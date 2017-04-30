@@ -1,0 +1,10 @@
+{
+  "name": "Sandwich Factory",
+  "app_id": "57356639",
+  "v2": true,
+  "typescript": true,
+  "proxies": [{
+  "path": "/category/",
+  "proxyUrl": " http://aljedad.com/api/sforder/9i3njlbu8_categories/"
+}]
+}

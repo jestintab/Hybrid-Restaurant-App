@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Category</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let categorie of categories">
+        <ion-list>
+            <ion-item (click)="navigate(categorie.values.category_id.value)">
+                <ion-thumbnail item-left>
+                    <img src="https://order.sandwichfactory.qa/assets/images/{{categorie.values.image.value}}">
+                </ion-thumbnail>
+                <p class="heading">{{categorie.values.name.value | entity  }}</p>
+                <p>{{categorie.values.description.value}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-card>
+</ion-content>

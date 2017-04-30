@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar hideBackButton="true">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Sandwich Factory</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only color="royal" (click)="navcart()">
+                <ion-icon name="cart"></ion-icon>
+                <ion-badge class="carts" item-right color="danger">{{noOfItems}}</ion-badge>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid class="grid">
+        <ion-row><!-- first row -->
+            <ion-slides initialSlide=0 speed=1000 loop=true pager=true>
+                <ion-slide *ngFor="let feature of featured">
+                    <div class="overlay">
+                        <img src={{feature.thumb}} class="slider-img">
+                    </div><!--overlay-->
+                    <div class="card-title">Featured Product</div>
+                </ion-slide>
+            </ion-slides>
+        </ion-row><!-- first row -->
+        <!-- second-row -->
+        <h2 text-center>Categories</h2>
+        <ion-row class="categories">
+            <ion-col width-50 *ngFor="let categorie of categories" (click)="navigate(categorie.key)">
+                <img src={{categorie.thumb}}>
+                <p class="text-over-img">{{categorie.title}}</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

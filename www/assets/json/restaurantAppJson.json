@@ -1,0 +1,1471 @@
+{
+  "categories": [
+    {
+      "key": "1",
+      "thumb": "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_110,w_200/v1483635730/shutterstock_211209340_hr5vjk.jpg",
+      "title": "Beverages",
+      "description": "Souvlaki features the fresh-tasting combination of lemon juice, garlic, and olive oil that is so prevalent in Greek cuisine",
+      "price": 4,
+      "date": "10/01/16"
+    },
+    {
+      "key": "2",
+      "thumb": "https://res-1.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_110,w_200/v1483635646/shutterstock_124388140_pcemyn.jpg",
+      "title": "Appetizers",
+      "description": "Serving authentic Italian Chicken Masala made by a 100% Italian from Chicago to Denver's front range. Vegan and Gluten free options available",
+      "price": 7,
+      "date": "04/01/16"
+    },
+    {
+      "key": 3,
+      "thumb": "https://res-2.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_110,w_200/v1483635603/shutterstock_85029121_yqrjco.jpg",
+      "title": "Salads",
+      "description": "Start the meal off right with these delicious appetizer recipes for dips, finger foods and other tasty bites your guests can nibble on.",
+      "price": 5,
+      "date": "07/11/15"
+    },
+    {
+      "key": "4",
+      "thumb": "https://res-3.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_110,w_200/v1483635771/shutterstock_414301747_mtoc29.jpg",
+      "title": "Sides",
+      "description": "Souvlaki features the fresh-tasting combination of lemon juice, garlic, and olive oil that is so prevalent in Greek cuisine",
+      "price": 13,
+      "date": "16/10/15"
+    },
+    {
+      "key": "5",
+      "thumb": "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_110,w_200/v1483635600/shutterstock_78020470_mogsht.jpg",
+      "title": "Desserts",
+      "description": "Serving authentic Italian Chicken Masala made by a 100% Italian from Chicago to Denver's front range. Vegan and Gluten free options available",
+      "price": "10",
+      "date": "22/6/15"
+    },
+    {
+      "key": "6",
+      "thumb": "https://res-1.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_110,w_200/v1483635736/shutterstock_154111196_dr1rsp.jpg",
+      "title": "Main Course",
+      "description": "Start the meal off right with these delicious appetizer recipes for dips, finger foods and other tasty bites your guests can nibble on.",
+      "price": 11,
+      "date": "04/01/15"
+    },
+    {
+      "key": "7",
+      "thumb": "https://res-2.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_110,w_200/v1483635706/shutterstock_125990357_cktkdy.jpg",
+      "title": "Starters",
+      "description": "Souvlaki features the fresh-tasting combination of lemon juice, garlic, and olive oil that is so prevalent in Greek cuisine",
+      "price": 15,
+      "date": "11/11/14"
+    },
+    {
+      "key": "8",
+      "thumb": "https://res-3.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_110,w_200/v1483635695/shutterstock_150017666_h2deah.jpg",
+      "title": "Slice",
+      "description": "Start the meal off right with these delicious appetizer recipes for dips, finger foods and other tasty bites your guests can nibble on.",
+      "price": 9,
+      "date": "01/01/14"
+    }
+  ],
+  "featured": [
+    {
+      "key": "1",
+      "thumb": "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_220,w_420/v1483635589/shutterstock_56500270_j3dvz7.jpg"
+    },
+    {
+      "key": "2",
+      "thumb": "https://res-1.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_220,w_420/v1483635624/shutterstock_114177826_mm6tnl.jpg"
+    },
+    {
+      "key": "3",
+      "thumb": "https://res-2.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_220,w_420/v1483635648/shutterstock_93878743_rugqzs.jpg"
+    }
+  ],
+  "menuItems": [
+    {
+      "id": "1",
+      "body": "Serving authentic Italian Chicken Masala made by a 100% Italian from Chicago to Denver's front range. Vegan and Gluten free options available",
+      "category_id": "6",
+      "extraOptions": [
+        {
+          "name": "Dill sauce",
+          "value": 3.10
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483635781/shutterstock_309150017_mpk0xn.jpg"
+      ],
+      "price": [
+        {
+          "name": "Single",
+          "value": 10,
+          "offerValue": 7
+        },
+        {
+          "name": "Double",
+          "value": 20,
+          "offerValue": 14
+        }
+      ],
+      "offer": "30%",
+      "title": "Chicken Masala"
+    },
+    {
+      "id": "2",
+      "body": "Serving authentic Italian Beef made by a 100% Italian from Chicago to Denver's front range. Vegan and Gluten free options available",
+      "category_id": "6",
+      "extraOptions": [
+        {
+          "name": "Dill sauce",
+          "value": 3.10
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483635736/shutterstock_154111196_dr1rsp.jpg"
+      ],
+      "price": [
+        {
+          "name": "Single",
+          "value": 14,
+          "offerValue": 7
+        },
+        {
+          "name": "Double",
+          "value": 28,
+          "offerValue": 14
+        }
+      ],
+      "offer": "50%",
+      "title": "King Beef"
+    },
+    {
+      "id": "3",
+      "body": "Souvlaki features the fresh-tasting combination of lemon juice, garlic, and olive oil that is so prevalent in Greek cuisine",
+      "category_id": "6",
+      "extraOptions": [
+        {
+          "name": "Dill sauce",
+          "value": 3.10
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483635709/shutterstock_136879979_z6uhqk.jpg"
+      ],
+      "price": [
+        {
+          "name": "Single",
+          "value": 6,
+          "offerValue": 3
+        },
+        {
+          "name": "Double",
+          "value": 12,
+          "offerValue": 6
+        }
+      ],
+      "offer": "50%",
+      "title": "Souvlaki"
+    },
+    {
+      "id": "4",
+      "body": "Serving authentic Italian Chicken Masala made by a 100% Italian from Chicago to Denver's front range. Vegan and Gluten free options available",
+      "category_id": "6",
+      "extraOptions": [
+        {
+          "name": "Dill sauce",
+          "value": 3.10
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483635781/shutterstock_309150017_mpk0xn.jpg"
+      ],
+      "price": [
+        {
+          "name": "Single",
+          "value": 10,
+          "offerValue": 8
+        },
+        {
+          "name": "Double",
+          "value": 20,
+          "offerValue": 16
+        }
+      ],
+      "offer": "20%",
+      "title": "Chicken Masala"
+    },
+    {
+      "id": "5",
+      "body": "Serving authentic Italian Beef made by a 100% Italian from Chicago to Denver's front range. Vegan and Gluten free options available",
+      "category_id": "6",
+      "extraOptions": [
+        {
+          "name": "Dill sauce",
+          "value": 3.10
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483635736/shutterstock_154111196_dr1rsp.jpg"
+      ],
+      "price": [
+        {
+          "name": "Single",
+          "value": 7
+        },
+        {
+          "name": "Double",
+          "value": 14
+        }
+      ],
+      "title": "King Beef"
+    },
+    {
+      "id": "6",
+      "body": "Souvlaki features the fresh-tasting combination of lemon juice, garlic, and olive oil that is so prevalent in Greek cuisine",
+      "category_id": "6",
+      "extraOptions": [
+        {
+          "name": "Dill sauce",
+          "value": 3.10
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483635709/shutterstock_136879979_z6uhqk.jpg"
+      ],
+      "price": [
+        {
+          "name": "Single",
+          "value": 6
+        },
+        {
+          "name": "Double",
+          "value": 12
+        }
+      ],
+      "title": "Souvlaki"
+    },
+    {
+      "id": "7",
+      "body": "Start the meal off right with these delicious appetizer recipes for dips, finger foods and other tasty bites your guests can nibble on.",
+      "category_id": "2",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_600/v1483635646/shutterstock_124388140_pcemyn.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Buffalo Chicken Dip."
+    },
+    {
+      "id": "8",
+      "body": "Start the meal off right with these delicious appetizer recipes for dips, finger foods and other tasty bites your guests can nibble on.",
+      "category_id": "2",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483635713/shutterstock_111888155_gsa8qk.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Antipasto Kabobs"
+    },
+    {
+      "id": "9",
+      "body": "Start the meal off right with these delicious appetizer recipes for dips, finger foods and other tasty bites your guests can nibble on.",
+      "category_id": "2",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635607/shutterstock_53287165_ilpulr.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Chocolate Chip Cheese Ball"
+    },
+    {
+      "id": "10",
+      "body": "Start the meal off right with these delicious appetizer recipes for dips, finger foods and other tasty bites your guests can nibble on.",
+      "category_id": "2",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_600/v1483635646/shutterstock_124388140_pcemyn.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Appetizer Tortilla Pinwheels"
+    },
+    {
+      "id": "11",
+      "body": "Start the meal off right with these delicious appetizer recipes for dips, finger foods and other tasty bites your guests can nibble on.",
+      "category_id": "2",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483635713/shutterstock_111888155_gsa8qk.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Savory Party Bread"
+    },
+    {
+      "id": "12",
+      "body": "Start the meal off right with these delicious appetizer recipes for dips, finger foods and other tasty bites your guests can nibble on.",
+      "category_id": "2",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635607/shutterstock_53287165_ilpulr.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Cretan Ntakos"
+    },
+    {
+      "id": "13",
+      "body": "Start the meal off right with these delicious appetizer recipes for dips, finger foods and other tasty bites your guests can nibble on..",
+      "category_id": "2",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483635648/shutterstock_93878743_rugqzs.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Cretan Ntakos"
+    },
+    {
+      "id": "14",
+      "body": "north indian style fried mix veg recipe. mix vegetable curries are made in south india as well as in north india.",
+      "category_id": "4",
+      "extraOptions": [
+        {
+          "name": "Fresh rosemary leaves",
+          "value": 0.5
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483695755/mix_veg_nutnln.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 7
+        }
+      ],
+      "title": "Vegetable Mix"
+    },
+    {
+      "id": "15",
+      "body": "Phasellus eu nulla id ex ornare tempor. Sed egestas turpis eu nisi aliquet, nec eleifend urna egestas.",
+      "category_id": "4",
+      "extraOptions": [
+        {
+          "name": "Fresh rosemary leaves",
+          "value": 0.5
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483635641/shutterstock_128639204_iuir0k.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 7
+        }
+      ],
+      "title": "Fish Masala"
+    },
+    {
+      "id": "16",
+      "body": "Phasellus eu nulla id ex ornare tempor. Sed egestas turpis eu nisi aliquet, nec eleifend urna egestas.",
+      "category_id": "4",
+      "extraOptions": [
+        {
+          "name": "Fresh rosemary leaves",
+          "value": 0.5
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483635730/shutterstock_295230917_qatnud.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 7
+        }
+      ],
+      "title": "Chicken Mix"
+    },
+    {
+      "id": "17",
+      "body": "north indian style fried mix veg recipe. mix vegetable curries are made in south india as well as in north india.",
+      "category_id": "4",
+      "extraOptions": [
+        {
+          "name": "Fresh rosemary leaves",
+          "value": 0.5
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483695755/mix_veg_nutnln.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 7
+        }
+      ],
+      "title": "Vegetable Mix"
+    },
+    {
+      "id": "18",
+      "body": "Phasellus eu nulla id ex ornare tempor. Sed egestas turpis eu nisi aliquet, nec eleifend urna egestas.",
+      "category_id": "4",
+      "extraOptions": [
+        {
+          "name": "Fresh rosemary leaves",
+          "value": 0.5
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483635641/shutterstock_128639204_iuir0k.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 7
+        }
+      ],
+      "title": "Fish Masala"
+    },
+    {
+      "id": "19",
+      "body": "Phasellus eu nulla id ex ornare tempor. Sed egestas turpis eu nisi aliquet, nec eleifend urna egestas.",
+      "category_id": "4",
+      "extraOptions": [
+        {
+          "name": "Fresh rosemary leaves",
+          "value": 0.5
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483635730/shutterstock_295230917_qatnud.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 7
+        }
+      ],
+      "title": "Chicken Mix"
+    },
+    {
+      "id": "20",
+      "body": "north indian style fried mix veg recipe. mix vegetable curries are made in south india as well as in north india.",
+      "category_id": "4",
+      "extraOptions": [
+        {
+          "name": "Fresh rosemary leaves",
+          "value": 0.5
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483695755/mix_veg_nutnln.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 7
+        }
+      ],
+      "title": "Vegetable Mix"
+    },
+    {
+      "id": "21",
+      "body": "Phasellus eu nulla id ex ornare tempor. Sed egestas turpis eu nisi aliquet, nec eleifend urna egestas.",
+      "category_id": "4",
+      "extraOptions": [
+        {
+          "name": "Fresh rosemary leaves",
+          "value": 0.5
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483635641/shutterstock_128639204_iuir0k.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 7
+        }
+      ],
+      "title": "Fish Masala"
+    },
+    {
+      "id": "22",
+      "body": "Phasellus eu nulla id ex ornare tempor. Sed egestas turpis eu nisi aliquet, nec eleifend urna egestas.",
+      "category_id": "4",
+      "extraOptions": [
+        {
+          "name": "Fresh rosemary leaves",
+          "value": 0.5
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483635730/shutterstock_295230917_qatnud.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 7
+        }
+      ],
+      "title": "Chicken Mix"
+    },
+    {
+      "id": "23",
+      "body": "Our salads are made with the freshest ingredients every day, and served with a freshly baked focaccia roll.",
+      "category_id": "3",
+      "extraOptions": [
+        {
+          "name": "Fresh rosemary leaves",
+          "value": 0.5
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635603/shutterstock_85029121_yqrjco.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 7.50
+        },
+        {
+          "name": "Large",
+          "value": 9
+        }
+      ],
+      "title": "Tomato Stuffed Salad"
+    },
+    {
+      "id": "24",
+      "body": "Our salads are made with the freshest ingredients every day, and served with a freshly baked focaccia roll.",
+      "category_id": "3",
+      "extraOptions": [
+        {
+          "name": "Fresh rosemary leaves",
+          "value": 0.5
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/v1483685209/salads_x9urxg.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 7.50
+        },
+        {
+          "name": "Large",
+          "value": 9
+        }
+      ],
+      "title": "Chef Salad"
+    },
+    {
+      "id": "25",
+      "body": "Our salads are made with the freshest ingredients every day, and served with a freshly baked focaccia roll.",
+      "category_id": "3",
+      "extraOptions": [
+        {
+          "name": "Fresh rosemary leaves",
+          "value": 0.5
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635603/shutterstock_85029121_yqrjco.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 7.50
+        },
+        {
+          "name": "Large",
+          "value": 9
+        }
+      ],
+      "title": "Cucumber Stuffed Salad"
+    },
+    {
+      "id": "26",
+      "body": "Our salads are made with the freshest ingredients every day, and served with a freshly baked focaccia roll.",
+      "category_id": "3",
+      "extraOptions": [
+        {
+          "name": "Fresh rosemary leaves",
+          "value": 0.5
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/v1483685209/salads_x9urxg.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 7.50
+        },
+        {
+          "name": "Large",
+          "value": 9
+        }
+      ],
+      "title": "Carrot mix Salad"
+    },
+    {
+      "id": "27",
+      "body": "Our salads are made with the freshest ingredients every day, and served with a freshly baked focaccia roll.",
+      "category_id": "3",
+      "extraOptions": [
+        {
+          "name": "Fresh rosemary leaves",
+          "value": 0.5
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635603/shutterstock_85029121_yqrjco.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 7.50
+        },
+        {
+          "name": "Large",
+          "value": 9
+        }
+      ],
+      "title": " Chinese Chicken Salad."
+    },
+    {
+      "id": "28",
+      "body": "Our salads are made with the freshest ingredients every day, and served with a freshly baked focaccia roll.",
+      "category_id": "3",
+      "extraOptions": [
+        {
+          "name": "Fresh rosemary leaves",
+          "value": 0.5
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/v1483685209/salads_x9urxg.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 7.50
+        },
+        {
+          "name": "Large",
+          "value": 9
+        }
+      ],
+      "title": "egg and potato salads"
+    },
+    {
+      "id": "29",
+      "body": "Our salads are made with the freshest ingredients every day, and served with a freshly baked focaccia roll.",
+      "category_id": "3",
+      "extraOptions": [
+        {
+          "name": "Fresh rosemary leaves",
+          "value": 0.5
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/v1483685209/salads_x9urxg.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 7.50
+        },
+        {
+          "name": "Large",
+          "value": 9
+        }
+      ],
+      "title": "Onion Stuffed Salad"
+    },
+    {
+      "id": "30",
+      "body": "Butterscotch is a type of confectionery whose primary ingredients are brown sugar and butter, although other ingredients are part of some recipes",
+      "category_id": "5",
+      "extraOptions": [
+        {
+          "name": "Cold Coffee",
+          "value": 3
+        },
+        {
+          "name": "Coffee Milk Cold",
+          "value": 4
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483685095/IceCream_ds66sm.jpg"
+      ],
+      "price": [
+        {
+          "name": "Small",
+          "value": 5
+        },
+        {
+          "name": "Normal",
+          "value": 9
+        }
+      ],
+      "title": "Butter Scotch"
+    },
+    {
+      "id": "31",
+      "body": "Vanila is a type of confectionery whose primary ingredients are brown sugar and butter, although other ingredients are part of some recipes",
+      "category_id": "5",
+      "extraOptions": [
+        {
+          "name": "Cold Coffee",
+          "value": 3
+        },
+        {
+          "name": "Coffee Milk Cold",
+          "value": 4
+        }
+      ],
+      "pictures": "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483687797/vanila_w0vumh.jpg",
+      "price": [
+        {
+          "name": "Small",
+          "value": 4
+        },
+        {
+          "name": "Normal",
+          "value": 8
+        }
+      ],
+      "title": "Vanila"
+    },
+    {
+      "id": "32",
+      "body": "Choko Bar is a type of confectionery whose primary ingredients are brown sugar and butter, although other ingredients are part of some recipes",
+      "category_id": "5",
+      "extraOptions": [
+        {
+          "name": "Cold Coffee",
+          "value": 3
+        },
+        {
+          "name": "Coffee Milk Cold",
+          "value": 4
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483687780/chokobar_uzfd0d.jpg"
+      ],
+      "price": [
+        {
+          "name": "Small",
+          "value": 5
+        },
+        {
+          "name": "Normal",
+          "value": 9
+        }
+      ],
+      "title": "Choko Bar"
+    },
+    {
+      "id": "33",
+      "body": "Butterscotch is a type of confectionery whose primary ingredients are brown sugar and butter, although other ingredients are part of some recipes",
+      "category_id": "5",
+      "extraOptions": [
+        {
+          "name": "Cold Coffee",
+          "value": 3
+        },
+        {
+          "name": "Coffee Milk Cold",
+          "value": 4
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483685095/IceCream_ds66sm.jpg"
+      ],
+      "price": [
+        {
+          "name": "Small",
+          "value": 4
+        },
+        {
+          "name": "Normal",
+          "value": 8
+        }
+      ],
+      "title": "Butter Scotch"
+    },
+    {
+      "id": "34",
+      "body": "Vanila is a type of confectionery whose primary ingredients are brown sugar and butter, although other ingredients are part of some recipes",
+      "category_id": "5",
+      "extraOptions": [
+        {
+          "name": "Cold Coffee",
+          "value": 3
+        },
+        {
+          "name": "Coffee Milk Cold",
+          "value": 4
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483687797/vanila_w0vumh.jpg"
+      ],
+      "price": [
+        {
+          "name": "Small",
+          "value": 4
+        },
+        {
+          "name": "Normal",
+          "value": 8
+        }
+      ],
+      "title": "Vanila"
+    },
+    {
+      "id": "35",
+      "body": "Choko Bar is a type of confectionery whose primary ingredients are brown sugar and butter, although other ingredients are part of some recipes",
+      "category_id": "5",
+      "extraOptions": [
+        {
+          "name": "Cold Coffee",
+          "value": 3
+        },
+        {
+          "name": "Coffee Milk Cold",
+          "value": 4
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483687780/chokobar_uzfd0d.jpg"
+      ],
+      "price": [
+        {
+          "name": "Small",
+          "value": 4
+        },
+        {
+          "name": "Normal",
+          "value": 8
+        }
+      ],
+      "title": "Choko Bar"
+    },
+    {
+      "id": "36",
+      "body": "Red Horse, the first extra-strong beer brand in the Philippines, is the high-alcohol beer brand of San Miguel Brewery.",
+      "category_id": "1",
+      "extraOptions": [
+        {
+          "name": "Sparkling wine",
+          "selected": true,
+          "value": 7
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/v1483683855/drinks_yivdr5.jpg"
+      ],
+      "price": [
+        {
+          "name": "Single",
+          "value": 10
+        },
+        {
+          "name": "Double",
+          "value": 19
+        }
+      ],
+      "title": "Red Horse"
+    },
+    {
+      "id": "37",
+      "body": "Soda, which is offered by Coca-Cola and was launched in 2002. Kinley Soda is a no.1 national soda brand in India today",
+      "category_id": "1",
+      "extraOptions": [
+        {
+          "name": "Sparkling wine",
+          "selected": true,
+          "value": 7
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483684513/carbonated-water_u9jxdq.jpg"
+      ],
+      "price": [
+        {
+          "name": "Single",
+          "value": 8
+        },
+        {
+          "name": "Double",
+          "value": 16
+        }
+      ],
+      "title": "Soda Water"
+    },
+    {
+      "id": "38",
+      "body": "Red Horse, the first extra-strong beer brand in the Philippines, is the high-alcohol beer brand of San Miguel Brewery.",
+      "category_id": "1",
+      "extraOptions": [
+        {
+          "name": "Sparkling wine",
+          "selected": true,
+          "value": 7
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/v1483683855/drinks_yivdr5.jpg"
+      ],
+      "price": [
+        {
+          "name": "Single",
+          "value": 10
+        },
+        {
+          "name": "Double",
+          "value": 19
+        }
+      ],
+      "title": "Red Horse"
+    },
+    {
+      "id": "39",
+      "body": "Soda, which is offered by Coca-Cola and was launched in 2002. Kinley Soda is a no.1 national soda brand in India today",
+      "category_id": "1",
+      "extraOptions": [
+        {
+          "name": "Sparkling wine",
+          "selected": true,
+          "value": 7
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483684513/carbonated-water_u9jxdq.jpg"
+      ],
+      "price": [
+        {
+          "name": "Single",
+          "value": 8
+        },
+        {
+          "name": "Double",
+          "value": 16
+        }
+      ],
+      "title": "Soda Water"
+    },
+    {
+      "id": "40",
+      "body": "Red Horse, the first extra-strong beer brand in the Philippines, is the high-alcohol beer brand of San Miguel Brewery.",
+      "category_id": "1",
+      "extraOptions": [
+        {
+          "name": "Sparkling wine",
+          "selected": true,
+          "value": 7
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/v1483683855/drinks_yivdr5.jpg"
+      ],
+      "price": [
+        {
+          "name": "Single",
+          "value": 10
+        },
+        {
+          "name": "Double",
+          "value": 19
+        }
+      ],
+      "title": "Red Horse"
+    },
+    {
+      "id": "41",
+      "body": "Soda, which is offered by Coca-Cola and was launched in 2002. Kinley Soda is a no.1 national soda brand in India today",
+      "category_id": "1",
+      "extraOptions": [
+        {
+          "name": "Sparkling wine",
+          "selected": true,
+          "value": 7
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_564/v1483684513/carbonated-water_u9jxdq.jpg"
+      ],
+      "price": [
+        {
+          "name": "Single",
+          "value": 10
+        },
+        {
+          "name": "Double",
+          "value": 19
+        }
+      ],
+      "title": "Soda Water"
+    },
+    {
+      "id": "42",
+      "body": "raise the bar with these sensational starters and set the perfect tone",
+      "category_id": "7",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635706/shutterstock_125990357_cktkdy.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Veg Chaumeen"
+    },
+    {
+      "id": "43",
+      "body": "raise the bar with these sensational starters and set the perfect tone.",
+      "category_id": "7",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635592/shutterstock_79528333_aalfqz.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Veg Burger"
+    },
+    {
+      "id": "44",
+      "body": "raise the bar with these sensational starters and set the perfect tone.",
+      "category_id": "7",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635706/shutterstock_125990357_cktkdy.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Veg Chaumeen"
+    },
+    {
+      "id": "45",
+      "body": "raise the bar with these sensational starters and set the perfect tone",
+      "category_id": "7",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635592/shutterstock_79528333_aalfqz.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Veg Burger"
+    },
+    {
+      "id": "46",
+      "body": "raise the bar with these sensational starters and set the perfect tone",
+      "category_id": "7",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635771/shutterstock_543080839_g1on42.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Veg Chaumeen"
+    },
+    {
+      "id": "47",
+      "body": "raise the bar with these sensational starters and set the perfect tone",
+      "category_id": "7",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635592/shutterstock_79528333_aalfqz.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Veg Burger"
+    },
+    {
+      "id": "48",
+      "body": "Delicious slices with flavoured chees.",
+      "category_id": "8",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635695/shutterstock_150017666_h2deah.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Peanut Buttert Slice"
+    },
+    {
+      "id": "49",
+      "body": "Delicious slices with flavoured chees.",
+      "category_id": "8",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635645/shutterstock_131880668_ck8eaj.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Chocklate Almond Slice"
+    },
+    {
+      "id": "50",
+      "body": "Delicious slices with flavoured chees.",
+      "category_id": "8",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635695/shutterstock_150017666_h2deah.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Carrot Slice"
+    },
+    {
+      "id": "51",
+      "body": "Delicious slices with flavoured chees.",
+      "category_id": "8",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635645/shutterstock_131880668_ck8eaj.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Vagon Wheel Slice"
+    },
+    {
+      "id": "52",
+      "body": "Delicious slices with flavoured chees.",
+      "category_id": "8",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635695/shutterstock_150017666_h2deah.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Bread Slice"
+    },
+    {
+      "id": "53",
+      "body": "Delicious slices with flavoured chees.",
+      "category_id": "8",
+      "extraOptions": [
+        {
+          "name": "Cucumber",
+          "value": 1.20
+        }
+      ],
+      "pictures": [
+        "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_400,w_560/v1483635645/shutterstock_131880668_ck8eaj.jpg"
+      ],
+      "price": [
+        {
+          "name": "Standard",
+          "value": 8
+        },
+        {
+          "name": "Large",
+          "value": 12
+        }
+      ],
+      "title": "Meusli Slice"
+    }
+  ],
+  "newsList": [
+    {
+      "id": "1",
+      "title": "India vs Bangladesh match",
+      "discription": "Murali Vijay and Cheteshwar Pujara steadied the ship for India. as they strung a fifty-plus partnership in the one-off Test.",
+      "image": "assets/img/news.jpg",
+      "dateTime": "09.02.2017,10:20 am",
+      "details": "Pujara maintains a steady approach in the next over by Shakib, getting a single at the end of the over to move to 49. FIFTY for Cheteshwar Pujara — his 12th in Tests! Gets there with a single off Rabbi, and now both batsmen will look to convert this to a big score today. Vijay drives the fifth ball towards extra-cover to get a couple of runs.Vijay brings up his half-century in style, driving Shakib through extra-cover to get his seventh boundary, and ends up bringing up the milestone for the 15th time in his Test career, taking 82 balls to do so. Executes a fine pull in the following over, pushing it wide of the backward square-leg fielder, before getting four leg-byes a couple of deliveries later. FOUR! Murali Vijay gets to his half-century in style, driving Shakib towards extra-cover to bring up the milestone for the 15th time in his Test career! And that also brings up the 100-stand between him and Pujara! Now for his partner to bring up the milestone as well."
+    },
+    {
+      "id": "2",
+      "title": "India vs Bangladesh match",
+      "discription": "Murali Vijay and Cheteshwar Pujara steadied the ship for India. as they strung a fifty-plus partnership in the one-off Test.",
+      "image": "assets/img/news.jpg",
+      "dateTime": "10.02.2017,10:20 am",
+      "details": "Pujara maintains a steady approach in the next over by Shakib, getting a single at the end of the over to move to 49. FIFTY for Cheteshwar Pujara — his 12th in Tests! Gets there with a single off Rabbi, and now both batsmen will look to convert this to a big score today. Vijay drives the fifth ball towards extra-cover to get a couple of runs.Vijay brings up his half-century in style, driving Shakib through extra-cover to get his seventh boundary, and ends up bringing up the milestone for the 15th time in his Test career, taking 82 balls to do so. Executes a fine pull in the following over, pushing it wide of the backward square-leg fielder, before getting four leg-byes a couple of deliveries later. FOUR! Murali Vijay gets to his half-century in style, driving Shakib towards extra-cover to bring up the milestone for the 15th time in his Test career! And that also brings up the 100-stand between him and Pujara! Now for his partner to bring up the milestone as well."
+    },
+    {
+      "id": "3",
+      "title": "India vs Bangladesh match",
+      "discription": "Murali Vijay and Cheteshwar Pujara steadied the ship for India. as they strung a fifty-plus partnership in the one-off Test.",
+      "image": "assets/img/news.jpg",
+      "dateTime": "11.02.2017,10:20 am",
+      "details": "Pujara maintains a steady approach in the next over by Shakib, getting a single at the end of the over to move to 49. FIFTY for Cheteshwar Pujara — his 12th in Tests! Gets there with a single off Rabbi, and now both batsmen will look to convert this to a big score today. Vijay drives the fifth ball towards extra-cover to get a couple of runs.Vijay brings up his half-century in style, driving Shakib through extra-cover to get his seventh boundary, and ends up bringing up the milestone for the 15th time in his Test career, taking 82 balls to do so. Executes a fine pull in the following over, pushing it wide of the backward square-leg fielder, before getting four leg-byes a couple of deliveries later. FOUR! Murali Vijay gets to his half-century in style, driving Shakib towards extra-cover to bring up the milestone for the 15th time in his Test career! And that also brings up the 100-stand between him and Pujara! Now for his partner to bring up the milestone as well."
+    },
+    {
+      "id": "4",
+      "title": "India vs Bangladesh match",
+      "discription": "Murali Vijay and Cheteshwar Pujara steadied the ship for India. as they strung a fifty-plus partnership in the one-off Test.",
+      "image": "assets/img/news.jpg",
+      "dateTime": "12.02.2017,10:20 am",
+      "details": "Pujara maintains a steady approach in the next over by Shakib, getting a single at the end of the over to move to 49. FIFTY for Cheteshwar Pujara — his 12th in Tests! Gets there with a single off Rabbi, and now both batsmen will look to convert this to a big score today. Vijay drives the fifth ball towards extra-cover to get a couple of runs.Vijay brings up his half-century in style, driving Shakib through extra-cover to get his seventh boundary, and ends up bringing up the milestone for the 15th time in his Test career, taking 82 balls to do so. Executes a fine pull in the following over, pushing it wide of the backward square-leg fielder, before getting four leg-byes a couple of deliveries later. FOUR! Murali Vijay gets to his half-century in style, driving Shakib towards extra-cover to bring up the milestone for the 15th time in his Test career! And that also brings up the 100-stand between him and Pujara! Now for his partner to bring up the milestone as well."
+    },
+    {
+      "id": "5",
+      "title": "India vs Bangladesh match",
+      "discription": "Murali Vijay and Cheteshwar Pujara steadied the ship for India. as they strung a fifty-plus partnership in the one-off Test.",
+      "image": "assets/img/news.jpg",
+      "dateTime": "12.02.2017,10:20 am",
+      "details": "Pujara maintains a steady approach in the next over by Shakib, getting a single at the end of the over to move to 49. FIFTY for Cheteshwar Pujara — his 12th in Tests! Gets there with a single off Rabbi, and now both batsmen will look to convert this to a big score today. Vijay drives the fifth ball towards extra-cover to get a couple of runs.Vijay brings up his half-century in style, driving Shakib through extra-cover to get his seventh boundary, and ends up bringing up the milestone for the 15th time in his Test career, taking 82 balls to do so. Executes a fine pull in the following over, pushing it wide of the backward square-leg fielder, before getting four leg-byes a couple of deliveries later. FOUR! Murali Vijay gets to his half-century in style, driving Shakib towards extra-cover to bring up the milestone for the 15th time in his Test career! And that also brings up the 100-stand between him and Pujara! Now for his partner to bring up the milestone as well."
+    },
+    {
+      "id": "6",
+      "title": "India vs Bangladesh match",
+      "discription": "Murali Vijay and Cheteshwar Pujara steadied the ship for India. as they strung a fifty-plus partnership in the one-off Test.",
+      "image": "assets/img/news.jpg",
+      "dateTime": "12.02.2017,10:20 am",
+      "details": "Pujara maintains a steady approach in the next over by Shakib, getting a single at the end of the over to move to 49. FIFTY for Cheteshwar Pujara — his 12th in Tests! Gets there with a single off Rabbi, and now both batsmen will look to convert this to a big score today. Vijay drives the fifth ball towards extra-cover to get a couple of runs.Vijay brings up his half-century in style, driving Shakib through extra-cover to get his seventh boundary, and ends up bringing up the milestone for the 15th time in his Test career, taking 82 balls to do so. Executes a fine pull in the following over, pushing it wide of the backward square-leg fielder, before getting four leg-byes a couple of deliveries later. FOUR! Murali Vijay gets to his half-century in style, driving Shakib towards extra-cover to bring up the milestone for the 15th time in his Test career! And that also brings up the 100-stand between him and Pujara! Now for his partner to bring up the milestone as well."
+    },
+    {
+      "id": "7",
+      "title": "India vs Bangladesh match",
+      "discription": "Murali Vijay and Cheteshwar Pujara steadied the ship for India. as they strung a fifty-plus partnership in the one-off Test.",
+      "image": "assets/img/news.jpg",
+      "dateTime": "12.02.2017,10:20 am",
+      "details": "Pujara maintains a steady approach in the next over by Shakib, getting a single at the end of the over to move to 49. FIFTY for Cheteshwar Pujara — his 12th in Tests! Gets there with a single off Rabbi, and now both batsmen will look to convert this to a big score today. Vijay drives the fifth ball towards extra-cover to get a couple of runs.Vijay brings up his half-century in style, driving Shakib through extra-cover to get his seventh boundary, and ends up bringing up the milestone for the 15th time in his Test career, taking 82 balls to do so. Executes a fine pull in the following over, pushing it wide of the backward square-leg fielder, before getting four leg-byes a couple of deliveries later. FOUR! Murali Vijay gets to his half-century in style, driving Shakib towards extra-cover to bring up the milestone for the 15th time in his Test career! And that also brings up the 100-stand between him and Pujara! Now for his partner to bring up the milestone as well."
+    }
+  ]
+}

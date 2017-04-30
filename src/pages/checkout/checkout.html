@@ -1,0 +1,114 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title class="title">Payment Options
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="checkOut">
+    <form (ngSubmit)="onCheckout(f)" #f="ngForm">
+        <ion-row>
+            <ion-col class="address-header">
+                <ion-icon ios="ios-home" md="md-home"></ion-icon>
+                &nbsp;&nbsp;Address
+            </ion-col>
+        </ion-row><!-- row for address -->
+        <ion-list class="adress-line">
+
+            <ion-label  class="add-heading">
+                <ion-icon ios="ios-home" md="md-home"></ion-icon>
+                &nbsp;&nbsp;ENTER ADDRESS
+            </ion-label>
+            <div>
+                <ion-item class="sub-address">
+                    <ion-input type="text" placeholder="Name" name="name" id="name"
+                               [(ngModel)]="orderDetails.name"></ion-input>
+                </ion-item>
+                <ion-item class="sub-address">
+                    <ion-textarea rows="3" placeholder="Address" name="adress" id="adress"
+                                  [(ngModel)]="orderDetails.adress"></ion-textarea>
+                </ion-item>
+                <ion-item class="sub-address">
+                    <ion-input type="text" placeholder="City" name="city" id="city"
+                               [(ngModel)]="orderDetails.city"></ion-input>
+                </ion-item>
+                <ion-item class="sub-address">
+                    <ion-input type="number" placeholder="Pincode" name="pincode" id="pincode"
+                               [(ngModel)]="orderDetails.pincode"></ion-input>
+                </ion-item>
+            </div>
+
+        </ion-list>
+        <ion-row>
+            <ion-col class="payment-header">
+                <ion-icon ios="ios-pricetags" md="md-pricetags"></ion-icon>
+                &nbsp;&nbsp;Payment
+            </ion-col>
+        </ion-row>
+
+        <!--payment-->
+        <ion-list radio-group class="payment-block">
+            <ion-row>
+                <ion-col width-50 class="col-card no-padd">
+                    <ion-item>
+                        <ion-label>COD</ion-label>
+                        <ion-radio checked="true" value="cod" (click)="hide()"></ion-radio>
+                    </ion-item>
+                </ion-col>
+                <ion-col width-50 class="col-card no-padd">
+                    <ion-item>
+                        <ion-label>CARD</ion-label>
+                        <ion-radio value="card" (click)="toggle2()"></ion-radio>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+        </ion-list>
+        <!--payment ends-->
+
+        <!--payment input fields-->
+        <ion-row>
+            <ion-list class="card-list" [hidden]="tagHide2">
+                <ion-item class="card-detail">
+                    <ion-row>
+                        <ion-col class="no-padd">
+                            <ion-item class="card-item">
+                                <ion-input type="number" placeholder="Card No:" name="cardNo" id="cardNo"
+                                           [(ngModel)]="orderDetails.cardNo"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col width-33 class="no-padd">
+                            <ion-item class="card-item cvv">
+                                <ion-input type="number" placeholder="Cvv:" name="cvv" id="cvv"
+                                           [(ngModel)]="orderDetails.cvv"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col width-67 class="no-padd">
+                            <ion-item class="card-item date">
+                                <ion-datetime class="textbox-n" placeholder="Date" displayFormat="DD/MM/YYYY"
+                                              placeholder="Date:" name="expiryDate"
+                                              id="expiryDate"
+                                              [(ngModel)]="orderDetails.expiryDate"></ion-datetime>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col class="no-padd">
+                            <ion-item class="card-item">
+                                <ion-input type="text" placeholder="Name on Card:" name="cardHolderName"
+                                           id="cardHolderName"
+                                           [(ngModel)]="orderDetails.cardHolderName"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                </ion-item>
+            </ion-list>
+        </ion-row>
+
+        <button class="checkOut-btn" type="submit" ion-button block>
+            <ion-icon ios="ios-cart" md="md-cart"></ion-icon>
+            &nbsp;&nbsp;Check Out
+        </button>
+    </form>
+</ion-content>

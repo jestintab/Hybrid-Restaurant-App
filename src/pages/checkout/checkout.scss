@@ -1,0 +1,132 @@
+page-checkout {
+
+  ::-wekit-input-placeholder {
+    color: #white !important;
+  }
+  .list .item-block .item-inner {
+    border-color: rgba(256, 256, 256, .05);
+  }
+  .list .item-input:last-child {
+    border-bottom: 1px solid;
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+  .text-input {
+    color: $white !important;
+  }
+
+  .no-padd {
+    padding: 0px
+  }
+
+  .item {
+    color: $white;
+    background-color: $primary;
+  }
+  .checkOut .card-btn, page-checkout .checkOut .checkOut-btn :hover {
+    background-color: $white;
+    color: #white;
+    border: 1px solid $light-grey;
+    margin: 0.4rem 0rem;
+  }
+  .payment-block {
+    margin-bottom: 0px
+  }
+  .date-icon{
+    position: absolute;
+    top: 60px;
+    left: 138px;
+    color:$light-grey;
+    z-index: -111;
+  }
+  .checkOut {
+    background: url('../assets/img/bg.jpg') no-repeat center;
+    background-size: cover;
+    .address-header {
+      font-size: 20px;
+      color: $white;
+      text-align: center;
+      color: $white;
+      margin-bottom: 1.5rem;
+    }
+    .payment-header {
+      @extend .address-header;
+    }
+    .add-heading {
+      padding: 1.3rem;
+      margin: 0;
+      background-color: $primary;
+      color: $white;
+    }
+    .sub-address {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: $white;
+      border-right: 1px solid;
+      border-left: 1px solid;
+      border-color: rgba(256, 256, 256, .05);
+      padding-left: 0 !important;
+      text-indent: 7px
+    }
+
+    .col-cod {
+      padding-left: 0 !important;
+    }
+    .cod-btn {
+      width: 100%;
+      border-radius: 0;
+      background-color: $white;
+      color: black;
+      height: 5.2rem;
+      border: 1px solid $light-grey;
+    }
+    .col-cart {
+      padding-right: 0 !important;
+    }
+    .card-btn {
+      @extend .cod-btn;
+      background-color: $primary;
+      color: $white;
+      border: 0;
+      .check {
+        font-size: 1.6rem;
+      }
+    }
+
+    .checkOut-btn {
+      @extend .card-btn;
+      margin-top: 2em;
+      height: 4.9rem;
+    }
+
+    .card-list {
+      .card-detail {
+        background: transparent;
+        padding: 0px;
+        padding: 0px;
+        .item-inner {
+          padding-right: 0px;
+          .label {
+            margin: 0px;
+            .card-item {
+              background-color: rgba(0, 0, 0, 0.5);
+              border: 1px solid;
+              border-color: rgba(256, 256, 256, 0.4);
+            }
+          }
+        }
+      }
+    }
+  }
+  .list {
+    width: 100%;
+  }
+  .cvv {
+    border-top: 0px !important;
+    border-bottom: 0px !important;
+    border-right: 0px !important;
+  }
+  .date {
+    border-top: 0px !important;
+    border-bottom: 0px !important;
+  }
+
+}

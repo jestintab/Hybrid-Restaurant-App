@@ -1,0 +1,45 @@
+page-product-list {
+  .trim-info {
+    max-width: 200px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 15px;
+    position: relative;
+  }
+  .item {
+    padding-left: 7px;
+    border-bottom: 2px solid #d5d5d5;
+    .label {
+      margin: 9px 0px 0px 0px;
+    }
+  }
+  .catagory {
+    img {
+
+    }
+    .item-name {
+      font-weight: 700;
+      font-size: 15px;
+      white-space: nowrap;
+    }
+    .item-detail {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      line-height: 16px;
+      max-height: 62px;
+
+    }
+    .item-price {
+      font-weight: 700;
+      color: $secondary;
+    }
+  }
+
+  .list {
+    margin: -1px 0 0px 0;
+  }
+
+}

@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Settings</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="login">
+        <ion-row>
+            <img class="img" [src]="url"><br>
+        </ion-row>
+        <ion-row>
+            <input type="file" name="file" id="file" class="inputfile" aria-describedby="fileHelp" accept="image/*"
+                   (change)="readUrl($event)">
+            <label for="file" class="upload">
+                <ion-icon ios="ios-cloud-upload" md="md-cloud-upload"></ion-icon>
+            </label>
+        </ion-row>
+        <p class="name">Your Name</p>
+        <p class="email">ionicfirebaseapp@gmail.com</p>
+    </div>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <ion-list>
+            <ion-item>
+                <ion-label primary> Notifications</ion-label>
+                <ion-toggle primary checked="false"></ion-toggle>
+            </ion-item>
+            <!--card no-->
+            <ion-item>
+                <ion-label>Card Number:</ion-label>
+                <ion-input type="text" name="card" id="card" placeholder="5172628928"
+                           [(ngModel)]="user.card"></ion-input>
+            </ion-item>
+            <!--name on card-->
+            <ion-item>
+                <ion-label>Name on card:</ion-label>
+                <ion-input type="text" name="name" id="email" placeholder="Your Name"
+                           [(ngModel)]="user.name"></ion-input>
+            </ion-item>
+            <!--cvv-->
+            <ion-item>
+                <ion-label>CVV:</ion-label>
+                <ion-input type="number" name="cvv" id="cvv" placeholder="234"
+                           [(ngModel)]="user.cvv"></ion-input>
+            </ion-item>
+            <!--date-->
+            <ion-item>
+                <ion-label>Date of expiry:</ion-label>
+                <ion-input type="number" name="date" id="date" placeholder="25/06/2020"
+                           [(ngModel)]="user.date"></ion-input>
+            </ion-item>
+        </ion-list>
+        <!--button-->
+        <button class="login-btn" ion-button type="submit">Save</button>
+    </form>
+</ion-content>

@@ -1,0 +1,76 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Cart</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only color="royal">
+                <ion-icon name="cart"></ion-icon>
+                <ion-badge class="carts" item-right color="danger">{{noOfItems}}</ion-badge>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div>
+        <ion-list class="cart-list" *ngFor="let cartItem of cartItems"><!-- item-list -->
+            <ion-item class="cart-item"><!-- item -->
+                <ion-row>
+                    <ion-col width-10><!-- col-cancel  button -->
+                        <ion-icon class="close-btn" ion-button icon only clear ios="ios-close-circle"
+                                  md="md-close-circle"
+                                  (click)="deleteItem(cartItem)">
+                        </ion-icon>
+                    </ion-col>
+                    <ion-col><!-- col-for item-image and details -->
+                        <ion-row>
+                            <ion-col width-50><!-- item-image -->
+                                <img src={{cartItem.image}} alt="">
+                            </ion-col>
+                            <ion-col>
+                                <p class="item-name">{{cartItem.name}}</p>
+                                <p class="item-detail" text-wrap>Quantity : {{cartItem.Quantity}}</p>
+                                <p class="item-detail">Price :
+    <span *ngIf="!cartItem.sizeOption.offerValue" class="item-price">
+                         ${{cartItem.sizeOption.value}}</span>
+    <span *ngIf="cartItem.sizeOption.offerValue" class="item-price">
+                          ${{cartItem.sizeOption.offerValue}}</span>
+                    </p>
+                                <ion-row><!-- row-for count item -->
+
+                                    <div class="count">
+            <span class="item-count" (click)="remove(cartItem)">
+              -
+            </span>
+                                        <span class="item-count show-count">
+          {{cartItem.Quantity}}
+            </span>
+                                        <span class="item-count" (click)="add(cartItem)">
+              +
+            </span>
+                                    </div>
+                                </ion-row>
+                            </ion-col>
+                        </ion-row>
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+        </ion-list>
+        <ion-row class="price-details">
+            <ion-col class="calculate">
+                <p class="bill-detail">Price Subtotal <span> ${{SubTotalPrice}}</span></p>
+                <p class="bill-detail">Total VAT (5%) <span> ${{totalVat | number}}</span></p>
+                <p class="bill-detail">Other Taxes (3%)
+                    <span>${{otherTaxes | number}}</span></p>
+                <hr>
+                <p class="cart-total"><strong>Order Total </strong><span class="price">${{GrandTotal}}</span>
+                </p>
+            </ion-col>
+        </ion-row><!-- row-bill-deatails -->
+        <!-- continue button -->
+        <ion-row>
+            <ion-col>
+                <button ion-button block class="continue-btn" (click)="checkout()">Continue</button>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

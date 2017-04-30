@@ -1,0 +1,17 @@
+page-news-detail {
+  .card {
+    margin: 0px;
+    width: 100%;
+  }
+  .news-head {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+  }
+  .news-time {
+    padding-left: 17px;
+    font-size: 10px;
+    color: $grey;
+  }
+}

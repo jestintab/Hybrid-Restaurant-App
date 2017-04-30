@@ -1,0 +1,38 @@
+page-orders {
+  ion-row{
+    border-bottom: 1px solid $light-grey;
+  }
+  .orders-list {
+    .orders-item {
+      padding: 0px !important;
+      img {
+        min-height: 60px;
+        width: 100%
+      }
+      .item-name, .date {
+        font-weight: 100;
+        font-size: 12px;
+        line-height: 20px;
+      }
+      .item-price {
+        font-weight: 700;
+        color: $primary;
+      }
+      .btn-cart {
+        height: 2.2rem;
+        width: 2.2rem;
+        float: right;
+        box-shadow:none;
+      }
+      .btn-view{
+        float: right;
+        margin: 1.2rem 0.2rem;
+        padding: 0 1em;
+        height: 2.2rem;
+        background-color: $primary;
+        font-size: 1rem;
+        box-shadow:none;
+      }
+    }
+  }
+}

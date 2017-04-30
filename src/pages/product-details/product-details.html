@@ -1,0 +1,84 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{ itemdetail_name }}</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only color="royal" (click)="navcart()">
+                <ion-icon name="cart"></ion-icon>
+                <ion-badge class="carts" item-right color="danger">{{noOfItems}}</ion-badge>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-row class="productImage" >
+        <img src="http://aljedad.com/sforder/assets/images/{{itemdetail_image}}" alt="">
+        <p class="text-over-image">{{itemdetail_name }} &nbsp;<span class="prod-price">
+        ({{itemdetail_price | trunc }} QR)</span></p>
+        <span clear text-center (click)="toggleFavourite()">
+        <ion-icon class="fav" name="heart" *ngIf="!visible"
+                  (click)="removeFromFavourite(itemdetail_id)"></ion-icon>
+        <ion-icon class="fav heart-clicked" name="heart" *ngIf="visible"
+                  (click)="addToFavourite(itemdetail_id)"></ion-icon>
+    </span>
+    </ion-row>
+
+    <ion-row>
+        <ion-col width-50>
+            <div class="count">
+            <span class="item-count" (click)="remove()">
+              -
+            </span>
+                <span class="item-count show-count">
+              {{count}}
+            </span>
+                <span class="item-count" (click)="add()">
+              +
+            </span>
+            </div>
+        </ion-col>
+
+        <ion-col width-50>
+            <a (click)="addToCart(product.id)" ion-button icon-left full class="btn-add-to-cart">
+                <ion-icon name="cart"></ion-icon>
+                ADD TO CART
+            </a>
+        </ion-col>
+    </ion-row>
+
+
+    <ion-list class="extra-list">
+        <ion-list-header class="header" text-center>Add extra choice</ion-list-header>
+        <ion-item *ngFor="let option of ExtraOptions; let i= index" class="list-item">
+            <ion-label>{{option.name}} ({{option.value}} USD)</ion-label>
+            <ion-toggle (ionChange)="checkOptions(option)"></ion-toggle>
+        </ion-item>
+    </ion-list>
+
+    <!-- size and price check box -->
+    <ion-list radio-group class="size-list">
+        <ion-list-header class="size-list-header" text-center>
+            Size and prices
+        </ion-list-header>
+        <!--<ion-item *ngFor="let price of prices" class="size-list-item">
+            <ion-label *ngIf!="price.offerValue">{{price.name}} ${{price.value}}</ion-label>
+            <ion-label *ngIf="price.offerValue">{{price.name}} ${{price.offerValue}}</ion-label>
+            <ion-radio class="checked" (ionSelect)="sizeOptions(price)"></ion-radio>
+        </ion-item>-->
+    </ion-list>
+    <ion-row>
+        <ion-col width-50>
+            <a (click)="addToCart(product.id)" ion-button icon-left full class="btn-add-to-cart">
+                <ion-icon name="cart"></ion-icon>
+                CHECKOUT
+            </a>
+        </ion-col>
+        <ion-col width-50>
+            <a (click)="home()" ion-button icon-left full class="btn-add-to-cart">
+                <ion-icon name="basket"></ion-icon>
+                KEEP SHOPPING
+            </a>
+        </ion-col>
+    </ion-row>
+</ion-content>

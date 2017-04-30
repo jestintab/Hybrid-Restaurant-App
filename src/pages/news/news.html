@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>News</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item (click)="newsDetail(news.id)" *ngFor="let news of newsList">
+            <ion-thumbnail item-left>
+                <img src="{{news.image}}">
+            </ion-thumbnail>
+            <h2>{{news.title}} </h2>
+            <p>{{news.discription}}</p>
+        </ion-item>
+    </ion-list>
+</ion-content>
