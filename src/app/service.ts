@@ -41,6 +41,14 @@ export class Service {
           return this.http.get(this.sfapiUrl+'/9i3njlbu8_menus/'+menuId+this.json)
             .map((response: Response) => response.json());
     }
+    getMenuOptions(menuId){
+          return this.http.get(this.sfapiUrl+'/9i3njlbu8_menu_options/'+this.json+this.amp+this.filter+'menu_id'+this.equalTo+menuId)
+            .map((res: Response) => res.json());
+    }
+    getOptionName(optionValueId,optionId){
+          return this.http.get(this.sfapiUrl+'/9i3njlbu8_option_values/'+this.json+this.amp+this.filter+'option_value_id'+this.equalTo+optionValueId+this.amp+'option_id'+this.equalTo+optionId+this.sort+'priority+asc')
+            .map((resp: Response) => resp.json());
+    }
 
 
 

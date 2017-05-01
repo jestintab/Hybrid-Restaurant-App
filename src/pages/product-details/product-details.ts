@@ -6,6 +6,8 @@ import {HomePage} from '../../pages/home/home';
 import {Storage} from '@ionic/storage';
 import  unserialize   from 'locutus/php/var/unserialize';
 import  html_entity_decode   from 'locutus/php/strings/html_entity_decode';
+import 'rxjs/Rx';
+
 
 @Component({
     selector: 'page-product-details',
@@ -32,6 +34,11 @@ export class ProductDetailsPage {
     itemdetail_image:string;
     itemdetail_description:string;
     itemdetail_id:number;
+    menuOptions: any;
+    menuOptionJson: any;
+    menuOptionname: any;
+    menuOptionId: number;
+    menuExtras: any;
 
     constructor(public navCtrl: NavController,
                 public alertCtrl: AlertController,
@@ -68,23 +75,42 @@ export class ProductDetailsPage {
         //     })
         this.service.getMenuItem(this.productId)
                 .subscribe((response) => {
-                    
                     this.itemDetails = response.restify.rows;
                     this.itemDetails.forEach(itemdetail => {
                         this.itemdetail_name = itemdetail.values.menu_name.value;
                         this.itemdetail_description = itemdetail.values.menu_description.value;
                         this.itemdetail_image = itemdetail.values.menu_photo.value;
                         this.itemdetail_price = itemdetail.values.menu_price.value;
-                        this.itemdetail_id = itemdetail.values.menu_id.value;
-                        
+                        this.itemdetail_id = itemdetail.values.menu_id.value;                      
                        //console.log(itemdetail.values.menu_name.value);
-                    });
-
-                                  
+                    });                                  
                 })
+        this.service.getMenuOptions(this.productId)
+                    .subscribe((res) => {
+                       this.menuOptions = res.restify.rows;
+                       this.menuOptions.forEach( menuOption => {
+                           this.menuOptionJson = menuOption.values.option_values.value;
+                           this.menuOptionId = menuOption.values.option_id.value;
+                       });
+                       this.menuOptionJson = unserialize(html_entity_decode(this.menuOptionJson));
+                      //this.menuOptionJson = JSON.parse(this.menuOptionJson);
+                      // console.log(this.menuOptionJson);
+                        for (let i of Object.keys(this.menuOptionJson)) {
+                           // console.log(i,this.menuOptionJson[i].option_value_id);
+                           this.service.getOptionName(this.menuOptionJson[i].option_value_id,this.menuOptionId)
+                                        .subscribe((resp)=>{
 
-               console.log(unserialize(html_entity_decode('a:6:{i:1;a:5:{s:15:&quot;option_value_id&quot;;s:2:&quot;21&quot;;s:5:&quot;price&quot;;s:6:&quot;5.0000&quot;;s:8:&quot;quantity&quot;;s:1:&quot;0&quot;;s:14:&quot;subtract_stock&quot;;s:1:&quot;0&quot;;s:20:&quot;menu_option_value_id&quot;;s:2:&quot;97&quot;;}i:2;a:5:{s:15:&quot;option_value_id&quot;;s:2:&quot;22&quot;;s:5:&quot;price&quot;;s:6:&quot;5.0000&quot;;s:8:&quot;quantity&quot;;s:1:&quot;0&quot;;s:14:&quot;subtract_stock&quot;;s:1:&quot;0&quot;;s:20:&quot;menu_option_value_id&quot;;s:2:&quot;98&quot;;}i:3;a:5:{s:15:&quot;option_value_id&quot;;s:2:&quot;23&quot;;s:5:&quot;price&quot;;s:6:&quot;4.0000&quot;;s:8:&quot;quantity&quot;;s:1:&quot;0&quot;;s:14:&quot;subtract_stock&quot;;s:1:&quot;0&quot;;s:20:&quot;menu_option_value_id&quot;;s:2:&quot;99&quot;;}i:4;a:5:{s:15:&quot;option_value_id&quot;;s:2:&quot;24&quot;;s:5:&quot;price&quot;;s:6:&quot;5.0000&quot;;s:8:&quot;quantity&quot;;s:1:&quot;0&quot;;s:14:&quot;subtract_stock&quot;;s:1:&quot;0&quot;;s:20:&quot;menu_option_value_id&quot;;s:3:&quot;100&quot;;}i:5;a:5:{s:15:&quot;option_value_id&quot;;s:2:&quot;25&quot;;s:5:&quot;price&quot;;s:6:&quot;3.0000&quot;;s:8:&quot;quantity&quot;;s:1:&quot;0&quot;;s:14:&quot;subtract_stock&quot;;s:1:&quot;0&quot;;s:20:&quot;menu_option_value_id&quot;;s:3:&quot;101&quot;;}i:6;a:5:{s:15:&quot;option_value_id&quot;;s:2:&quot;39&quot;;s:5:&quot;price&quot;;s:1:&quot;4&quot;;s:8:&quot;quantity&quot;;s:0:&quot;&quot;;s:14:&quot;subtract_stock&quot;;s:1:&quot;0&quot;;s:20:&quot;menu_option_value_id&quot;;s:0:&quot;&quot;;}}'))); 
-              
+                                                for(let j of Object.keys(resp.restify.rows)){
+                                                    this.ExtraOptions.push({'option_value_id': resp.restify.rows[j].values.option_value_id.value,
+                                                                            'option_id': resp.restify.rows[j].values.option_id.value,
+                                                                            'name': resp.restify.rows[j].values.value.value,
+                                                                            'price': resp.restify.rows[j].values.price.value
+                                                                        });                                          
+                                                }
+                                            })                                       
+                         }                                                        
+                                            console.log(this.ExtraOptions);   
+                })
                 
     }
 

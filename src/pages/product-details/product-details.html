@@ -50,8 +50,8 @@
 
     <ion-list class="extra-list">
         <ion-list-header class="header" text-center>Add extra choice</ion-list-header>
-        <ion-item *ngFor="let option of ExtraOptions; let i= index" class="list-item">
-            <ion-label>{{option.name}} ({{option.value}} USD)</ion-label>
+        <ion-item *ngFor="let option of ExtraOptions" class="list-item">
+            <ion-label>{{option.name}} ({{option.price | trunc }} QR)</ion-label>
             <ion-toggle (ionChange)="checkOptions(option)"></ion-toggle>
         </ion-item>
     </ion-list>
@@ -61,11 +61,11 @@
         <ion-list-header class="size-list-header" text-center>
             Size and prices
         </ion-list-header>
-        <!--<ion-item *ngFor="let price of prices" class="size-list-item">
-            <ion-label *ngIf!="price.offerValue">{{price.name}} ${{price.value}}</ion-label>
-            <ion-label *ngIf="price.offerValue">{{price.name}} ${{price.offerValue}}</ion-label>
+        <ion-item *ngFor="let price of prices" class="size-list-item">
+            <ion-label *ngIf!="price.offerValue">{{itemdetail_name}} QR{{itemdetail_price | trunc}}</ion-label>
+            <!--<ion-label *ngIf="price.offerValue">{{price.name}} ${{price.offerValue}}</ion-label>-->
             <ion-radio class="checked" (ionSelect)="sizeOptions(price)"></ion-radio>
-        </ion-item>-->
+        </ion-item>
     </ion-list>
     <ion-row>
         <ion-col width-50>
