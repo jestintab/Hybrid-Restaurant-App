@@ -36,9 +36,9 @@ export class ProductDetailsPage {
     itemdetail_id:number;
     menuOptions: any;
     menuOptionJson: any;
-    menuOptionname: any;
     menuOptionId: number;
     menuExtras: any;
+    optionLength: number;
 
     constructor(public navCtrl: NavController,
                 public alertCtrl: AlertController,
@@ -88,43 +88,45 @@ export class ProductDetailsPage {
         this.service.getMenuOptions(this.productId)
                     .subscribe((res) => {
                        this.menuOptions = res.restify.rows;
+                       this.optionLength = this.menuOptions.length;
+                if(this.menuOptions.length != 0){
+
                        this.menuOptions.forEach( menuOption => {
                            this.menuOptionJson = menuOption.values.option_values.value;
                            this.menuOptionId = menuOption.values.option_id.value;
-                       });
+
+                       });                      
                        this.menuOptionJson = unserialize(html_entity_decode(this.menuOptionJson));
-                      //this.menuOptionJson = JSON.parse(this.menuOptionJson);
-                      // console.log(this.menuOptionJson);
                         for (let i of Object.keys(this.menuOptionJson)) {
-                           // console.log(i,this.menuOptionJson[i].option_value_id);
+
                            this.service.getOptionName(this.menuOptionJson[i].option_value_id,this.menuOptionId)
                                         .subscribe((resp)=>{
 
                                                 for(let j of Object.keys(resp.restify.rows)){
+
                                                     this.ExtraOptions.push({'option_value_id': resp.restify.rows[j].values.option_value_id.value,
                                                                             'option_id': resp.restify.rows[j].values.option_id.value,
                                                                             'name': resp.restify.rows[j].values.value.value,
                                                                             'price': resp.restify.rows[j].values.price.value
                                                                         });                                          
-                                                }
-                                            })                                       
-                         }                                                        
-                                            console.log(this.ExtraOptions);   
-                })
-                
-    }
+                                                     }
+                                                });                                       
+                            }                                                                                
+                        }                   
+                    })          
+        }
 
 
     addToCart(productId) {
-        if (this.product.sizeOption.name == null) {
-            let alert = this.alertCtrl.create({
-                title: 'Please!',
-                subTitle: 'Select Size and Price!',
-                buttons: ['OK']
-            });
-            alert.present();
-        }
-        else {
+        // if (this.product.sizeOption.name == null) {
+        //     let alert = this.alertCtrl.create({
+        //         title: 'Please!',
+        //         subTitle: 'Select Size and Price!',
+        //         buttons: ['OK']
+        //     });
+        //     alert.present();
+        // }
+        // else {
             this.Cart = JSON.parse(localStorage.getItem("cartItem"));
             if (this.Cart == null) {
                 this.product.Quantity = this.count;
@@ -168,7 +170,7 @@ export class ProductDetailsPage {
             }
             this.navCtrl.push(CartPage);
 
-        }
+        
     }
 
     checkOptions(option) {

@@ -22026,7 +22026,7 @@ page-product-details .count .item-count {
   padding: 11.5px 20px;
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  color: #000;
   background-color: #777;
 }
 
@@ -22040,7 +22040,7 @@ page-product-details .label {
 
 page-product-details .btn-add-to-cart {
   background-color: #fecc27 !important;
-  color: #fff;
+  color: #222;
   padding: 22.2px;
   box-shadow: none;
   font-size: 14px;
@@ -22113,6 +22113,14 @@ page-product-details .fav {
 
 page-product-details .heart-clicked {
   color: #fecc27;
+}
+
+page-product-details .item-name {
+  color: #222;
+}
+
+page-product-details .item-price {
+  float: right;
 }
 
 page-product-list .trim-info {

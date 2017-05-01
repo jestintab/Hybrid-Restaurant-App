@@ -34,7 +34,7 @@ page-product-details {
       padding: 11.5px 20px;
       font-size: 20px;
       font-weight: 700;
-      color: #fff;
+      color: #000;
       background-color: #777;
     }
     .show-count {
@@ -46,7 +46,7 @@ page-product-details {
   }
   .btn-add-to-cart {
     background-color: $primary !important;
-    color: $white;
+    color: $dark;
     padding: 22.2px;
     box-shadow: none;
     font-size: 14px;
@@ -120,5 +120,12 @@ page-product-details {
   }
   .heart-clicked{
     color:$primary;
+  }
+  .item-name{
+    color:$dark;
+    
+  }
+  .item-price{
+    float: right;
   }
 }
