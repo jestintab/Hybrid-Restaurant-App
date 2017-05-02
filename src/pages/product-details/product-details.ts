@@ -111,15 +111,13 @@ export class ProductDetailsPage {
                                         .subscribe((resp)=>{
 
                                                 for(let j of Object.keys(resp.restify.rows)){
-                                                   
-
+                    
                                                     this.ExtraOptions.push({'option_value_id': resp.restify.rows[j].values.option_value_id.value,
                                                                             'option_id': resp.restify.rows[j].values.option_id.value,
                                                                             'name': resp.restify.rows[j].values.value.value,
-                                                                            'price': resp.restify.rows[j].values.price.value
+                                                                            'price': parseInt(resp.restify.rows[j].values.price.value)
                                                                         }); 
-                                                    //this.ExtraOptions. = j;
-                                                                                                                 
+                                                                                                              
                                                      }
                     
                                                      
@@ -127,8 +125,7 @@ export class ProductDetailsPage {
                             }                                                                                
                         }                   
                     })     
-                    console.log(this.ExtraOptions);
-                    console.log(this.ExtraOptions.length);
+                  
                    
                     
 
@@ -153,8 +150,8 @@ export class ProductDetailsPage {
                
                 let proExtraPrice = 0;
                 for (let i = 0; i <= this.product.extraOption.length - 1; i++) {
-                    proExtraPrice = proExtraPrice + this.product.extraOption[i].value;
-                    this.product.extraPrice = proExtraPrice;
+                    proExtraPrice = proExtraPrice + parseInt(this.product.extraOption[i].price);
+                    this.product.extraPrice =  proExtraPrice;
                 }
 
                 this.itemInCart.push(this.product);
@@ -187,6 +184,7 @@ export class ProductDetailsPage {
     }
 
     checkOptions(option) {
+        
         if (this.product.extraOption.length !== 0) {
             for (let i = 0; i <= this.product.extraOption.length - 1; i++) {
                 if (this.product.extraOption[i].name == option.name) {
@@ -202,11 +200,12 @@ export class ProductDetailsPage {
         else {
             this.product.extraOption.push(option);
         }
+        
     }
 
-    sizeOptions(price) {
-        this.product.sizeOption = price;
-    }
+    // sizeOptions(price) {
+    //     this.product.sizeOption = price;
+    // }
 
     add() {
         if (this.count < 10) {

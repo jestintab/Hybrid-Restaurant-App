@@ -11,8 +11,7 @@ import {HomePage} from "../../pages/home/home";
 export class CartPage {
     cartItems: any[] = [];
     SubTotalPrice: number;
-    totalVat: number;
-    otherTaxes: number;
+    delivery: number;
     GrandTotal: number;
     noOfItems: number;
     constructor(public navCtrl: NavController,
@@ -49,7 +48,7 @@ export class CartPage {
         else {
             this.noOfItems = this.cartItems.length;
             this.CalculatePrice();
-
+            console.log(this.cartItems);
         }
     }
 
@@ -63,8 +62,6 @@ export class CartPage {
 
         if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
             this.SubTotalPrice = 0;
-            this.totalVat = 0;
-            this.otherTaxes = 0;
             this.GrandTotal = 0;
         }
         else {
@@ -112,6 +109,7 @@ export class CartPage {
         for (let i = 0; i <= this.cartItems.length; i++) {
             if (this.cartItems[i] != null) {
                 if (this.cartItems[i].extraPrice != null) {
+                    
                     proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].itemTotalPrice + this.cartItems[i].extraPrice;
                 } else {
                     proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].itemTotalPrice;
@@ -119,9 +117,8 @@ export class CartPage {
                 this.SubTotalPrice = proGrandTotalPrice;
             }
         }
-        this.totalVat = ((5 / 100) * this.SubTotalPrice);
-        this.otherTaxes = ((3 / 100) * this.SubTotalPrice);
-        this.GrandTotal = Math.ceil(this.SubTotalPrice + this.totalVat + this.otherTaxes);
+        this.delivery = 5;
+        this.GrandTotal = Math.ceil(this.SubTotalPrice + this.delivery );
     }
      
 
@@ -131,11 +128,8 @@ export class CartPage {
       for (let i = 0; i <= this.cartItems.length - 1; i++) {
       if (this.cartItems[i].id == data.id) {
         this.cartItems[i].Quantity = data.Quantity;
-        if(this.cartItems[i].sizeOption.offerValue){
-            this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].sizeOption.offerValue);
-        } else {
-        this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].sizeOption.value);
-      }
+        this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].price);
+       
   }
     }
     localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
@@ -150,11 +144,8 @@ export class CartPage {
       for (let i = 0; i <= this.cartItems.length - 1; i++) {
       if (this.cartItems[i].id == data.id) {
         this.cartItems[i].Quantity = data.Quantity;
-        if(this.cartItems[i].sizeOption.offerValue){
-        this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].sizeOption.offerValue);
-        } else {
-        this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].sizeOption.value);
-      }
+        this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].price);
+        
       }
     }
     localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
