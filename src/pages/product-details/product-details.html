@@ -1,6 +1,6 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>{{ itemdetail_name }}</ion-title>
+        <ion-title>{{ product.name }}</ion-title>
         <ion-buttons end>
             <button ion-button icon-only color="royal" (click)="navcart()">
                 <ion-icon name="cart"></ion-icon>
@@ -13,14 +13,14 @@
 
 <ion-content>
     <ion-row class="productImage" >
-        <img src="http://aljedad.com/sforder/assets/images/{{itemdetail_image}}" alt="">
-        <p class="text-over-image">{{itemdetail_name }} &nbsp;<span class="prod-price">
-        ({{itemdetail_price | trunc }} QR)</span></p>
+        <img src="http://aljedad.com/sforder/assets/images/{{product.image}}" alt="">
+        <p class="text-over-image">{{product.name }} &nbsp;<span class="prod-price">
+        ({{product.price | trunc }} QR)</span></p>
         <span clear text-center (click)="toggleFavourite()">
         <ion-icon class="fav" name="heart" *ngIf="!visible"
-                  (click)="removeFromFavourite(itemdetail_id)"></ion-icon>
+                  (click)="removeFromFavourite(product.id)"></ion-icon>
         <ion-icon class="fav heart-clicked" name="heart" *ngIf="visible"
-                  (click)="addToFavourite(itemdetail_id)"></ion-icon>
+                  (click)="addToFavourite(product.id)"></ion-icon>
     </span>
     </ion-row>
 <!-- size and price check box -->
@@ -29,8 +29,8 @@
             Size and prices
         </ion-list-header>-->
         <ion-item>
-            <ion-label class="item-name" width-50><strong>{{itemdetail_name}}</strong></ion-label>
-            <ion-label class="item-price" width-20><strong>{{itemdetail_price | trunc}} QR</strong></ion-label>
+            <ion-label class="item-name" width-50><strong>{{product.name}}</strong></ion-label>
+            <ion-label class="item-price" width-20><strong>{{product.price | trunc}} QR</strong></ion-label>
             <!--<ion-label *ngIf="price.offerValue">{{price.name}} ${{price.offerValue}}</ion-label>-->
             <!--<ion-radio class="checked" checked (ionSelect)="sizeOptions(itemdetail_price)"></ion-radio>
             -->

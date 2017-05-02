@@ -24,16 +24,16 @@
                     <ion-col><!-- col-for item-image and details -->
                         <ion-row>
                             <ion-col width-50><!-- item-image -->
-                                <img src={{cartItem.image}} alt="">
+                                <img src="http://aljedad.com/sforder/assets/images/thumbnail/{{cartItem.thumb}}" alt="">
                             </ion-col>
                             <ion-col>
                                 <p class="item-name">{{cartItem.name}}</p>
                                 <p class="item-detail" text-wrap>Quantity : {{cartItem.Quantity}}</p>
-                                <p class="item-detail">Price :
-    <span *ngIf="!cartItem.sizeOption.offerValue" class="item-price">
+                                <p class="item-detail">Price : {{cartItem.price | trunc}}
+    <!--<span *ngIf="!cartItem.sizeOption.offerValue" class="item-price">
                          ${{cartItem.sizeOption.value}}</span>
     <span *ngIf="cartItem.sizeOption.offerValue" class="item-price">
-                          ${{cartItem.sizeOption.offerValue}}</span>
+                          ${{cartItem.sizeOption.offerValue}}</span>-->
                     </p>
                                 <ion-row><!-- row-for count item -->
 

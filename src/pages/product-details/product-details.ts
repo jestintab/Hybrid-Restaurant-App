@@ -24,16 +24,15 @@ export class ProductDetailsPage {
     Cart: any[] = [];
     prices: any[] = [{value: ''}];
     product: any = {
-        sizeOption: {},
         extraOption: []
     };
     productDetails: any[] = [];
     itemDetails: any;
-    itemdetail_name:string;
-    itemdetail_price:string;
-    itemdetail_image:string;
-    itemdetail_description:string;
-    itemdetail_id:number;
+    // itemdetail_name:string;
+    // itemdetail_price:string;
+    // itemdetail_image:string;
+    // itemdetail_description:string;
+    // itemdetail_id:number;
     menuOptions: any;
     menuOptionJson: any;
     menuOptionId: number;
@@ -77,18 +76,27 @@ export class ProductDetailsPage {
                 .subscribe((response) => {
                     this.itemDetails = response.restify.rows;
                     this.itemDetails.forEach(itemdetail => {
-                        this.itemdetail_name = itemdetail.values.menu_name.value;
-                        this.itemdetail_description = itemdetail.values.menu_description.value;
-                        this.itemdetail_image = itemdetail.values.menu_photo.value;
-                        this.itemdetail_price = itemdetail.values.menu_price.value;
-                        this.itemdetail_id = itemdetail.values.menu_id.value;                      
-                       //console.log(itemdetail.values.menu_name.value);
+                        // this.itemdetail_name = itemdetail.values.menu_name.value;
+                        // this.itemdetail_description = itemdetail.values.menu_description.value;
+                        // this.itemdetail_image = itemdetail.values.menu_photo.value;
+                        // this.itemdetail_price = itemdetail.values.menu_price.value;
+                        // this.itemdetail_id = itemdetail.values.menu_id.value;      
+                        this.product.name = itemdetail.values.menu_name.value;
+                        this.product.description = itemdetail.values.menu_description.value;
+                        this.product.image = itemdetail.values.menu_photo.value;
+                        this.product.price = itemdetail.values.menu_price.value;
+                        this.product.id = itemdetail.values.menu_id.value;      
+                        this.product.thumb = itemdetail.values.menu_thumb.value;               
+                      
                     });                                  
                 })
+                // console.log(this.product);
+                // console.log(this.productDetails);
         this.service.getMenuOptions(this.productId)
                     .subscribe((res) => {
                        this.menuOptions = res.restify.rows;
                        this.optionLength = this.menuOptions.length;
+                      
                 if(this.menuOptions.length != 0){
 
                        this.menuOptions.forEach( menuOption => {
@@ -103,17 +111,27 @@ export class ProductDetailsPage {
                                         .subscribe((resp)=>{
 
                                                 for(let j of Object.keys(resp.restify.rows)){
+                                                   
 
                                                     this.ExtraOptions.push({'option_value_id': resp.restify.rows[j].values.option_value_id.value,
                                                                             'option_id': resp.restify.rows[j].values.option_id.value,
                                                                             'name': resp.restify.rows[j].values.value.value,
                                                                             'price': resp.restify.rows[j].values.price.value
-                                                                        });                                          
+                                                                        }); 
+                                                    //this.ExtraOptions. = j;
+                                                                                                                 
                                                      }
+                    
+                                                     
                                                 });                                       
                             }                                                                                
                         }                   
-                    })          
+                    })     
+                    console.log(this.ExtraOptions);
+                    console.log(this.ExtraOptions.length);
+                   
+                    
+
         }
 
 
@@ -130,11 +148,9 @@ export class ProductDetailsPage {
             this.Cart = JSON.parse(localStorage.getItem("cartItem"));
             if (this.Cart == null) {
                 this.product.Quantity = this.count;
-                if(this.product.sizeOption.offerValue){
-                   this.product.itemTotalPrice = this.product.Quantity * this.product.sizeOption.offerValue; 
-                }else {
-                this.product.itemTotalPrice = this.product.Quantity * this.product.sizeOption.value;
-               }
+               
+                this.product.itemTotalPrice = this.product.Quantity * this.product.price;
+               
                 let proExtraPrice = 0;
                 for (let i = 0; i <= this.product.extraOption.length - 1; i++) {
                     proExtraPrice = proExtraPrice + this.product.extraOption[i].value;
@@ -154,11 +170,8 @@ export class ProductDetailsPage {
                     }
                 }
                 this.product.Quantity = this.count;
-                if(this.product.sizeOption.offerValue){
-                   this.product.itemTotalPrice = this.product.Quantity * this.product.sizeOption.offerValue; 
-                }else {
-                this.product.itemTotalPrice = this.product.Quantity * this.product.sizeOption.value;
-               }
+                this.product.itemTotalPrice = this.product.Quantity * this.product.price;
+                 
                 let proExtraPrice = 0;
                 for (let i = 0; i <= this.product.extraOption.length - 1; ++i) {
                     proExtraPrice = proExtraPrice + this.product.extraOption[i].value;

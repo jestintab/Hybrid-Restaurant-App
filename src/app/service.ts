@@ -39,14 +39,17 @@ export class Service {
     }
     getMenuItem(menuId){
           return this.http.get(this.sfapiUrl+'/9i3njlbu8_menus/'+menuId+this.json)
+            .cache()
             .map((response: Response) => response.json());
     }
     getMenuOptions(menuId){
           return this.http.get(this.sfapiUrl+'/9i3njlbu8_menu_options/'+this.json+this.amp+this.filter+'menu_id'+this.equalTo+menuId)
+            .cache()
             .map((res: Response) => res.json());
     }
     getOptionName(optionValueId,optionId){
           return this.http.get(this.sfapiUrl+'/9i3njlbu8_option_values/'+this.json+this.amp+this.filter+'option_value_id'+this.equalTo+optionValueId+this.amp+'option_id'+this.equalTo+optionId+this.sort+'priority+asc')
+            .cache()
             .map((resp: Response) => resp.json());
     }
 
