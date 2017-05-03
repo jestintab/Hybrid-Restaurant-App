@@ -151,7 +151,7 @@ export class ProductDetailsPage {
                 let proExtraPrice = 0;
                 for (let i = 0; i <= this.product.extraOption.length - 1; i++) {
                     proExtraPrice = proExtraPrice + parseInt(this.product.extraOption[i].price);
-                    this.product.extraPrice =  proExtraPrice;
+                    //this.product.extraPrice =  proExtraPrice;
                 }
 
                 this.itemInCart.push(this.product);

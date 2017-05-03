@@ -48,7 +48,7 @@ export class CartPage {
         else {
             this.noOfItems = this.cartItems.length;
             this.CalculatePrice();
-            console.log(this.cartItems);
+            //console.log(this.cartItems);
         }
     }
 
@@ -78,15 +78,16 @@ export class CartPage {
     }
 
     deleteOptionItem(data) {
-        console.log(data);
         for (let i = 0; i <= this.cartItems.length - 1; i++) {
           for(let j = 0; j <= this.cartItems[i].extraOption.length -1 ; j++){
             if (this.cartItems[i].extraOption[j].id == data.id) {
                 this.cartItems[i].extraOption.splice(j, 1);
+                console.log(this.cartItems);
             }
           }
         }
-        this.CalculatePrice();
+            this.CalculatePrice();
+        
         localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
         this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
         this.noOfItems = this.noOfItems - 1;
@@ -126,11 +127,16 @@ export class CartPage {
         let proGrandTotalPrice = 0;
         for (let i = 0; i <= this.cartItems.length; i++) {
             if (this.cartItems[i] != null) {
-                if (this.cartItems[i].extraPrice != null) {
+                
+                if (this.cartItems[i].extraOption.length != 0) {
+                    for(let j = 0; j <= this.cartItems[i].extraOption.length -1 ; j++){
+                     proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].extraOption[j].price;                            
+                    }      
+                     proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].itemTotalPrice;                
                     
-                    proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].itemTotalPrice + this.cartItems[i].extraPrice;
                 } else {
                     proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].itemTotalPrice;
+                   
                 }
                 this.SubTotalPrice = proGrandTotalPrice;
             }
@@ -147,8 +153,7 @@ export class CartPage {
       if (this.cartItems[i].id == data.id) {
         this.cartItems[i].Quantity = data.Quantity;
         this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].price);
-       
-  }
+       }
     }
     localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
     this.CalculatePrice();
@@ -162,8 +167,7 @@ export class CartPage {
       for (let i = 0; i <= this.cartItems.length - 1; i++) {
       if (this.cartItems[i].id == data.id) {
         this.cartItems[i].Quantity = data.Quantity;
-        this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].price);
-        
+        this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].price);      
       }
     }
     localStorage.setItem('cartItem', JSON.stringify(this.cartItems));

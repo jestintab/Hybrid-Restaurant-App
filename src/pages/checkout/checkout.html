@@ -25,17 +25,23 @@
                                [(ngModel)]="orderDetails.name"></ion-input>
                 </ion-item>
                 <ion-item class="sub-address">
+                    <ion-input type="email" placeholder="Email" name="email" id="email"
+                               [(ngModel)]="orderDetails.email"></ion-input>
+                </ion-item>
+                <ion-item class="sub-address">
+                    <ion-input type="number" placeholder="Phone" name="phone" id="phone"
+                               [(ngModel)]="orderDetails.phone"></ion-input>
+                </ion-item>
+
+                <ion-item class="sub-address">
                     <ion-textarea rows="3" placeholder="Address" name="adress" id="adress"
                                   [(ngModel)]="orderDetails.adress"></ion-textarea>
                 </ion-item>
                 <ion-item class="sub-address">
-                    <ion-input type="text" placeholder="City" name="city" id="city"
+                    <ion-input ng-disabled type="text" placeholder="City" ngValue="Doha, Qatar" name="city" id="city" 
                                [(ngModel)]="orderDetails.city"></ion-input>
                 </ion-item>
-                <ion-item class="sub-address">
-                    <ion-input type="number" placeholder="Pincode" name="pincode" id="pincode"
-                               [(ngModel)]="orderDetails.pincode"></ion-input>
-                </ion-item>
+                
             </div>
 
         </ion-list>
@@ -57,8 +63,8 @@
                 </ion-col>
                 <ion-col width-50 class="col-card no-padd">
                     <ion-item>
-                        <ion-label>CARD</ion-label>
-                        <ion-radio value="card" (click)="toggle2()"></ion-radio>
+                        <ion-label>Portable card machine </ion-label>
+                        <ion-radio value="pcm" (click)="toggle2()"></ion-radio>
                     </ion-item>
                 </ion-col>
             </ion-row>
