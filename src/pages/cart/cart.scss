@@ -14,10 +14,7 @@ page-cart {
         left: -32%;
         color: $dark-grey !important;
       }
-      img {
-        height: 100px;
-        width: 100px;
-      }
+    
       .item-name {
         font-weight: 700;
         font-size: 17px;
@@ -28,9 +25,14 @@ page-cart {
         white-space: initial !important;
 
       }
+      .item-option-detail{
+        font-size: 12px;
+        line-height: 1.3em;
+        white-space: initial !important;
+      }
       .item-price {
         font-weight: 700;
-        color: $primary;
+        color: $dark;
       }
      
 
@@ -55,13 +57,13 @@ page-cart {
       span {
         float: right;
         font-weight: 700;
-        color: $primary
+        color: $dark
       }
     }
   }
   .continue-btn {
     background-color: $primary !important;
-    color: $white;
+    color: $dark;
     padding: 22.5px;
     box-shadow: none;
   }

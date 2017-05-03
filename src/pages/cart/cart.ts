@@ -77,6 +77,24 @@ export class CartPage {
         }
     }
 
+    deleteOptionItem(data) {
+        console.log(data);
+        for (let i = 0; i <= this.cartItems.length - 1; i++) {
+          for(let j = 0; j <= this.cartItems[i].extraOption.length -1 ; j++){
+            if (this.cartItems[i].extraOption[j].id == data.id) {
+                this.cartItems[i].extraOption.splice(j, 1);
+            }
+          }
+        }
+        this.CalculatePrice();
+        localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
+        this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
+        this.noOfItems = this.noOfItems - 1;
+        if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
+            this.alert();
+        }
+    }
+
     checkout() {
         if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
             this.alert();

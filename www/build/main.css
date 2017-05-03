@@ -21352,11 +21352,6 @@ page-cart .cart-list .cart-item .close-btn {
   color: #424242 !important;
 }
 
-page-cart .cart-list .cart-item img {
-  height: 100px;
-  width: 100px;
-}
-
 page-cart .cart-list .cart-item .item-name {
   font-weight: 700;
   font-size: 17px;
@@ -21368,9 +21363,15 @@ page-cart .cart-list .cart-item .item-detail {
   white-space: initial !important;
 }
 
+page-cart .cart-list .cart-item .item-option-detail {
+  font-size: 12px;
+  line-height: 1.3em;
+  white-space: initial !important;
+}
+
 page-cart .cart-list .cart-item .item-price {
   font-weight: 700;
-  color: #fecc27;
+  color: #222;
 }
 
 page-cart .calculate {
@@ -21397,12 +21398,12 @@ page-cart .calculate .cart-total {
 page-cart .calculate .cart-total span {
   float: right;
   font-weight: 700;
-  color: #fecc27;
+  color: #222;
 }
 
 page-cart .continue-btn {
   background-color: #fecc27 !important;
-  color: #fff;
+  color: #222;
   padding: 22.5px;
   box-shadow: none;
 }

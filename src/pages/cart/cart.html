@@ -23,7 +23,7 @@
                     </ion-col>
                     <ion-col><!-- col-for item-image and details -->
                         <ion-row>
-                            <ion-col width-30><!-- item-image -->
+                            <ion-col width-25><!-- item-image -->
                                 <img src="http://aljedad.com/sforder/assets/images/thumbnail/{{cartItem.thumb}}" alt="">
                             </ion-col>
                             <ion-col>
@@ -31,7 +31,11 @@
                                    <span class="item-name"> {{ cartItem.name }} </span>                                 
                                 </p>
                                 <!--<p class="item-price"> {{cartItem.price | trunc}} QR </p>-->
-                            
+
+                            <div  *ngFor="let option of cartItem.extraOption"> 
+                            <p class="item-option-detail">+ {{option.name}} - {{option.price}}QR 
+                                <span class="option-delete" (click)="deleteOptionItem(option)"> <strong>x</strong> </span> </p>
+                            </div>   
                                 <ion-row><!-- row-for count item -->
 
                                     <div class="count">
@@ -48,10 +52,10 @@
         </ion-list>
         <ion-row class="price-details">
             <ion-col class="calculate">
-                <p class="bill-detail">Price Subtotal <span> {{SubTotalPrice}} QR</span></p>
-                <p class="bill-detail">Total VAT (5%) <span> {{totalVat | number}} QR</span></p>
-                <p class="bill-detail">Other Taxes (3%)
-                    <span>{{otherTaxes | number}} QR</span></p>
+                <p class="bill-detail">Subtotal <span> {{SubTotalPrice}} QR</span></p>
+                <p class="bill-detail">Delivery Charge <span> {{delivery | number}} QR</span></p>
+                <!--<p class="bill-detail">Other Taxes (3%)
+                    <span>{{otherTaxes | number}} QR</span></p>-->
                 <hr>
                 <p class="cart-total"><strong>Order Total </strong><span class="price">{{GrandTotal}} QR</span>
                 </p>
