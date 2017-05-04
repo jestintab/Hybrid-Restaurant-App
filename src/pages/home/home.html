@@ -28,9 +28,9 @@
         <!-- second-row -->
         <h2 text-center>Categories</h2>
         <ion-row class="categories">
-            <ion-col width-50 *ngFor="let categorie of categories" (click)="navigate(categorie.key)">
-                <img src={{categorie.thumb}}>
-                <p class="text-over-img">{{categorie.title}}</p>
+            <ion-col width-50 *ngFor="let categorie of categories" (click)="navigate(categorie.values.category_id.value)">
+                <img src="https://order.sandwichfactory.qa/assets/images/{{categorie.values.image.value}}">
+                <p class="text-over-img">{{categorie.values.name.value | entity  }}</p>
             </ion-col>
         </ion-row>
     </ion-grid>

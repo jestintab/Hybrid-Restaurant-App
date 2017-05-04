@@ -25,6 +25,7 @@ export class CheckoutPage {
 
     onCheckout(OrderDetails: NgForm) {
         this.OrderedProduct.orderDetail = OrderDetails.value
+        console.log(this.OrderedProduct);
         this.OrderedProduct.COD = this.COD;
         this.navCtrl.push(ThankyouPage);
     }

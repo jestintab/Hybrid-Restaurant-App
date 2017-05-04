@@ -24,14 +24,19 @@ export class HomePage {
         }
         this.service.getData()
             .subscribe((response) => {
-                this.categories = response.categories;
+               // this.categories = response.categories;
                 this.featured = response.featured;
+            })
+              this.service.getCategory()
+            .subscribe((response) => {
+               this.categories = response.restify.rows;
+              
             })
     }
 
-    navigate(MenuId) {
+    navigate(catId) {
         this.navCtrl.push(ProductListPage,
-            {MenuId: MenuId}
+            {catId: catId}
         );
     }
 

@@ -63,7 +63,7 @@
                 </ion-col>
                 <ion-col width-50 class="col-card no-padd">
                     <ion-item>
-                        <ion-label>Portable card machine </ion-label>
+                        <ion-label>PCM </ion-label>
                         <ion-radio value="pcm" (click)="toggle2()"></ion-radio>
                     </ion-item>
                 </ion-col>
@@ -76,6 +76,9 @@
             <ion-list class="card-list" [hidden]="tagHide2">
                 <ion-item class="card-detail">
                     <ion-row>
+                        <p> Our bike delivery staff will bring a portable credit/debit card machine for the payment.</p>
+                    </ion-row>
+                    <!--<ion-row>
                         <ion-col class="no-padd">
                             <ion-item class="card-item">
                                 <ion-input type="number" placeholder="Card No:" name="cardNo" id="cardNo"
@@ -107,7 +110,7 @@
                                            [(ngModel)]="orderDetails.cardHolderName"></ion-input>
                             </ion-item>
                         </ion-col>
-                    </ion-row>
+                    </ion-row>-->
                 </ion-item>
             </ion-list>
         </ion-row>
