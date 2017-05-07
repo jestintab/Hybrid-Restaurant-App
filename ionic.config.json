@@ -4,7 +4,12 @@
   "v2": true,
   "typescript": true,
   "proxies": [{
-  "path": "/category/",
-  "proxyUrl": " http://aljedad.com/api/sforder/9i3njlbu8_categories/"
-}]
+      "path": "/api/sforder",
+      "proxyUrl": "https://order.sandwichfactory.qa"
+    },
+    {
+      "path": "/api/sforder",
+      "proxyUrl": "http://aljedad.com"
+    }
+    ] 
 }

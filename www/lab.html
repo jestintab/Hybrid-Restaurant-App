@@ -1,0 +1,91 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Ionic Lab</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="/ionic-lab/static/img/favicon.png" />
+    <link rel="stylesheet" href="lab/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="header">
+        <div id="header-left">
+          <a target="_blank" href="http://ionicframework.com/" id="logo">
+          </a>
+        </div>
+
+        <div id="header-right">
+          <div class="dropdown">
+            <button class="dropdown-toggle" type="button">Platforms <span class="dropdown-caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><input type="checkbox" id="device-iphone" name="iphone"><label for="device-iphone">iPhone</label></li>
+              <li><input type="checkbox" id="device-android" name="android"><label for="device-android">Android</label></li>
+              <li><input type="checkbox" id="device-windows" name="windows"><label for="device-windows">Windows</label></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <preview>
+      </preview>
+      <div id="footer">
+        <div id="footer-left">
+          <span id="app-info"></span>
+        </div>
+        <!--<div id="footer-right">
+          <a target="_blank" href="http://twitter.com/ionicframework">Twitter</a>
+          <a target="_blank" href="http://ionicframework.com/docs">Documentation</a>
+          <a target="_blank" href="https://forum.ionicframework.com/">Forum</a>
+          <a target="_blank" href="https://github.com/driftyco/ionic">GitHub</a>
+          <a target="_blank" class="view-link" href="http://view.ionic.io/">Ionic View</a>
+        </div>-->
+      </div>
+
+      <div id="view-popup">
+        <div class="view-popup-wrapper">
+          <div class="close"></div>
+          <div class="content">
+           
+          </div>
+          <div class="ionitron"></div>
+        </div>
+      </div>
+    </div>
+    <template id="iphone-frame-template">
+      <div class="phone" id="iphone">
+        <div class="phone-frame">
+          <h2><div class="phone-icon"></div> <a href="/?ionicplatform=ios" target="_blank">iOS</a></h2>
+          <div id="iphone-frame" class="phone-frame-wrap">
+            <div class="statusbar"></div>
+            <iframe src="/index.html" class="frame"></iframe>
+          </div>
+        </div>
+      </div>
+    </template>
+    <template id="android-frame-template">
+      <div class="phone" id="android">
+        <div class="phone-frame">
+          <h2><div class="phone-icon"></div> <a href="/?ionicplatform=android" target="_blank">Android</a></h2>
+          <div id="android-frame" class="phone-frame-wrap">
+            <div class="statusbar"></div>
+            <iframe src="/?ionicplatform=android" class="frame"></iframe>
+          </div>
+        </div>
+      </div>
+    </template>
+    <template id="windows-frame-template">
+      <div class="phone" id="windows">
+        <div class="phone-frame">
+          <h2><div class="phone-icon"></div> <a href="/?ionicplatform=windows" target="_blank">Windows</a></h2>
+          <div id="windows-frame" class="phone-frame-wrap">
+            <div class="statusbar"></div>
+            <iframe src="/?ionicplatform=windows" class="frame"></iframe>
+          </div>
+        </div>
+      </div>
+    </template>
+    <script src="lab/script.js"></script>
+   
+  </body>
+</html>

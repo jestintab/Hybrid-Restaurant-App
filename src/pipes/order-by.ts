@@ -1,5 +1,5 @@
-import { Injectable, Pipe } from '@angular/core';
-import 'rxjs/Rx';
+import {  Pipe } from '@angular/core';
+
 
 /*
   Generated class for the OrderBy pipe.

@@ -1,5 +1,5 @@
 .bar-button-default, .bar-button-clear-default, .bar-button-default {
-  color: $white;
+  color: $dark;
   background-color: transparent;
 }
 
@@ -44,9 +44,10 @@ ion-badge {
   font-size: 11px;
   padding-top: 5px;
   padding-left: 7px;
+  
 }
 .menu-badge{
-  color: #fff;
+color:#fff;
 background-color:$primary;
 float: right;
 border-radius: 50%;
@@ -87,9 +88,9 @@ padding-left: 7px;
     text-align: center;
     .user-img {
       max-width: 100%;
-      height: 5.5em;
-      border: 3px solid $white;
-      border-radius: 50%;
+      height: 12.5em;
+      //border: 3px solid $white;
+      //border-radius: 50%;
       margin-top: 24px;
     }
   }
@@ -106,5 +107,5 @@ padding-left: 7px;
 }
 
 .toolbar-title {
-  color: $white;
+  color: $dark;
 }
