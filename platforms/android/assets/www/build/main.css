@@ -21217,7 +21217,7 @@ sub {
 }
 
 .bar-button-default, .bar-button-clear-default, .bar-button-default {
-  color: #fff;
+  color: #222;
   background-color: transparent;
 }
 
@@ -21309,9 +21309,7 @@ ion-badge {
 
 .sidebar-menu .img-name-row .user-img {
   max-width: 100%;
-  height: 5.5em;
-  border: 3px solid #fff;
-  border-radius: 50%;
+  height: 12.5em;
   margin-top: 24px;
 }
 
@@ -21327,7 +21325,7 @@ ion-badge {
 }
 
 .toolbar-title {
-  color: #fff;
+  color: #222;
 }
 
 page-cart .price-details {
@@ -21421,7 +21419,8 @@ page-cart .count .item-count {
 }
 
 page-cart .count .show-count {
-  background-color: #32cd32 !important;
+  background-color: #fecc27 !important;
+  color: #222;
 }
 
 page-category ion-label {
@@ -21709,8 +21708,6 @@ page-home .grid .categories h2 {
 }
 
 page-home .grid .categories img {
-  height: 110px;
-  width: 100%;
   position: relative;
   z-index: -111;
 }
@@ -22018,6 +22015,21 @@ page-product-details .item.item-block .item-inner {
   border-bottom: 0px;
 }
 
+page-product-details .menu-item {
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  position: relative;
+  width: 100%;
+  margin: -54px 0px 0px 0px;
+  text-align: center;
+  font-size: 18px;
+}
+
+page-product-details .menu-item .item-name {
+  color: #fff;
+}
+
 page-product-details .count {
   padding: 10px 0px;
   margin: 0px;
@@ -22062,7 +22074,7 @@ page-product-details .extra-list .header, page-product-details .size-list .heade
 }
 
 page-product-details .extra-list .toggle .toggle-checked, page-product-details .size-list .toggle .toggle-checked {
-  background-color: #32cd32;
+  background-color: #fecc27;
   width: 45px;
   height: 26px;
 }
