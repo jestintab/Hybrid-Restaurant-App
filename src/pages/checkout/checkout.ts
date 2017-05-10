@@ -2,11 +2,14 @@ import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {NgForm} from "@angular/forms";
 import {ThankyouPage} from '../../pages/thankyou/thankyou';
+import {Service} from '../../app/service';
 
 
 @Component({
     selector: 'page-checkout',
-    templateUrl: 'checkout.html'
+    templateUrl: 'checkout.html',
+    providers: [Service],
+
 })
 export class CheckoutPage {
     orderDetails: any = {};
@@ -19,15 +22,20 @@ export class CheckoutPage {
     };
     COD: string;
 
-    constructor(public navCtrl: NavController) {
+    constructor(public navCtrl: NavController, public service: Service) {
         this.OrderedProduct.cartItems = JSON.parse(localStorage.getItem('cartItem'));
     }
 
     onCheckout(OrderDetails: NgForm) {
         this.OrderedProduct.orderDetail = OrderDetails.value
-        console.log(this.OrderedProduct);
         this.OrderedProduct.COD = this.COD;
-        this.navCtrl.push(ThankyouPage);
+        this.service.postOrderDetails(this.OrderedProduct);
+        // .subscribe((res) => {
+        //     console.log(res);
+        // });
+        console.log(JSON.stringify(this.OrderedProduct));
+        
+        //this.navCtrl.push(ThankyouPage);
     }
 
     toggle2() {
