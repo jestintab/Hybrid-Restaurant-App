@@ -1,18 +1,19 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
-import {ProductListPage} from '../product-list/product-list';
+import {NavController, IonicPage } from 'ionic-angular';
+//import {ProductListPage} from '../product-list/product-list';
 import {Service} from '../../app/service';
 
 
 
 
-@Component({
+@IonicPage()
+@Component({ 
     selector: 'page-category',
     templateUrl: 'category.html',
     providers: [Service],
 
 })
-export class CategoryPage {
+export class CategoryPage { 
     categories: any[] = [];
 
     constructor(public navCtrl: NavController, public service: Service) {
@@ -25,8 +26,7 @@ export class CategoryPage {
     }
 
     navigate(catId) {
-        this.navCtrl.push(ProductListPage,
-
+        this.navCtrl.push("ProductListPage",
             {catId: catId}
         );
          // console.log(catId);

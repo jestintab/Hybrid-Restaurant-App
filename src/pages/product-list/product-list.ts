@@ -1,9 +1,8 @@
 import {Component} from '@angular/core';
-import {NavController, NavParams,ToastController} from 'ionic-angular';
+import {NavController, NavParams,ToastController, IonicPage} from 'ionic-angular';
 import {Service} from '../../app/service';
-import {ProductDetailsPage} from '../../pages/product-details/product-details';
-import {CartPage} from '../../pages/cart/cart';
 
+@IonicPage()
 @Component({
   selector: 'page-product-list',
   templateUrl: 'product-list.html',
@@ -11,6 +10,7 @@ import {CartPage} from '../../pages/cart/cart';
 })
 export class ProductListPage {
   menuItems: any[]=[];
+  items:any[]=[];
   catId: number;
   cartItems: any[];
   noOfItems: number;
@@ -40,20 +40,31 @@ export class ProductListPage {
       // })
       .subscribe((response) => {
         this.menuItems = response.restify.rows;
+        this.items=this.menuItems;
         //console.log(response.restify.rows);
       })
   }
-
-
+ initializeItems() {
+        this.items = this.menuItems;
+    }
+  getItems(ev: any) {
+        this.initializeItems();
+        let val = ev.target.value;
+        if (val && val.trim() != '') {
+            this.items = this.items.filter((data) => {
+                return (data.values.menu_name.value.toLowerCase().indexOf(val.toLowerCase()) > -1);
+            })
+        }
+    }
   navigate(productId) {
-    this.navCtrl.push(ProductDetailsPage, {
+    this.navCtrl.push("ProductDetailsPage", {
       productId: productId
     });
     
   }
 
   navcart() {
-    this.navCtrl.push(CartPage);
+    this.navCtrl.push("CartPage");
   }
 
 

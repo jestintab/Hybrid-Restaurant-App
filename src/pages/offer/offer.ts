@@ -1,9 +1,9 @@
 import {Component, ViewChild} from '@angular/core';
-import {NavController, NavParams, Slides} from 'ionic-angular';
+import {NavController, NavParams, Slides, IonicPage} from 'ionic-angular';
 import {Service} from '../../app/service';
-import {ProductDetailsPage} from '../../pages/product-details/product-details';
 
 
+@IonicPage()
 @Component({
     selector: 'page-offer',
     templateUrl: 'offer.html',
@@ -40,7 +40,7 @@ export class OfferPage {
     }
 
     buyNow(productId) {
-        this.navCtrl.push(ProductDetailsPage, {
+        this.navCtrl.push("ProductDetailsPage", {
             productId: productId
         });
     }

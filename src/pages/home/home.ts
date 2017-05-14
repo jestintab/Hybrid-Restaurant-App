@@ -1,10 +1,8 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
-import {ProductListPage} from '../product-list/product-list';
-import {CartPage} from '../../pages/cart/cart';
+import {NavController, IonicPage} from 'ionic-angular';
 import {Service} from '../../app/service';
 
-
+@IonicPage()
 @Component({
     selector: 'page-home',
     templateUrl: 'home.html',
@@ -35,13 +33,13 @@ export class HomePage {
     }
 
     navigate(catId) {
-        this.navCtrl.push(ProductListPage,
+        this.navCtrl.push("ProductListPage",
             {catId: catId}
         );
     }
 
     navcart() {
-        this.navCtrl.push(CartPage);
+        this.navCtrl.push("CartPage");
     }
 
 }

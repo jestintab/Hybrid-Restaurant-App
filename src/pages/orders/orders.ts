@@ -1,7 +1,9 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {NavController, IonicPage} from 'ionic-angular';
 import {Service} from '../../app/service';
-import {OrderDetailsPage} from '../../pages/order-details/order-details';
+
+
+
 @Component({
     selector: 'page-orders',
     templateUrl: 'orders.html',
@@ -11,7 +13,10 @@ export class OrdersPage {
     categories: any[] = [];
     featured: any[] = [];
 
-    constructor(public navCtrl: NavController, public service: Service) {
+    constructor(public navCtrl: NavController, public service: Service) {}
+
+    
+    ngOnInit(){
         this.service.getData()
             .subscribe((response) => {
                 this.categories = response.categories;
@@ -19,6 +24,6 @@ export class OrdersPage {
             })
     }
     orderDetails() {
-      this.navCtrl.push(OrderDetailsPage);
+      this.navCtrl.push("OrderDetailsPage");
     }
 }

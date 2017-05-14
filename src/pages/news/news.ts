@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
-import {NewsDetailPage} from '../../pages/news-detail/news-detail';
+import {NavController, NavParams, IonicPage} from 'ionic-angular';
 import {Service} from '../../app/service';
 
+@IonicPage()
 @Component({
     selector: 'page-news',
     templateUrl: 'news.html',
@@ -24,7 +24,7 @@ export class NewsPage {
     }
 
     newsDetail(newsId) {
-        this.navCtrl.push(NewsDetailPage, {
+        this.navCtrl.push("NewsDetailPage", {
             newsId: newsId
         });
     }

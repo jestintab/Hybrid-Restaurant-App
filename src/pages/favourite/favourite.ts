@@ -1,9 +1,8 @@
 import {Component} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
-import {CartPage} from '../../pages/cart/cart';
-import {ProductDetailsPage} from '../../pages/product-details/product-details';
+import {NavController, NavParams, IonicPage} from 'ionic-angular';
 import {Storage} from '@ionic/storage';
 
+@IonicPage()
 @Component({
     selector: 'page-favourite',
     templateUrl: 'favourite.html'
@@ -26,11 +25,11 @@ export class FavouritePage {
     }
 
     navcart() {
-        this.navCtrl.push(CartPage);
+        this.navCtrl.push("CartPage");
     }
 
     buyNow(productId) {
-        this.navCtrl.push(ProductDetailsPage, {
+        this.navCtrl.push("ProductDetailsPage", {
             productId: productId
         });
     }

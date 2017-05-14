@@ -14,8 +14,8 @@
 <ion-content>
     <ion-row class="productImage" >
         <img src="http://aljedad.com/sforder/assets/images/{{product.image}}" alt="">
-        <p class="text-over-image">{{product.name }} &nbsp;<span class="prod-price">
-        ({{product.price | trunc }} QR)</span></p>
+        <!--<p class="text-over-image">{{product.name }} &nbsp;<span class="prod-price">
+        ({{product.price | trunc }} QR)</span></p>-->
         <span clear text-center (click)="toggleFavourite()">
         <ion-icon class="fav" name="heart" *ngIf="!visible"
                   (click)="removeFromFavourite(product.id)"></ion-icon>
@@ -29,15 +29,15 @@
             Size and prices
         </ion-list-header>-->
         <ion-item class="menu-item">
-            <ion-label class="item-name" width-50><strong>{{product.name}}</strong></ion-label>
-            <ion-label class="item-price" width-20><strong>{{product.price | trunc}} QR</strong></ion-label>
+            <ion-label class="item-name" col-6><strong>{{product.name}}</strong></ion-label>
+            <ion-label class="item-price prod-price" col-6><strong>{{product.price | trunc}} QR</strong></ion-label>
             <!--<ion-label *ngIf="price.offerValue">{{price.name}} ${{price.offerValue}}</ion-label>-->
             <!--<ion-radio class="checked" checked (ionSelect)="sizeOptions(itemdetail_price)"></ion-radio>
             -->
         </ion-item>
     </ion-row>
     <ion-row>
-        <ion-col width-50>
+        <ion-col col-6>
             <div class="count">
             <span class="item-count" (click)="remove()">
               -
@@ -51,7 +51,7 @@
             </div>
         </ion-col>
 
-        <ion-col width-50>
+        <ion-col col-6>
             <a (click)="addToCart(product.id)" ion-button icon-left full class="btn-add-to-cart">
                 <ion-icon name="cart"></ion-icon>
                 ADD TO CART
@@ -70,13 +70,13 @@
 
  
     <ion-row>
-        <ion-col width-50>
+        <ion-col col-6>
             <a (click)="addToCart(product.id)" ion-button icon-left full class="btn-add-to-cart">
                 <ion-icon name="cart"></ion-icon>
                 CHECKOUT
             </a>
         </ion-col>
-        <ion-col width-50>
+        <ion-col col-6>
             <a (click)="home()" ion-button icon-left full class="btn-add-to-cart">
                 <ion-icon name="basket"></ion-icon>
                 KEEP SHOPPING

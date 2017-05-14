@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
+import {NavController, NavParams, IonicPage} from 'ionic-angular';
 import {Service} from '../../app/service';
 
-
+@IonicPage()
 @Component({
     selector: 'page-news-detail',
     templateUrl: 'news-detail.html',

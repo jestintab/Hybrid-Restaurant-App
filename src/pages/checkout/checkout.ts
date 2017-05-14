@@ -1,10 +1,11 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {NavController, IonicPage} from 'ionic-angular';
 import {NgForm} from "@angular/forms";
-import {ThankyouPage} from '../../pages/thankyou/thankyou';
 import {Service} from '../../app/service';
 
 
+
+@IonicPage()
 @Component({
     selector: 'page-checkout',
     templateUrl: 'checkout.html',

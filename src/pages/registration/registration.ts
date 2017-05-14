@@ -1,8 +1,9 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
-import {LoginPage} from '../../pages/login/login';
+import {NavController,IonicPage} from 'ionic-angular';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {ToastController} from 'ionic-angular';
+
+@IonicPage()
 @Component({
     selector: 'page-registration',
     templateUrl: 'registration.html'
@@ -38,7 +39,7 @@ export class RegistrationPage {
     }
 
     navLogin() {
-        this.navCtrl.push(LoginPage);
+        this.navCtrl.push("LoginPage");
     }
 
 }

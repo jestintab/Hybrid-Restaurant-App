@@ -1,14 +1,12 @@
 import {Component} from '@angular/core';
-import {NavController, NavParams, AlertController, ToastController} from 'ionic-angular';
-import {CartPage} from '../../pages/cart/cart';
+import {NavController, NavParams, AlertController, ToastController, IonicPage} from 'ionic-angular';
 import {Service} from '../../app/service';
-import {HomePage} from '../../pages/home/home';
 import {Storage} from '@ionic/storage';
 import  unserialize   from 'locutus/php/var/unserialize';
 import  html_entity_decode   from 'locutus/php/strings/html_entity_decode';
 import 'rxjs/Rx';
 
-
+@IonicPage()
 @Component({
     selector: 'page-product-details',
     templateUrl: 'product-details.html',
@@ -178,7 +176,7 @@ export class ProductDetailsPage {
                 this.Cart.push(this.product);
                 localStorage.setItem('cartItem', JSON.stringify(this.Cart));
             }
-            this.navCtrl.push(CartPage);
+            this.navCtrl.push("CartPage");
 
         
     }
@@ -220,11 +218,11 @@ export class ProductDetailsPage {
     }
 
     home() {
-        this.navCtrl.push(HomePage);
+        this.navCtrl.push("HomePage");
     }
 
     navcart() {
-        this.navCtrl.push(CartPage);
+        this.navCtrl.push("CartPage");
     }
 
     //Add favourite

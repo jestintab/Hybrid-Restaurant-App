@@ -1,7 +1,7 @@
 page-checkout {
 
   ::-wekit-input-placeholder {
-    color: #white !important;
+    color: $white !important;
   }
   .list .item-block .item-inner {
     border-color: rgba(256, 256, 256, .05);
@@ -24,7 +24,7 @@ page-checkout {
   }
   .checkOut .card-btn, page-checkout .checkOut .checkOut-btn :hover {
     background-color: $white;
-    color: #white;
+    color: $white;
     border: 1px solid $light-grey;
     margin: 0.4rem 0rem;
   }

@@ -1,9 +1,8 @@
 import {Component} from "@angular/core";
-import {AlertController, NavController, PopoverController} from "ionic-angular";
-import {CheckoutPage} from "../../pages/checkout/checkout";
-import {HomePage} from "../../pages/home/home";
+import {AlertController, NavController, PopoverController, IonicPage} from "ionic-angular";
 
 
+@IonicPage()
 @Component({
     selector: 'page-cart',
     templateUrl: 'cart.html'
@@ -37,7 +36,7 @@ export class CartPage {
                                 this.navCtrl.pop();
                             }
                             else {
-                                this.navCtrl.push(HomePage);
+                                this.navCtrl.push("HomePage");
                             }
                         }
                     }
@@ -101,7 +100,7 @@ export class CartPage {
             this.alert();
         }
         else {
-            this.navCtrl.push(CheckoutPage);
+            this.navCtrl.push("CheckoutPage");
         }
     }
 
@@ -115,7 +114,7 @@ export class CartPage {
                     text: 'Ok',
                     handler: data => {
                         localStorage.removeItem('cartItem');
-                        this.navCtrl.push(HomePage);
+                        this.navCtrl.push("HomePage");
                     }
                 }
             ]

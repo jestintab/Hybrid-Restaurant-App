@@ -1,16 +1,15 @@
 import {Component} from '@angular/core';
-import {NavController, NavParams,ToastController} from 'ionic-angular';
+import {NavController, NavParams,ToastController, IonicPage} from 'ionic-angular';
 import {NgForm} from "@angular/forms";
 
 
-
+@IonicPage()
 @Component({
   selector: 'page-contact',
   templateUrl: 'contact.html'
 })
 export class ContactPage {
 	user:any = { }
-
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public toastCtrl:ToastController) {
