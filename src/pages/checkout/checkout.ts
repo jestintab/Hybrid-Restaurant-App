@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NavController, IonicPage} from 'ionic-angular';
+import {NavController, NavParams, IonicPage} from 'ionic-angular';
 import {NgForm} from "@angular/forms";
 import {Service} from '../../app/service';
 
@@ -25,18 +25,22 @@ export class CheckoutPage {
         orderType:'',
         orderDetail: {},
         orderTotal: {},
+        comments:'',
     };
     COD: string;
     orderType:string;
+    deliveryCharge:number = 5;
 
-    constructor(public navCtrl: NavController, public service: Service) {
+    constructor(public navCtrl: NavController, public service: Service,
+                public NavParams: NavParams) {
         this.OrderedProduct.cartItems = JSON.parse(localStorage.getItem('cartItem'));
-        this.OrderedProduct.orderTotal = JSON.parse(localStorage.getItem('orderTotal'));
-         this.orderDetails.city = 'Doha, Qatar';
+        this.OrderedProduct.orderTotal = this.NavParams.get('orderTotal');
+        this.OrderedProduct.comments = this.NavParams.get('comments');
+        this.orderDetails.city = 'Doha, Qatar';
     }
 
     onCheckout(OrderDetails: NgForm) {
-        this.OrderedProduct.orderDetail = OrderDetails.value
+        this.OrderedProduct.orderDetail = OrderDetails.value;
         this.OrderedProduct.COD = this.COD;
         this.service.postOrderDetails(this.OrderedProduct);
         // .subscribe((res) => {
@@ -55,19 +59,24 @@ export class CheckoutPage {
         this.gatemall = true;       
         this.orderDetails.city = 'Doha, Qatar';   
         this.orderType = 'Delivery';
+        this.deliveryCharge = 5;
 
     }
     gateMall(){
         this.gatemall = false;
         this.order_delivery = true;
         this.orderDetails.city = 'The Gate Mall, Doha, Qatar';
+        this.deliveryCharge = 0;
+        
         
     }
 
     takeaway(){
         this.order_delivery = true;
         this.gatemall = true;
-        this.orderDetails.city = 'Doha, Qatar';        
+        this.orderDetails.city = 'Doha, Qatar';
+        this.deliveryCharge = 0;
+                
      }
 
     hide() {
@@ -75,4 +84,8 @@ export class CheckoutPage {
         //this.tag = true;
         this.COD = 'cod';
     }
+    if(orderType = 'Delivery'){
+        this.deliveryCharge = 5;
+    }
+   
 }

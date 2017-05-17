@@ -43,6 +43,25 @@ page-checkout {
 .card-detail p{
   color: #fff;
 }
+.nodelivery{
+  text-decoration: line-through;
+}
+.price-col{
+  .nodelivery{
+  text-decoration: line-through;
+}
+.total{
+  font-size: 22px;
+  font-style: bold;
+}
+  background: $primary;
+  color:$dark;
+  border-color:$dark;
+  ion-label{
+    color:$dark;
+    font-size: 14px;
+  }
+}
 
    ion-label input:checked{
      color: $primary;

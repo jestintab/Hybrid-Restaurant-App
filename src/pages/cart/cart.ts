@@ -1,5 +1,6 @@
 import {Component} from "@angular/core";
 import {AlertController, NavController, PopoverController, IonicPage} from "ionic-angular";
+import {NgForm} from "@angular/forms";
 
 
 @IonicPage()
@@ -9,10 +10,11 @@ import {AlertController, NavController, PopoverController, IonicPage} from "ioni
 })
 export class CartPage {
     cartItems: any[] = [];
+    cartData:any[] =[];
     SubTotalPrice: number;
-    delivery: number;
     GrandTotal: number;
     noOfItems: number;
+    comments:string;
     constructor(public navCtrl: NavController,
                 public alertCtrl: AlertController,
                 public popoverCtrl: PopoverController) {
@@ -95,14 +97,19 @@ export class CartPage {
         }
     }
 
-    checkout() {
-        if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
+      onCart(){        
+      this.cartData['comments'] = this.cartData;   
+       if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
             this.alert();
         }
         else {
-            this.navCtrl.push("CheckoutPage");
+            this.navCtrl.push("CheckoutPage",this.cartData);
+      console.log(this.cartData);
+            
         }
-    }
+  }  
+
+ 
 
    
     alert() {
@@ -140,12 +147,14 @@ export class CartPage {
                 this.SubTotalPrice = proGrandTotalPrice;
             }
         }
-        this.delivery = 5;
-        this.GrandTotal = Math.ceil(this.SubTotalPrice + this.delivery );
-        localStorage.setItem('orderTotal', JSON.stringify(this.SubTotalPrice));
+       
+        this.GrandTotal = Math.ceil(this.SubTotalPrice  );
+        this.cartData['orderTotal'] = this.SubTotalPrice;
+       // localStorage.setItem('orderTotal', JSON.stringify(this.SubTotalPrice));
         
     }
-     
+
+ 
 
   add(data) {
     if (data.Quantity < 20) {

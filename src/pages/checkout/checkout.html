@@ -1,6 +1,6 @@
 <ion-header>
     <ion-navbar>
-        <ion-title class="title">Payment Options
+        <ion-title class="title">Checkout
         </ion-title>
     </ion-navbar>
 </ion-header>
@@ -32,22 +32,44 @@
                 </ion-col>
                 <ion-col col-4 class="no-padd">
                     <ion-item class="sub-address">
-                        <ion-label>Free Delivery <span>(only gatemall)</span></ion-label>
-                        <ion-label> </ion-label>
+                        <ion-label>Free Delivery </ion-label>
+                        <ion-label> <span>(only gatemall) </span></ion-label>
                         <ion-radio value="free" (click)="gateMall()"></ion-radio>
                     </ion-item>
                 </ion-col>
            
         </ion-list>
         <!--delivery ends-->
-        <ion-row>
-              <ion-col col-12 class="col-card no-padd">
-                    <ion-item>
-                        <ion-label>Order Total  </ion-label>
-                        <ion-label>  {{OrderedProduct.orderTotal}}  QR   </ion-label>
+        <ion-grid>
+        <ion-row class="price-col">              
+                    <ion-item col-6>
+                        <ion-label>Sub Total:  </ion-label> 
                     </ion-item>
-                </ion-col>
-        </ion-row>
+                
+                    <ion-item col-6>                 
+                        <ion-label>  {{OrderedProduct.orderTotal}}  QR   </ion-label>
+                    </ion-item>                  
+          </ion-row>
+        <ion-row class="price-col" [class.nodelivery]="deliveryCharge==0">              
+                    <ion-item col-6>
+                        <ion-label>Delivery  </ion-label> 
+                    </ion-item>
+                
+                    <ion-item col-6>                 
+                        <ion-label>  5  QR   </ion-label>
+                    </ion-item>                  
+          </ion-row>
+        <ion-row class="price-col total">              
+                    <ion-item col-6>
+                        <ion-label>Order Total  </ion-label> 
+                    </ion-item>
+                
+                    <ion-item col-6>                 
+                        <ion-label> {{OrderedProduct.orderTotal + deliveryCharge}}   QR   </ion-label>
+                    </ion-item>                  
+          </ion-row>
+       
+        </ion-grid>
 
         <ion-row>
             <ion-col class="address-header">

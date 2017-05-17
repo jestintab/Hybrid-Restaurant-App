@@ -24866,6 +24866,13 @@ page-cart .count .show-count {
   color: #222;
 }
 
+page-cart .add-heading {
+  padding: 1.3rem;
+  margin: 0;
+  background-color: #fecc27;
+  color: #222;
+}
+
 page-category ion-label {
   white-space: normal;
 }
@@ -24928,6 +24935,30 @@ page-checkout .payment-block .radio-md .radio-checked .radio-inner {
 
 page-checkout .card-detail p {
   color: #fff;
+}
+
+page-checkout .nodelivery {
+  text-decoration: line-through;
+}
+
+page-checkout .price-col {
+  background: #fecc27;
+  color: #222;
+  border-color: #222;
+}
+
+page-checkout .price-col .nodelivery {
+  text-decoration: line-through;
+}
+
+page-checkout .price-col .total {
+  font-size: 22px;
+  font-style: bold;
+}
+
+page-checkout .price-col ion-label {
+  color: #222;
+  font-size: 14px;
 }
 
 page-checkout ion-label input:checked {

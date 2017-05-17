@@ -56,7 +56,7 @@
         <ion-row class="price-details">
             <ion-col class="calculate">
                 <p class="bill-detail">Subtotal <span> {{SubTotalPrice}} QR</span></p>
-                <p class="bill-detail">Delivery Charge <span> {{delivery | number}} QR</span></p>
+              
                 <!--<p class="bill-detail">Other Taxes (3%)
                     <span>{{otherTaxes | number}} QR</span></p>-->
                 <hr>
@@ -64,11 +64,26 @@
                 </p>
             </ion-col>
         </ion-row><!-- row-bill-deatails -->
+        <!-- Comments -->
+     <form (ngSubmit)="onCart()" >        
+        <ion-row>
+             <ion-label  class="add-heading">
+                <ion-icon ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                &nbsp;&nbsp;Instructions / Comments 
+            </ion-label>
+            <ion-item class="sub-address" >
+                    <ion-textarea rows="3" [(ngModel)]="cartData.comments" [ngModelOptions]="{standalone: true}" placeholder="Special instructions/comments" name="comments" id="comments"
+                                  ></ion-textarea>
+                </ion-item>
+        </ion-row>    
+    
+
         <!-- continue button -->
         <ion-row>
             <ion-col>
-                <button ion-button block class="continue-btn" (click)="checkout()">Continue</button>
+                <button ion-button block type="submit" class="continue-btn" >Continue</button>
             </ion-col>
         </ion-row>
+         </form>
     </div>
 </ion-content>

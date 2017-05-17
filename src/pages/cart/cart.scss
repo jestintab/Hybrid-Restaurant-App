@@ -39,6 +39,7 @@ page-cart {
     }
   }
 
+
   .calculate {
     margin: 0 4px;
     .bill-detail {
@@ -80,6 +81,13 @@ page-cart {
         background-color: $primary !important;
         color:$dark;
       }
+    }
+
+     .add-heading {
+      padding: 1.3rem;
+      margin: 0;
+      background-color: $primary;
+      color: $dark;
     }
 
 }
