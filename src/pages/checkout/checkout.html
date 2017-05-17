@@ -6,7 +6,49 @@
 </ion-header>
 
 <ion-content padding class="checkOut">
-    <form (ngSubmit)="onCheckout(f)" #f="ngForm">
+
+    <form (ngSubmit)="onCheckout(f)" #f="ngForm">        
+            <ion-row>
+            <ion-col class="payment-header">
+                <ion-icon ios="ios-paper-plane" md="md-paper-plane"></ion-icon>
+                &nbsp;&nbsp;Delivery / TakeAway
+            </ion-col>
+        </ion-row>
+            <!--Delivery -->
+        <ion-list radio-group class="ordertype-block">
+          
+                <ion-col col-4 class="col-card no-padd">
+                    <ion-item class="sub-address">
+                        <ion-label>Delivery <span>in 50 mins</span></ion-label>                      
+                        <ion-radio checked="true" value="delivery" (click)="delivery()"></ion-radio>
+                    </ion-item>
+                </ion-col>
+                <ion-col col-4 class="col-card no-padd">
+                    <ion-item class="sub-address">
+                        <ion-label>TakeAway <span>in 15 mins</span></ion-label>
+                      
+                        <ion-radio value="pickup"  (click)="takeaway()"></ion-radio>
+                    </ion-item>
+                </ion-col>
+                <ion-col col-4 class="no-padd">
+                    <ion-item class="sub-address">
+                        <ion-label>Free Delivery <span>(only gatemall)</span></ion-label>
+                        <ion-label> </ion-label>
+                        <ion-radio value="free" (click)="gateMall()"></ion-radio>
+                    </ion-item>
+                </ion-col>
+           
+        </ion-list>
+        <!--delivery ends-->
+        <ion-row>
+              <ion-col col-12 class="col-card no-padd">
+                    <ion-item>
+                        <ion-label>Order Total  </ion-label>
+                        <ion-label>  {{OrderedProduct.orderTotal}}  QR   </ion-label>
+                    </ion-item>
+                </ion-col>
+        </ion-row>
+
         <ion-row>
             <ion-col class="address-header">
                 <ion-icon ios="ios-home" md="md-home"></ion-icon>
@@ -33,15 +75,38 @@
                                [(ngModel)]="orderDetails.phone"></ion-input>
                 </ion-item>
 
-                <ion-item class="sub-address">
+                <ion-item class="sub-address" [hidden]="order_delivery">
                     <ion-textarea rows="3" placeholder="Address" name="adress" id="adress"
                                   [(ngModel)]="orderDetails.adress"></ion-textarea>
                 </ion-item>
-                <ion-item class="sub-address">
-                    <ion-input ng-disabled type="text" placeholder="City" ngValue="Doha, Qatar" name="city" id="city" 
-                               [(ngModel)]="orderDetails.city"></ion-input>
+
+                <div [hidden]="gatemall"> 
+
+                <ion-item class="sub-address" >
+                    <ion-textarea rows="3" placeholder="Company/Shop Name" name="adress" id="adress"
+                                  [(ngModel)]="orderDetails.address"></ion-textarea>
                 </ion-item>
-                
+                <ion-item class="sub-address">
+                <ion-label>Select Tower</ion-label>
+                <ion-select [(ngModel)]="orderDetails.tower" name="tower" id="tower">
+                    <ion-option value="G">Mall Area</ion-option>
+                    <ion-option value="T1">Tower 1</ion-option>
+                    <ion-option value="T2">Tower 2</ion-option>
+                    <ion-option value="T3">Tower 3</ion-option>
+                    <ion-option value="T4">Tower 4</ion-option>
+                </ion-select>
+                </ion-item>
+                <ion-item class="sub-address" >
+                <ion-label>Floor</ion-label>
+                <ion-input type="number" placeholder="Enter your Floor No" name="floor" id="floor"
+                               [(ngModel)]="orderDetails.floor"></ion-input>
+                </ion-item>
+                </div>
+                <ion-item class="sub-address" >
+                    <ion-label >City</ion-label>
+                    <ion-input disabled="true" type="text" placeholder="City" ngValue="Doha, Qatar" name="city" id="city" 
+                               [(ngModel)]="orderDetails.city"></ion-input>
+                </ion-item>               
             </div>
 
         </ion-list>
@@ -55,13 +120,13 @@
         <!--payment-->
         <ion-list radio-group class="payment-block">
             <ion-row>
-                <ion-col width-50 class="col-card no-padd">
+                <ion-col col-6 class="col-card no-padd">
                     <ion-item>
                         <ion-label>COD</ion-label>
                         <ion-radio checked="true" value="cod" (click)="hide()"></ion-radio>
                     </ion-item>
                 </ion-col>
-                <ion-col width-50 class="col-card no-padd">
+                <ion-col col-6 class="col-card no-padd">
                     <ion-item>
                         <ion-label>Card </ion-label>
                         <ion-radio value="pcm" (click)="toggle2()"></ion-radio>
@@ -76,7 +141,11 @@
             <ion-list class="card-list" [hidden]="tagHide2">
                 <ion-item class="card-detail">
                     <ion-row>
-                        <p> Our bike delivery staff will bring a Portable Credit/Debit Card Machine for the payment.</p>
+                        <ion-col col-12>
+                        <p> Our bike delivery staff will bring a <br>Portable Credit/Debit Card Machine for the payment.
+
+                        </p>
+                        </ion-col>
                     </ion-row>
                     <!--<ion-row>
                         <ion-col class="no-padd">

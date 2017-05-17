@@ -1,15 +1,15 @@
 webpackJsonp([4],{
 
-/***/ 566:
+/***/ 568:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cart__ = __webpack_require__(584);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__ = __webpack_require__(582);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CartPageModule", function() { return CartPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__category__ = __webpack_require__(607);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__ = __webpack_require__(585);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CategoryPageModule", function() { return CategoryPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,32 +19,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+//import {TranslaterModule} from '../../app/translate.module';
 
-var CartPageModule = (function () {
-    function CartPageModule() {
+var CategoryPageModule = (function () {
+    function CategoryPageModule() {
     }
-    return CartPageModule;
+    return CategoryPageModule;
 }());
-CartPageModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+CategoryPageModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__cart__["a" /* CartPage */]
+            __WEBPACK_IMPORTED_MODULE_2__category__["a" /* CategoryPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cart__["a" /* CartPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__category__["a" /* CategoryPage */]),
             __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__["a" /* PipesModule */]
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__cart__["a" /* CartPage */]
+            __WEBPACK_IMPORTED_MODULE_2__category__["a" /* CategoryPage */]
         ]
     })
-], CartPageModule);
+], CategoryPageModule);
 
-//# sourceMappingURL=cart.module.js.map
+//# sourceMappingURL=category.module.js.map
 
 /***/ }),
 
-/***/ 580:
+/***/ 583:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -89,17 +90,17 @@ var Entity = (function () {
     return Entity;
 }());
 Entity = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Pipe */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
         name: 'entity'
     }),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])()
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
 ], Entity);
 
 //# sourceMappingURL=entity.js.map
 
 /***/ }),
 
-/***/ 581:
+/***/ 584:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -142,7 +143,7 @@ var OrderBy = (function () {
     return OrderBy;
 }());
 OrderBy = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Pipe */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
         name: 'orderBy',
         pure: false
     })
@@ -152,14 +153,14 @@ OrderBy = __decorate([
 
 /***/ }),
 
-/***/ 582:
+/***/ 585:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__trunc__ = __webpack_require__(583);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__entity__ = __webpack_require__(580);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__order_by_ts__ = __webpack_require__(581);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__trunc__ = __webpack_require__(586);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__entity__ = __webpack_require__(583);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__order_by_ts__ = __webpack_require__(584);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PipesModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -177,7 +178,7 @@ var PipesModule = (function () {
     return PipesModule;
 }());
 PipesModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__entity__["a" /* Entity */],
             __WEBPACK_IMPORTED_MODULE_1__trunc__["a" /* Trunc */],
@@ -196,7 +197,7 @@ PipesModule = __decorate([
 
 /***/ }),
 
-/***/ 583:
+/***/ 586:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -227,7 +228,7 @@ var Trunc = (function () {
     return Trunc;
 }());
 Trunc = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Pipe */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
         name: 'trunc',
         pure: false
     })
@@ -237,13 +238,14 @@ Trunc = __decorate([
 
 /***/ }),
 
-/***/ 584:
+/***/ 607:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CartPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_service__ = __webpack_require__(128);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CategoryPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -255,166 +257,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var CartPage = (function () {
-    function CartPage(navCtrl, alertCtrl, popoverCtrl) {
-        this.navCtrl = navCtrl;
-        this.alertCtrl = alertCtrl;
-        this.popoverCtrl = popoverCtrl;
-        this.cartItems = [];
-        this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
-        if (this.cartItems != null) {
-            this.noOfItems = this.cartItems.length;
-        }
-    }
-    CartPage.prototype.ngOnInit = function () {
-        var _this = this;
-        if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
-            var prompt_1 = this.alertCtrl.create({
-                title: 'Your Cart is Empty!',
-                message: "Please add item",
-                buttons: [
-                    {
-                        text: 'Ok',
-                        handler: function (data) {
-                            localStorage.removeItem('cartItem');
-                            if (_this.navCtrl.canGoBack() == true) {
-                                _this.navCtrl.pop();
-                            }
-                            else {
-                                _this.navCtrl.push("HomePage");
-                            }
-                        }
-                    }
-                ]
-            });
-            prompt_1.present();
-        }
-        else {
-            this.noOfItems = this.cartItems.length;
-            this.CalculatePrice();
-            //console.log(this.cartItems);
-        }
-    };
-    CartPage.prototype.deleteItem = function (data) {
-        for (var i = 0; i <= this.cartItems.length - 1; i++) {
-            if (this.cartItems[i].id == data.id) {
-                this.cartItems.splice(i, 1);
-            }
-        }
-        if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
-            this.SubTotalPrice = 0;
-            this.GrandTotal = 0;
-        }
-        else {
-            this.CalculatePrice();
-        }
-        localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
-        this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
-        this.noOfItems = this.noOfItems - 1;
-        if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
-            this.alert();
-        }
-    };
-    CartPage.prototype.deleteOptionItem = function (data) {
-        for (var i = 0; i <= this.cartItems.length - 1; i++) {
-            for (var j = 0; j <= this.cartItems[i].extraOption.length - 1; j++) {
-                if (this.cartItems[i].extraOption[j].id == data.id) {
-                    this.cartItems[i].extraOption.splice(j, 1);
-                    console.log(this.cartItems);
-                }
-            }
-        }
-        this.CalculatePrice();
-        localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
-        this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
-        this.noOfItems = this.noOfItems - 1;
-        if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
-            this.alert();
-        }
-    };
-    CartPage.prototype.checkout = function () {
-        if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
-            this.alert();
-        }
-        else {
-            this.navCtrl.push("CheckoutPage");
-        }
-    };
-    CartPage.prototype.alert = function () {
-        var _this = this;
-        var alert = this.alertCtrl.create({
-            title: 'Cart Is Empty!',
-            subTitle: 'Please Add Item!',
-            buttons: [
-                {
-                    text: 'Ok',
-                    handler: function (data) {
-                        localStorage.removeItem('cartItem');
-                        _this.navCtrl.push("HomePage");
-                    }
-                }
-            ]
-        });
-        alert.present();
-    };
-    CartPage.prototype.CalculatePrice = function () {
-        var proGrandTotalPrice = 0;
-        for (var i = 0; i <= this.cartItems.length; i++) {
-            if (this.cartItems[i] != null) {
-                if (this.cartItems[i].extraOption.length != 0) {
-                    for (var j = 0; j <= this.cartItems[i].extraOption.length - 1; j++) {
-                        proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].extraOption[j].price;
-                    }
-                    proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].itemTotalPrice;
-                }
-                else {
-                    proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].itemTotalPrice;
-                }
-                this.SubTotalPrice = proGrandTotalPrice;
-            }
-        }
-        this.delivery = 5;
-        this.GrandTotal = Math.ceil(this.SubTotalPrice + this.delivery);
-    };
-    CartPage.prototype.add = function (data) {
-        if (data.Quantity < 20) {
-            data.Quantity = data.Quantity + 1;
-            for (var i = 0; i <= this.cartItems.length - 1; i++) {
-                if (this.cartItems[i].id == data.id) {
-                    this.cartItems[i].Quantity = data.Quantity;
-                    this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].price);
-                }
-            }
-            localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
-            this.CalculatePrice();
-        }
-    };
-    CartPage.prototype.remove = function (data) {
-        if (data.Quantity > 1) {
-            data.Quantity = data.Quantity - 1;
-            for (var i = 0; i <= this.cartItems.length - 1; i++) {
-                if (this.cartItems[i].id == data.id) {
-                    this.cartItems[i].Quantity = data.Quantity;
-                    this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].price);
-                }
-            }
-            localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
-            this.CalculatePrice();
-        }
-    };
-    return CartPage;
-}());
-CartPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-cart',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\cart\cart.html"*/'<ion-header>\n   <ion-navbar hideBackButton="true">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Cart</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only color="royal">\n                <ion-icon name="cart"></ion-icon>\n                <ion-badge class="carts" item-right color="danger">{{noOfItems}}</ion-badge>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <div>\n        <ion-list class="cart-list" *ngFor="let cartItem of cartItems"><!-- item-list -->\n            <ion-item class="cart-item"><!-- item -->\n                <ion-row>\n                    <ion-col col-2><!-- col-cancel  button -->\n                        <ion-icon class="close-btn" ion-button icon only clear ios="ios-close-circle"\n                                  md="md-close-circle"\n                                   (click)="deleteItem(cartItem)">\n                        </ion-icon>\n                    </ion-col>\n                    <ion-col><!-- col-for item-image and details -->\n                        <ion-row>\n                            <ion-col col-4><!-- item-image -->\n                                <img src="http://aljedad.com/sforder/assets/images/thumbnail/{{cartItem.thumb}}" alt="">\n                            </ion-col>\n                            <ion-col col-6>\n                                <p><span class="item-detail"> {{cartItem.Quantity}} x </span> \n                                   <span class="item-name"> {{ cartItem.name }} </span>                                 \n                                </p>\n                                <!--<p class="item-price"> {{cartItem.price | trunc}} QR </p>-->\n\n                            <div  *ngFor="let option of cartItem.extraOption"> \n                            <p class="item-option-detail">+ {{option.name}} - {{option.price}}QR \n                                <span class="option-delete" (click)="deleteOptionItem(option)"> <strong>x</strong> </span> </p>\n                            </div>   \n                                <ion-row><!-- row-for count item -->\n\n                                    <div class="count">\n                                        <span class="item-count" (click)="remove(cartItem)"> - </span>\n                                        <span class="item-count show-count"> {{cartItem.Quantity}}</span>\n                                        <span class="item-count" (click)="add(cartItem)"> + </span>\n                                    </div>\n                                </ion-row>\n                            </ion-col>\n                        </ion-row>\n                    </ion-col>\n                </ion-row>\n            </ion-item>\n        </ion-list>\n        <ion-row class="price-details">\n            <ion-col class="calculate">\n                <p class="bill-detail">Subtotal <span> {{SubTotalPrice}} QR</span></p>\n                <p class="bill-detail">Delivery Charge <span> {{delivery | number}} QR</span></p>\n                <!--<p class="bill-detail">Other Taxes (3%)\n                    <span>{{otherTaxes | number}} QR</span></p>-->\n                <hr>\n                <p class="cart-total"><strong>Order Total </strong><span class="price">{{GrandTotal}} QR</span>\n                </p>\n            </ion-col>\n        </ion-row><!-- row-bill-deatails -->\n        <!-- continue button -->\n        <ion-row>\n            <ion-col>\n                <button ion-button block class="continue-btn" (click)="checkout()">Continue</button>\n            </ion-col>\n        </ion-row>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\cart\cart.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* AlertController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* PopoverController */]])
-], CartPage);
+//import {ProductListPage} from '../product-list/product-list';
 
-//# sourceMappingURL=cart.js.map
+var CategoryPage = (function () {
+    function CategoryPage(navCtrl, service) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.service = service;
+        this.categories = [];
+        this.service.getCategory()
+            .subscribe(function (response) {
+            _this.categories = response.restify.rows;
+            //console.log(response.restify.rows);
+        });
+    }
+    CategoryPage.prototype.navigate = function (catId) {
+        this.navCtrl.push("ProductListPage", { catId: catId });
+        // console.log(catId);
+    };
+    return CategoryPage;
+}());
+CategoryPage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-category',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\category\category.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n            <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n        <ion-title>Category</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-card *ngFor="let categorie of categories">\n\n        <ion-list>\n\n            <ion-item (click)="navigate(categorie.values.category_id.value)">\n\n                <ion-thumbnail item-left>\n\n                    <img src="https://order.sandwichfactory.qa/assets/images/{{categorie.values.image.value}}">\n\n                </ion-thumbnail>\n\n                <p class="heading">{{categorie.values.name.value | entity  }}</p>\n\n                <p>{{categorie.values.description.value}}</p>\n\n            </ion-item>\n\n        </ion-list>\n\n    </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\category\category.html"*/,
+        providers: [__WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* Service */]],
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* Service */]])
+], CategoryPage);
+
+//# sourceMappingURL=category.js.map
 
 /***/ })
 

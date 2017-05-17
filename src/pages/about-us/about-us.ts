@@ -30,15 +30,13 @@ export class AboutUsPage {
     console.log('ionViewDidLoad AboutUsPage');
 
   }
-
-
-   
+  
    goToSlide() {
     this.slides.slideTo(2, 500);
   }
 
   callUs() {
-      this.callNumber.callNumber(this.contactNo, true)
+    this.callNumber.callNumber(this.contactNo, true)
     .then(() => console.log('Launched dialer!'))
     .catch(() => console.log('Error launching dialer'));
   }

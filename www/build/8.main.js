@@ -1,14 +1,14 @@
 webpackJsonp([8],{
 
-/***/ 577:
+/***/ 581:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__registration__ = __webpack_require__(595);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegistrationPageModule", function() { return RegistrationPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(620);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsModule", function() { return SettingsModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var RegistrationPageModule = (function () {
-    function RegistrationPageModule() {
+var SettingsModule = (function () {
+    function SettingsModule() {
     }
-    return RegistrationPageModule;
+    return SettingsModule;
 }());
-RegistrationPageModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+SettingsModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__registration__["a" /* RegistrationPage */]
+            __WEBPACK_IMPORTED_MODULE_2__settings__["a" /* Settings */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__registration__["a" /* RegistrationPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__settings__["a" /* Settings */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__registration__["a" /* RegistrationPage */]
+            __WEBPACK_IMPORTED_MODULE_2__settings__["a" /* Settings */]
         ]
     })
-], RegistrationPageModule);
+], SettingsModule);
 
-//# sourceMappingURL=registration.module.js.map
+//# sourceMappingURL=settings.module.js.map
 
 /***/ }),
 
-/***/ 595:
+/***/ 620:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(22);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegistrationPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Settings; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,48 +59,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-var RegistrationPage = (function () {
-    function RegistrationPage(navCtrl, toastCtrl, fb) {
+var Settings = (function () {
+    function Settings(navCtrl) {
         this.navCtrl = navCtrl;
-        this.toastCtrl = toastCtrl;
-        this.fb = fb;
+        this.user = {};
+        this.url = "assets/img/profile.jpg";
     }
-    RegistrationPage.prototype.onRegister = function () {
-        if (this.user.value.name != '' && this.user.value.email != '' && this.user.value.password != '') {
-            this.displayToast('User Successfully added!', 5000);
+    Settings.prototype.onSubmit = function (user) {
+        console.log("user Setting Data : " + JSON.stringify(this.user));
+    };
+    Settings.prototype.readUrl = function (event) {
+        var _this = this;
+        if (event.target.files && event.target.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (event) {
+                _this.url = event.target.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
         }
     };
-    RegistrationPage.prototype.displayToast = function (message, duration) {
-        var toast = this.toastCtrl.create({
-            message: message,
-            duration: duration
-        });
-        toast.present();
-    };
-    RegistrationPage.prototype.ngOnInit = function () {
-        this.user = this.fb.group({
-            name: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required],
-            email: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required],
-            mobileNo: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required],
-            password: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required],
-        });
-    };
-    RegistrationPage.prototype.navLogin = function () {
-        this.navCtrl.push("LoginPage");
-    };
-    return RegistrationPage;
+    return Settings;
 }());
-RegistrationPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-registration',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\registration\registration.html"*/'<ion-header>\n    <ion-navbar hideBackButton="true">\n        <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n        </button>\n        <ion-title>Registration</ion-title>\n    </ion-navbar>\n\n</ion-header>\n\n<ion-content class="login">\n    <img class="logo" src="assets/img/logo-icon.png">\n\n    <!--inputs-->\n    <!--name-->\n    <form [formGroup]="user" (ngSubmit)="onRegister()">\n        <ion-row>\n            <ion-col>\n                <ion-item>\n                    <ion-label>Name:</ion-label>\n                    <ion-input type="text" formControlName="name"></ion-input>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n        <!--email-->\n        <ion-row>\n            <ion-col>\n                <ion-item>\n                    <ion-label>Email:</ion-label>\n                    <ion-input type="email" formControlName="email"></ion-input>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n        <!--Mobile No-->\n        <ion-row>\n            <ion-col>\n                <ion-item>\n                    <ion-label>Mobile:</ion-label>\n                    <ion-input type="number" formControlName="mobileNo"></ion-input>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n\n        <!--password-->\n        <ion-row>\n            <ion-col>\n                <ion-item>\n                    <ion-label>Password:</ion-label>\n                    <ion-input type="password" formControlName="password"></ion-input>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n\n        <!--button-->\n        <ion-row>\n            <ion-col>\n                <button class="login-btn" ion-button>Register</button>\n            </ion-col>\n        </ion-row>\n    </form>\n\n    <!--login with-->\n    <ion-row>\n        <ion-col>\n            <p text-center>REGISTER WITH</p>\n        </ion-col>\n    </ion-row>\n\n    <!--Social login-->\n    <ion-row>\n        <ion-col text-center>\n     <span>\n       <img class="social-icon" src="assets/img/fb.png">\n     </span>\n            <span>\n       <img class="social-icon" src="assets/img/g+.png">\n     </span>\n            <span>\n       <img class="social-icon" src="assets/img/twitter.png">\n     </span>\n        </ion-col>\n    </ion-row>\n\n    <!--go to registration-->\n    <ion-row>\n        <ion-col>\n            <a (click)="navLogin()">\n                <p text-center>ALREADY REGISTERED !</p>\n            </a>\n        </ion-col>\n    </ion-row>\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\registration\registration.html"*/
+Settings = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-settings',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\settings\settings.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n        </button>\n        <ion-title>Settings</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <div class="login">\n        <ion-row>\n            <img class="img" [src]="url"><br>\n        </ion-row>\n        <ion-row>\n            <input type="file" name="file" id="file" class="inputfile" aria-describedby="fileHelp" accept="image/*"\n                   (change)="readUrl($event)">\n            <label for="file" class="upload">\n                <ion-icon ios="ios-cloud-upload" md="md-cloud-upload"></ion-icon>\n            </label>\n        </ion-row>\n        <p class="name">Hello Guest</p>\n        <p class="email">ionicfirebaseapp@gmail.com</p>\n    </div>\n    <form (ngSubmit)="onSubmit(f)" #f="ngForm">\n        <ion-list>\n            <ion-item>\n                <ion-label primary> Notifications</ion-label>\n                <ion-toggle primary checked="false"></ion-toggle>\n            </ion-item>\n            <!--card no-->\n            <ion-item>\n                <ion-label>Card Number:</ion-label>\n                <ion-input type="text" name="card" id="card" placeholder="5172628928"\n                           [(ngModel)]="user.card"></ion-input>\n            </ion-item>\n            <!--name on card-->\n            <ion-item>\n                <ion-label>Name on card:</ion-label>\n                <ion-input type="text" name="name" id="email" placeholder="Your Name"\n                           [(ngModel)]="user.name"></ion-input>\n            </ion-item>\n            <!--cvv-->\n            <ion-item>\n                <ion-label>CVV:</ion-label>\n                <ion-input type="number" name="cvv" id="cvv" placeholder="234"\n                           [(ngModel)]="user.cvv"></ion-input>\n            </ion-item>\n            <!--date-->\n            <ion-item>\n                <ion-label>Date of expiry:</ion-label>\n                <ion-input type="number" name="date" id="date" placeholder="25/06/2020"\n                           [(ngModel)]="user.date"></ion-input>\n            </ion-item>\n        </ion-list>\n        <!--button-->\n        <button class="login-btn" ion-button type="submit">Save</button>\n    </form>\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\settings\settings.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormBuilder */]])
-], RegistrationPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
+], Settings);
 
-//# sourceMappingURL=registration.js.map
+//# sourceMappingURL=settings.js.map
 
 /***/ })
 

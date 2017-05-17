@@ -16,15 +16,23 @@ export class CheckoutPage {
     orderDetails: any = {};
     tagHide1: boolean = true;
     tagHide2: boolean = true;
-    OrderedProduct = {
+    order_delivery: boolean = false;
+    gatemall:boolean = true;
+    
+    OrderedProduct = { 
         cartItems: [],
         COD: '',
-        orderDetail: {}
+        orderType:'',
+        orderDetail: {},
+        orderTotal: {},
     };
     COD: string;
+    orderType:string;
 
     constructor(public navCtrl: NavController, public service: Service) {
         this.OrderedProduct.cartItems = JSON.parse(localStorage.getItem('cartItem'));
+        this.OrderedProduct.orderTotal = JSON.parse(localStorage.getItem('orderTotal'));
+         this.orderDetails.city = 'Doha, Qatar';
     }
 
     onCheckout(OrderDetails: NgForm) {
@@ -42,9 +50,29 @@ export class CheckoutPage {
     toggle2() {
         this.tagHide2 = this.tagHide2 ? false : true;
     }
+    delivery(){
+        this.order_delivery = false;
+        this.gatemall = true;       
+        this.orderDetails.city = 'Doha, Qatar';   
+        this.orderType = 'Delivery';
+
+    }
+    gateMall(){
+        this.gatemall = false;
+        this.order_delivery = true;
+        this.orderDetails.city = 'The Gate Mall, Doha, Qatar';
+        
+    }
+
+    takeaway(){
+        this.order_delivery = true;
+        this.gatemall = true;
+        this.orderDetails.city = 'Doha, Qatar';        
+     }
 
     hide() {
         this.tagHide2 = true;
+        //this.tag = true;
         this.COD = 'cod';
     }
 }

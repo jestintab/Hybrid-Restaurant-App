@@ -142,6 +142,8 @@ export class CartPage {
         }
         this.delivery = 5;
         this.GrandTotal = Math.ceil(this.SubTotalPrice + this.delivery );
+        localStorage.setItem('orderTotal', JSON.stringify(this.SubTotalPrice));
+        
     }
      
 

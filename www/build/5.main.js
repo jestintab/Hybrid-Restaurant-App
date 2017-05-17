@@ -1,15 +1,15 @@
 webpackJsonp([5],{
 
-/***/ 603:
+/***/ 567:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_us__ = __webpack_require__(604);
-throw new Error("Cannot find module \"../../app/translate.module\"");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutUsPageModule", function() { return AboutUsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cart__ = __webpack_require__(606);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__ = __webpack_require__(585);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CartPageModule", function() { return CartPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,184 +20,220 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AboutUsPageModule = (function () {
-    function AboutUsPageModule() {
+var CartPageModule = (function () {
+    function CartPageModule() {
     }
-    return AboutUsPageModule;
+    return CartPageModule;
 }());
-AboutUsPageModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+CartPageModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__about_us__["a" /* AboutUsPage */]
+            __WEBPACK_IMPORTED_MODULE_2__cart__["a" /* CartPage */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__about_us__["a" /* AboutUsPage */]),
-            __WEBPACK_IMPORTED_MODULE_3__app_translate_module__["TranslaterModule"]
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cart__["a" /* CartPage */]),
+            __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__["a" /* PipesModule */]
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__about_us__["a" /* AboutUsPage */]
+            __WEBPACK_IMPORTED_MODULE_2__cart__["a" /* CartPage */]
         ]
     })
-], AboutUsPageModule);
+], CartPageModule);
 
-//# sourceMappingURL=about-us.module.js.map
+//# sourceMappingURL=cart.module.js.map
 
 /***/ }),
 
-/***/ 604:
+/***/ 583:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_call_number__ = __webpack_require__(605);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__ = __webpack_require__(606);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutUsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Entity; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
+/*
+  Generated class for the Entity pipe.
 
-
-
-
-
-var AboutUsPage = (function () {
-    function AboutUsPage(platform, navCtrl, navParams, callNumber, emailComposer) {
-        this.platform = platform;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.callNumber = callNumber;
-        this.emailComposer = emailComposer;
-        this.contactNo = 7376421282;
+  See https://angular.io/docs/ts/latest/guide/pipes.html for more info on
+  Angular 2 Pipes.
+*/
+var Entity = (function () {
+    function Entity() {
     }
-    AboutUsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AboutUsPage');
-    };
-    AboutUsPage.prototype.goToSlide = function () {
-        this.slides.slideTo(2, 500);
-    };
-    AboutUsPage.prototype.callUs = function () {
-        this.callNumber.callNumber(this.contactNo, true)
-            .then(function () { return console.log('Launched dialer!'); })
-            .catch(function () { return console.log('Error launching dialer'); });
-    };
-    AboutUsPage.prototype.gotogoogleMap = function () {
-        this.navCtrl.push("LocationPage");
-    };
-    AboutUsPage.prototype.contact = function () {
-        var email = {
-            to: 'san10694@gmail.com',
-            isHtml: true
-        };
-        this.emailComposer.open(email);
-    };
-    return AboutUsPage;
-}());
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Slides */]),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Slides */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Slides */]) === "function" && _a || Object)
-], AboutUsPage.prototype, "slides", void 0);
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */]),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */]) === "function" && _b || Object)
-], AboutUsPage.prototype, "nav", void 0);
-AboutUsPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-about-us',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\about-us\about-us.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n            <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n        <ion-title>About Us</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n\n\n   <ion-slides initialSlide=0 speed=2000 loop=true>\n\n  <ion-slide>\n\n    \n\n    <img src="assets/img/about_us.jpg" class="slider-img">\n\n       <div class="card-title">We provide better service</div>\n\n  </ion-slide>\n\n    <ion-slide>\n\n    <img src="assets/img/about-us.jpg" class="slider-img">\n\n     <div class="card-title">We provide better service</div>\n\n  </ion-slide>\n\n  <ion-slide>\n\n    <img src="assets/img/about_us.jpg" class="slider-img">\n\n     <div class="card-title">We provide better service</div>\n\n  </ion-slide>\n\n\n\n\n\n</ion-slides>\n\n\n\n<!--about-->\n\n<div class="wrapper">\n\n  <h4 class="heading">About Us </h4>\n\n    <p class="details">\n\n    	 Pietech Solution is a global information technology, consulting and outsourcing company was founded by a highly motivated groups of marketing Team, software Developer.Talented, driven and principled people who are passionate about IT services, came together because they wanted to do something special. Special work for our clients is the front line, revolutionizing the way the industry works is a gradual effect, improving Industry through services is our long term goal.We offer a variety of services in the area of Mobile Application Development, Software Development ,Web Application development,CRM Business application,Responsive websites Design and Online Marketing.Our field service management software connects you with your field workforce, giving you complete visibility of the service delivery operation and driving efficiency and profitability.\n\n    </p>\n\n\n\n <!--Get in touch-->\n\n   <h4 class="heading">Get In Touch &nbsp;<ion-icon name="arrow-dropdown"></ion-icon></h4>\n\n   <ion-card>\n\n      <ion-card-content (click)="callUs()">\n\n         <ion-icon name="call"></ion-icon> &nbsp; Call us\n\n      </ion-card-content>\n\n      <ion-card-content (click)="contact()">\n\n        <ion-icon name="mail"></ion-icon> &nbsp; Email us\n\n      </ion-card-content>\n\n      <ion-card-content (click)="gotogoogleMap()">\n\n         <ion-icon name="locate" ></ion-icon> &nbsp; Locate us\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n <!--follow-->\n\n    <h4 class="heading">Follow Us &nbsp;<ion-icon name="arrow-dropdown"></ion-icon></h4>\n\n   <ion-card>\n\n      <ion-card-content>\n\n          <ion-icon name="logo-facebook"></ion-icon> &nbsp; Facebook\n\n      </ion-card-content>\n\n      <ion-card-content>\n\n        <ion-icon name="logo-twitter"></ion-icon> &nbsp; Twitter\n\n      </ion-card-content>\n\n      <ion-card-content>\n\n         <ion-icon name="logo-instagram"></ion-icon> &nbsp; Instagram\n\n      </ion-card-content>\n\n    </ion-card>\n\n   </div> \n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\about-us\about-us.html"*/,
-        providers: [__WEBPACK_IMPORTED_MODULE_2__ionic_native_call_number__["a" /* CallNumber */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__["a" /* EmailComposer */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_call_number__["a" /* CallNumber */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_call_number__["a" /* CallNumber */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__["a" /* EmailComposer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__["a" /* EmailComposer */]) === "function" && _g || Object])
-], AboutUsPage);
-
-var _a, _b, _c, _d, _e, _f, _g;
-//# sourceMappingURL=about-us.js.map
-
-/***/ }),
-
-/***/ 605:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(72);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CallNumber; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * @name Call Number
- * @description
- * Call a number directly from your Cordova/Ionic application.
- *
- * @usage
- * ```
- * import {CallNumber} from '@ionic-native/call-number';
- *
- * constructor(private callNumber: CallNumber) { }
- *
- * ...
- *
- *
- * this.callNumber.callNumber(18001010101, true)
- *   .then(() => console.log('Launched dialer!'))
- *   .catch(() => console.log('Error launching dialer'));
- *
- * ```
- */
-var CallNumber = (function () {
-    function CallNumber() {
-    }
-    /**
-     * Calls a phone number
-     * @param numberToCall {string} The phone number to call as a string
-     * @param bypassAppChooser {boolean} Set to true to bypass the app chooser and go directly to dialer
-     * @return {Promise<any>}
+    /*
+      Takes a value and makes it lowercase.
      */
-    CallNumber.prototype.callNumber = function (numberToCall, bypassAppChooser) {
-        return;
+    Entity.prototype.transform = function (text) {
+        var entities = [
+            ['amp', '&'],
+            ['apos', '\''],
+            ['#x27', '\''],
+            ['#x2F', '/'],
+            ['#39', '\''],
+            ['#47', '/'],
+            ['lt', '<'],
+            ['gt', '>'],
+            ['nbsp', ' '],
+            ['quot', '"']
+        ];
+        for (var i = 0, max = entities.length; i < max; ++i)
+            text = text.replace(new RegExp('&' + entities[i][0] + ';', 'g'), entities[i][1]);
+        return text;
     };
-    CallNumber.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */] },
-    ];
-    /** @nocollapse */
-    CallNumber.ctorParameters = function () { return []; };
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])({
-            callbackOrder: 'reverse'
-        }), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', [String, Boolean]), 
-        __metadata('design:returntype', Promise)
-    ], CallNumber.prototype, "callNumber", null);
-    CallNumber = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["b" /* Plugin */])({
-            pluginName: 'CallNumber',
-            plugin: 'call-number',
-            pluginRef: 'plugins.CallNumber',
-            repo: 'https://github.com/Rohfosho/CordovaCallNumberPlugin',
-            platforms: ['iOS', 'Android']
-        }), 
-        __metadata('design:paramtypes', [])
-    ], CallNumber);
-    return CallNumber;
+    return Entity;
 }());
-//# sourceMappingURL=index.js.map
+Entity = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+        name: 'entity'
+    }),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
+], Entity);
+
+//# sourceMappingURL=entity.js.map
+
+/***/ }),
+
+/***/ 584:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OrderBy; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+/*
+  Generated class for the OrderBy pipe.
+
+  See https://angular.io/docs/ts/latest/guide/pipes.html for more info on
+  Angular 2 Pipes.
+*/
+var OrderBy = (function () {
+    function OrderBy() {
+    }
+    /*
+      Takes a value and makes it lowercase.
+     */
+    OrderBy.prototype.transform = function (value, expression, ex1, ex2, reverse) {
+        if (!value) {
+            return value;
+        }
+        var array = value.sort(function (a, b) {
+            //console.log(expression);
+            //console.log(a[expression][ex1][ex2]);
+            //console.log(a['values']['name']['value']);
+            return a[expression][ex1][ex2] > b[expression][ex1][ex2] ? 1 : -1;
+        });
+        if (reverse) {
+            return array.reverse();
+        }
+        return array;
+    };
+    return OrderBy;
+}());
+OrderBy = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+        name: 'orderBy',
+        pure: false
+    })
+], OrderBy);
+
+//# sourceMappingURL=order-by.js.map
+
+/***/ }),
+
+/***/ 585:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__trunc__ = __webpack_require__(586);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__entity__ = __webpack_require__(583);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__order_by_ts__ = __webpack_require__(584);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PipesModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var PipesModule = (function () {
+    function PipesModule() {
+    }
+    return PipesModule;
+}());
+PipesModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_2__entity__["a" /* Entity */],
+            __WEBPACK_IMPORTED_MODULE_1__trunc__["a" /* Trunc */],
+            __WEBPACK_IMPORTED_MODULE_3__order_by_ts__["a" /* OrderBy */]
+        ],
+        imports: [],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_2__entity__["a" /* Entity */],
+            __WEBPACK_IMPORTED_MODULE_1__trunc__["a" /* Trunc */],
+            __WEBPACK_IMPORTED_MODULE_3__order_by_ts__["a" /* OrderBy */]
+        ]
+    })
+], PipesModule);
+
+//# sourceMappingURL=pipes.module.js.map
+
+/***/ }),
+
+/***/ 586:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Trunc; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+/*
+  Generated class for the OrderBy pipe.
+
+  See https://angular.io/docs/ts/latest/guide/pipes.html for more info on
+  Angular 2 Pipes.
+*/
+var Trunc = (function () {
+    function Trunc() {
+    }
+    /*
+      Takes a value and makes it lowercase.
+     */
+    Trunc.prototype.transform = function (value) {
+        return Math.trunc(value);
+    };
+    return Trunc;
+}());
+Trunc = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+        name: 'trunc',
+        pure: false
+    })
+], Trunc);
+
+//# sourceMappingURL=trunc.js.map
 
 /***/ }),
 
@@ -206,8 +242,8 @@ var CallNumber = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(72);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmailComposer; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CartPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -219,140 +255,166 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * @beta
- * @name Email Composer
- * @description
- *
- * Requires Cordova plugin: cordova-plugin-email-composer. For more info, please see the [Email Composer plugin docs](https://github.com/hypery2k/cordova-email-plugin).
- *
- * DISCLAIMER: This plugin is experiencing issues with the latest versions of Cordova. Use at your own risk. Functionality is not guaranteed. Please stay tuned for a more stable version.
- * A good alternative to this plugin is the social sharing plugin.
- *
- * @usage
- * ```typescript
- * import { EmailComposer } from '@ionic-native/email-composer';
- *
- * constructor(private emailComposer: EmailComposer) { }
- *
- * ...
- *
- *
- * this.emailComposer.isAvailable().then((available: boolean) =>{
- *  if(available) {
- *    //Now we know we can send
- *  }
- * });
- *
- * let email = {
- *   to: 'max@mustermann.de',
- *   cc: 'erika@mustermann.de',
- *   bcc: ['john@doe.com', 'jane@doe.com'],
- *   attachments: [
- *     'file://img/logo.png',
- *     'res://icon.png',
- *     'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
- *     'file://README.pdf'
- *   ],
- *   subject: 'Cordova Icons',
- *   body: 'How are you? Nice greetings from Leipzig',
- *   isHtml: true
- * };
- *
- * // Send a text message using default options
- * this.emailComposer.open(email);
- *
- * ```
- * @interfaces
- * EmailComposerOptions
- */
-var EmailComposer = (function () {
-    function EmailComposer() {
+var CartPage = (function () {
+    function CartPage(navCtrl, alertCtrl, popoverCtrl) {
+        this.navCtrl = navCtrl;
+        this.alertCtrl = alertCtrl;
+        this.popoverCtrl = popoverCtrl;
+        this.cartItems = [];
+        this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
+        if (this.cartItems != null) {
+            this.noOfItems = this.cartItems.length;
+        }
     }
-    /**
-     * Verifies if sending emails is supported on the device.
-     *
-     * @param [app] {string} App id or uri scheme.
-     * @returns {Promise<any>} Resolves if available, rejects if not available
-     */
-    EmailComposer.prototype.isAvailable = function (app) {
-        return new Promise(function (resolve, reject) {
-            if (app) {
-                cordova.plugins.email.isAvailable(app, function (isAvailable) {
-                    if (isAvailable) {
-                        resolve();
+    CartPage.prototype.ngOnInit = function () {
+        var _this = this;
+        if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
+            var prompt = this.alertCtrl.create({
+                title: 'Your Cart is Empty!',
+                message: "Please add item",
+                buttons: [
+                    {
+                        text: 'Ok',
+                        handler: function (data) {
+                            localStorage.removeItem('cartItem');
+                            if (_this.navCtrl.canGoBack() == true) {
+                                _this.navCtrl.pop();
+                            }
+                            else {
+                                _this.navCtrl.push("HomePage");
+                            }
+                        }
                     }
-                    else {
-                        reject();
-                    }
-                });
-            }
-            else {
-                cordova.plugins.email.isAvailable(function (isAvailable) {
-                    if (isAvailable) {
-                        resolve();
-                    }
-                    else {
-                        reject();
-                    }
-                });
-            }
-        });
+                ]
+            });
+            prompt.present();
+        }
+        else {
+            this.noOfItems = this.cartItems.length;
+            this.CalculatePrice();
+            //console.log(this.cartItems);
+        }
     };
-    /**
-     * Adds a new mail app alias.
-     *
-     * @param alias {string} The alias name
-     * @param packageName {string} The package name
-     */
-    EmailComposer.prototype.addAlias = function (alias, packageName) { };
-    /**
-     * Displays the email composer pre-filled with data.
-     *
-     * @param options {EmailComposerOptions} Email
-     * @param [scope] {any} Scope for the promise
-     * @returns {Promise<any>} Resolves promise when the EmailComposer has been opened
-     */
-    EmailComposer.prototype.open = function (options, scope) { return; };
-    EmailComposer.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */] },
-    ];
-    /** @nocollapse */
-    EmailComposer.ctorParameters = function () { return []; };
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["d" /* CordovaCheck */])(), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', [String]), 
-        __metadata('design:returntype', Promise)
-    ], EmailComposer.prototype, "isAvailable", null);
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])(), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', [String, String]), 
-        __metadata('design:returntype', void 0)
-    ], EmailComposer.prototype, "addAlias", null);
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* Cordova */])({
-            successIndex: 1,
-            errorIndex: 3
-        }), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', [Object, Object]), 
-        __metadata('design:returntype', Promise)
-    ], EmailComposer.prototype, "open", null);
-    EmailComposer = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["b" /* Plugin */])({
-            pluginName: 'EmailComposer',
-            plugin: 'cordova-plugin-email',
-            pluginRef: 'cordova.plugins.email',
-            repo: 'https://github.com/hypery2k/cordova-email-plugin',
-            platforms: ['Android', 'iOS']
-        }), 
-        __metadata('design:paramtypes', [])
-    ], EmailComposer);
-    return EmailComposer;
+    CartPage.prototype.deleteItem = function (data) {
+        for (var i = 0; i <= this.cartItems.length - 1; i++) {
+            if (this.cartItems[i].id == data.id) {
+                this.cartItems.splice(i, 1);
+            }
+        }
+        if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
+            this.SubTotalPrice = 0;
+            this.GrandTotal = 0;
+        }
+        else {
+            this.CalculatePrice();
+        }
+        localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
+        this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
+        this.noOfItems = this.noOfItems - 1;
+        if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
+            this.alert();
+        }
+    };
+    CartPage.prototype.deleteOptionItem = function (data) {
+        for (var i = 0; i <= this.cartItems.length - 1; i++) {
+            for (var j = 0; j <= this.cartItems[i].extraOption.length - 1; j++) {
+                if (this.cartItems[i].extraOption[j].id == data.id) {
+                    this.cartItems[i].extraOption.splice(j, 1);
+                    console.log(this.cartItems);
+                }
+            }
+        }
+        this.CalculatePrice();
+        localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
+        this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
+        this.noOfItems = this.noOfItems - 1;
+        if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
+            this.alert();
+        }
+    };
+    CartPage.prototype.checkout = function () {
+        if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
+            this.alert();
+        }
+        else {
+            this.navCtrl.push("CheckoutPage");
+        }
+    };
+    CartPage.prototype.alert = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Cart Is Empty!',
+            subTitle: 'Please Add Item!',
+            buttons: [
+                {
+                    text: 'Ok',
+                    handler: function (data) {
+                        localStorage.removeItem('cartItem');
+                        _this.navCtrl.push("HomePage");
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    CartPage.prototype.CalculatePrice = function () {
+        var proGrandTotalPrice = 0;
+        for (var i = 0; i <= this.cartItems.length; i++) {
+            if (this.cartItems[i] != null) {
+                if (this.cartItems[i].extraOption.length != 0) {
+                    for (var j = 0; j <= this.cartItems[i].extraOption.length - 1; j++) {
+                        proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].extraOption[j].price;
+                    }
+                    proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].itemTotalPrice;
+                }
+                else {
+                    proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].itemTotalPrice;
+                }
+                this.SubTotalPrice = proGrandTotalPrice;
+            }
+        }
+        this.delivery = 5;
+        this.GrandTotal = Math.ceil(this.SubTotalPrice + this.delivery);
+        localStorage.setItem('orderTotal', JSON.stringify(this.SubTotalPrice));
+    };
+    CartPage.prototype.add = function (data) {
+        if (data.Quantity < 20) {
+            data.Quantity = data.Quantity + 1;
+            for (var i = 0; i <= this.cartItems.length - 1; i++) {
+                if (this.cartItems[i].id == data.id) {
+                    this.cartItems[i].Quantity = data.Quantity;
+                    this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].price);
+                }
+            }
+            localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
+            this.CalculatePrice();
+        }
+    };
+    CartPage.prototype.remove = function (data) {
+        if (data.Quantity > 1) {
+            data.Quantity = data.Quantity - 1;
+            for (var i = 0; i <= this.cartItems.length - 1; i++) {
+                if (this.cartItems[i].id == data.id) {
+                    this.cartItems[i].Quantity = data.Quantity;
+                    this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].price);
+                }
+            }
+            localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
+            this.CalculatePrice();
+        }
+    };
+    return CartPage;
 }());
-//# sourceMappingURL=index.js.map
+CartPage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-cart',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\cart\cart.html"*/'<ion-header>\n   <ion-navbar hideBackButton="true">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Cart</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only color="royal">\n                <ion-icon name="cart"></ion-icon>\n                <ion-badge class="carts" item-right color="danger">{{noOfItems}}</ion-badge>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <div>\n        <ion-list class="cart-list" *ngFor="let cartItem of cartItems"><!-- item-list -->\n            <ion-item class="cart-item"><!-- item -->\n                <ion-row>\n                    <ion-col col-2><!-- col-cancel  button -->\n                        <ion-icon class="close-btn" ion-button icon only clear ios="ios-close-circle"\n                                  md="md-close-circle"\n                                   (click)="deleteItem(cartItem)">\n                        </ion-icon>\n                    </ion-col>\n                    <ion-col><!-- col-for item-image and details -->\n                        <ion-row>\n                            <ion-col col-4><!-- item-image -->\n                                <img src="http://aljedad.com/sforder/assets/images/thumbnail/{{cartItem.thumb}}" alt="">\n                            </ion-col>\n                            <ion-col col-6>\n                                <p><span class="item-detail"> {{cartItem.Quantity}} x </span> \n                                   <span class="item-name"> {{ cartItem.name }} </span>                                 \n                                </p>\n                                <!--<p class="item-price"> {{cartItem.price | trunc}} QR </p>-->\n\n                            <div  *ngFor="let option of cartItem.extraOption"> \n                            <p class="item-option-detail">+ {{option.name}} - {{option.price}}QR \n                                <span class="option-delete" (click)="deleteOptionItem(option)"> <strong>x</strong> </span> </p>\n                            </div>   \n                                <ion-row><!-- row-for count item -->\n\n                                    <div class="count">\n                                        <span class="item-count" (click)="remove(cartItem)"> - </span>\n                                        <span class="item-count show-count"> {{cartItem.Quantity}}</span>\n                                        <span class="item-count" (click)="add(cartItem)"> + </span>\n                                    </div>\n                                </ion-row>\n                            </ion-col>\n                        </ion-row>\n                    </ion-col>\n                </ion-row>\n            </ion-item>\n        </ion-list>\n        <ion-row class="price-details">\n            <ion-col class="calculate">\n                <p class="bill-detail">Subtotal <span> {{SubTotalPrice}} QR</span></p>\n                <p class="bill-detail">Delivery Charge <span> {{delivery | number}} QR</span></p>\n                <!--<p class="bill-detail">Other Taxes (3%)\n                    <span>{{otherTaxes | number}} QR</span></p>-->\n                <hr>\n                <p class="cart-total"><strong>Order Total </strong><span class="price">{{GrandTotal}} QR</span>\n                </p>\n            </ion-col>\n        </ion-row><!-- row-bill-deatails -->\n        <!-- continue button -->\n        <ion-row>\n            <ion-col>\n                <button ion-button block class="continue-btn" (click)="checkout()">Continue</button>\n            </ion-col>\n        </ion-row>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\cart\cart.html"*/
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* AlertController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* PopoverController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* PopoverController */]) === "function" && _c || Object])
+], CartPage);
+
+var _a, _b, _c;
+//# sourceMappingURL=cart.js.map
 
 /***/ })
 

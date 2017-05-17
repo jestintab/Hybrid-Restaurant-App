@@ -17,6 +17,36 @@ page-checkout {
   .no-padd {
     padding: 0px
   }
+.item-radio-checked{
+  color: $primary;
+}
+.ion-label{
+  color:$primary;
+}
+.ordertype-block{
+ .radio-md .radio-checked{
+   border-color: $primary;
+   .radio-inner{
+     background: $primary;     
+   }
+ }
+}
+.payment-block{
+ .radio-md .radio-checked{
+   border-color: $dark;
+   .radio-inner{
+     background: $dark;
+   }
+ }
+}
+
+.card-detail p{
+  color: #fff;
+}
+
+   ion-label input:checked{
+     color: $primary;
+   }
 
   .item {
     color: $white;
@@ -28,8 +58,13 @@ page-checkout {
     border: 1px solid $light-grey;
     margin: 0.4rem 0rem;
   }
-  .payment-block {
-    margin-bottom: 0px
+  .ordertype-block {
+    margin-bottom: 0px;
+    background: #000;
+    span {
+      color: $white;
+      font-size: 12px;
+    }
   }
   .date-icon{
     position: absolute;
@@ -55,7 +90,7 @@ page-checkout {
       padding: 1.3rem;
       margin: 0;
       background-color: $primary;
-      color: $white;
+      color: $dark;
     }
     .sub-address {
       background-color: rgba(0, 0, 0, 0.5);
@@ -64,7 +99,8 @@ page-checkout {
       border-left: 1px solid;
       border-color: rgba(256, 256, 256, .05);
       padding-left: 0 !important;
-      text-indent: 7px
+      text-indent: 7px;
+      
     }
 
     .col-cod {

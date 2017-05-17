@@ -1,14 +1,14 @@
 webpackJsonp([11],{
 
-/***/ 572:
+/***/ 576:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__news_detail__ = __webpack_require__(590);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsDetailPageModule", function() { return NewsDetailPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__news__ = __webpack_require__(615);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewsPageModule", function() { return NewsPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var NewsDetailPageModule = (function () {
-    function NewsDetailPageModule() {
+var NewsPageModule = (function () {
+    function NewsPageModule() {
     }
-    return NewsDetailPageModule;
+    return NewsPageModule;
 }());
-NewsDetailPageModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+NewsPageModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__news_detail__["a" /* NewsDetailPage */]
+            __WEBPACK_IMPORTED_MODULE_2__news__["a" /* NewsPage */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__news_detail__["a" /* NewsDetailPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__news__["a" /* NewsPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__news_detail__["a" /* NewsDetailPage */]
+            __WEBPACK_IMPORTED_MODULE_2__news__["a" /* NewsPage */]
         ]
     })
-], NewsDetailPageModule);
+], NewsPageModule);
 
-//# sourceMappingURL=news-detail.module.js.map
+//# sourceMappingURL=news.module.js.map
 
 /***/ }),
 
-/***/ 590:
+/***/ 615:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_service__ = __webpack_require__(128);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewsDetailPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewsPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -61,39 +61,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var NewsDetailPage = (function () {
-    function NewsDetailPage(navCtrl, navParams, newsService) {
+var NewsPage = (function () {
+    function NewsPage(navCtrl, navParams, newsService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.newsService = newsService;
-        this.newsDetails = {};
-        this.newsId = this.navParams.get('newsId');
     }
-    NewsDetailPage.prototype.ngOnInit = function () {
+    NewsPage.prototype.ngOnInit = function () {
         var _this = this;
         this.newsService.getData()
             .subscribe(function (response) {
-            for (var i = 0; i <= response.newsList.length - 1; i++) {
-                if (response.newsList[i].id == _this.newsId) {
-                    _this.newsDetails = response.newsList[i];
-                }
-            }
+            _this.newsList = response.newsList;
         });
     };
-    return NewsDetailPage;
+    NewsPage.prototype.newsDetail = function (newsId) {
+        this.navCtrl.push("NewsDetailPage", {
+            newsId: newsId
+        });
+    };
+    return NewsPage;
 }());
-NewsDetailPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-news-detail',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\news-detail\news-detail.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>News-details</ion-title>\n    </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n    <ion-card>\n        <img src="{{newsDetails.image}}">\n        <p class="news-head" center>{{newsDetails.title}}</p>\n        <p class="news-time">{{newsDetails.dateTime}}</p>\n        <ion-card-content>\n            <p>{{newsDetails.details}} </p>\n        </ion-card-content>\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\news-detail\news-detail.html"*/,
+NewsPage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-news',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\news\news.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n        </button>\n        <ion-title>News</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <ion-list>\n        <ion-item (click)="newsDetail(news.id)" *ngFor="let news of newsList">\n            <ion-thumbnail item-left>\n                <img src="{{news.image}}">\n            </ion-thumbnail>\n            <h2>{{news.title}} </h2>\n            <p>{{news.discription}}</p>\n        </ion-item>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\news\news.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* Service */]]
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* Service */]])
-], NewsDetailPage);
+], NewsPage);
 
-//# sourceMappingURL=news-detail.js.map
+//# sourceMappingURL=news.js.map
 
 /***/ })
 

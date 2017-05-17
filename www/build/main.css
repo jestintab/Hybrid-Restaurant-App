@@ -24902,6 +24902,38 @@ page-checkout .no-padd {
   padding: 0px;
 }
 
+page-checkout .item-radio-checked {
+  color: #fecc27;
+}
+
+page-checkout .ion-label {
+  color: #fecc27;
+}
+
+page-checkout .ordertype-block .radio-md .radio-checked {
+  border-color: #fecc27;
+}
+
+page-checkout .ordertype-block .radio-md .radio-checked .radio-inner {
+  background: #fecc27;
+}
+
+page-checkout .payment-block .radio-md .radio-checked {
+  border-color: #222;
+}
+
+page-checkout .payment-block .radio-md .radio-checked .radio-inner {
+  background: #222;
+}
+
+page-checkout .card-detail p {
+  color: #fff;
+}
+
+page-checkout ion-label input:checked {
+  color: #fecc27;
+}
+
 page-checkout .item {
   color: #fff;
   background-color: #fecc27;
@@ -24914,8 +24946,14 @@ page-checkout .checkOut .card-btn, page-checkout .checkOut .checkOut-btn, page-c
   margin: 0.4rem 0rem;
 }
 
-page-checkout .payment-block {
+page-checkout .ordertype-block {
   margin-bottom: 0px;
+  background: #000;
+}
+
+page-checkout .ordertype-block span {
+  color: #fff;
+  font-size: 12px;
 }
 
 page-checkout .date-icon {
@@ -24943,7 +24981,7 @@ page-checkout .checkOut .add-heading {
   padding: 1.3rem;
   margin: 0;
   background-color: #fecc27;
-  color: #fff;
+  color: #222;
 }
 
 page-checkout .checkOut .sub-address {
