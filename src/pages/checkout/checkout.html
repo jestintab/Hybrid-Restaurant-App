@@ -20,21 +20,21 @@
                 <ion-col col-4 class="col-card no-padd">
                     <ion-item class="sub-address">
                         <ion-label>Delivery <span>in 50 mins</span></ion-label>                      
-                        <ion-radio checked="true" value="delivery" (click)="delivery()"></ion-radio>
+                        <ion-radio name="order_type" checked="true" value="delivery" (click)="delivery()"></ion-radio>
                     </ion-item>
                 </ion-col>
                 <ion-col col-4 class="col-card no-padd">
                     <ion-item class="sub-address">
                         <ion-label>TakeAway <span>in 15 mins</span></ion-label>
                       
-                        <ion-radio value="pickup"  (click)="takeaway()"></ion-radio>
+                        <ion-radio name="order_type" value="pickup"  (click)="takeaway()"></ion-radio>
                     </ion-item>
                 </ion-col>
                 <ion-col col-4 class="no-padd">
                     <ion-item class="sub-address">
                         <ion-label>Free Delivery </ion-label>
                         <ion-label> <span>(only gatemall) </span></ion-label>
-                        <ion-radio value="free" (click)="gateMall()"></ion-radio>
+                        <ion-radio name="order_type" value="gatemall" (click)="gateMall()"></ion-radio>
                     </ion-item>
                 </ion-col>
            

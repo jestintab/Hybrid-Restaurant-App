@@ -21,13 +21,13 @@ export class CheckoutPage {
     
     OrderedProduct = { 
         cartItems: [],
-        COD: '',
-        orderType:'',
+        payment: 'cod',
+        orderType:'delivery',
         orderDetail: {},
         orderTotal: {},
         comments:'',
     };
-    COD: string;
+   
     orderType:string;
     deliveryCharge:number = 5;
 
@@ -41,7 +41,7 @@ export class CheckoutPage {
 
     onCheckout(OrderDetails: NgForm) {
         this.OrderedProduct.orderDetail = OrderDetails.value;
-        this.OrderedProduct.COD = this.COD;
+     
         this.service.postOrderDetails(this.OrderedProduct);
         // .subscribe((res) => {
         //     console.log(res);
@@ -51,14 +51,12 @@ export class CheckoutPage {
         //this.navCtrl.push(ThankyouPage);
     }
 
-    toggle2() {
-        this.tagHide2 = this.tagHide2 ? false : true;
-    }
+   
     delivery(){
         this.order_delivery = false;
         this.gatemall = true;       
         this.orderDetails.city = 'Doha, Qatar';   
-        this.orderType = 'Delivery';
+        this.OrderedProduct.orderType = 'delivery';
         this.deliveryCharge = 5;
 
     }
@@ -67,6 +65,7 @@ export class CheckoutPage {
         this.order_delivery = true;
         this.orderDetails.city = 'The Gate Mall, Doha, Qatar';
         this.deliveryCharge = 0;
+        this.OrderedProduct.orderType = 'gatemall';
         
         
     }
@@ -76,14 +75,22 @@ export class CheckoutPage {
         this.gatemall = true;
         this.orderDetails.city = 'Doha, Qatar';
         this.deliveryCharge = 0;
+        this.OrderedProduct.orderType = 'collection';
                 
      }
+      toggle2() {
+        this.tagHide2 = this.tagHide2 ? false : true;
+            this.OrderedProduct.payment = 'pcm';
+        
+    }
 
     hide() {
-        this.tagHide2 = true;
-        //this.tag = true;
-        this.COD = 'cod';
+      
+            this.tagHide2 = true;
+            this.OrderedProduct.payment = 'cod';
+        
     }
+
     if(orderType = 'Delivery'){
         this.deliveryCharge = 5;
     }
