@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http, Response, Headers, RequestOptions} from "@angular/http";
+import {Http, Response, Headers} from "@angular/http";
 import 'rxjs/Rx';
 
 
@@ -16,7 +16,7 @@ export class Service {
     private amp:string;
     private body:any;
     private headers:any;
-    private options:any;
+    //private options:any;
     private postUrl:string;
 
 

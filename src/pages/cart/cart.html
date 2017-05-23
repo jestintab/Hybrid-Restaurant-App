@@ -73,7 +73,7 @@
             </ion-label>
             <ion-item class="sub-address" >
                     <ion-textarea rows="3" [(ngModel)]="cartData.comments" [ngModelOptions]="{standalone: true}" placeholder="Special instructions/comments" name="comments" id="comments"
-                                  ></ion-textarea>
+                        ng-value="cartData.comments"          ></ion-textarea>
                 </ion-item>
         </ion-row>    
     

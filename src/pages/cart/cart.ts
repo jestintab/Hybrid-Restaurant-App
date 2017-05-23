@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {AlertController, NavController, PopoverController, IonicPage} from "ionic-angular";
-import {NgForm} from "@angular/forms";
+//import {NgForm} from "@angular/forms";
 
 
 @IonicPage()
@@ -10,7 +10,7 @@ import {NgForm} from "@angular/forms";
 })
 export class CartPage {
     cartItems: any[] = [];
-    cartData:any[] =[];
+    cartData:any[] = [];
     SubTotalPrice: number;
     GrandTotal: number;
     noOfItems: number;
@@ -23,7 +23,7 @@ export class CartPage {
             this.noOfItems = this.cartItems.length;
         }
     }
-
+ 
     ngOnInit() {
         if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
             let prompt = this.alertCtrl.create({
@@ -97,17 +97,19 @@ export class CartPage {
         }
     }
 
-      onCart(){        
-      this.cartData['comments'] = this.cartData;   
+      onCart(){
+
+      this.cartData['comments'] = this.cartData['comments'];  
+       
        if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
             this.alert();
         }
         else {
-            this.navCtrl.push("CheckoutPage",this.cartData);
-      console.log(this.cartData);
             
-        }
-  }  
+            this.navCtrl.push("CheckoutPage",this.cartData);
+            console.log(this.cartData);         
+            }
+    }  
 
  
 

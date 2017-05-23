@@ -20,12 +20,13 @@ export class CheckoutPage {
     gatemall:boolean = true;
     
     OrderedProduct = { 
-        cartItems: [],
+        cartItems: [ ],
         payment: 'cod',
         orderType:'delivery',
         orderDetail: {},
         orderTotal: {},
-        comments:'',
+        comment: ''
+       
     };
    
     orderType:string;
@@ -35,7 +36,7 @@ export class CheckoutPage {
                 public NavParams: NavParams) {
         this.OrderedProduct.cartItems = JSON.parse(localStorage.getItem('cartItem'));
         this.OrderedProduct.orderTotal = this.NavParams.get('orderTotal');
-        this.OrderedProduct.comments = this.NavParams.get('comments');
+        this.OrderedProduct.comment = this.NavParams.get('comments');
         this.orderDetails.city = 'Doha, Qatar';
     }
 

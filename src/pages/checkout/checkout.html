@@ -86,7 +86,7 @@
             <div>
                 <ion-item class="sub-address">
                     <ion-input type="text" placeholder="Name" name="name" id="name"
-                               [(ngModel)]="orderDetails.name"></ion-input>
+                               [(ngModel)]="orderDetails.name" ng-value="orderDetails.name"></ion-input>
                 </ion-item>
                 <ion-item class="sub-address">
                     <ion-input type="email" placeholder="Email" name="email" id="email"
@@ -98,14 +98,14 @@
                 </ion-item>
 
                 <ion-item class="sub-address" [hidden]="order_delivery">
-                    <ion-textarea rows="3" placeholder="Address" name="adress" id="adress"
-                                  [(ngModel)]="orderDetails.adress"></ion-textarea>
+                    <ion-textarea rows="3" placeholder="Address" name="address" id="address"
+                                  [(ngModel)]="orderDetails.address"></ion-textarea>
                 </ion-item>
 
                 <div [hidden]="gatemall"> 
 
                 <ion-item class="sub-address" >
-                    <ion-textarea rows="3" placeholder="Company/Shop Name" name="adress" id="adress"
+                    <ion-textarea rows="3" placeholder="Company/Shop Name" name="address" id="address"
                                   [(ngModel)]="orderDetails.address"></ion-textarea>
                 </ion-item>
                 <ion-item class="sub-address">
