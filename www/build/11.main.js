@@ -88,7 +88,7 @@ NewsPage = __decorate([
         providers: [__WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* Service */]]
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* Service */]])
 ], NewsPage);
 

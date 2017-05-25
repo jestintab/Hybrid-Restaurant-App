@@ -1,14 +1,14 @@
 webpackJsonp([8],{
 
-/***/ 581:
+/***/ 582:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings__ = __webpack_require__(620);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingsModule", function() { return SettingsModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__thankyou__ = __webpack_require__(621);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThankyouPageModule", function() { return ThankyouPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SettingsModule = (function () {
-    function SettingsModule() {
+var ThankyouPageModule = (function () {
+    function ThankyouPageModule() {
     }
-    return SettingsModule;
+    return ThankyouPageModule;
 }());
-SettingsModule = __decorate([
+ThankyouPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__settings__["a" /* Settings */]
+            __WEBPACK_IMPORTED_MODULE_2__thankyou__["a" /* ThankyouPage */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__settings__["a" /* Settings */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__thankyou__["a" /* ThankyouPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__settings__["a" /* Settings */]
+            __WEBPACK_IMPORTED_MODULE_2__thankyou__["a" /* ThankyouPage */]
         ]
     })
-], SettingsModule);
+], ThankyouPageModule);
 
-//# sourceMappingURL=settings.module.js.map
+//# sourceMappingURL=thankyou.module.js.map
 
 /***/ }),
 
-/***/ 620:
+/***/ 621:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Settings; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ThankyouPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,36 +59,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var Settings = (function () {
-    function Settings(navCtrl) {
+var ThankyouPage = (function () {
+    function ThankyouPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.user = {};
-        this.url = "assets/img/profile.jpg";
     }
-    Settings.prototype.onSubmit = function (user) {
-        console.log("user Setting Data : " + JSON.stringify(this.user));
+    ThankyouPage.prototype.ionViewDidLoad = function () {
+        localStorage.removeItem('cartItem');
     };
-    Settings.prototype.readUrl = function (event) {
-        var _this = this;
-        if (event.target.files && event.target.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (event) {
-                _this.url = event.target.result;
-            };
-            reader.readAsDataURL(event.target.files[0]);
-        }
-    };
-    return Settings;
+    return ThankyouPage;
 }());
-Settings = __decorate([
+ThankyouPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-settings',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\settings\settings.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n        </button>\n        <ion-title>Settings</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <div class="login">\n        <ion-row>\n            <img class="img" [src]="url"><br>\n        </ion-row>\n        <ion-row>\n            <input type="file" name="file" id="file" class="inputfile" aria-describedby="fileHelp" accept="image/*"\n                   (change)="readUrl($event)">\n            <label for="file" class="upload">\n                <ion-icon ios="ios-cloud-upload" md="md-cloud-upload"></ion-icon>\n            </label>\n        </ion-row>\n        <p class="name">Hello Guest</p>\n        <p class="email">ionicfirebaseapp@gmail.com</p>\n    </div>\n    <form (ngSubmit)="onSubmit(f)" #f="ngForm">\n        <ion-list>\n            <ion-item>\n                <ion-label primary> Notifications</ion-label>\n                <ion-toggle primary checked="false"></ion-toggle>\n            </ion-item>\n            <!--card no-->\n            <ion-item>\n                <ion-label>Card Number:</ion-label>\n                <ion-input type="text" name="card" id="card" placeholder="5172628928"\n                           [(ngModel)]="user.card"></ion-input>\n            </ion-item>\n            <!--name on card-->\n            <ion-item>\n                <ion-label>Name on card:</ion-label>\n                <ion-input type="text" name="name" id="email" placeholder="Your Name"\n                           [(ngModel)]="user.name"></ion-input>\n            </ion-item>\n            <!--cvv-->\n            <ion-item>\n                <ion-label>CVV:</ion-label>\n                <ion-input type="number" name="cvv" id="cvv" placeholder="234"\n                           [(ngModel)]="user.cvv"></ion-input>\n            </ion-item>\n            <!--date-->\n            <ion-item>\n                <ion-label>Date of expiry:</ion-label>\n                <ion-input type="number" name="date" id="date" placeholder="25/06/2020"\n                           [(ngModel)]="user.date"></ion-input>\n            </ion-item>\n        </ion-list>\n        <!--button-->\n        <button class="login-btn" ion-button type="submit">Save</button>\n    </form>\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\settings\settings.html"*/
+        selector: 'page-thankyou',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\thankyou\thankyou.html"*/'<ion-header>\n    <ion-navbar hideBackButton="true">\n        <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n        </button>\n            <ion-title>Thank You</ion-title>\n            <ion-buttons end>\n                <button ion-button icon-only color="royal">\n                    <ion-icon name="cart"></ion-icon>\n                </button>\n            </ion-buttons>\n    </ion-navbar>\n</ion-header>\n\n<ion-content class="page-content">\n    <ion-row>\n        <ion-col>\n            <div class="thanks">\n                <h2>Thank you !</h2>\n                <p>We love our customers and we value your business.\n                    we want to thank you for giving us the opportunity\n                    to serve you. Our customer service always open to hear feedback from you.thanks you!\n                </p>\n            </div>\n        </ion-col>\n    </ion-row>\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\thankyou\thankyou.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
-], Settings);
+], ThankyouPage);
 
-//# sourceMappingURL=settings.js.map
+//# sourceMappingURL=thankyou.js.map
 
 /***/ })
 

@@ -2337,7 +2337,7 @@ LocationPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-location',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\location\location.html"*/'<!--\n  Generated template for the Location page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>SF Location</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content >\n\n<sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">\n\n        <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>\n\n </sebm-google-map>\n\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\location\location.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], LocationPage);
 
 //# sourceMappingURL=location.js.map

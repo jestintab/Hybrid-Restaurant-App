@@ -98,12 +98,12 @@ var AboutUsPage = (function () {
     return AboutUsPage;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Slides */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Slides */])
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Slides */]),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Slides */])
 ], AboutUsPage.prototype, "slides", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Nav */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Nav */])
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Nav */]),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Nav */])
 ], AboutUsPage.prototype, "nav", void 0);
 AboutUsPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
@@ -111,9 +111,9 @@ AboutUsPage = __decorate([
         selector: 'page-about-us',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\about-us\about-us.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n            <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n        <ion-title>About Us</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n\n\n   <ion-slides initialSlide=0 speed=2000 loop=true>\n\n  <ion-slide>\n\n    \n\n    <img src="assets/img/about_us.jpg" class="slider-img">\n\n       <div class="card-title">We provide better service</div>\n\n  </ion-slide>\n\n    <ion-slide>\n\n    <img src="assets/img/about-us.jpg" class="slider-img">\n\n     <div class="card-title">We provide better service</div>\n\n  </ion-slide>\n\n  <ion-slide>\n\n    <img src="assets/img/about_us.jpg" class="slider-img">\n\n     <div class="card-title">We provide better service</div>\n\n  </ion-slide>\n\n\n\n\n\n</ion-slides>\n\n\n\n<!--about-->\n\n<div class="wrapper">\n\n  <h4 class="heading">About Us </h4>\n\n    <p class="details">\n\n    	 Pietech Solution is a global information technology, consulting and outsourcing company was founded by a highly motivated groups of marketing Team, software Developer.Talented, driven and principled people who are passionate about IT services, came together because they wanted to do something special. Special work for our clients is the front line, revolutionizing the way the industry works is a gradual effect, improving Industry through services is our long term goal.We offer a variety of services in the area of Mobile Application Development, Software Development ,Web Application development,CRM Business application,Responsive websites Design and Online Marketing.Our field service management software connects you with your field workforce, giving you complete visibility of the service delivery operation and driving efficiency and profitability.\n\n    </p>\n\n\n\n <!--Get in touch-->\n\n   <h4 class="heading">Get In Touch &nbsp;<ion-icon name="arrow-dropdown"></ion-icon></h4>\n\n   <ion-card>\n\n      <ion-card-content (click)="callUs()">\n\n         <ion-icon name="call"></ion-icon> &nbsp; Call us\n\n      </ion-card-content>\n\n      <ion-card-content (click)="contact()">\n\n        <ion-icon name="mail"></ion-icon> &nbsp; Email us\n\n      </ion-card-content>\n\n      <ion-card-content (click)="gotogoogleMap()">\n\n         <ion-icon name="locate" ></ion-icon> &nbsp; Locate us\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n <!--follow-->\n\n    <h4 class="heading">Follow Us &nbsp;<ion-icon name="arrow-dropdown"></ion-icon></h4>\n\n   <ion-card>\n\n      <ion-card-content>\n\n          <ion-icon name="logo-facebook"></ion-icon> &nbsp; Facebook\n\n      </ion-card-content>\n\n      <ion-card-content>\n\n        <ion-icon name="logo-twitter"></ion-icon> &nbsp; Twitter\n\n      </ion-card-content>\n\n      <ion-card-content>\n\n         <ion-icon name="logo-instagram"></ion-icon> &nbsp; Instagram\n\n      </ion-card-content>\n\n    </ion-card>\n\n   </div> \n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\about-us\about-us.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_2__ionic_native_call_number__["a" /* CallNumber */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__["a" /* EmailComposer */]]
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Platform */],
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Platform */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_2__ionic_native_call_number__["a" /* CallNumber */],
         __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__["a" /* EmailComposer */]])
 ], AboutUsPage);

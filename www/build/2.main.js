@@ -1,15 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 579:
+/***/ 580:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__product_list__ = __webpack_require__(618);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__ = __webpack_require__(585);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductListPageModule", function() { return ProductListPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__registration__ = __webpack_require__(619);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegistrationPageModule", function() { return RegistrationPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,232 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var ProductListPageModule = (function () {
-    function ProductListPageModule() {
+var RegistrationPageModule = (function () {
+    function RegistrationPageModule() {
     }
-    return ProductListPageModule;
+    return RegistrationPageModule;
 }());
-ProductListPageModule = __decorate([
+RegistrationPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__product_list__["a" /* ProductListPage */],
+            __WEBPACK_IMPORTED_MODULE_2__registration__["a" /* RegistrationPage */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__product_list__["a" /* ProductListPage */]),
-            __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__["a" /* PipesModule */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__registration__["a" /* RegistrationPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__product_list__["a" /* ProductListPage */]
+            __WEBPACK_IMPORTED_MODULE_2__registration__["a" /* RegistrationPage */]
         ]
     })
-], ProductListPageModule);
+], RegistrationPageModule);
 
-//# sourceMappingURL=product-list.module.js.map
-
-/***/ }),
-
-/***/ 583:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Entity; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-/*
-  Generated class for the Entity pipe.
-
-  See https://angular.io/docs/ts/latest/guide/pipes.html for more info on
-  Angular 2 Pipes.
-*/
-var Entity = (function () {
-    function Entity() {
-    }
-    /*
-      Takes a value and makes it lowercase.
-     */
-    Entity.prototype.transform = function (text) {
-        var entities = [
-            ['amp', '&'],
-            ['apos', '\''],
-            ['#x27', '\''],
-            ['#x2F', '/'],
-            ['#39', '\''],
-            ['#47', '/'],
-            ['lt', '<'],
-            ['gt', '>'],
-            ['nbsp', ' '],
-            ['quot', '"']
-        ];
-        for (var i = 0, max = entities.length; i < max; ++i)
-            text = text.replace(new RegExp('&' + entities[i][0] + ';', 'g'), entities[i][1]);
-        return text;
-    };
-    return Entity;
-}());
-Entity = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
-        name: 'entity'
-    }),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
-], Entity);
-
-//# sourceMappingURL=entity.js.map
+//# sourceMappingURL=registration.module.js.map
 
 /***/ }),
 
-/***/ 584:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OrderBy; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-/*
-  Generated class for the OrderBy pipe.
-
-  See https://angular.io/docs/ts/latest/guide/pipes.html for more info on
-  Angular 2 Pipes.
-*/
-var OrderBy = (function () {
-    function OrderBy() {
-    }
-    /*
-      Takes a value and makes it lowercase.
-     */
-    OrderBy.prototype.transform = function (value, expression, ex1, ex2, reverse) {
-        if (!value) {
-            return value;
-        }
-        var array = value.sort(function (a, b) {
-            //console.log(expression);
-            //console.log(a[expression][ex1][ex2]);
-            //console.log(a['values']['name']['value']);
-            return a[expression][ex1][ex2] > b[expression][ex1][ex2] ? 1 : -1;
-        });
-        if (reverse) {
-            return array.reverse();
-        }
-        return array;
-    };
-    return OrderBy;
-}());
-OrderBy = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
-        name: 'orderBy',
-        pure: false
-    })
-], OrderBy);
-
-//# sourceMappingURL=order-by.js.map
-
-/***/ }),
-
-/***/ 585:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__trunc__ = __webpack_require__(586);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__entity__ = __webpack_require__(583);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__order_by_ts__ = __webpack_require__(584);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PipesModule; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-var PipesModule = (function () {
-    function PipesModule() {
-    }
-    return PipesModule;
-}());
-PipesModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__entity__["a" /* Entity */],
-            __WEBPACK_IMPORTED_MODULE_1__trunc__["a" /* Trunc */],
-            __WEBPACK_IMPORTED_MODULE_3__order_by_ts__["a" /* OrderBy */]
-        ],
-        imports: [],
-        exports: [
-            __WEBPACK_IMPORTED_MODULE_2__entity__["a" /* Entity */],
-            __WEBPACK_IMPORTED_MODULE_1__trunc__["a" /* Trunc */],
-            __WEBPACK_IMPORTED_MODULE_3__order_by_ts__["a" /* OrderBy */]
-        ]
-    })
-], PipesModule);
-
-//# sourceMappingURL=pipes.module.js.map
-
-/***/ }),
-
-/***/ 586:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Trunc; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-/*
-  Generated class for the OrderBy pipe.
-
-  See https://angular.io/docs/ts/latest/guide/pipes.html for more info on
-  Angular 2 Pipes.
-*/
-var Trunc = (function () {
-    function Trunc() {
-    }
-    /*
-      Takes a value and makes it lowercase.
-     */
-    Trunc.prototype.transform = function (value) {
-        return Math.trunc(value);
-    };
-    return Trunc;
-}());
-Trunc = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
-        name: 'trunc',
-        pure: false
-    })
-], Trunc);
-
-//# sourceMappingURL=trunc.js.map
-
-/***/ }),
-
-/***/ 618:
+/***/ 619:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_service__ = __webpack_require__(128);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductListPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(22);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegistrationPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -257,64 +61,47 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ProductListPage = (function () {
-    function ProductListPage(navCtrl, service, navParams, toastCtrl) {
+
+var RegistrationPage = (function () {
+    function RegistrationPage(navCtrl, toastCtrl, fb) {
         this.navCtrl = navCtrl;
-        this.service = service;
-        this.navParams = navParams;
         this.toastCtrl = toastCtrl;
-        this.menuItems = [];
-        this.items = [];
-        this.catId = navParams.get('catId');
-        // this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
-        // if (this.cartItems != null) {
-        //   this.noOfItems = this.cartItems.length;
-        // }
+        this.fb = fb;
     }
-    ProductListPage.prototype.ngOnInit = function () {
-        var _this = this;
-        this.service.getMenus(this.catId)
-            .subscribe(function (response) {
-            _this.menuItems = response.restify.rows;
-            _this.items = _this.menuItems;
-            //console.log(response.restify.rows);
-        });
-    };
-    ProductListPage.prototype.initializeItems = function () {
-        this.items = this.menuItems;
-    };
-    ProductListPage.prototype.getItems = function (ev) {
-        this.initializeItems();
-        var val = ev.target.value;
-        if (val && val.trim() != '') {
-            this.items = this.items.filter(function (data) {
-                return (data.values.menu_name.value.toLowerCase().indexOf(val.toLowerCase()) > -1);
-            });
+    RegistrationPage.prototype.onRegister = function () {
+        if (this.user.value.name != '' && this.user.value.email != '' && this.user.value.password != '') {
+            this.displayToast('User Successfully added!', 5000);
         }
     };
-    ProductListPage.prototype.navigate = function (productId) {
-        this.navCtrl.push("ProductDetailsPage", {
-            productId: productId
+    RegistrationPage.prototype.displayToast = function (message, duration) {
+        var toast = this.toastCtrl.create({
+            message: message,
+            duration: duration
+        });
+        toast.present();
+    };
+    RegistrationPage.prototype.ngOnInit = function () {
+        this.user = this.fb.group({
+            name: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required],
+            email: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required],
+            mobileNo: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required],
+            password: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required],
         });
     };
-    ProductListPage.prototype.navcart = function () {
-        this.navCtrl.push("CartPage");
+    RegistrationPage.prototype.navLogin = function () {
+        this.navCtrl.push("LoginPage");
     };
-    return ProductListPage;
+    return RegistrationPage;
 }());
-ProductListPage = __decorate([
+RegistrationPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-product-list',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\product-list\product-list.html"*/'<ion-header>\n  <ion-navbar>\n      <ion-title>Menu Items</ion-title>\n      <ion-buttons end>\n        <button ion-button icon-only color="royal" (click)="navcart()">\n          <ion-icon name="cart"></ion-icon>\n          <ion-badge class="carts" item-right color="danger">{{noOfItems}}</ion-badge>\n        </button>\n      </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-searchbar (ionInput)="getItems($event)" placeholder="Enter Menu Item">\n    </ion-searchbar>\n  <ion-list *ngFor="let menuItem of items"><!-- list -->\n    <ion-item text-wrap (click)="navigate(menuItem.values.menu_id.value)"><!-- item -->\n      <ion-row class="category"><!-- row -->\n        <ion-col col-3><!-- col with 50  width -->\n          <img src="http://aljedad.com/sforder/assets/images/thumbnail/{{menuItem.values.menu_thumb.value}}" alt="{{menuItem.values.menu_name.value}}"/>\n        </ion-col>\n        <ion-col col-9><!-- col with 50% width -->\n          <p class="item-name">{{menuItem.values.menu_name.value | entity }}</p>\n          <p class="item-detail" text-wrap><span class="">{{menuItem.values.menu_description.value}}</span></p>\n          <p class="item-detail">Price:\n    <span  class="item-price">{{menuItem.values.menu_price.value | trunc }}  QR</span>\n    <!-- <span *ngIf="menuItem.offer" class="item-price">${{}}</span> -->\n          </p>\n        </ion-col>\n      </ion-row><!--end row -->\n    </ion-item><!-- item -->\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\product-list\product-list.html"*/,
-        providers: [__WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* Service */]]
+        selector: 'page-registration',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\registration\registration.html"*/'<ion-header>\n    <ion-navbar hideBackButton="true">\n        <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n        </button>\n        <ion-title>Registration</ion-title>\n    </ion-navbar>\n\n</ion-header>\n\n<ion-content class="login">\n    <img class="logo" src="assets/img/logo-icon.png">\n\n    <!--inputs-->\n    <!--name-->\n    <form [formGroup]="user" (ngSubmit)="onRegister()">\n        <ion-row>\n            <ion-col>\n                <ion-item>\n                    <ion-label>Name:</ion-label>\n                    <ion-input type="text" formControlName="name"></ion-input>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n        <!--email-->\n        <ion-row>\n            <ion-col>\n                <ion-item>\n                    <ion-label>Email:</ion-label>\n                    <ion-input type="email" formControlName="email"></ion-input>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n        <!--Mobile No-->\n        <ion-row>\n            <ion-col>\n                <ion-item>\n                    <ion-label>Mobile:</ion-label>\n                    <ion-input type="number" formControlName="mobileNo"></ion-input>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n\n        <!--password-->\n        <ion-row>\n            <ion-col>\n                <ion-item>\n                    <ion-label>Password:</ion-label>\n                    <ion-input type="password" formControlName="password"></ion-input>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n\n        <!--button-->\n        <ion-row>\n            <ion-col>\n                <button class="login-btn" ion-button>Register</button>\n            </ion-col>\n        </ion-row>\n    </form>\n\n    <!--login with-->\n    <ion-row>\n        <ion-col>\n            <p text-center>REGISTER WITH</p>\n        </ion-col>\n    </ion-row>\n\n    <!--Social login-->\n    <ion-row>\n        <ion-col text-center>\n     <span>\n       <img class="social-icon" src="assets/img/fb.png">\n     </span>\n            <span>\n       <img class="social-icon" src="assets/img/g+.png">\n     </span>\n            <span>\n       <img class="social-icon" src="assets/img/twitter.png">\n     </span>\n        </ion-col>\n    </ion-row>\n\n    <!--go to registration-->\n    <ion-row>\n        <ion-col>\n            <a (click)="navLogin()">\n                <p text-center>ALREADY REGISTERED !</p>\n            </a>\n        </ion-col>\n    </ion-row>\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\registration\registration.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* Service */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ToastController */]])
-], ProductListPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* FormBuilder */]])
+], RegistrationPage);
 
-//# sourceMappingURL=product-list.js.map
+//# sourceMappingURL=registration.js.map
 
 /***/ })
 

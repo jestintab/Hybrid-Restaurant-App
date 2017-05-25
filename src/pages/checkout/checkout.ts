@@ -43,11 +43,11 @@ export class CheckoutPage {
     onCheckout(OrderDetails: NgForm) {
         this.OrderedProduct.orderDetail = OrderDetails.value;
      
-        this.service.postOrderDetails(this.OrderedProduct);
-        // .subscribe((res) => {
-        //     console.log(res);
-        // });
-        console.log(JSON.stringify(this.OrderedProduct));
+        this.service.postOrderDetails(this.OrderedProduct)
+            .subscribe((res) => {
+            console.log(res);
+     });
+       // console.log(JSON.stringify(this.OrderedProduct));
         
         //this.navCtrl.push(ThankyouPage);
     }

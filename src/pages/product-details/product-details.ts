@@ -5,6 +5,8 @@ import {Storage} from '@ionic/storage';
 import  unserialize   from 'locutus/php/var/unserialize';
 import  html_entity_decode   from 'locutus/php/strings/html_entity_decode';
 import 'rxjs/Rx';
+import isset from 'locutus/php/var/isset';
+import _ from 'lodash/array';
 
 @IonicPage()
 @Component({
@@ -28,7 +30,7 @@ export class ProductDetailsPage {
     itemDetails: any;
     // itemdetail_name:string;
     // itemdetail_price:string;
-    // itemdetail_image:string;
+    // itemdetail_image:string; 
     // itemdetail_description:string;
     // itemdetail_id:number;
     menuOptions: any;
@@ -36,6 +38,9 @@ export class ProductDetailsPage {
     menuOptionId: number;
     menuExtras: any;
     optionLength: number;
+    cartStoredItem:any;
+    checkedOptions:any;
+    optionCount: number;
 
     constructor(public navCtrl: NavController,
                 public alertCtrl: AlertController,
@@ -44,6 +49,10 @@ export class ProductDetailsPage {
                 public storage: Storage,
                 public service: Service) {
         this.productId = navParams.get('productId');
+        if(isset(navParams.get('cartStoredItem'))){
+        this.cartStoredItem = navParams.get('cartStoredItem');
+      
+        }
         this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
         if (this.cartItems != null) {
             this.noOfItems = this.cartItems.length;
@@ -73,12 +82,7 @@ export class ProductDetailsPage {
         this.service.getMenuItem(this.productId)
                 .subscribe((response) => {
                     this.itemDetails = response.restify.rows;
-                    this.itemDetails.forEach(itemdetail => {
-                        // this.itemdetail_name = itemdetail.values.menu_name.value;
-                        // this.itemdetail_description = itemdetail.values.menu_description.value;
-                        // this.itemdetail_image = itemdetail.values.menu_photo.value;
-                        // this.itemdetail_price = itemdetail.values.menu_price.value;
-                        // this.itemdetail_id = itemdetail.values.menu_id.value;      
+                    this.itemDetails.forEach(itemdetail => { 
                         this.product.name = itemdetail.values.menu_name.value;
                         this.product.description = itemdetail.values.menu_description.value;
                         this.product.image = itemdetail.values.menu_photo.value;
@@ -97,37 +101,45 @@ export class ProductDetailsPage {
                       
                 if(this.menuOptions.length != 0){
 
-                       this.menuOptions.forEach( menuOption => {
+                       this.menuOptions.forEach( menuOption => {     
                            this.menuOptionJson = menuOption.values.option_values.value;
                            this.menuOptionId = menuOption.values.option_id.value;
 
                        });                      
                        this.menuOptionJson = unserialize(html_entity_decode(this.menuOptionJson));
-                        for (let i of Object.keys(this.menuOptionJson)) {
-
+                        for (let i of Object.keys(this.menuOptionJson)) {  
+ 
                            this.service.getOptionName(this.menuOptionJson[i].option_value_id,this.menuOptionId)
-                                        .subscribe((resp)=>{
+                                        .subscribe((resp)=>{ 
 
-                                                for(let j of Object.keys(resp.restify.rows)){
+                               for(let j of Object.keys(resp.restify.rows)){    
                     
-                                                    this.ExtraOptions.push({'option_value_id': resp.restify.rows[j].values.option_value_id.value,
-                                                                            'option_id': resp.restify.rows[j].values.option_id.value,
-                                                                            'name': resp.restify.rows[j].values.value.value,
-                                                                            'price': parseInt(resp.restify.rows[j].values.price.value)
-                                                                        }); 
-                                                                                                              
-                                                     }
-                    
-                                                     
-                                                });                                       
+                                    this.ExtraOptions.push({'option_value_id': resp.restify.rows[j].values.option_value_id.value,
+                                        'option_id': resp.restify.rows[j].values.option_id.value,
+                                        'name': resp.restify.rows[j].values.value.value,
+                                        'price': parseInt(resp.restify.rows[j].values.price.value)
+                                        }); 
+                                 }
+                 });                                       
                             }                                                                                
                         }                   
-                    })     
-                  
-                   
+                    })       
+          
+          
+        if(isset(this.cartStoredItem) ){
+      
+            
+        this.checkedOptions = this.cartStoredItem.extraOption;
+        this.optionCount = this.checkedOptions.length;
+        console.log(this.ExtraOptions);
+       console.log(_.difference(this.ExtraOptions,this.checkedOptions));
+        console.log(this.checkedOptions);
+        }
                     
 
-        }
+    }
+    
+
 
 
     addToCart(productId) {

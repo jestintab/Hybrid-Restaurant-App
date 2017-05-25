@@ -1,6 +1,7 @@
 import {Component} from "@angular/core";
-import {AlertController, NavController, PopoverController, IonicPage} from "ionic-angular";
+import {AlertController, NavController, PopoverController, IonicPage, ModalController, ViewController, } from "ionic-angular";
 //import {NgForm} from "@angular/forms";
+
 
 
 @IonicPage()
@@ -15,9 +16,11 @@ export class CartPage {
     GrandTotal: number;
     noOfItems: number;
     comments:string;
+    productId:number;
     constructor(public navCtrl: NavController,
                 public alertCtrl: AlertController,
-                public popoverCtrl: PopoverController) {
+                public popoverCtrl: PopoverController,
+                public modalCtrl: ModalController) {
         this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
         if (this.cartItems != null) {
             this.noOfItems = this.cartItems.length;
@@ -76,6 +79,22 @@ export class CartPage {
         if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
             this.alert();
         }
+    }
+
+    editItem(cartItem){
+        //console.log(cartItem);
+        this.productId = cartItem.id;
+
+        // let optionModal = this.modalCtrl.create( "ProductOption", {"productId": this.productId});
+        // optionModal.onDidDismiss(data => {
+        //     console.log(data);
+        // });
+        // optionModal.present();
+        this.navCtrl.push("ProductDetailsPage", {
+            productId: this.productId,    
+            cartStoredItem: cartItem,
+
+            });
     }
 
     deleteOptionItem(data) {

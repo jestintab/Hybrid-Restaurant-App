@@ -37,7 +37,7 @@
 
                             <div  *ngFor="let option of cartItem.extraOption"> 
                             <p class="item-option-detail">+ {{option.name}} - {{option.price}}QR 
-                                <span class="option-delete" (click)="deleteOptionItem(option)"> <strong>x</strong> </span> </p>
+                                <!--<span class="option-delete" (click)="deleteOptionItem(option)"> <strong>x</strong> </span> </p>-->
                             </div>   
                                 <ion-row><!-- row-for count item -->
 
@@ -46,6 +46,9 @@
                                         <span class="item-count show-count"> {{cartItem.Quantity}}</span>
                                         <span class="item-count" (click)="add(cartItem)"> + </span>
                                     </div>
+                                </ion-row>
+                                <ion-row>
+                                    <button  (click)=editItem(cartItem) > Edit </button>
                                 </ion-row>
                             </ion-col>
                         </ion-row>

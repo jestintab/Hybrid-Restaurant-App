@@ -63,10 +63,10 @@ export class Service {
         this.headers.append('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
        // this.options = new RequestOptions({ headers: this.headers });
         return this.http.post(this.postUrl, this.body , {headers: this.headers})
-            .map((res: Response) => res)
-            .subscribe((data) => {
-            console.log(data);
-        });
+            .map((res: Response) => res);
+        //     .subscribe((data) => {
+        //     console.log(data);
+        // });
             //.catch(this.handleError);
 
     }

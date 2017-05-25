@@ -1,14 +1,14 @@
 webpackJsonp([7],{
 
-/***/ 582:
+/***/ 633:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__thankyou__ = __webpack_require__(621);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThankyouPageModule", function() { return ThankyouPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__product_option__ = __webpack_require__(634);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductOptionModule", function() { return ProductOptionModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ThankyouPageModule = (function () {
-    function ThankyouPageModule() {
+var ProductOptionModule = (function () {
+    function ProductOptionModule() {
     }
-    return ThankyouPageModule;
+    return ProductOptionModule;
 }());
-ThankyouPageModule = __decorate([
+ProductOptionModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__thankyou__["a" /* ThankyouPage */]
+            __WEBPACK_IMPORTED_MODULE_2__product_option__["a" /* ProductOption */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__thankyou__["a" /* ThankyouPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__product_option__["a" /* ProductOption */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__thankyou__["a" /* ThankyouPage */]
+            __WEBPACK_IMPORTED_MODULE_2__product_option__["a" /* ProductOption */]
         ]
     })
-], ThankyouPageModule);
+], ProductOptionModule);
 
-//# sourceMappingURL=thankyou.module.js.map
+//# sourceMappingURL=product-option.module.js.map
 
 /***/ }),
 
-/***/ 621:
+/***/ 634:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ThankyouPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductOption; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,24 +59,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var ThankyouPage = (function () {
-    function ThankyouPage(navCtrl) {
+/**
+ * Generated class for the ProductOption page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var ProductOption = (function () {
+    function ProductOption(navCtrl, navParams) {
         this.navCtrl = navCtrl;
+        this.navParams = navParams;
     }
-    ThankyouPage.prototype.ionViewDidLoad = function () {
-        localStorage.removeItem('cartItem');
+    ProductOption.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ProductOption');
     };
-    return ThankyouPage;
+    return ProductOption;
 }());
-ThankyouPage = __decorate([
+ProductOption = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-thankyou',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\thankyou\thankyou.html"*/'<ion-header>\n    <ion-navbar hideBackButton="true">\n        <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n        </button>\n            <ion-title>Thank You</ion-title>\n            <ion-buttons end>\n                <button ion-button icon-only color="royal">\n                    <ion-icon name="cart"></ion-icon>\n                </button>\n            </ion-buttons>\n    </ion-navbar>\n</ion-header>\n\n<ion-content class="page-content">\n    <ion-row>\n        <ion-col>\n            <div class="thanks">\n                <h2>Thank you !</h2>\n                <p>We love our customers and we value your business.\n                    we want to thank you for giving us the opportunity\n                    to serve you. Our customer service always open to hear feedback from you.thanks you!\n                </p>\n            </div>\n        </ion-col>\n    </ion-row>\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\thankyou\thankyou.html"*/
+        selector: 'page-product-option',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\product-option\product-option.html"*/'<ion-header>\n  <ion-navbar>\n      <ion-title>Menu Add On</ion-title>\n      <ion-buttons end>\n         <ion-icon class="close-btn" ion-button icon only clear ios="ios-close-circle"\n                                  md="md-close-circle"\n                                   >\n         </ion-icon>\n      </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\nThis product option page\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\product-option\product-option.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
-], ThankyouPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+], ProductOption);
 
-//# sourceMappingURL=thankyou.js.map
+//# sourceMappingURL=product-option.js.map
 
 /***/ })
 

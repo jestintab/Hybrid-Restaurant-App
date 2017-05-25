@@ -87,11 +87,11 @@ var CheckoutPage = (function () {
     }
     CheckoutPage.prototype.onCheckout = function (OrderDetails) {
         this.OrderedProduct.orderDetail = OrderDetails.value;
-        this.service.postOrderDetails(this.OrderedProduct);
-        // .subscribe((res) => {
-        //     console.log(res);
-        // });
-        console.log(JSON.stringify(this.OrderedProduct));
+        this.service.postOrderDetails(this.OrderedProduct)
+            .subscribe(function (res) {
+            console.log(res);
+        });
+        // console.log(JSON.stringify(this.OrderedProduct));
         //this.navCtrl.push(ThankyouPage);
     };
     CheckoutPage.prototype.delivery = function () {
@@ -136,7 +136,7 @@ CheckoutPage = __decorate([
         providers: [__WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* Service */]],
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* Service */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], CheckoutPage);
 
 //# sourceMappingURL=checkout.js.map
