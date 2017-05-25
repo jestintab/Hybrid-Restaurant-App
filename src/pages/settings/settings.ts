@@ -11,12 +11,12 @@ export class Settings {
     user: any = {};
     url: any = "assets/img/profile.jpg";
 
-    constructor(public navCtrl: NavController) {
+    constructor(public navCtrl: NavController) {  
     }
 
     onSubmit(user: NgForm) {
         console.log("user Setting Data : " + JSON.stringify(this.user));
-    }
+    } 
 
 
     readUrl(event) {

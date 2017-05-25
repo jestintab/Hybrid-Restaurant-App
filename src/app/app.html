@@ -18,19 +18,19 @@
       <ion-icon  name="apps" item-left></ion-icon>
       Category
     </button>
-    <button menuClose class="menu-item" ion-item (click)="offer()">
+    <!--<button menuClose class="menu-item" ion-item (click)="offer()">
       <ion-icon  name="pricetag" item-left></ion-icon>
       Offers<ion-badge class="menu-badge">{{offerCounter}}</ion-badge>
-    </button>
+    </button>-->
     <button menuClose class="menu-item" ion-item (click)="gotoCart()">
       <ion-icon  name="cart" item-left></ion-icon>
       MyCart<ion-badge class="menu-badge">{{noOfItems}}</ion-badge>
     </button>
-    <button menuClose class="menu-item" ion-item *ngIf="isLogin()"
+    <!--<button menuClose class="menu-item" ion-item *ngIf="isLogin()"
             (click)="yourOrders()">
       <ion-icon  name="timer" item-left></ion-icon>
       Your Orders
-    </button>
+    </button>-->
     <button menuClose class="menu-item" ion-item *ngIf="isLogin()"
             (click)="settings()">
       <ion-icon name="settings" item-left></ion-icon>
@@ -39,13 +39,13 @@
     <button menuClose class="menu-item" ion-item
             (click)="news()">
       <ion-icon name="paper" item-left></ion-icon>
-      News<ion-badge class="menu-badge">{{newsCounter}}</ion-badge>
+      Our Blog<ion-badge class="menu-badge">{{newsCounter}}</ion-badge>
     </button>
-    <button menuClose class="menu-item" ion-item *ngIf="isLogin()"
+    <!--<button menuClose class="menu-item" ion-item *ngIf="isLogin()"
             (click)="favourite()">
       <ion-icon name="heart" item-left></ion-icon>
       Favourite
-    </button>
+    </button>-->
      <button menuClose class="menu-item" ion-item
                      (click)="aboutUs()">
       <ion-icon name="contacts" item-left></ion-icon>
@@ -56,14 +56,14 @@
       <ion-icon name="call" item-left></ion-icon>
       Contact
     </button>
-    <button menuClose class="menu-item" ion-item *ngIf="!isLogin()" (click)="login()">
+    <!--<button menuClose class="menu-item" ion-item *ngIf="!isLogin()" (click)="login()">
       <ion-icon name="log-in" item-left></ion-icon>
       Login
     </button>
     <button menuClose class="menu-item" ion-item *ngIf="isLogin()" (click)="logout()">
       <ion-icon name="log-out" item-left></ion-icon>
       Logout
-    </button>
+    </button>-->
   </ion-content>
 
 </ion-menu>

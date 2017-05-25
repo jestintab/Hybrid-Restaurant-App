@@ -20,7 +20,7 @@
             </label>
         </ion-row>
         <p class="name">Hello Guest</p>
-        <p class="email">ionicfirebaseapp@gmail.com</p>
+        <!--<p class="email">ionicfirebaseapp@gmail.com</p>-->
     </div>
     <form (ngSubmit)="onSubmit(f)" #f="ngForm">
         <ion-list>
@@ -28,32 +28,36 @@
                 <ion-label primary> Notifications</ion-label>
                 <ion-toggle primary checked="false"></ion-toggle>
             </ion-item>
-            <!--card no-->
+            <ion-item>
+                
+            </ion-item>
+            <!--card no-
             <ion-item>
                 <ion-label>Card Number:</ion-label>
                 <ion-input type="text" name="card" id="card" placeholder="5172628928"
                            [(ngModel)]="user.card"></ion-input>
             </ion-item>
-            <!--name on card-->
+            name on card-
             <ion-item>
                 <ion-label>Name on card:</ion-label>
                 <ion-input type="text" name="name" id="email" placeholder="Your Name"
                            [(ngModel)]="user.name"></ion-input>
             </ion-item>
-            <!--cvv-->
+           cvv
             <ion-item>
                 <ion-label>CVV:</ion-label>
                 <ion-input type="number" name="cvv" id="cvv" placeholder="234"
                            [(ngModel)]="user.cvv"></ion-input>
             </ion-item>
-            <!--date-->
+          date
             <ion-item>
                 <ion-label>Date of expiry:</ion-label>
                 <ion-input type="number" name="date" id="date" placeholder="25/06/2020"
                            [(ngModel)]="user.date"></ion-input>
             </ion-item>
-        </ion-list>
-        <!--button-->
+      
+        button-->
+          </ion-list>
         <button class="login-btn" ion-button type="submit">Save</button>
     </form>
 </ion-content>

@@ -20,7 +20,7 @@ export class AboutUsPage {
     contactNo:any=40206555;
 
 
-  constructor(public platform: Platform,
+  constructor(public platform: Platform, 
               public navCtrl: NavController,
               public navParams: NavParams,
               public callNumber:CallNumber,
@@ -29,7 +29,7 @@ export class AboutUsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AboutUsPage');
 
-  }
+  } 
   
    goToSlide() {
     this.slides.slideTo(2, 500);

@@ -12,7 +12,7 @@ import {AboutUsPage} from './about-us';
         
 
     ],
-    exports: [
+    exports: [ 
         AboutUsPage
     ]
 })
