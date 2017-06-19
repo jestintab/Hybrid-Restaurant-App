@@ -68,15 +68,15 @@
   "featured": [
     {
       "key": "1",
-      "thumb": "https://res.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_220,w_420/v1483635589/shutterstock_56500270_j3dvz7.jpg"
+      "thumb": "https://cdn.sandwichfactory.qa/slider/slider-1.jpg"
     },
     {
       "key": "2",
-      "thumb": "https://res-1.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_220,w_420/v1483635624/shutterstock_114177826_mm6tnl.jpg"
+      "thumb": "https://cdn.sandwichfactory.qa/slider/slider-2.jpg"
     },
     {
       "key": "3",
-      "thumb": "https://res-2.cloudinary.com/ionicfirebaseapp/image/upload/c_scale,h_220,w_420/v1483635648/shutterstock_93878743_rugqzs.jpg"
+      "thumb": "https://cdn.sandwichfactory.qa/slider/slider-3.jpg"
     }
   ],
   "menuItems": [

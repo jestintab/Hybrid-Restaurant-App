@@ -25,7 +25,7 @@ export class CartPage {
         if (this.cartItems != null) {
             this.noOfItems = this.cartItems.length;
         }
-    }
+    } 
  
     ngOnInit() {
         if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
@@ -117,8 +117,8 @@ export class CartPage {
     }
 
       onCart(){
-
       this.cartData['comments'] = this.cartData['comments'];  
+      this.cartData['noofitems'] = this.noOfItems;
        
        if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
             this.alert();
@@ -129,10 +129,7 @@ export class CartPage {
             console.log(this.cartData);         
             }
     }  
-
  
-
-   
     alert() {
         let alert = this.alertCtrl.create({
             title: 'Cart Is Empty!',

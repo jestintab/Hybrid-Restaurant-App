@@ -5,7 +5,7 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding class="checkOut">
+<ion-content padding class="checkOut" [hidden]="submitted">
 
     <form (ngSubmit)="onCheckout(f)" #f="ngForm">        
             <ion-row>
@@ -86,19 +86,20 @@
             <div>
                 <ion-item class="sub-address">
                     <ion-input type="text" placeholder="Name" name="name" id="name"
-                               [(ngModel)]="orderDetails.name" ng-value="orderDetails.name"></ion-input>
+                               [(ngModel)]="orderDetails.name" ng-value="orderDetails.name" required></ion-input>
                 </ion-item>
                 <ion-item class="sub-address">
-                    <ion-input type="email" placeholder="Email" name="email" id="email"
-                               [(ngModel)]="orderDetails.email"></ion-input>
+                    <ion-input type="email" placeholder="Email" name="email" id="email" required
+                               [(ngModel)]="orderDetails.email"> </ion-input>
                 </ion-item>
                 <ion-item class="sub-address">
-                    <ion-input type="number" placeholder="Phone" name="phone" id="phone"
+                    <ion-input type="number" maxlength="8" minlength="8" placeholder="Mobile" name="phone" id="phone" required
                                [(ngModel)]="orderDetails.phone"></ion-input>
+                         
                 </ion-item>
 
                 <ion-item class="sub-address" [hidden]="order_delivery">
-                    <ion-textarea rows="3" placeholder="Address" name="address" id="address"
+                    <ion-textarea rows="3" placeholder="Address" name="address" id="address" 
                                   [(ngModel)]="orderDetails.address"></ion-textarea>
                 </ion-item>
 
@@ -206,7 +207,7 @@
             </ion-list>
         </ion-row>
 
-        <button class="checkOut-btn" type="submit" ion-button block>
+        <button class="checkOut-btn"  [disabled]="!f.form.valid" type="submit"  ion-button block>
             <ion-icon ios="ios-cart" md="md-cart"></ion-icon>
             &nbsp;&nbsp;Check Out
         </button>

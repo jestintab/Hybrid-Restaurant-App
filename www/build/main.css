@@ -25170,7 +25170,6 @@ page-home .grid {
 }
 
 page-home .grid .slides .overlay {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -25219,6 +25218,7 @@ page-home .grid .categories h2 {
 }
 
 page-home .grid .categories img {
+  text-align: center;
   position: relative;
   z-index: -111;
 }
@@ -25227,7 +25227,7 @@ page-home .grid .categories .text-over-img {
   color: #fff;
   font-size: 18px;
   padding: 5px;
-  background-color: rgba(119, 119, 119, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   position: relative;
   width: 100%;
   margin: -34px 0px 0px 0px;

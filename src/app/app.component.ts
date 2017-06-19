@@ -36,10 +36,10 @@ export class MyApp {
     let token = localStorage.getItem('user');
 
     if (token == null) {
-      this.rootPage = "CategoryPage";
+      this.rootPage = "HomePage";
     }
     else {
-      this.rootPage = "CategoryPage";
+      this.rootPage = "HomePage";
     }
   }
 
@@ -136,6 +136,11 @@ export class MyApp {
   logout() {
     localStorage.removeItem('user');
     this.nav.setRoot("LoginPage");
+  }
+
+  thankyou(){
+    this.nav.setRoot("ThankyouPage");
+    
   }
 
 }

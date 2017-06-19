@@ -16,7 +16,7 @@ export class Service {
     private amp:string;
     private body:any;
     private headers:any;
-    //private options:any;
+    //private options:any;  
     private postUrl:string;
 
 
@@ -30,8 +30,8 @@ export class Service {
       this.filter = '_filter=';
       this.sort = '_sort=';
       this.amp ='&';
-      this.postUrl = "http://localhost/order/api";
-      
+      this.postUrl = "http://aljedad.com/sforder/api";
+       
     }
     getData() {
         return this.http.get('assets/json/restaurantAppJson.json')

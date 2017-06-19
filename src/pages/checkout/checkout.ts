@@ -25,7 +25,8 @@ export class CheckoutPage {
         orderType:'delivery',
         orderDetail: {},
         orderTotal: {},
-        comment: ''
+        comment: '',
+        noOfItems: '',
        
     };
    
@@ -37,10 +38,12 @@ export class CheckoutPage {
         this.OrderedProduct.cartItems = JSON.parse(localStorage.getItem('cartItem'));
         this.OrderedProduct.orderTotal = this.NavParams.get('orderTotal');
         this.OrderedProduct.comment = this.NavParams.get('comments');
+        this.OrderedProduct.noOfItems = this.NavParams.get('noofitems')
         this.orderDetails.city = 'Doha, Qatar';
     }
-
+    submitted = false;
     onCheckout(OrderDetails: NgForm) {
+        this.submitted = true;
         this.OrderedProduct.orderDetail = OrderDetails.value;
      
         this.service.postOrderDetails(this.OrderedProduct)
@@ -49,7 +52,7 @@ export class CheckoutPage {
      });
        // console.log(JSON.stringify(this.OrderedProduct));
         
-        //this.navCtrl.push(ThankyouPage);
+       this.navCtrl.push("ThankyouPage");
     }
 
    
