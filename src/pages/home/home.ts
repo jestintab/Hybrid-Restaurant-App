@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
-import {NavController, IonicPage} from 'ionic-angular';
+import {NavController, IonicPage, ToastController} from 'ionic-angular';
 import {Service} from '../../app/service';
+import { LoadingController } from 'ionic-angular';
+
 
 @IonicPage()
 @Component({
@@ -15,21 +17,34 @@ export class HomePage {
     noOfItems: number;
 
 
-    constructor(public navCtrl: NavController, public service: Service) {
+    constructor(public navCtrl: NavController, 
+                public service: Service, 
+                public loading: LoadingController,
+                private toast:ToastController) {
         this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
         if (this.cartItems != null) {
             this.noOfItems = this.cartItems.length;
         }
-        this.service.getData()
-            .subscribe((response) => {
-               // this.categories = response.categories;
-                this.featured = response.featured;
-            })
-              this.service.getCategory()
-            .subscribe((response) => {
-               this.categories = response.restify.rows;
-              
-            })
+       
+       
+    }
+ ionViewDidEnter() {
+        let loader = this.loading.create({
+            content: 'Loading ...',
+        });
+
+        loader.present().then(() => {
+            this.service.getData()
+                    .subscribe((response) => {
+                    // this.categories = response.categories;
+                        this.featured = response.featured;
+                    })
+                    this.service.getCategory()
+                    .subscribe((response) => {
+                    this.categories = response.restify.rows;
+                    })
+            loader.dismiss();
+        });
     }
 
     navigate(catId) {
@@ -43,3 +58,4 @@ export class HomePage {
     }
 
 }
+ 

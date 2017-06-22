@@ -12,6 +12,9 @@
         },
         "cordova-plugin-network-information": {
             "PACKAGE_NAME": "com.aljedad.sandwichfactory"
+        },
+        "cordova.plugins.diagnostic": {
+            "PACKAGE_NAME": "com.aljedad.sandwichfactory"
         }
     },
     "dependent_plugins": {}

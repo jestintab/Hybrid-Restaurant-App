@@ -8,6 +8,8 @@ import {Http, HttpModule} from '@angular/http';
 import {BrowserModule} from "@angular/platform-browser";
 import {Service} from '../app/service';
 import {MyApp} from './app.component';
+import { Network }  from '@ionic-native/network';
+import {NetworkService} from '../providers/network-service';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import {MyApp} from './app.component';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Storage,Service,
     StatusBar,
-    SplashScreen
+    SplashScreen,
+    Network,
+    NetworkService
     ],
 
 

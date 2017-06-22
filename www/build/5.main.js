@@ -1,14 +1,14 @@
 webpackJsonp([5],{
 
-/***/ 567:
+/***/ 570:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cart__ = __webpack_require__(690);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__ = __webpack_require__(595);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cart__ = __webpack_require__(693);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__ = __webpack_require__(598);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CartPageModule", function() { return CartPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -31,7 +31,7 @@ CartPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__cart__["a" /* CartPage */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cart__["a" /* CartPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cart__["a" /* CartPage */]),
             __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__["a" /* PipesModule */]
         ],
         exports: [
@@ -44,7 +44,7 @@ CartPageModule = __decorate([
 
 /***/ }),
 
-/***/ 593:
+/***/ 596:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -99,7 +99,7 @@ Entity = __decorate([
 
 /***/ }),
 
-/***/ 594:
+/***/ 597:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -152,14 +152,14 @@ OrderBy = __decorate([
 
 /***/ }),
 
-/***/ 595:
+/***/ 598:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__trunc__ = __webpack_require__(596);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__entity__ = __webpack_require__(593);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__order_by_ts__ = __webpack_require__(594);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__trunc__ = __webpack_require__(599);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__entity__ = __webpack_require__(596);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__order_by_ts__ = __webpack_require__(597);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PipesModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -196,7 +196,7 @@ PipesModule = __decorate([
 
 /***/ }),
 
-/***/ 596:
+/***/ 599:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -237,12 +237,12 @@ Trunc = __decorate([
 
 /***/ }),
 
-/***/ 690:
+/***/ 693:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(73);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CartPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -425,14 +425,14 @@ var CartPage = (function () {
     return CartPage;
 }());
 CartPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-cart',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\cart\cart.html"*/'<ion-header>\n   <ion-navbar hideBackButton="true">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n        <ion-title>Cart</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only color="royal">\n                <ion-icon name="cart"></ion-icon>\n                <ion-badge class="carts" item-right color="danger">{{noOfItems}}</ion-badge>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <div>\n        <ion-list class="cart-list" *ngFor="let cartItem of cartItems"><!-- item-list -->\n            <ion-item class="cart-item"><!-- item -->\n                <ion-row>\n                    <ion-col col-2><!-- col-cancel  button -->\n                        <ion-icon class="close-btn" ion-button icon only clear ios="ios-close-circle"\n                                  md="md-close-circle"\n                                   (click)="deleteItem(cartItem)">\n                        </ion-icon>\n                    </ion-col>\n                    <ion-col><!-- col-for item-image and details -->\n                        <ion-row>\n                            <ion-col col-4><!-- item-image -->\n                                <img src="http://aljedad.com/sforder/assets/images/thumbnail/{{cartItem.thumb}}" alt="">\n                            </ion-col>\n                            <ion-col col-6>\n                                <p><span class="item-detail"> {{cartItem.Quantity}} x </span> \n                                   <span class="item-name"> {{ cartItem.name }} </span>                                 \n                                </p>\n                                <!--<p class="item-price"> {{cartItem.price | trunc}} QR </p>-->\n\n                            <div  *ngFor="let option of cartItem.extraOption"> \n                            <p class="item-option-detail">+ {{option.name}} - {{option.price}}QR \n                                <!--<span class="option-delete" (click)="deleteOptionItem(option)"> <strong>x</strong> </span> </p>-->\n                            </div>   \n                                <ion-row><!-- row-for count item -->\n\n                                    <div class="count">\n                                        <span class="item-count" (click)="remove(cartItem)"> - </span>\n                                        <span class="item-count show-count"> {{cartItem.Quantity}}</span>\n                                        <span class="item-count" (click)="add(cartItem)"> + </span>\n                                    </div>\n                                </ion-row>\n                                <ion-row>\n                                    <button  (click)=editItem(cartItem) > Edit </button>\n                                </ion-row>\n                            </ion-col>\n                        </ion-row>\n                    </ion-col>\n                </ion-row>\n            </ion-item>\n        </ion-list>\n        <ion-row class="price-details">\n            <ion-col class="calculate">\n                <p class="bill-detail">Subtotal <span> {{SubTotalPrice}} QR</span></p>\n              \n                <!--<p class="bill-detail">Other Taxes (3%)\n                    <span>{{otherTaxes | number}} QR</span></p>-->\n                <hr>\n                <p class="cart-total"><strong>Order Total </strong><span class="price">{{GrandTotal}} QR</span>\n                </p>\n            </ion-col>\n        </ion-row><!-- row-bill-deatails -->\n        <!-- Comments -->\n     <form (ngSubmit)="onCart()" >        \n        <ion-row>\n             <ion-label  class="add-heading">\n                <ion-icon ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>\n                &nbsp;&nbsp;Instructions / Comments \n            </ion-label>\n            <ion-item class="sub-address" >\n                    <ion-textarea rows="3" [(ngModel)]="cartData.comments" [ngModelOptions]="{standalone: true}" placeholder="Special instructions/comments" name="comments" id="comments"\n                        ng-value="cartData.comments"          ></ion-textarea>\n                </ion-item>\n        </ion-row>    \n    \n\n        <!-- continue button -->\n        <ion-row>\n            <ion-col>\n                <button ion-button block type="submit" class="continue-btn" >Continue</button>\n            </ion-col>\n        </ion-row>\n         </form>\n    </div>\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\cart\cart.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* AlertController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* PopoverController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ModalController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* AlertController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* PopoverController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ModalController */]])
 ], CartPage);
 
 //# sourceMappingURL=cart.js.map

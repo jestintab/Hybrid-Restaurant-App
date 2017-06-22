@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 568:
+/***/ 571:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__category__ = __webpack_require__(691);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__ = __webpack_require__(595);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__category__ = __webpack_require__(694);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__ = __webpack_require__(598);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CategoryPageModule", function() { return CategoryPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -32,7 +32,7 @@ CategoryPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__category__["a" /* CategoryPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__category__["a" /* CategoryPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__category__["a" /* CategoryPage */]),
             __WEBPACK_IMPORTED_MODULE_3__pipes_pipes_module__["a" /* PipesModule */]
         ],
         exports: [
@@ -45,7 +45,7 @@ CategoryPageModule = __decorate([
 
 /***/ }),
 
-/***/ 593:
+/***/ 596:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100,7 +100,7 @@ Entity = __decorate([
 
 /***/ }),
 
-/***/ 594:
+/***/ 597:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -153,14 +153,14 @@ OrderBy = __decorate([
 
 /***/ }),
 
-/***/ 595:
+/***/ 598:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__trunc__ = __webpack_require__(596);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__entity__ = __webpack_require__(593);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__order_by_ts__ = __webpack_require__(594);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__trunc__ = __webpack_require__(599);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__entity__ = __webpack_require__(596);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__order_by_ts__ = __webpack_require__(597);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PipesModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -197,7 +197,7 @@ PipesModule = __decorate([
 
 /***/ }),
 
-/***/ 596:
+/***/ 599:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -238,12 +238,12 @@ Trunc = __decorate([
 
 /***/ }),
 
-/***/ 691:
+/***/ 694:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_service__ = __webpack_require__(128);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CategoryPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -259,18 +259,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 //import {ProductListPage} from '../product-list/product-list';
 
+
 var CategoryPage = (function () {
-    function CategoryPage(navCtrl, service) {
-        var _this = this;
+    function CategoryPage(navCtrl, service, loading) {
         this.navCtrl = navCtrl;
         this.service = service;
+        this.loading = loading;
         this.categories = [];
-        this.service.getCategory()
-            .subscribe(function (response) {
-            _this.categories = response.restify.rows;
-            //console.log(response.restify.rows);
-        });
     }
+    CategoryPage.prototype.ionViewDidEnter = function () {
+        var _this = this;
+        var loader = this.loading.create({
+            content: 'Loading ...',
+        });
+        loader.present().then(function () {
+            _this.service.getCategory()
+                .subscribe(function (response) {
+                _this.categories = response.restify.rows;
+                //console.log(response.restify.rows);
+            });
+            loader.dismiss();
+        });
+    };
     CategoryPage.prototype.navigate = function (catId) {
         this.navCtrl.push("ProductListPage", { catId: catId });
         // console.log(catId);
@@ -278,14 +288,15 @@ var CategoryPage = (function () {
     return CategoryPage;
 }());
 CategoryPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-category',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\category\category.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n            <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n        <ion-title>Category</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-card *ngFor="let categorie of categories">\n\n        <ion-list>\n\n            <ion-item (click)="navigate(categorie.values.category_id.value)">\n\n                <ion-thumbnail item-left>\n\n                    <img src="https://order.sandwichfactory.qa/assets/images/{{categorie.values.image.value}}">\n\n                </ion-thumbnail>\n\n                <p class="heading">{{categorie.values.name.value | entity  }}</p>\n\n                <p>{{categorie.values.description.value}}</p>\n\n            </ion-item>\n\n        </ion-list>\n\n    </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\category\category.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* Service */]],
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* Service */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* Service */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* Service */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* LoadingController */]) === "function" && _c || Object])
 ], CategoryPage);
 
+var _a, _b, _c;
 //# sourceMappingURL=category.js.map
 
 /***/ })

@@ -1,9 +1,11 @@
 import {Component, ViewChild} from '@angular/core';
-import {Nav, Platform} from 'ionic-angular';
+import {Nav, Platform, ToastController} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {Service} from '../app/service';
 import {OneSignal} from '@ionic-native/onesignal';
+
+
 
 // import {HomePage} from '../pages/home/home';
 // import {CategoryPage} from '../pages/category/category'
@@ -21,7 +23,7 @@ import {OneSignal} from '@ionic-native/onesignal';
 @Component({
   templateUrl: 'app.html',
   selector: 'MyApp',
-  providers:[Service, OneSignal]
+  providers:[Service, OneSignal ]
 
 })
 export class MyApp {
@@ -49,11 +51,13 @@ export class MyApp {
                 public service: Service,
                 statusBar: StatusBar,
                 splashScreen: SplashScreen,
-                public oneSignal: OneSignal) {
+                public oneSignal: OneSignal,
+              
+                public toast:ToastController) {
   
     platform.ready().then((res) => {
             if (res == 'cordova') {
-                this.oneSignal.startInit('230d3e93-0c29-49bd-ac82-ecea8612464e', '714618018341');
+                this.oneSignal.startInit('8af3933a-47e7-46dc-bd28-fd3cd48c7748', '973507141094');
                 this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
                 this.oneSignal.handleNotificationReceived().subscribe(() => {
                 });
@@ -64,6 +68,8 @@ export class MyApp {
             }
             statusBar.styleDefault();
             splashScreen.hide();
+
+          
         });
 
 

@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {NavController, IonicPage } from 'ionic-angular';
 //import {ProductListPage} from '../product-list/product-list';
 import {Service} from '../../app/service';
+import { LoadingController } from 'ionic-angular';
 
 
 
@@ -16,13 +17,23 @@ import {Service} from '../../app/service';
 export class CategoryPage { 
     categories: any[] = [];
 
-    constructor(public navCtrl: NavController, public service: Service) {
+    constructor(public navCtrl: NavController, public service: Service, public loading: LoadingController) {
 
-        this.service.getCategory()
+      
+    }
+     ionViewDidEnter() {
+        let loader = this.loading.create({
+            content: 'Loading ...',
+        });
+
+        loader.present().then(() => {
+            this.service.getCategory()
             .subscribe((response) => {
                this.categories = response.restify.rows;
               //console.log(response.restify.rows);
             })
+            loader.dismiss();
+        });
     }
 
     navigate(catId) {

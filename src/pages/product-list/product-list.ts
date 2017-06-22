@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams,ToastController, IonicPage} from 'ionic-angular';
 import {Service} from '../../app/service';
+import { LoadingController } from 'ionic-angular';
+
 
 @IonicPage()
 @Component({
@@ -20,7 +22,8 @@ export class ProductListPage {
   constructor(public navCtrl: NavController,
               public service: Service,
               public navParams: NavParams,
-              public toastCtrl:ToastController) {
+              public toastCtrl:ToastController,
+              public loading: LoadingController) {
     this.catId = navParams.get('catId');
 
     // this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
@@ -28,21 +31,23 @@ export class ProductListPage {
     //   this.noOfItems = this.cartItems.length;
     // }
   }
+ ionViewDidEnter() {
+        let loader = this.loading.create({
+            content: 'Loading ...',
+        });
 
+        loader.present().then(() => {
+             this.service.getMenus(this.catId)
+            .subscribe((response) => {
+              this.menuItems = response.restify.rows;
+              this.items=this.menuItems;
+              //console.log(response.restify.rows);
+            })
+            loader.dismiss();
+        });
+    }
   ngOnInit() {
-    this.service.getMenus(this.catId)
-      // .subscribe((response) => {
-      //   for (let i = 0; i <= response.restify.rows.length - 1; i++) {
-      //     if (response.restify.rows.menuItems[i].category_id == this.catId) {
-      //       this.menuItems.push(response.menuItems[i]);
-      //     }
-      //   }
-      // })
-      .subscribe((response) => {
-        this.menuItems = response.restify.rows;
-        this.items=this.menuItems;
-        //console.log(response.restify.rows);
-      })
+  
   }
  initializeItems() {
         this.items = this.menuItems;

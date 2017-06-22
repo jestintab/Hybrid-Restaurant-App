@@ -1,13 +1,13 @@
 webpackJsonp([16],{
 
-/***/ 570:
+/***/ 573:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact__ = __webpack_require__(693);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact__ = __webpack_require__(696);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactPageModule", function() { return ContactPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -29,7 +29,7 @@ ContactPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__contact__["a" /* ContactPage */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__contact__["a" /* ContactPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__contact__["a" /* ContactPage */]),
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__contact__["a" /* ContactPage */]
@@ -41,12 +41,12 @@ ContactPageModule = __decorate([
 
 /***/ }),
 
-/***/ 693:
+/***/ 696:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(73);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -79,13 +79,13 @@ var ContactPage = (function () {
     return ContactPage;
 }());
 ContactPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-contact',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\contact\contact.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n        </button>\n        <ion-title>Contact</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content class="contact">\n    <p class="contact-head">Contact Us</p>\n    <form (ngSubmit)="onSend(f)" #f="ngForm">\n        <!--name-->\n        <ion-row>\n            <ion-col>\n                <ion-item>\n                    <ion-label>Name:</ion-label>\n                    <ion-input type="text" name="name" id="name"\n                               [(ngModel)]="user.name" required></ion-input>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n        <!--email-->\n        <ion-row>\n            <ion-col>\n                <ion-item>\n                    <ion-label>Email:</ion-label>\n                    <ion-input type="email" name="email" id="email"\n                               [(ngModel)]="user.email" required></ion-input>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n        <!--message-->\n        <ion-row>\n            <ion-col>\n                <ion-item>\n                    <ion-label>Message:</ion-label>\n                    <ion-textarea rows="6" lineHeight="42" name="message" id="message"\n                                  [(ngModel)]="user.message" required></ion-textarea>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n        <!--button-->\n        <ion-row>\n            <ion-col>\n                <button class="submit-btn" ion-button type=\'submit\'> Send</button>\n            </ion-col>\n        </ion-row>\n    </form>\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\contact\contact.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ToastController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */]])
 ], ContactPage);
 
 //# sourceMappingURL=contact.js.map

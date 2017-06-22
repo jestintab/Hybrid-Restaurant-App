@@ -27,6 +27,8 @@ $grey: #777;
 $light-grey: #ccc;
 $dark-grey:#424242;
 
+
+
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
@@ -34,6 +36,10 @@ $dark-grey:#424242;
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
+$loading-md-background: rgba(0,0,0,.6);
+$loading-md-text-color: #fff;
+$loading-md-spinner-color: #fecc27;
+
 
 // App Windows Variables
 // --------------------------------------------------

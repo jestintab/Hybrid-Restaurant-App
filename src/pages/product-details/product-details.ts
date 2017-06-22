@@ -7,6 +7,8 @@ import  html_entity_decode   from 'locutus/php/strings/html_entity_decode';
 import 'rxjs/Rx';
 import isset from 'locutus/php/var/isset';
 import _ from 'lodash/array';
+import { LoadingController } from 'ionic-angular';
+
 
 @IonicPage()
 @Component({
@@ -47,7 +49,8 @@ export class ProductDetailsPage {
                 public toastCtrl: ToastController,
                 public navParams: NavParams,
                 public storage: Storage,
-                public service: Service) {
+                public service: Service,
+                public loading: LoadingController) {
         this.productId = navParams.get('productId');
         if(isset(navParams.get('cartStoredItem'))){
         this.cartStoredItem = navParams.get('cartStoredItem');
@@ -64,22 +67,13 @@ export class ProductDetailsPage {
         //     this.favouriteItems = favourites;
         // })
     }
+ ionViewDidEnter() {
+        let loader = this.loading.create({
+            content: 'Loading ...',
+        });
 
-    ngOnInit() {
-        // this.service.getData()
-        //     .subscribe((response) => {
-        //         for (let i = 0; i <= response.menuItems.length - 1; i++) {
-        //             if (response.menuItems[i].id == this.productId) {
-        //                 this.productDetails = response.menuItems[i];
-        //                 this.product.id = response.menuItems[i].id;
-        //                 this.prices = response.menuItems[i].price;
-        //                 this.ExtraOptions = response.menuItems[i].extraOptions;
-        //                 this.product.name = response.menuItems[i].title;
-        //                 this.product.image = response.menuItems[i].pictures;
- 
-        //         }
-        //     })
-        this.service.getMenuItem(this.productId)
+        loader.present().then(() => {
+            this.service.getMenuItem(this.productId)
                 .subscribe((response) => {
                     this.itemDetails = response.restify.rows;
                     this.itemDetails.forEach(itemdetail => { 
@@ -131,10 +125,14 @@ export class ProductDetailsPage {
             
         this.checkedOptions = this.cartStoredItem.extraOption;
         this.optionCount = this.checkedOptions.length;
-        console.log(this.ExtraOptions);
-       console.log(_.difference(this.ExtraOptions,this.checkedOptions));
-        console.log(this.checkedOptions);
+        
         }
+            loader.dismiss();
+        });
+    }
+    ngOnInit() {
+       
+        
                     
 
     }
