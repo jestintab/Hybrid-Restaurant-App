@@ -1,23 +1,27 @@
 import { Injectable } from '@angular/core';
-import { AlertController } from 'ionic-angular';
+import { AlertController, NavController, App } from 'ionic-angular';
 import { Network}  from '@ionic-native/network';
-//import { Diagnostic } from '@ionic-native/diagnostic';
+import { Diagnostic } from '@ionic-native/diagnostic';
 
 
 
 @Injectable()
 export class NetworkService {
+  private navCtrl: NavController;
 
-  constructor( public alert: AlertController,
-  //private diagnostic: Diagnostic,
-   public network:Network) {
-    console.log('Hello NetworkService Provider');
-  }
+  constructor (public alert: AlertController,
+   private diagnostic: Diagnostic,
+   public network:Network,
+   private app:App) {
+      this.navCtrl = app.getActiveNav();
+   }
  noConnection() {
     return (this.network.type === 'none');
   }
  
 private showSettings() {
+    this.navCtrl.push("Homepage");
+
     // if (this.diagnostic.switchToWifiSettings) {
     //   this.diagnostic.switchToWifiSettings();
     // } else {
@@ -34,10 +38,10 @@ private showSettings() {
           handler: () => {}
         },
         {
-          text: 'Open Settings',
+          text: 'Reload',
           handler: () => {
             networkAlert.dismiss().then(() => {
-              this.showSettings();
+             this.showSettings();
             })
           }
         }

@@ -10,6 +10,7 @@ import {Service} from '../app/service';
 import {MyApp} from './app.component';
 import { Network }  from '@ionic-native/network';
 import {NetworkService} from '../providers/network-service';
+import { Diagnostic } from '@ionic-native/diagnostic';
 
 
 @NgModule({
@@ -32,10 +33,9 @@ import {NetworkService} from '../providers/network-service';
     StatusBar,
     SplashScreen,
     Network,
-    NetworkService
+    NetworkService,
+    Diagnostic,    
     ],
-
-
 })
 export class AppModule {
 }

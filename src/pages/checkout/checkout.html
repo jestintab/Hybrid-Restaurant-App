@@ -85,15 +85,17 @@
             </ion-label>
             <div>
                 <ion-item class="sub-address">
-                    <ion-input type="text" placeholder="Name" name="name" id="name"
+                   <ion-label>Name:  </ion-label>  <ion-input type="text" placeholder="Enter your name" name="name" id="name"
                                [(ngModel)]="orderDetails.name" ng-value="orderDetails.name" required></ion-input>
                 </ion-item>
                 <ion-item class="sub-address">
-                    <ion-input type="email" placeholder="Email" name="email" id="email" required
+                   <ion-label>Email:  </ion-label> <ion-input type="email" placeholder="Enter your email" name="email" id="email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" required
                                [(ngModel)]="orderDetails.email"> </ion-input>
                 </ion-item>
                 <ion-item class="sub-address">
-                    <ion-input type="number"  minlength="8" placeholder="Mobile" name="phone" id="phone" required
+                        <ion-label>Phone:  </ion-label>  <ion-input type="text"  disabled="true" placeholder="Code" ngValue="00974" name="pcode" id="pcode" required
+                               [(ngModel)]="orderDetails.pcode"></ion-input>
+                    <ion-input type="number"  minlength="8" placeholder="Mobile"  name="phone" id="phone" required
                                [(ngModel)]="orderDetails.phone"></ion-input>
                          
                 </ion-item>
@@ -127,7 +129,7 @@
                 </div>
                 <ion-item class="sub-address" >
                     <ion-label >City</ion-label>
-                    <ion-input disabled="true" type="text" placeholder="City" ngValue="Doha, Qatar" name="city" id="city" 
+                    <ion-input disabled="true" type="text" placeholder="City"  name="city" id="city" 
                                [(ngModel)]="orderDetails.city"></ion-input>
                 </ion-item>               
             </div>

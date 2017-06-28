@@ -38,7 +38,8 @@ export class CheckoutPage {
         this.OrderedProduct.cartItems = JSON.parse(localStorage.getItem('cartItem'));
         this.OrderedProduct.orderTotal = this.NavParams.get('orderTotal');
         this.OrderedProduct.comment = this.NavParams.get('comments');
-        this.OrderedProduct.noOfItems = this.NavParams.get('noofitems')
+        this.OrderedProduct.noOfItems = this.NavParams.get('noofitems');
+        this.orderDetails.pcode = '00974';
         this.orderDetails.city = 'Doha, Qatar';
     }
     submitted = false;
@@ -59,6 +60,7 @@ export class CheckoutPage {
     delivery(){
         this.order_delivery = false;
         this.gatemall = true;       
+        this.orderDetails.phone = '+974';
         this.orderDetails.city = 'Doha, Qatar';   
         this.OrderedProduct.orderType = 'delivery';
         this.deliveryCharge = 5;

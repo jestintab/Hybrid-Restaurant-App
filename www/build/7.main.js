@@ -1,13 +1,13 @@
 webpackJsonp([7],{
 
-/***/ 586:
+/***/ 587:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__thankyou__ = __webpack_require__(709);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__thankyou__ = __webpack_require__(627);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThankyouPageModule", function() { return ThankyouPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -29,7 +29,7 @@ ThankyouPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__thankyou__["a" /* ThankyouPage */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__thankyou__["a" /* ThankyouPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__thankyou__["a" /* ThankyouPage */]),
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__thankyou__["a" /* ThankyouPage */]
@@ -41,7 +41,7 @@ ThankyouPageModule = __decorate([
 
 /***/ }),
 
-/***/ 709:
+/***/ 627:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -69,11 +69,11 @@ var ThankyouPage = (function () {
     return ThankyouPage;
 }());
 ThankyouPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-thankyou',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\thankyou\thankyou.html"*/'<ion-header>\n    <ion-navbar hideBackButton="true">\n        <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n        </button>\n            <ion-title>Thank You</ion-title>\n            <ion-buttons end>\n                <button ion-button icon-only color="royal">\n                    <ion-icon name="cart"></ion-icon>\n                </button>\n            </ion-buttons>\n    </ion-navbar>\n</ion-header>\n\n<ion-content class="page-content">\n    <ion-row>\n        <ion-col>\n            <div class="thanks">\n                <h2>Thank for your order !</h2>\n                <p>Your order has been received by our delivery staff,will be with you shortly.\n                     We will call you within 10 minutes to confirm your order.\n                     If you are unreachable, this order will automatically be cancelled. \n                </p>\n            </div>\n        </ion-col>\n    </ion-row>\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\thankyou\thankyou.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])
 ], ThankyouPage);
 
 //# sourceMappingURL=thankyou.js.map

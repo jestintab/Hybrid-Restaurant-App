@@ -14581,8 +14581,8 @@ ion-loading {
   max-width: 280px;
   max-height: 90%;
   border-radius: 2px;
-  color: rgba(0, 0, 0, 0.5);
-  background: #fafafa;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
   box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -14592,23 +14592,23 @@ ion-loading {
 
 .loading-md .spinner-ios line,
 .loading-md .spinner-ios-small line {
-  stroke: #327eff;
+  stroke: #fecc27;
 }
 
 .loading-md .spinner-bubbles circle {
-  fill: #327eff;
+  fill: #fecc27;
 }
 
 .loading-md .spinner-circles circle {
-  fill: #327eff;
+  fill: #fecc27;
 }
 
 .loading-md .spinner-crescent circle {
-  stroke: #327eff;
+  stroke: #fecc27;
 }
 
 .loading-md .spinner-dots circle {
-  fill: #327eff;
+  fill: #fecc27;
 }
 
 .loading-wp .loading-wrapper {

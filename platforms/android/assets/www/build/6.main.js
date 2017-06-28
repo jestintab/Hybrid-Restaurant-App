@@ -1,13 +1,13 @@
 webpackJsonp([6],{
 
-/***/ 569:
+/***/ 570:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_us__ = __webpack_require__(692);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_us__ = __webpack_require__(610);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutUsPageModule", function() { return AboutUsPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -29,7 +29,7 @@ AboutUsPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__about_us__["a" /* AboutUsPage */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__about_us__["a" /* AboutUsPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__about_us__["a" /* AboutUsPage */]),
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__about_us__["a" /* AboutUsPage */]
@@ -41,14 +41,14 @@ AboutUsPageModule = __decorate([
 
 /***/ }),
 
-/***/ 692:
+/***/ 610:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_call_number__ = __webpack_require__(710);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__ = __webpack_require__(711);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_call_number__ = __webpack_require__(628);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__ = __webpack_require__(629);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutUsPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -98,22 +98,22 @@ var AboutUsPage = (function () {
     return AboutUsPage;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Slides */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Slides */])
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Slides */]),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Slides */])
 ], AboutUsPage.prototype, "slides", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Nav */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Nav */])
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Nav */]),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Nav */])
 ], AboutUsPage.prototype, "nav", void 0);
 AboutUsPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-about-us',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\about-us\about-us.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n            <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n        <ion-title>About Us</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n\n\n   <ion-slides initialSlide=0 speed=2000 loop=true>\n\n  <ion-slide>\n\n    \n\n    <img src="assets/img/about_us2.jpg" class="slider-img">\n\n       <div class="card-title">WE DESIGN TASTE</div>\n\n  </ion-slide>\n\n    <ion-slide>\n\n    <img src="assets/img/about_us1.jpg" class="slider-img">\n\n     <div class="card-title">WE DESIGN TASTE</div>\n\n  </ion-slide>\n\n  <ion-slide>\n\n    <img src="assets/img/about_us3.jpg" class="slider-img">\n\n     <div class="card-title">WE DELIVERY FRESH</div>\n\n  </ion-slide>\n\n\n\n\n\n</ion-slides>\n\n\n\n<!--about-->\n\n<div class="wrapper">\n\n  <h4 class="heading">About Us </h4>\n\n    <p class="details">\n\n    Sandwich Factory is a Street-Food Snack-House where it serves its sandwiches in the authentic Lebanese way including the ingredients. It is the first true Lebanese Shawarma and menu offering that is as close as you can get in the country to how the Lebanese people have eaten it for years.\n\n    </p>\n\n\n\n <!--Get in touch-->\n\n   <h4 class="heading">Get In Touch &nbsp;<ion-icon name="arrow-dropdown"></ion-icon></h4>\n\n   <ion-card>\n\n      <ion-card-content (click)="callUs()">\n\n         <ion-icon name="call"></ion-icon> &nbsp; Call us\n\n      </ion-card-content>\n\n      <ion-card-content (click)="contact()">\n\n        <ion-icon name="mail"></ion-icon> &nbsp; Email us\n\n      </ion-card-content>\n\n      <ion-card-content (click)="gotogoogleMap()">\n\n         <ion-icon name="locate" ></ion-icon> &nbsp; Locate us\n\n      </ion-card-content>\n\n    </ion-card>\n\n\n\n <!--follow-->\n\n    <h4 class="heading">Follow Us &nbsp;<ion-icon name="arrow-dropdown"></ion-icon></h4>\n\n   <ion-card>\n\n      <ion-card-content>\n\n          <ion-icon name="logo-facebook"></ion-icon> &nbsp; Facebook\n\n      </ion-card-content>\n\n      <ion-card-content>\n\n        <ion-icon name="logo-twitter"></ion-icon> &nbsp; Twitter\n\n      </ion-card-content>\n\n      <ion-card-content>\n\n         <ion-icon name="logo-instagram"></ion-icon> &nbsp; Instagram\n\n      </ion-card-content>\n\n    </ion-card>\n\n   </div> \n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\about-us\about-us.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_2__ionic_native_call_number__["a" /* CallNumber */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__["a" /* EmailComposer */]]
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Platform */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* Platform */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_2__ionic_native_call_number__["a" /* CallNumber */],
         __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__["a" /* EmailComposer */]])
 ], AboutUsPage);
@@ -122,12 +122,12 @@ AboutUsPage = __decorate([
 
 /***/ }),
 
-/***/ 710:
+/***/ 628:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(43);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CallNumber; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -178,7 +178,7 @@ var CallNumber = (function () {
     /** @nocollapse */
     CallNumber.ctorParameters = function () { return []; };
     __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["b" /* Cordova */])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["c" /* Cordova */])({
             callbackOrder: 'reverse'
         }), 
         __metadata('design:type', Function), 
@@ -186,7 +186,7 @@ var CallNumber = (function () {
         __metadata('design:returntype', Promise)
     ], CallNumber.prototype, "callNumber", null);
     CallNumber = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["c" /* Plugin */])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["d" /* Plugin */])({
             pluginName: 'CallNumber',
             plugin: 'call-number',
             pluginRef: 'plugins.CallNumber',
@@ -201,12 +201,12 @@ var CallNumber = (function () {
 
 /***/ }),
 
-/***/ 711:
+/***/ 629:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(43);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmailComposer; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -320,19 +320,19 @@ var EmailComposer = (function () {
     /** @nocollapse */
     EmailComposer.ctorParameters = function () { return []; };
     __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* CordovaCheck */])(), 
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["e" /* CordovaCheck */])(), 
         __metadata('design:type', Function), 
         __metadata('design:paramtypes', [String]), 
         __metadata('design:returntype', Promise)
     ], EmailComposer.prototype, "isAvailable", null);
     __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["b" /* Cordova */])(), 
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["c" /* Cordova */])(), 
         __metadata('design:type', Function), 
         __metadata('design:paramtypes', [String, String]), 
         __metadata('design:returntype', void 0)
     ], EmailComposer.prototype, "addAlias", null);
     __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["b" /* Cordova */])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["c" /* Cordova */])({
             successIndex: 1,
             errorIndex: 3
         }), 
@@ -341,7 +341,7 @@ var EmailComposer = (function () {
         __metadata('design:returntype', Promise)
     ], EmailComposer.prototype, "open", null);
     EmailComposer = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["c" /* Plugin */])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["d" /* Plugin */])({
             pluginName: 'EmailComposer',
             plugin: 'cordova-plugin-email',
             pluginRef: 'cordova.plugins.email',

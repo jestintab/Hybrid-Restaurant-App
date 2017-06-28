@@ -7,10 +7,10 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.ionicframework.restaurantapp2984128"
-        },
         "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.aljedad.sandwichfactory"
+        },
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.aljedad.sandwichfactory"
         },
         "cordova.plugins.diagnostic": {

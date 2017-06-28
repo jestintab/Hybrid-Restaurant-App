@@ -1,13 +1,13 @@
 webpackJsonp([11],{
 
-/***/ 580:
+/***/ 581:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__offer__ = __webpack_require__(703);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__offer__ = __webpack_require__(621);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OfferPageModule", function() { return OfferPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -29,7 +29,7 @@ OfferPageModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__offer__["a" /* OfferPage */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__offer__["a" /* OfferPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__offer__["a" /* OfferPage */]),
         ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_2__offer__["a" /* OfferPage */]
@@ -41,7 +41,7 @@ OfferPageModule = __decorate([
 
 /***/ }),
 
-/***/ 703:
+/***/ 621:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93,17 +93,17 @@ var OfferPage = (function () {
     return OfferPage;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Slides */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Slides */])
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Slides */]),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Slides */])
 ], OfferPage.prototype, "slides", void 0);
 OfferPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-offer',template:/*ion-inline-start:"C:\Projects\sfapp\src\pages\offer\offer.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n        </button>\n        <ion-title>Offers</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <ion-row class="full-slide"><!-- first row -->\n        <ion-slides initialSlide=0 speed=1000 loop=true>\n            <ion-slide *ngFor="let product of offerProducts">\n                <div class="overlay">\n                    <img src="{{product.pictures}}" class="slider-img">\n                    <div class="offer-label">\n                        <span class="square text-center light assertive-bg ng-binding">{{product.offer}}</span>\n                        <i class="triangle"></i>\n                    </div>\n                    <div class="card-title">\n                        <ion-icon name="arrow-dropleft" (click)="gotoPrevSlide()"></ion-icon>\n                        &nbsp;&nbsp;&nbsp; {{product.title}} &nbsp;&nbsp;&nbsp;\n                        <ion-icon name="arrow-dropright" (click)="gotoNextSlide()"></ion-icon>\n                    </div>\n                </div>\n\n                <p class="price"><b>Original Price : </b> <span class="total line"> ${{product.price[0].value}}</span></p>\n                <p class="price"><b>Offer Price : </b><span class="total"> ${{product.price[0].offerValue}}</span></p>\n                <p class="desc"><b>Product Description : </b> {{product.body}}</p>\n                <a (click)="buyNow(product.id)" ion-button icon-left full class="btn-add-to-cart">\n                    <ion-icon name="cart">\n                    </ion-icon>\n                    Buy Now\n                </a>\n            </ion-slide>\n        </ion-slides>\n    </ion-row>\n</ion-content>\n'/*ion-inline-end:"C:\Projects\sfapp\src\pages\offer\offer.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* Service */]]
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_2__app_service__["a" /* Service */]])
 ], OfferPage);
 
