@@ -1,9 +1,8 @@
 {
   "name": "Sandwich Factory",
-  "app_id": "57356639",
-  "v2": true,
-  "typescript": true,
-  "proxies": [{
+  "app_id": "d196fefa",
+  "proxies": [
+    {
       "path": "/api/sforder",
       "proxyUrl": "https://order.sandwichfactory.qa"
     },
@@ -11,5 +10,6 @@
       "path": "/api/sforder",
       "proxyUrl": "http://aljedad.com"
     }
-    ] 
+  ],
+  "type": "ionic-angular"
 }

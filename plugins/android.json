@@ -15,6 +15,21 @@
         },
         "cordova.plugins.diagnostic": {
             "PACKAGE_NAME": "com.aljedad.sandwichfactory"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.aljedad.sandwichfactory"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.aljedad.sandwichfactory"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.aljedad.sandwichfactory"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.aljedad.sandwichfactory"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.aljedad.sandwichfactory"
         }
     },
     "dependent_plugins": {}

@@ -1,13 +1,13 @@
 webpackJsonp([6],{
 
-/***/ 570:
+/***/ 573:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_us__ = __webpack_require__(610);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_us__ = __webpack_require__(613);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutUsPageModule", function() { return AboutUsPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -41,14 +41,14 @@ AboutUsPageModule = __decorate([
 
 /***/ }),
 
-/***/ 610:
+/***/ 613:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_call_number__ = __webpack_require__(628);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__ = __webpack_require__(629);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_call_number__ = __webpack_require__(631);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__ = __webpack_require__(632);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutUsPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -122,13 +122,23 @@ AboutUsPage = __decorate([
 
 /***/ }),
 
-/***/ 628:
+/***/ 631:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(42);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CallNumber; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -146,8 +156,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Call a number directly from your Cordova/Ionic application.
  *
  * @usage
- * ```
- * import {CallNumber} from '@ionic-native/call-number';
+ * ```typescript
+ * import { CallNumber } from '@ionic-native/call-number';
  *
  * constructor(private callNumber: CallNumber) { }
  *
@@ -160,8 +170,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  *
  * ```
  */
-var CallNumber = (function () {
+var CallNumber = (function (_super) {
+    __extends(CallNumber, _super);
     function CallNumber() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
      * Calls a phone number
@@ -172,42 +184,52 @@ var CallNumber = (function () {
     CallNumber.prototype.callNumber = function (numberToCall, bypassAppChooser) {
         return;
     };
-    CallNumber.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
-    ];
-    /** @nocollapse */
-    CallNumber.ctorParameters = function () { return []; };
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["c" /* Cordova */])({
-            callbackOrder: 'reverse'
-        }), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', [String, Boolean]), 
-        __metadata('design:returntype', Promise)
-    ], CallNumber.prototype, "callNumber", null);
-    CallNumber = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["d" /* Plugin */])({
-            pluginName: 'CallNumber',
-            plugin: 'call-number',
-            pluginRef: 'plugins.CallNumber',
-            repo: 'https://github.com/Rohfosho/CordovaCallNumberPlugin',
-            platforms: ['iOS', 'Android']
-        }), 
-        __metadata('design:paramtypes', [])
-    ], CallNumber);
     return CallNumber;
-}());
+}(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* IonicNativePlugin */]));
+CallNumber.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+CallNumber.ctorParameters = function () { return []; };
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["c" /* Cordova */])({
+        callbackOrder: 'reverse'
+    }),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, Boolean]),
+    __metadata("design:returntype", Promise)
+], CallNumber.prototype, "callNumber", null);
+CallNumber = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["d" /* Plugin */])({
+        pluginName: 'CallNumber',
+        plugin: 'call-number',
+        pluginRef: 'plugins.CallNumber',
+        repo: 'https://github.com/Rohfosho/CordovaCallNumberPlugin',
+        platforms: ['Android', 'iOS']
+    })
+], CallNumber);
+
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 629:
+/***/ 632:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_core__ = __webpack_require__(42);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmailComposer; });
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -220,14 +242,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * @beta
  * @name Email Composer
  * @description
  *
  * Requires Cordova plugin: cordova-plugin-email-composer. For more info, please see the [Email Composer plugin docs](https://github.com/hypery2k/cordova-email-plugin).
  *
- * DISCLAIMER: This plugin is experiencing issues with the latest versions of Cordova. Use at your own risk. Functionality is not guaranteed. Please stay tuned for a more stable version.
- * A good alternative to this plugin is the social sharing plugin.
  *
  * @usage
  * ```typescript
@@ -266,8 +285,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * @interfaces
  * EmailComposerOptions
  */
-var EmailComposer = (function () {
+var EmailComposer = (function (_super) {
+    __extends(EmailComposer, _super);
     function EmailComposer() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
      * Verifies if sending emails is supported on the device.
@@ -314,44 +335,44 @@ var EmailComposer = (function () {
      * @returns {Promise<any>} Resolves promise when the EmailComposer has been opened
      */
     EmailComposer.prototype.open = function (options, scope) { return; };
-    EmailComposer.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
-    ];
-    /** @nocollapse */
-    EmailComposer.ctorParameters = function () { return []; };
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["e" /* CordovaCheck */])(), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', [String]), 
-        __metadata('design:returntype', Promise)
-    ], EmailComposer.prototype, "isAvailable", null);
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["c" /* Cordova */])(), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', [String, String]), 
-        __metadata('design:returntype', void 0)
-    ], EmailComposer.prototype, "addAlias", null);
-    __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["c" /* Cordova */])({
-            successIndex: 1,
-            errorIndex: 3
-        }), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', [Object, Object]), 
-        __metadata('design:returntype', Promise)
-    ], EmailComposer.prototype, "open", null);
-    EmailComposer = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["d" /* Plugin */])({
-            pluginName: 'EmailComposer',
-            plugin: 'cordova-plugin-email',
-            pluginRef: 'cordova.plugins.email',
-            repo: 'https://github.com/hypery2k/cordova-email-plugin',
-            platforms: ['Android', 'iOS']
-        }), 
-        __metadata('design:paramtypes', [])
-    ], EmailComposer);
     return EmailComposer;
-}());
+}(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["a" /* IonicNativePlugin */]));
+EmailComposer.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
+];
+/** @nocollapse */
+EmailComposer.ctorParameters = function () { return []; };
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["e" /* CordovaCheck */])(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], EmailComposer.prototype, "isAvailable", null);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["c" /* Cordova */])(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, String]),
+    __metadata("design:returntype", void 0)
+], EmailComposer.prototype, "addAlias", null);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["c" /* Cordova */])({
+        successIndex: 1,
+        errorIndex: 3
+    }),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", Promise)
+], EmailComposer.prototype, "open", null);
+EmailComposer = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__ionic_native_core__["d" /* Plugin */])({
+        pluginName: 'EmailComposer',
+        plugin: 'cordova-plugin-email',
+        pluginRef: 'cordova.plugins.email',
+        repo: 'https://github.com/hypery2k/cordova-email-plugin',
+        platforms: ['Amazon Fire OS', 'Android', 'Browser', 'iOS', 'Windows']
+    })
+], EmailComposer);
+
 //# sourceMappingURL=index.js.map
 
 /***/ })
