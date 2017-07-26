@@ -62,5 +62,68 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-email": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-email@^1.2.6"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-facebook4": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-facebook4@^1.7.4"
+        },
+        "is_top_level": true,
+        "variables": {
+            "APP_ID": "1825216277772417",
+            "APP_NAME": "ionic3ApiApp"
+        }
+    },
+    "cordova-plugin-googleplus": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-googleplus@^5.1.1"
+        },
+        "is_top_level": true,
+        "variables": {
+            "REVERSED_CLIENT_ID": "ionic3Api"
+        }
+    },
+    "cordova-plugin-x-socialsharing": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-x-socialsharing@^5.1.8"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "es6-promise-plugin": {
+        "source": {
+            "type": "registry",
+            "id": "es6-promise-plugin"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "onesignal-cordova-plugin": {
+        "source": {
+            "type": "registry",
+            "id": "onesignal-cordova-plugin@^2.0.11"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "twitter-connect-plugin": {
+        "source": {
+            "type": "registry",
+            "id": "twitter-connect-plugin@^0.6.0"
+        },
+        "is_top_level": true,
+        "variables": {
+            "FABRIC_KEY": "c85e4cff3836038742faae187f364ea33d94cbed"
+        }
     }
 }

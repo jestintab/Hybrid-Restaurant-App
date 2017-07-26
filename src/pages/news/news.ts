@@ -9,7 +9,7 @@ import {Service} from '../../app/service';
     providers: [Service]
 })
 export class NewsPage {
-    newsList: any[];
+    newsList: any;
 
     constructor(public navCtrl: NavController,
                 public navParams: NavParams,
@@ -17,9 +17,13 @@ export class NewsPage {
     }
 
     ngOnInit() {
-        this.newsService.getData()
+        this.newsService.getBlog()
             .subscribe((response) => {
-                this.newsList = response.newsList
+               this.newsList = response;
+            //    this.newsList.forEach(newsContent => {
+            //        console.log(newsContent.id);
+            //    });
+               
             })
     }
 

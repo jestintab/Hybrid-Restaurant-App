@@ -10,7 +10,8 @@ import {Service} from '../../app/service';
 })
 export class NewsDetailPage {
     newsId: '';
-    newsDetails: any = {};
+    newsDetails: any = {}; 
+    newsTitle:string;
 
     constructor(public navCtrl: NavController,
                 public navParams: NavParams,
@@ -19,14 +20,22 @@ export class NewsDetailPage {
     }
 
     ngOnInit() {
-        this.newsService.getData()
+        this.newsService.getBlogDetail(this.newsId)
             .subscribe((response) => {
-                for (let i = 0; i <= response.newsList.length - 1; i++) {
-                    if (response.newsList[i].id == this.newsId) {
-                        this.newsDetails = response.newsList[i];
-                    }
-                }
-            })
+
+                
+                this.newsDetails.title = response.title.rendered;
+                this.newsDetails.img = response.better_featured_image.media_details.sizes.medium.source_url
+                this.newsDetails.date = response.date;
+                this.newsDetails.content = response.content.rendered;
+               console.log(this.newsDetails.content);
+            //     console.log(response.title.rendered);
+            //     for (let i = 0; i <= response.length - 1; i++) {
+            //         if (response.id == this.newsId) {
+            //             this.newsDetails = response;
+            //         }
+            //     }
+             })
     }
 
 

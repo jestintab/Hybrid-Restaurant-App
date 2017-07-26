@@ -1,17 +1,17 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>News-details</ion-title>
+        <ion-title>{{newsDetails.title}}</ion-title>
     </ion-navbar>
 </ion-header>
 
 
 <ion-content>
     <ion-card>
-        <img src="{{newsDetails.image}}">
+        <img src="{{this.newsDetails.img}}">
         <p class="news-head" center>{{newsDetails.title}}</p>
-        <p class="news-time">{{newsDetails.dateTime}}</p>
+        <p class="news-time">{{newsDetails.date | date:"yMMMMd" }}</p>
         <ion-card-content>
-            <p>{{newsDetails.details}} </p>
+            <p [innerHtml]="newsDetails.content"> </p>
         </ion-card-content>
     </ion-card>
 </ion-content>

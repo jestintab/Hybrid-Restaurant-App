@@ -13,7 +13,8 @@ export class NetworkService {
    private diagnostic: Diagnostic,
    public network:Network,
    private app:App) {
-      this.navCtrl = app.getActiveNav();
+     //this.nav = navCtrl
+     this.navCtrl = app.getActiveNav();
    }
  noConnection() {
     return (this.network.type === 'none');

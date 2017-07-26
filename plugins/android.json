@@ -30,7 +30,32 @@
         },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.aljedad.sandwichfactory"
+        },
+        "cordova-plugin-email": {
+            "PACKAGE_NAME": "com.sandwichfactoryintl.sfdoha"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1825216277772417",
+            "APP_NAME": "ionic3ApiApp",
+            "PACKAGE_NAME": "com.sandwichfactoryintl.sfdoha"
+        },
+        "cordova-plugin-googleplus": {
+            "PACKAGE_NAME": "com.sandwichfactoryintl.sfdoha"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.sandwichfactoryintl.sfdoha"
+        },
+        "onesignal-cordova-plugin": {
+            "PACKAGE_NAME": "com.sandwichfactoryintl.sfdoha"
+        },
+        "twitter-connect-plugin": {
+            "FABRIC_KEY": "c85e4cff3836038742faae187f364ea33d94cbed",
+            "PACKAGE_NAME": "com.sandwichfactoryintl.sfdoha"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "com.sandwichfactoryintl.sfdoha"
+        }
+    }
 }

@@ -3,7 +3,7 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>News</ion-title>
+        <ion-title>Blog & Media</ion-title>
     </ion-navbar>
 </ion-header>
 
@@ -11,10 +11,10 @@
     <ion-list>
         <ion-item (click)="newsDetail(news.id)" *ngFor="let news of newsList">
             <ion-thumbnail item-left>
-                <img src="{{news.image}}">
+                <img src="{{news.better_featured_image.media_details.sizes.thumbnail.source_url}}">
             </ion-thumbnail>
-            <h2>{{news.title}} </h2>
-            <p>{{news.discription}}</p>
+            <h2>{{news.title.rendered}} </h2>
+            <p  [innerHtml]="news.excerpt.rendered"></p>
         </ion-item>
     </ion-list>
 </ion-content>

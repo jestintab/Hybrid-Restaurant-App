@@ -19,6 +19,7 @@ export class Service {
     private headers:any;
     //private options:any;  
     private postUrl:string;
+    private blogUrl:string;
 
 
 
@@ -32,6 +33,7 @@ export class Service {
       this.sort = '_sort=';
       this.amp ='&';
       this.postUrl = "http://aljedad.com/sforder/api";
+      this.blogUrl = "https://sandwichfactory.qa/blog/wp-json/wp/v2/posts"
        
     }
     getData() {
@@ -100,6 +102,25 @@ export class Service {
 
     }
 
+    getBlog(){
+       if (this.networkService.noConnection()) {
+            this.networkService.showNetworkAlert();
+            } else { 
+            return this.http.get(this.blogUrl)  
+            .map((res: Response) => res.json());
+           
+            }
+    }
+      getBlogDetail(post_id){
+        if (this.networkService.noConnection()) {
+            this.networkService.showNetworkAlert();
+            } else { 
+            return this.http.get(this.blogUrl+'/'+post_id)  
+            .map((res: Response) => res.json());
+           
+            }
+
+            }
 
 
 }
