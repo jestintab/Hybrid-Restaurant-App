@@ -19,7 +19,7 @@ export class ContactPage {
               private http: Http) {
                 this.http = http;
                 this.mailgunUrl ="sandwichfactory.co";
-                this.mailgunApiKey = window.btoa("api:key-b776d63a14258b3624845ef65cf9cdbb");
+                this.mailgunApiKey = window.btoa("api:key-somekey");
   	          
       }
 
