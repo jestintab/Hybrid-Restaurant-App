@@ -16,7 +16,9 @@ page-product-list {
     }
   }
   .category {
-   
+    img {
+      width: 130px;
+    }
     .item-name {
       font-weight: 700;
       font-size: 15px;
@@ -28,16 +30,13 @@ page-product-list {
       display: -webkit-box;
       line-height: 16px;
       max-height: 62px;
-
     }
     .item-price {
       font-weight: 700;
       color: $secondary;
     }
   }
-
   .list {
     margin: -1px 0 0px 0;
   }
-
 }

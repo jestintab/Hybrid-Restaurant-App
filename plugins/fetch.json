@@ -125,5 +125,29 @@
         "variables": {
             "FABRIC_KEY": "c85e4cff3836038742faae187f364ea33d94cbed"
         }
+    },
+    "cordova-plugin-appavailability": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-appavailability"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-inappbrowser": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-inappbrowser@1.7.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "mx.ferreyra.callnumber": {
+        "source": {
+            "type": "registry",
+            "id": "call-number@^1.0.1"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

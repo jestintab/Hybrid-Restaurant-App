@@ -3,7 +3,6 @@ page-cart {
     display: flex;
     width: 97%;
   }
-
   .cart-list {
     background-color: #FFFFE0;
     margin-bottom: -12px !important;
@@ -14,7 +13,10 @@ page-cart {
         left: -32%;
         color: $dark-grey !important;
       }
-    
+      img {
+        width: 130px;
+        height: 130px;
+      }
       .item-name {
         font-weight: 700;
         font-size: 17px;
@@ -23,9 +25,8 @@ page-cart {
         font-size: 13px;
         line-height: 1.3em;
         white-space: initial !important;
-
       }
-      .item-option-detail{
+      .item-option-detail {
         font-size: 12px;
         line-height: 1.3em;
         white-space: initial !important;
@@ -34,12 +35,8 @@ page-cart {
         font-weight: 700;
         color: $dark;
       }
-     
-
     }
   }
-
-
   .calculate {
     margin: 0 4px;
     .bill-detail {
@@ -67,27 +64,31 @@ page-cart {
     color: $dark;
     padding: 22.5px;
     box-shadow: none;
+    ion-icon {
+      padding-right: 10px;
+    }
   }
   .count {
-      padding: 15px 0px 16px 0px;
-      .item-count {
-        padding: 1.5px 9px;
-        font-size: 18px;
-        font-weight: 700;
-        color: #fff;
-        background-color: $grey;
-      }
-      .show-count {
-        background-color: $primary !important;
-        color:$dark;
-      }
+    padding: 15px 0px 16px 0px;
+    .item-count {
+      padding: 1.5px 9px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      background-color: $grey;
     }
-
-     .add-heading {
-      padding: 1.3rem;
-      margin: 0;
-      background-color: $primary;
+    .show-count {
+      background-color: $primary !important;
       color: $dark;
     }
-
+  }
+  .add-heading {
+    padding: 1.3rem;
+    margin: 0;
+    background-color: $primary;
+    color: $dark;
+  }
+  .alert-button {
+    color: $dark !important;
+  }
 }

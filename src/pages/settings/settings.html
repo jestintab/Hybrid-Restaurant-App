@@ -13,8 +13,7 @@
             <img class="img" [src]="url"><br>
         </ion-row>
         <ion-row>
-            <input type="file" name="file" id="file" class="inputfile" aria-describedby="fileHelp" accept="image/*"
-                   (change)="readUrl($event)">
+            <input type="file" name="file" id="file" class="inputfile" aria-describedby="fileHelp" accept="image/*" (change)="readUrl($event)">
             <label for="file" class="upload">
                 <ion-icon ios="ios-cloud-upload" md="md-cloud-upload"></ion-icon>
             </label>
@@ -29,7 +28,7 @@
                 <ion-toggle primary checked="false"></ion-toggle>
             </ion-item>
             <ion-item>
-                
+
             </ion-item>
             <!--card no-
             <ion-item>
@@ -57,7 +56,7 @@
             </ion-item>
       
         button-->
-          </ion-list>
+        </ion-list>
         <button class="login-btn" ion-button type="submit">Save</button>
     </form>
 </ion-content>

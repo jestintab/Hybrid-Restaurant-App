@@ -83,6 +83,18 @@
                         {
                             "xml": "<feature name=\"TwitterConnect\"><param name=\"android-package\" value=\"com.manifestwebdesign.twitterconnect.TwitterConnect\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AppAvailability\"><param name=\"android-package\" value=\"com.ohh2ahh.appavailability.AppAvailability\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"CallNumber\"><param name=\"android-package\" value=\"mx.ferreyra.callnumber.CFCallNumber\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -96,6 +108,14 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.CALL_PHONE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-feature android:name=\"android.hardware.telephony\" android:required=\"false\" />",
                             "count": 1
                         }
                     ],
@@ -241,6 +261,15 @@
         "twitter-connect-plugin": {
             "FABRIC_KEY": "c85e4cff3836038742faae187f364ea33d94cbed",
             "PACKAGE_NAME": "com.sandwichfactoryintl.sfdoha"
+        },
+        "cordova-plugin-appavailability": {
+            "PACKAGE_NAME": "com.sandwichfactoryintl.sfdoha"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.sandwichfactoryintl.sfdoha"
+        },
+        "mx.ferreyra.callnumber": {
+            "PACKAGE_NAME": "com.sandwichfactoryintl.sfdoha"
         }
     },
     "dependent_plugins": {},
@@ -357,6 +386,31 @@
             "clobbers": [
                 "TwitterConnect"
             ]
+        },
+        {
+            "id": "cordova-plugin-appavailability.AppAvailability",
+            "file": "plugins/cordova-plugin-appavailability/www/AppAvailability.js",
+            "pluginId": "cordova-plugin-appavailability",
+            "clobbers": [
+                "appAvailability"
+            ]
+        },
+        {
+            "id": "cordova-plugin-inappbrowser.inappbrowser",
+            "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+            "pluginId": "cordova-plugin-inappbrowser",
+            "clobbers": [
+                "cordova.InAppBrowser.open",
+                "window.open"
+            ]
+        },
+        {
+            "id": "mx.ferreyra.callnumber.CallNumber",
+            "file": "plugins/mx.ferreyra.callnumber/www/CallNumber.js",
+            "pluginId": "mx.ferreyra.callnumber",
+            "clobbers": [
+                "call"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -374,6 +428,9 @@
         "es6-promise-plugin": "4.1.0",
         "cordova-plugin-x-socialsharing": "5.1.8",
         "onesignal-cordova-plugin": "2.0.11",
-        "twitter-connect-plugin": "0.6.0"
+        "twitter-connect-plugin": "0.6.0",
+        "cordova-plugin-appavailability": "0.4.2",
+        "cordova-plugin-inappbrowser": "1.7.1",
+        "mx.ferreyra.callnumber": "0.0.2"
     }
 }

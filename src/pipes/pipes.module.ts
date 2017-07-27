@@ -6,22 +6,22 @@ import { OrderBy } from './order-by.ts';
 
 
 @NgModule({
-    declarations:[       
+    declarations: [
         Entity,
         Trunc,
         OrderBy
-        
-    ],
-    imports:[
-        
 
     ],
-    exports:[
+    imports: [
+
+
+    ],
+    exports: [
         Entity,
         Trunc,
         OrderBy
-        
+
     ]
 })
 
-export class PipesModule {}
+export class PipesModule { }

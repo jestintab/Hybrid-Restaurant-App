@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AlertController, NavController, App } from 'ionic-angular';
-import { Network}  from '@ionic-native/network';
-import { Diagnostic } from '@ionic-native/diagnostic';
+import { Network } from '@ionic-native/network';
+//import { Diagnostic } from '@ionic-native/diagnostic';
 
 
 
@@ -9,19 +9,24 @@ import { Diagnostic } from '@ionic-native/diagnostic';
 export class NetworkService {
   private navCtrl: NavController;
 
-  constructor (public alert: AlertController,
-   private diagnostic: Diagnostic,
-   public network:Network,
-   private app:App) {
-     //this.nav = navCtrl
-     this.navCtrl = app.getActiveNav();
-   }
- noConnection() {
+  constructor(public alert: AlertController,
+    //private diagnostic: Diagnostic,
+    public network: Network,
+    private app: App) {
+    //this.nav = navCtrl
+    this.navCtrl = app.getActiveNav();
+  }
+  noConnection() {
     return (this.network.type === 'none');
   }
- 
-private showSettings() {
-    this.navCtrl.push("Homepage");
+
+  private showSettings() {
+
+    if (this.noConnection()) {
+      this.showNetworkAlert();
+    } else {
+      this.navCtrl.push("Homepage");
+    }
 
     // if (this.diagnostic.switchToWifiSettings) {
     //   this.diagnostic.switchToWifiSettings();
@@ -29,27 +34,27 @@ private showSettings() {
     //   this.diagnostic.switchToSettings();
     // }
   }
-   showNetworkAlert() {
+  showNetworkAlert() {
     let networkAlert = this.alert.create({
       title: 'No Internet Connection',
       message: 'Please check your internet connection.',
       buttons: [
         {
           text: 'Cancel',
-          handler: () => {}
+          handler: () => { }
         },
         {
           text: 'Reload',
           handler: () => {
             networkAlert.dismiss().then(() => {
-             this.showSettings();
+              this.showSettings();
             })
           }
         }
       ]
     });
     networkAlert.present();
-  } 
+  }
 
 
 }

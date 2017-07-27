@@ -1,5 +1,5 @@
-import {NgModule} from '@angular/core';
-import {IonicPageModule} from 'ionic-angular';
+import { NgModule } from '@angular/core';
+import { IonicPageModule } from 'ionic-angular';
 import { HomePage } from './home';
 import { PipesModule } from '../../pipes/pipes.module';
 
@@ -12,9 +12,6 @@ import { PipesModule } from '../../pipes/pipes.module';
     imports: [
         IonicPageModule.forChild(HomePage),
         PipesModule
-
-    
-
     ],
     exports: [
         HomePage

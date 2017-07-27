@@ -10,7 +10,7 @@ export class LocationPage {
   title: string = 'Sandwich Factory ';
   lat: number = 25.323115;
   lng: number = 51.526112;
-  zoom: number=16;
+  zoom: number = 16;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

@@ -10,11 +10,11 @@ import { Settings } from './settings';
   ],
   imports: [
     IonicPageModule.forChild(Settings),
-    
-    
+
+
   ],
   exports: [
     Settings
   ]
 })
-export class SettingsModule {}
+export class SettingsModule { }

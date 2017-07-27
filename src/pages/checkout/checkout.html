@@ -7,68 +7,68 @@
 
 <ion-content padding class="checkOut" [hidden]="submitted">
 
-    <form (ngSubmit)="onCheckout(f)" #f="ngForm">        
-            <ion-row>
+    <form (ngSubmit)="onCheckout(f)" #f="ngForm">
+        <ion-row>
             <ion-col class="payment-header">
                 <ion-icon ios="ios-paper-plane" md="md-paper-plane"></ion-icon>
                 &nbsp;&nbsp;Delivery / TakeAway
             </ion-col>
         </ion-row>
-            <!--Delivery -->
+        <!--Delivery -->
         <ion-list radio-group class="ordertype-block">
-          
-                <ion-col col-4 class="col-card no-padd">
-                    <ion-item class="sub-address">
-                        <ion-label>Delivery <span>in 50 mins</span></ion-label>                      
-                        <ion-radio name="order_type" checked="true" value="delivery" (click)="delivery()"></ion-radio>
-                    </ion-item>
-                </ion-col>
-                <ion-col col-4 class="col-card no-padd">
-                    <ion-item class="sub-address">
-                        <ion-label>TakeAway <span>in 15 mins</span></ion-label>
-                      
-                        <ion-radio name="order_type" value="pickup"  (click)="takeaway()"></ion-radio>
-                    </ion-item>
-                </ion-col>
-                <ion-col col-4 class="no-padd">
-                    <ion-item class="sub-address">
-                        <ion-label>Free Delivery </ion-label>
-                        <ion-label> <span>(only gatemall) </span></ion-label>
-                        <ion-radio name="order_type" value="gatemall" (click)="gateMall()"></ion-radio>
-                    </ion-item>
-                </ion-col>
-           
+
+            <ion-col col-4 class="col-card no-padd">
+                <ion-item class="sub-address">
+                    <ion-label>Delivery <span>in 50 mins</span></ion-label>
+                    <ion-radio name="order_type" checked="true" value="delivery" (click)="delivery()"></ion-radio>
+                </ion-item>
+            </ion-col>
+            <ion-col col-4 class="col-card no-padd">
+                <ion-item class="sub-address">
+                    <ion-label>TakeAway <span>in 15 mins</span></ion-label>
+
+                    <ion-radio name="order_type" value="pickup" (click)="takeaway()"></ion-radio>
+                </ion-item>
+            </ion-col>
+            <ion-col col-4 class="no-padd">
+                <ion-item class="sub-address">
+                    <ion-label>Free Delivery </ion-label>
+                    <ion-label> <span>(only gatemall) </span></ion-label>
+                    <ion-radio name="order_type" value="gatemall" (click)="gateMall()"></ion-radio>
+                </ion-item>
+            </ion-col>
+
         </ion-list>
         <!--delivery ends-->
         <ion-grid>
-        <ion-row class="price-col">              
-                    <ion-item col-6>
-                        <ion-label>Sub Total:  </ion-label> 
-                    </ion-item>
-                
-                    <ion-item col-6>                 
-                        <ion-label>  {{OrderedProduct.orderTotal}}  QR   </ion-label>
-                    </ion-item>                  
-          </ion-row>
-        <ion-row class="price-col" [class.nodelivery]="deliveryCharge==0">              
-                    <ion-item col-6>
-                        <ion-label>Delivery  </ion-label> 
-                    </ion-item>
-                
-                    <ion-item col-6>                 
-                        <ion-label>  5  QR   </ion-label>
-                    </ion-item>                  
-          </ion-row>
-        <ion-row class="price-col total">              
-                    <ion-item col-6>
-                        <ion-label>Order Total  </ion-label> 
-                    </ion-item>
-                
-                    <ion-item col-6>                 
-                        <ion-label> {{OrderedProduct.orderTotal + deliveryCharge}}   QR   </ion-label>
-                    </ion-item>                  
-          </ion-row>
-       
+            <ion-row class="price-col">
+                <ion-item col-6>
+                    <ion-label>Sub Total: </ion-label>
+                </ion-item>
+
+                <ion-item col-6>
+                    <ion-label> {{OrderedProduct.orderTotal}} QR </ion-label>
+                </ion-item>
+            </ion-row>
+            <ion-row class="price-col" [class.nodelivery]="deliveryCharge==0">
+                <ion-item col-6>
+                    <ion-label>Delivery </ion-label>
+                </ion-item>
+
+                <ion-item col-6>
+                    <ion-label> 5 QR </ion-label>
+                </ion-item>
+            </ion-row>
+            <ion-row class="price-col total">
+                <ion-item col-6>
+                    <ion-label>Order Total </ion-label>
+                </ion-item>
+
+                <ion-item col-6>
+                    <ion-label> {{OrderedProduct.orderTotal + deliveryCharge}} QR </ion-label>
+                </ion-item>
+            </ion-row>
+
         </ion-grid>
 
         <ion-row>
@@ -76,62 +76,61 @@
                 <ion-icon ios="ios-home" md="md-home"></ion-icon>
                 &nbsp;&nbsp;Address
             </ion-col>
-        </ion-row><!-- row for address -->
+        </ion-row>
+        <!-- row for address -->
         <ion-list class="adress-line">
 
-            <ion-label  class="add-heading">
+            <ion-label class="add-heading">
                 <ion-icon ios="ios-home" md="md-home"></ion-icon>
                 &nbsp;&nbsp;ENTER ADDRESS
             </ion-label>
             <div>
                 <ion-item class="sub-address">
-                   <ion-label>Name:  </ion-label>  <ion-input type="text" placeholder="Enter your name" name="name" id="name"
-                               [(ngModel)]="orderDetails.name" ng-value="orderDetails.name" required></ion-input>
+                    <ion-label>Name: </ion-label>
+                    <ion-input type="text" placeholder="Enter your name" name="name" id="name" [(ngModel)]="orderDetails.name"
+                        ng-value="orderDetails.name" required></ion-input>
                 </ion-item>
                 <ion-item class="sub-address">
-                   <ion-label>Email:  </ion-label> <ion-input type="email" placeholder="Enter your email" name="email" id="email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" required
-                               [(ngModel)]="orderDetails.email"> </ion-input>
+                    <ion-label>Email: </ion-label>
+                    <ion-input type="email" placeholder="Enter your email" name="email" id="email" pattern="[A-Za-z0-9._%+-]{1,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"
+                        required [(ngModel)]="orderDetails.email"> </ion-input>
                 </ion-item>
                 <ion-item class="sub-address">
-                        <ion-label>Phone:  </ion-label>  <ion-input type="text"  disabled="true" placeholder="Code" ngValue="00974" name="pcode" id="pcode" required
-                               [(ngModel)]="orderDetails.pcode"></ion-input>
-                    <ion-input type="number"  minlength="8" placeholder="Mobile"  name="phone" id="phone" required
-                               [(ngModel)]="orderDetails.phone"></ion-input>
-                         
+                    <ion-label>Phone: </ion-label>
+                    <ion-input col-4 type="text" disabled="true" placeholder="Code" ngValue="00974" name="pcode"
+                        id="pcode" required [(ngModel)]="orderDetails.pcode"></ion-input>
+                    <ion-input type="number" minlength="8" placeholder=" Your 8 digit Phone no:" name="phone" id="phone" required [(ngModel)]="orderDetails.phone"></ion-input>
+
                 </ion-item>
 
                 <ion-item class="sub-address" [hidden]="order_delivery">
-                    <ion-textarea rows="3" placeholder="Address" name="address" id="address" 
-                                  [(ngModel)]="orderDetails.address"></ion-textarea>
+                    <ion-textarea rows="3" placeholder="Address" name="address" id="address" [(ngModel)]="orderDetails.address"></ion-textarea>
                 </ion-item>
 
-                <div [hidden]="gatemall"> 
+                <div [hidden]="gatemall">
 
-                <ion-item class="sub-address" >
-                    <ion-textarea rows="3" placeholder="Company/Shop Name" name="address" id="address"
-                                  [(ngModel)]="orderDetails.address"></ion-textarea>
-                </ion-item>
-                <ion-item class="sub-address">
-                <ion-label>Select Tower</ion-label>
-                <ion-select [(ngModel)]="orderDetails.tower" name="tower" id="tower">
-                    <ion-option value="G">Mall Area</ion-option>
-                    <ion-option value="T1">Tower 1</ion-option>
-                    <ion-option value="T2">Tower 2</ion-option>
-                    <ion-option value="T3">Tower 3</ion-option>
-                    <ion-option value="T4">Tower 4</ion-option>
-                </ion-select>
-                </ion-item>
-                <ion-item class="sub-address" >
-                <ion-label>Floor</ion-label>
-                <ion-input type="number" placeholder="Enter your Floor No" name="floor" id="floor"
-                               [(ngModel)]="orderDetails.floor"></ion-input>
-                </ion-item>
+                    <ion-item class="sub-address">
+                        <ion-textarea rows="3" placeholder="Company/Shop Name" name="address" id="address" [(ngModel)]="orderDetails.address"></ion-textarea>
+                    </ion-item>
+                    <ion-item class="sub-address">
+                        <ion-label>Select Tower</ion-label>
+                        <ion-select [(ngModel)]="orderDetails.tower" name="tower" id="tower">
+                            <ion-option value="G">Mall Area</ion-option>
+                            <ion-option value="T1">Tower 1</ion-option>
+                            <ion-option value="T2">Tower 2</ion-option>
+                            <ion-option value="T3">Tower 3</ion-option>
+                            <ion-option value="T4">Tower 4</ion-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-item class="sub-address">
+                        <ion-label>Floor</ion-label>
+                        <ion-input type="number" placeholder="Enter your Floor No" name="floor" id="floor" [(ngModel)]="orderDetails.floor"></ion-input>
+                    </ion-item>
                 </div>
-                <ion-item class="sub-address" >
-                    <ion-label >City</ion-label>
-                    <ion-input disabled="true" type="text" placeholder="City"  name="city" id="city" 
-                               [(ngModel)]="orderDetails.city"></ion-input>
-                </ion-item>               
+                <ion-item class="sub-address">
+                    <ion-label>City</ion-label>
+                    <ion-input disabled="true" type="text" placeholder="City" name="city" id="city" [(ngModel)]="orderDetails.city"></ion-input>
+                </ion-item>
             </div>
 
         </ion-list>
@@ -167,9 +166,9 @@
                 <ion-item class="card-detail">
                     <ion-row>
                         <ion-col col-12>
-                        <p> Our bike delivery staff will bring a <br>Portable Credit/Debit Card Machine for the payment.
+                            <p> Our bike delivery staff will bring a <br>Portable Credit/Debit Card Machine for the payment.
 
-                        </p>
+                            </p>
                         </ion-col>
                     </ion-row>
                     <!--<ion-row>
@@ -209,7 +208,7 @@
             </ion-list>
         </ion-row>
 
-        <button class="checkOut-btn"  [disabled]="!f.form.valid" type="submit"  ion-button block>
+        <button class="checkOut-btn" [disabled]="!f.form.valid" type="submit" ion-button block>
             <ion-icon ios="ios-cart" md="md-cart"></ion-icon>
             &nbsp;&nbsp;Check Out
         </button>

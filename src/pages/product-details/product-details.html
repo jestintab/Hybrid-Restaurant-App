@@ -12,8 +12,8 @@
 
 
 <ion-content>
-    <ion-row class="productImage" >
-        <img src="http://aljedad.com/sforder/assets/images/{{product.image}}" alt="">
+    <ion-row class="productImage">
+        <img src="https://order.sandwichfactory.qa/assets/images/{{product.image}}" alt="">
         <!--<p class="text-over-image">{{product.name }} &nbsp;<span class="prod-price">
         ({{product.price | trunc }} QR)</span></p>-->
         <span clear text-center (click)="toggleFavourite()">
@@ -23,13 +23,13 @@
                   (click)="addToFavourite(product.id)"></ion-icon>
     </span>
     </ion-row>
-<!-- size and price check box -->
+    <!-- size and price check box -->
     <ion-row>
         <!--<ion-list-header class="size-list-header" text-center>
             Size and prices
         </ion-list-header>-->
         <ion-item class="menu-item">
-            <ion-label class="item-name" col-6><strong>{{product.name}}</strong></ion-label>
+            <ion-label class="item-name" col-6><strong>{{product.name }}</strong></ion-label>
             <ion-label class="item-price prod-price" col-6><strong>{{product.price | trunc}} QR</strong></ion-label>
             <!--<ion-label *ngIf="price.offerValue">{{price.name}} ${{price.offerValue}}</ion-label>-->
             <!--<ion-radio class="checked" checked (ionSelect)="sizeOptions(itemdetail_price)"></ion-radio>
@@ -39,7 +39,7 @@
     <ion-row>
         <ion-col col-6>
             <div class="count">
-            <span class="item-count" (click)="remove()">
+                <span class="item-count" (click)="remove()">
               -
             </span>
                 <span class="item-count show-count">
@@ -58,36 +58,36 @@
             </a>
         </ion-col>
     </ion-row>
-   
 
-    <ion-list class="extra-list" *ngIf="optionLength" >
-      
-           <div *ngIf="optionCount">
-                 <ion-list-header class="header" text-center>Selected extra choice</ion-list-header>
-             <ion-item   *ngFor="let coption of checkedOptions; let i = index"  class="list-item">
-                 
-            <ion-label>{{coption.name}} ({{coption.price | trunc }} QR) </ion-label>
-            <ion-toggle (ionChange)="checkOptions(coption)"  [checked]="true" ></ion-toggle>
-             </ion-item>   
-           </div>
-          <ion-list-header class="header" text-center>Add extra choice</ion-list-header>
-        <ion-item *ngFor="let option of ExtraOptions; let i = index"  class="list-item">
-            
-                    
+
+    <ion-list class="extra-list" *ngIf="optionLength">
+
+        <div *ngIf="optionCount">
+            <ion-list-header class="header" text-center>Selected extra choice</ion-list-header>
+            <ion-item *ngFor="let coption of checkedOptions; let i = index" class="list-item">
+
+                <ion-label>{{coption.name}} ({{coption.price | trunc }} QR) </ion-label>
+                <ion-toggle (ionChange)="checkOptions(coption)" [checked]="true"></ion-toggle>
+            </ion-item>
+        </div>
+        <ion-list-header class="header" text-center>Add extra choice</ion-list-header>
+        <ion-item *ngFor="let option of ExtraOptions; let i = index" class="list-item">
+
+
             <ion-label>{{option.name}} ({{option.price | trunc }} QR) </ion-label>
-            <ion-toggle (ionChange)="checkOptions(option)"   ></ion-toggle>
+            <ion-toggle (ionChange)="checkOptions(option)"></ion-toggle>
             <!--[checked]="checkedOptions[i]!=NULL" -->
-                    
+
             <!--</div>
             <ng-template #elseBlock>
              <ion-label>{{option.name}} ({{option.price | trunc }} QR) {{checkedOptions[i]['name']  }}-{{option.name}} </ion-label>
             <ion-toggle (ionChange)="checkOptions(option)"   ></ion-toggle>
             </ng-template>-->
         </ion-item>
-       
+
     </ion-list>
 
- 
+
     <ion-row>
         <ion-col col-6>
             <a (click)="addToCart(product.id)" ion-button icon-left full class="btn-add-to-cart">
@@ -98,7 +98,7 @@
         <ion-col col-6>
             <a (click)="home()" ion-button icon-left full class="btn-add-to-cart">
                 <ion-icon name="basket"></ion-icon>
-                KEEP SHOPPING
+                Add More
             </a>
         </ion-col>
     </ion-row>

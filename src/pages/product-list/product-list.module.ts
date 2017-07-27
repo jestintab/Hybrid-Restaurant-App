@@ -6,19 +6,19 @@ import { PipesModule } from '../../pipes/pipes.module';
 
 
 @NgModule({
-    declarations:[
+    declarations: [
         ProductListPage,
-        
-        
+
+
     ],
-    imports:[
+    imports: [
         IonicPageModule.forChild(ProductListPage),
         PipesModule,
 
     ],
-    exports:[
+    exports: [
         ProductListPage
     ]
 })
 
-export class ProductListPageModule {}
+export class ProductListPageModule { }

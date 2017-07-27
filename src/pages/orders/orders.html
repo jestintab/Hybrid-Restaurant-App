@@ -3,13 +3,13 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-      <ion-title>Orders</ion-title>
-      <ion-buttons end>
-        <button ion-button icon-only color="royal" (click)="navcart()">
+    <ion-title>Orders</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="navcart()">
           <ion-icon name="cart"></ion-icon>
           <ion-badge class="carts" item-right color="danger">{{noOfItems}}</ion-badge>
         </button>
-      </ion-buttons>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -26,10 +26,10 @@
           <p class="date">{{category.date}}</p>
         </ion-col>
         <ion-col width-20>
-          <button class="btn-cart"ion-button color="danger">
+          <button class="btn-cart" ion-button color="danger">
             <ion-icon ios="ios-cart" md="md-cart"></ion-icon>
           </button>
-          <button class="btn-view"ion-button color="primary" (click)="orderDetails()">
+          <button class="btn-view" ion-button color="primary" (click)="orderDetails()">
             View
           </button>
         </ion-col>

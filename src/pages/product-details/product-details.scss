@@ -1,5 +1,4 @@
 page-product-details {
-
   .slider {
     img {
       width: 100% !important;
@@ -15,9 +14,8 @@ page-product-details {
     width: 100%;
     margin: -55px 0px 0px 0px;
   }
-
   .productImage {
-    max-height:300px;
+    max-height: 300px;
   }
   .prod-price {
     font-weight: 700;
@@ -27,7 +25,7 @@ page-product-details {
     padding-right: 5px;
     border-bottom: 0px;
   }
-  .menu-item{
+  .menu-item {
     padding: 5px;
     background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
@@ -36,8 +34,8 @@ page-product-details {
     margin: -54px 0px 0px 0px;
     text-align: center;
     font-size: 18px;
-    .item-name{
-      color:#fff;
+    .item-name {
+      color: #fff;
     }
   }
   .count {
@@ -75,9 +73,8 @@ page-product-details {
       background-color: $grey;
       margin: 0;
     }
-
     .toggle .toggle-checked {
-      background-color:$primary;
+      background-color: $primary;
       width: 45px;
       height: 26px;
     }
@@ -94,7 +91,6 @@ page-product-details {
       background-color: $white;
     }
   }
-
   .size-list {
     @extend .extra-list;
     .size-list-header {
@@ -108,7 +104,6 @@ page-product-details {
       .checkbox .checkbox-icon {
         border: none !important;
       }
-
       .checkbox .checkbox-checked .checkbox-inner {
         width: 10px !important;
         height: 20px !important;
@@ -118,27 +113,28 @@ page-product-details {
         border-left-width: 0 !important;
         border-style: solid !important;
       }
-
     }
   }
-  .checkbox-checked + .size-list-item {
+  .checkbox-checked+.size-list-item {
     background-color: $secondary !important;
     color: red
   }
-  .fav{
+  .fav {
     color: $danger;
     font-size: 40px;
     position: absolute;
     right: 10px;
   }
-  .heart-clicked{
-    color:$primary;
+  .heart-clicked {
+    color: $primary;
   }
-  .item-name{
-    color:$dark;
-    
+  .item-name {
+    color: $dark;
   }
-  .item-price{
+  .toggle-checked .toggle-icon {
+    background: #424242 !important;
+  }
+  .item-price {
     float: right;
   }
 }

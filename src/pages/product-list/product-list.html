@@ -1,33 +1,41 @@
 <ion-header>
   <ion-navbar>
-      <ion-title>Menu Items</ion-title>
-      <ion-buttons end>
-        <button ion-button icon-only color="royal" (click)="navcart()">
+    <ion-title>Menu Items</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="navcart()">
           <ion-icon name="cart"></ion-icon>
           <ion-badge class="carts" item-right color="danger">{{noOfItems}}</ion-badge>
         </button>
-      </ion-buttons>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-searchbar (ionInput)="getItems($event)" placeholder="Enter Menu Item">
-    </ion-searchbar>
-  <ion-list *ngFor="let menuItem of items"><!-- list -->
-    <ion-item text-wrap (click)="navigate(menuItem.values.menu_id.value)"><!-- item -->
-      <ion-row class="category"><!-- row -->
-        <ion-col col-3><!-- col with 50  width -->
-          <img src="http://aljedad.com/sforder/assets/images/thumbnail/{{menuItem.values.menu_thumb.value}}" alt="{{menuItem.values.menu_name.value}}"/>
+  </ion-searchbar>
+  <ion-list *ngFor="let menuItem of items">
+    <!-- list -->
+    <ion-item text-wrap (click)="navigate(menuItem.values.menu_id.value)">
+      <!-- item -->
+      <ion-row class="category">
+        <!-- row -->
+        <ion-col col-3>
+          <!-- col with 50  width -->
+          <img src="https://order.sandwichfactory.qa/assets/images/thumbnail/{{menuItem.values.menu_thumb.value | entity}}" alt="{{menuItem.values.menu_name.value}}"
+          />
         </ion-col>
-        <ion-col col-9><!-- col with 50% width -->
+        <ion-col col-9>
+          <!-- col with 50% width -->
           <p class="item-name">{{menuItem.values.menu_name.value | entity }}</p>
           <p class="item-detail" text-wrap><span class="">{{menuItem.values.menu_description.value}}</span></p>
           <p class="item-detail">Price:
-    <span  class="item-price">{{menuItem.values.menu_price.value | trunc }}  QR</span>
-    <!-- <span *ngIf="menuItem.offer" class="item-price">${{}}</span> -->
+            <span class="item-price">{{menuItem.values.menu_price.value | trunc }}  QR</span>
+            <!-- <span *ngIf="menuItem.offer" class="item-price">${{}}</span> -->
           </p>
         </ion-col>
-      </ion-row><!--end row -->
-    </ion-item><!-- item -->
+      </ion-row>
+      <!--end row -->
+    </ion-item>
+    <!-- item -->
   </ion-list>
 </ion-content>

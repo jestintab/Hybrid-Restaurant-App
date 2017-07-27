@@ -10,11 +10,11 @@ import { ThankyouPage } from './thankyou';
   ],
   imports: [
     IonicPageModule.forChild(ThankyouPage),
-    
-    
+
+
   ],
   exports: [
     ThankyouPage
   ]
 })
-export class ThankyouPageModule {}
+export class ThankyouPageModule { }

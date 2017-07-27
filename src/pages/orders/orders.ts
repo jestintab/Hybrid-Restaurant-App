@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
-import {NavController, IonicPage} from 'ionic-angular';
-import {Service} from '../../app/service';
+import { Component } from '@angular/core';
+import { NavController, IonicPage } from 'ionic-angular';
+import { Service } from '../../app/service';
 
 
 
@@ -13,10 +13,10 @@ export class OrdersPage {
     categories: any[] = [];
     featured: any[] = [];
 
-    constructor(public navCtrl: NavController, public service: Service) {}
+    constructor(public navCtrl: NavController, public service: Service) { }
 
-    
-    ngOnInit(){
+
+    ngOnInit() {
         this.service.getData()
             .subscribe((response) => {
                 this.categories = response.categories;
@@ -24,6 +24,6 @@ export class OrdersPage {
             })
     }
     orderDetails() {
-      this.navCtrl.push("OrderDetailsPage");
+        //this.navCtrl.push("OrderDetailsPage");
     }
 }

@@ -1,6 +1,6 @@
 <ion-header>
-   <ion-navbar hideBackButton="true">
-    <button ion-button menuToggle>
+    <ion-navbar hideBackButton="true">
+        <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
         <ion-title>Cart</ion-title>
@@ -15,31 +15,35 @@
 
 <ion-content>
     <div>
-        <ion-list class="cart-list" *ngFor="let cartItem of cartItems"><!-- item-list -->
-            <ion-item class="cart-item"><!-- item -->
+        <ion-list class="cart-list" *ngFor="let cartItem of cartItems">
+            <!-- item-list -->
+            <ion-item class="cart-item">
+                <!-- item -->
                 <ion-row>
-                    <ion-col col-2><!-- col-cancel  button -->
-                        <ion-icon class="close-btn" ion-button icon only clear ios="ios-close-circle"
-                                  md="md-close-circle"
-                                   (click)="deleteItem(cartItem)">
+                    <ion-col col-2>
+                        <!-- col-cancel  button -->
+                        <ion-icon class="close-btn" ion-button icon only clear ios="ios-close-circle" md="md-close-circle" (click)="deleteItem(cartItem)">
                         </ion-icon>
                     </ion-col>
-                    <ion-col><!-- col-for item-image and details -->
+                    <ion-col>
+                        <!-- col-for item-image and details -->
                         <ion-row>
-                            <ion-col col-4><!-- item-image -->
-                                <img src="http://aljedad.com/sforder/assets/images/thumbnail/{{cartItem.thumb}}" alt="">
+                            <ion-col col-4>
+                                <!-- item-image -->
+                                <img src="https://order.sandwichfactory.qa/assets/images/thumbnail/{{cartItem.thumb}}" alt="">
                             </ion-col>
                             <ion-col col-6>
-                                <p><span class="item-detail"> {{cartItem.Quantity}} x </span> 
-                                   <span class="item-name"> {{ cartItem.name }} </span>                                 
+                                <p><span class="item-detail"> {{cartItem.Quantity}} x </span>
+                                    <span class="item-name"> {{ cartItem.name }} </span>
                                 </p>
                                 <!--<p class="item-price"> {{cartItem.price | trunc}} QR </p>-->
 
-                            <div  *ngFor="let option of cartItem.extraOption"> 
-                            <p class="item-option-detail">+ {{option.name}} - {{option.price}}QR 
-                                <!--<span class="option-delete" (click)="deleteOptionItem(option)"> <strong>x</strong> </span> </p>-->
-                            </div>   
-                                <ion-row><!-- row-for count item -->
+                                <div *ngFor="let option of cartItem.extraOption">
+                                    <p class="item-option-detail">+ {{option.name}} - {{option.price}}QR
+                                        <!--<span class="option-delete" (click)="deleteOptionItem(option)"> <strong>x</strong> </span> </p>-->
+                                </div>
+                                <ion-row>
+                                    <!-- row-for count item -->
 
                                     <div class="count">
                                         <span class="item-count" (click)="remove(cartItem)"> - </span>
@@ -48,7 +52,7 @@
                                     </div>
                                 </ion-row>
                                 <ion-row>
-                                    <button  (click)=editItem(cartItem) > Edit </button>
+                                    <button (click)=editItem(cartItem)> Edit </button>
                                 </ion-row>
                             </ion-col>
                         </ion-row>
@@ -59,34 +63,47 @@
         <ion-row class="price-details">
             <ion-col class="calculate">
                 <p class="bill-detail">Subtotal <span> {{SubTotalPrice}} QR</span></p>
-              
+
                 <!--<p class="bill-detail">Other Taxes (3%)
                     <span>{{otherTaxes | number}} QR</span></p>-->
                 <hr>
                 <p class="cart-total"><strong>Order Total </strong><span class="price">{{GrandTotal}} QR</span>
                 </p>
             </ion-col>
-        </ion-row><!-- row-bill-deatails -->
-        <!-- Comments -->
-     <form (ngSubmit)="onCart()" >        
-        <ion-row>
-             <ion-label  class="add-heading">
-                <ion-icon ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
-                &nbsp;&nbsp;Instructions / Comments 
-            </ion-label>
-            <ion-item class="sub-address" >
-                    <ion-textarea rows="3" [(ngModel)]="cartData.comments" [ngModelOptions]="{standalone: true}" placeholder="Special instructions/comments" name="comments" id="comments"
-                        ng-value="cartData.comments"          ></ion-textarea>
-                </ion-item>
-        </ion-row>    
-    
-
-        <!-- continue button -->
-        <ion-row>
-            <ion-col>
-                <button ion-button block type="submit" class="continue-btn" >Continue</button>
-            </ion-col>
         </ion-row>
-         </form>
+        <!-- row-bill-deatails -->
+        <!-- Comments -->
+        <form (ngSubmit)="onCart()">
+            <ion-row>
+                <ion-label class="add-heading">
+                    <ion-icon ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                    &nbsp;&nbsp;Instructions / Comments
+                </ion-label>
+                <ion-item class="sub-address">
+                    <ion-textarea rows="3" [(ngModel)]="cartData.comments" [ngModelOptions]="{standalone: true}" placeholder="Your food allergy if any."
+                        name="comments" id="comments" ng-value="cartData.comments"></ion-textarea>
+                </ion-item>
+            </ion-row>
+
+            <!-- continue button -->
+
+            <ion-row>
+                <ion-col>
+                    <button type="button" ion-button block class="continue-btn" (click)=addMore()>
+                     <ion-icon name="basket"></ion-icon> 
+                        ADD MORE 
+                    </button>
+                </ion-col>
+                <ion-col>
+                    <button ion-button block type="submit" class="continue-btn">
+                        <ion-icon name="cart"></ion-icon>
+                          Checkout
+                        </button>
+                </ion-col>
+            </ion-row>
+        </form>
+
+
+
     </div>
 </ion-content>

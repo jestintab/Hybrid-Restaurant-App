@@ -1,6 +1,5 @@
 page-checkout {
-
-  ::-wekit-input-placeholder {
+   ::-wekit-input-placeholder {
     color: $white !important;
   }
   .list .item-block .item-inner {
@@ -13,65 +12,62 @@ page-checkout {
   .text-input {
     color: $white !important;
   }
-
   .no-padd {
     padding: 0px
   }
-.item-radio-checked{
-  color: $primary;
-}
-.ion-label{
-  color:$primary;
-}
-.ordertype-block{
- .radio-md .radio-checked{
-   border-color: $primary;
-   .radio-inner{
-     background: $primary;     
-   }
- }
-}
-.payment-block{
- .radio-md .radio-checked{
-   border-color: $dark;
-   .radio-inner{
-     background: $dark;
-   }
- }
-}
-
-.card-detail p{
-  color: #fff;
-}
-.nodelivery{
-  text-decoration: line-through;
-}
-.price-col{
-  .nodelivery{
-  text-decoration: line-through;
-}
-.total{
-  font-size: 22px;
-  font-style: bold;
-}
-  background: $primary;
-  color:$dark;
-  border-color:$dark;
-  ion-label{
-    color:$dark;
-    font-size: 14px;
+  .item-radio-checked {
+    color: $primary;
   }
-}
-
-   ion-label input:checked{
-     color: $primary;
-   }
-
+  .ion-label {
+    color: $primary;
+  }
+  .ordertype-block {
+    .radio-md .radio-checked {
+      border-color: $primary;
+      .radio-inner {
+        background: $primary;
+      }
+    }
+  }
+  .payment-block {
+    .radio-md .radio-checked {
+      border-color: $dark;
+      .radio-inner {
+        background: $dark;
+      }
+    }
+  }
+  .card-detail p {
+    color: #fff;
+  }
+  .nodelivery {
+    text-decoration: line-through;
+  }
+  .price-col {
+    .nodelivery {
+      text-decoration: line-through;
+    }
+    .total {
+      font-size: 22px;
+      font-style: bold;
+    }
+    background: $primary;
+    color:$dark;
+    border-color:$dark;
+    ion-label {
+      color: $dark;
+      font-size: 14px;
+    }
+  }
+  ion-label input:checked {
+    color: $primary;
+  }
   .item {
     color: $white;
     background-color: $primary;
   }
-  .checkOut .card-btn, page-checkout .checkOut .checkOut-btn :hover {
+  .checkOut .card-btn,
+  page-checkout .checkOut .checkOut-btn :hover {
     background-color: $white;
     color: $white;
     border: 1px solid $light-grey;
@@ -85,11 +81,11 @@ page-checkout {
       font-size: 12px;
     }
   }
-  .date-icon{
+  .date-icon {
     position: absolute;
     top: 60px;
     left: 138px;
-    color:$light-grey;
+    color: $light-grey;
     z-index: -111;
   }
   .checkOut {
@@ -119,9 +115,7 @@ page-checkout {
       border-color: rgba(256, 256, 256, .05);
       padding-left: 0 !important;
       text-indent: 7px;
-      
     }
-
     .col-cod {
       padding-left: 0 !important;
     }
@@ -145,13 +139,11 @@ page-checkout {
         font-size: 1.6rem;
       }
     }
-
     .checkOut-btn {
       @extend .card-btn;
       margin-top: 2em;
       height: 4.9rem;
     }
-
     .card-list {
       .card-detail {
         background: transparent;
@@ -183,5 +175,4 @@ page-checkout {
     border-top: 0px !important;
     border-bottom: 0px !important;
   }
-
 }

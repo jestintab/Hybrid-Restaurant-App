@@ -10,10 +10,10 @@ import { PipesModule } from '../../pipes/pipes.module';
   ],
   imports: [
     IonicPageModule.forChild(ProductDetailsPage),
-    PipesModule
+    PipesModule,
   ],
   exports: [
     ProductDetailsPage
   ]
 })
-export class ProductDetailsPageModule {}
+export class ProductDetailsPageModule { }

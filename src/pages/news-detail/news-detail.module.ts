@@ -10,11 +10,11 @@ import { NewsDetailPage } from './news-detail';
   ],
   imports: [
     IonicPageModule.forChild(NewsDetailPage),
-  
-    
+
+
   ],
   exports: [
     NewsDetailPage
   ]
 })
-export class NewsDetailPageModule {}
+export class NewsDetailPageModule { }

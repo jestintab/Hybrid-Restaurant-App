@@ -1,12 +1,11 @@
-import {Component} from '@angular/core';
-import {NavController, NavParams, AlertController, ToastController, IonicPage} from 'ionic-angular';
-import {Service} from '../../app/service';
-import {Storage} from '@ionic/storage';
-import  unserialize   from 'locutus/php/var/unserialize';
-import  html_entity_decode   from 'locutus/php/strings/html_entity_decode';
+import { Component } from '@angular/core';
+import { NavController, NavParams, AlertController, ToastController, IonicPage } from 'ionic-angular';
+import { Service } from '../../app/service';
+import { Storage } from '@ionic/storage';
+import unserialize from 'locutus/php/var/unserialize';
+import html_entity_decode from 'locutus/php/strings/html_entity_decode';
 import 'rxjs/Rx';
 import isset from 'locutus/php/var/isset';
-import _ from 'lodash/array';
 import { LoadingController } from 'ionic-angular';
 
 
@@ -24,7 +23,7 @@ export class ProductDetailsPage {
     ExtraOptions: any[] = [];
     itemInCart: any[] = [];
     Cart: any[] = [];
-    prices: any[] = [{value: ''}];
+    prices: any[] = [{ value: '' }];
     product: any = {
         extraOption: []
     };
@@ -40,21 +39,21 @@ export class ProductDetailsPage {
     menuOptionId: number;
     menuExtras: any;
     optionLength: number;
-    cartStoredItem:any;
-    checkedOptions:any;
+    cartStoredItem: any;
+    checkedOptions: any;
     optionCount: number;
 
     constructor(public navCtrl: NavController,
-                public alertCtrl: AlertController,
-                public toastCtrl: ToastController,
-                public navParams: NavParams,
-                public storage: Storage,
-                public service: Service,
-                public loading: LoadingController) {
+        public alertCtrl: AlertController,
+        public toastCtrl: ToastController,
+        public navParams: NavParams,
+        public storage: Storage,
+        public service: Service,
+        public loading: LoadingController) {
         this.productId = navParams.get('productId');
-        if(isset(navParams.get('cartStoredItem'))){
-        this.cartStoredItem = navParams.get('cartStoredItem');
-      
+        if (isset(navParams.get('cartStoredItem'))) {
+            this.cartStoredItem = navParams.get('cartStoredItem');
+
         }
         this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
         if (this.cartItems != null) {
@@ -67,7 +66,7 @@ export class ProductDetailsPage {
         //     this.favouriteItems = favourites;
         // })
     }
- ionViewDidEnter() {
+    ionViewDidEnter() {
         let loader = this.loading.create({
             content: 'Loading ...',
         });
@@ -76,67 +75,68 @@ export class ProductDetailsPage {
             this.service.getMenuItem(this.productId)
                 .subscribe((response) => {
                     this.itemDetails = response.restify.rows;
-                    this.itemDetails.forEach(itemdetail => { 
+                    this.itemDetails.forEach(itemdetail => {
                         this.product.name = itemdetail.values.menu_name.value;
                         this.product.description = itemdetail.values.menu_description.value;
                         this.product.image = itemdetail.values.menu_photo.value;
                         this.product.price = itemdetail.values.menu_price.value;
-                        this.product.id = itemdetail.values.menu_id.value;      
-                        this.product.thumb = itemdetail.values.menu_thumb.value;               
-                      
-                    });                                  
+                        this.product.id = itemdetail.values.menu_id.value;
+                        this.product.thumb = itemdetail.values.menu_thumb.value;
+
+                    });
                 })
-                // console.log(this.product);
-                // console.log(this.productDetails);
-        this.service.getMenuOptions(this.productId)
-                    .subscribe((res) => {
-                       this.menuOptions = res.restify.rows;
-                       this.optionLength = this.menuOptions.length;
-                      
-                if(this.menuOptions.length != 0){
+            // console.log(this.product);
+            // console.log(this.productDetails);
+            this.service.getMenuOptions(this.productId)
+                .subscribe((res) => {
+                    this.menuOptions = res.restify.rows;
+                    this.optionLength = this.menuOptions.length;
 
-                       this.menuOptions.forEach( menuOption => {     
-                           this.menuOptionJson = menuOption.values.option_values.value;
-                           this.menuOptionId = menuOption.values.option_id.value;
+                    if (this.menuOptions.length != 0) {
 
-                       });                      
-                       this.menuOptionJson = unserialize(html_entity_decode(this.menuOptionJson));
-                        for (let i of Object.keys(this.menuOptionJson)) {  
- 
-                           this.service.getOptionName(this.menuOptionJson[i].option_value_id,this.menuOptionId)
-                                        .subscribe((resp)=>{ 
+                        this.menuOptions.forEach(menuOption => {
+                            this.menuOptionJson = menuOption.values.option_values.value;
+                            this.menuOptionId = menuOption.values.option_id.value;
 
-                               for(let j of Object.keys(resp.restify.rows)){    
-                    
-                                    this.ExtraOptions.push({'option_value_id': resp.restify.rows[j].values.option_value_id.value,
-                                        'option_id': resp.restify.rows[j].values.option_id.value,
-                                        'name': resp.restify.rows[j].values.value.value,
-                                        'price': parseInt(resp.restify.rows[j].values.price.value)
-                                        }); 
-                                 }
-                 });                                       
-                            }                                                                                
-                        }                   
-                    })       
-          
-          
-        if(isset(this.cartStoredItem) ){
-      
-            
-        this.checkedOptions = this.cartStoredItem.extraOption;
-        this.optionCount = this.checkedOptions.length;
-        
-        }
+                        });
+                        this.menuOptionJson = unserialize(html_entity_decode(this.menuOptionJson));
+                        for (let i of Object.keys(this.menuOptionJson)) {
+
+                            this.service.getOptionName(this.menuOptionJson[i].option_value_id, this.menuOptionId)
+                                .subscribe((resp) => {
+
+                                    for (let j of Object.keys(resp.restify.rows)) {
+
+                                        this.ExtraOptions.push({
+                                            'option_value_id': resp.restify.rows[j].values.option_value_id.value,
+                                            'option_id': resp.restify.rows[j].values.option_id.value,
+                                            'name': resp.restify.rows[j].values.value.value,
+                                            'price': parseInt(resp.restify.rows[j].values.price.value)
+                                        });
+                                    }
+                                });
+                        }
+                    }
+                })
+
+
+            if (isset(this.cartStoredItem)) {
+
+
+                this.checkedOptions = this.cartStoredItem.extraOption;
+                this.optionCount = this.checkedOptions.length;
+
+            }
             loader.dismiss();
         });
     }
     ngOnInit() {
-       
-        
-                    
+
+
+
 
     }
-    
+
 
 
 
@@ -150,49 +150,49 @@ export class ProductDetailsPage {
         //     alert.present();
         // }
         // else {
-            this.Cart = JSON.parse(localStorage.getItem("cartItem"));
-            if (this.Cart == null) {
-                this.product.Quantity = this.count;
-               
-                this.product.itemTotalPrice = this.product.Quantity * this.product.price;
-               
-                let proExtraPrice = 0;
-                for (let i = 0; i <= this.product.extraOption.length - 1; i++) {
-                    proExtraPrice = proExtraPrice + parseInt(this.product.extraOption[i].price);
-                    //this.product.extraPrice =  proExtraPrice;
-                }
+        this.Cart = JSON.parse(localStorage.getItem("cartItem"));
+        if (this.Cart == null) {
+            this.product.Quantity = this.count;
 
-                this.itemInCart.push(this.product);
-                localStorage.setItem('cartItem', JSON.stringify(this.itemInCart));
+            this.product.itemTotalPrice = this.product.Quantity * this.product.price;
 
+            let proExtraPrice = 0;
+            for (let i = 0; i <= this.product.extraOption.length - 1; i++) {
+                proExtraPrice = proExtraPrice + parseInt(this.product.extraOption[i].price);
+                //this.product.extraPrice =  proExtraPrice;
             }
-            else {
 
-                for (let i = 0; i <= this.Cart.length - 1; i++) {
-                    if (this.Cart[i].id == productId) {
-                        this.Cart.splice(i, 1);
+            this.itemInCart.push(this.product);
+            localStorage.setItem('cartItem', JSON.stringify(this.itemInCart));
 
-                    }
+        }
+        else {
+
+            for (let i = 0; i <= this.Cart.length - 1; i++) {
+                if (this.Cart[i].id == productId) {
+                    this.Cart.splice(i, 1);
+
                 }
-                this.product.Quantity = this.count;
-                this.product.itemTotalPrice = this.product.Quantity * this.product.price;
-                 
-                let proExtraPrice = 0;
-                for (let i = 0; i <= this.product.extraOption.length - 1; ++i) {
-                    proExtraPrice = proExtraPrice + this.product.extraOption[i].value;
-                    this.product.extraPrice = proExtraPrice;
-                }
-
-                this.Cart.push(this.product);
-                localStorage.setItem('cartItem', JSON.stringify(this.Cart));
             }
-            this.navCtrl.push("CartPage");
+            this.product.Quantity = this.count;
+            this.product.itemTotalPrice = this.product.Quantity * this.product.price;
 
-        
+            let proExtraPrice = 0;
+            for (let i = 0; i <= this.product.extraOption.length - 1; ++i) {
+                proExtraPrice = proExtraPrice + this.product.extraOption[i].value;
+                this.product.extraPrice = proExtraPrice;
+            }
+
+            this.Cart.push(this.product);
+            localStorage.setItem('cartItem', JSON.stringify(this.Cart));
+        }
+        this.navCtrl.push("CartPage");
+
+
     }
 
     checkOptions(option) {
-        
+
         if (this.product.extraOption.length !== 0) {
             for (let i = 0; i <= this.product.extraOption.length - 1; i++) {
                 if (this.product.extraOption[i].name == option.name) {
@@ -208,7 +208,7 @@ export class ProductDetailsPage {
         else {
             this.product.extraOption.push(option);
         }
-        
+
     }
 
     // sizeOptions(price) {

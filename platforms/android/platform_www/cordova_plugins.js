@@ -112,6 +112,31 @@ module.exports = [
         "clobbers": [
             "TwitterConnect"
         ]
+    },
+    {
+        "id": "cordova-plugin-appavailability.AppAvailability",
+        "file": "plugins/cordova-plugin-appavailability/www/AppAvailability.js",
+        "pluginId": "cordova-plugin-appavailability",
+        "clobbers": [
+            "appAvailability"
+        ]
+    },
+    {
+        "id": "cordova-plugin-inappbrowser.inappbrowser",
+        "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+        "pluginId": "cordova-plugin-inappbrowser",
+        "clobbers": [
+            "cordova.InAppBrowser.open",
+            "window.open"
+        ]
+    },
+    {
+        "id": "mx.ferreyra.callnumber.CallNumber",
+        "file": "plugins/mx.ferreyra.callnumber/www/CallNumber.js",
+        "pluginId": "mx.ferreyra.callnumber",
+        "clobbers": [
+            "call"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -131,7 +156,10 @@ module.exports.metadata =
     "es6-promise-plugin": "4.1.0",
     "cordova-plugin-x-socialsharing": "5.1.8",
     "onesignal-cordova-plugin": "2.0.11",
-    "twitter-connect-plugin": "0.6.0"
+    "twitter-connect-plugin": "0.6.0",
+    "cordova-plugin-appavailability": "0.4.2",
+    "cordova-plugin-inappbrowser": "1.7.1",
+    "mx.ferreyra.callnumber": "0.0.2"
 };
 // BOTTOM OF METADATA
 });

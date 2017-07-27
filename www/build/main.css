@@ -25143,7 +25143,9 @@ ion-navbar.toolbar {
   }
 }
 
-.bar-button-default, .bar-button-clear-default, .bar-button-default {
+.bar-button-default,
+.bar-button-clear-default,
+.bar-button-default {
   color: #222;
   background-color: transparent;
 }
@@ -25255,6 +25257,10 @@ ion-badge {
   color: #222;
 }
 
+.toggle-checked .toggle-icon {
+  background: #FECC27;
+}
+
 page-about-us p {
   color: #6d6d6d;
 }
@@ -25326,6 +25332,11 @@ page-cart .cart-list .cart-item .close-btn {
   color: #424242 !important;
 }
 
+page-cart .cart-list .cart-item img {
+  width: 130px;
+  height: 130px;
+}
+
 page-cart .cart-list .cart-item .item-name {
   font-weight: 700;
   font-size: 17px;
@@ -25383,6 +25394,10 @@ page-cart .continue-btn {
   box-shadow: none;
 }
 
+page-cart .continue-btn ion-icon {
+  padding-right: 10px;
+}
+
 page-cart .count {
   padding: 15px 0px 16px 0px;
 }
@@ -25405,6 +25420,10 @@ page-cart .add-heading {
   margin: 0;
   background-color: #fecc27;
   color: #222;
+}
+
+page-cart .alert-button {
+  color: #222 !important;
 }
 
 page-category ion-label {
@@ -25504,7 +25523,8 @@ page-checkout .item {
   background-color: #fecc27;
 }
 
-page-checkout .checkOut .card-btn, page-checkout .checkOut .checkOut-btn, page-checkout page-checkout .checkOut .checkOut-btn :hover {
+page-checkout .checkOut .card-btn, page-checkout .checkOut .checkOut-btn,
+page-checkout page-checkout .checkOut .checkOut-btn :hover {
   background-color: #fff;
   color: #fff;
   border: 1px solid #ccc;
@@ -25663,35 +25683,6 @@ page-contact .item-input .label {
   color: #fff;
 }
 
-page-favourite h3 {
-  font-size: 2.2rem;
-  text-align: center;
-  color: #fecc27;
-}
-
-page-favourite ion-label {
-  white-space: normal;
-}
-
-page-favourite .heading {
-  font-size: 15px;
-  font-weight: 700;
-  color: #777;
-}
-
-page-favourite .item-md ion-thumbnail img {
-  height: 5em;
-  width: 5em;
-}
-
-page-favourite .add {
-  float: right;
-  background-color: #fecc27;
-  border-radius: 0px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
 page-home {
   /*slider*/
 }
@@ -25755,9 +25746,15 @@ page-home .grid .categories h2 {
 }
 
 page-home .grid .categories img {
-  text-align: center;
   position: relative;
   z-index: -111;
+  width: auto !important;
+  height: auto !important;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: block;
 }
 
 page-home .grid .categories .text-over-img {
@@ -25773,54 +25770,6 @@ page-home .grid .categories .text-over-img {
 
 page-location .sebm-google-map-container {
   height: 100%;
-}
-
-page-login .btn-log-in {
-  background-color: #fecc27;
-}
-
-page-login .item {
-  background-color: rgba(119, 119, 119, 0.8);
-  width: 80%;
-  display: block;
-  margin: 0 auto;
-  border-radius: 5px;
-}
-
-page-login .item.item-block .item-inner {
-  border-bottom: 0;
-}
-
-page-login .item-input .label {
-  color: #fff;
-}
-
-page-login .login {
-  background: url("../assets/img/bg.jpg") no-repeat center;
-  background-size: cover;
-  color: #fff;
-}
-
-page-login .login .logo {
-  width: 86px;
-  display: block;
-  margin: 0 auto;
-  margin-top: 4em;
-  padding-bottom: 2em;
-}
-
-page-login .login-btn {
-  width: 80%;
-  display: block;
-  margin: 0 auto;
-  border-radius: 5px;
-  height: 4.4rem;
-  background-color: #fecc27;
-}
-
-page-login .social-icon {
-  width: 86px;
-  padding: 0px 20px;
 }
 
 page-news .item-block {
@@ -25850,108 +25799,6 @@ page-news-detail .news-time {
   padding-left: 17px;
   font-size: 10px;
   color: #777;
-}
-
-page-offer .full-slide {
-  height: 100%;
-}
-
-page-offer .slider-img {
-  height: 330px;
-}
-
-page-offer .card-title {
-  position: absolute;
-  font-size: 2.6rem;
-  width: 100%;
-  color: #fff;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 8px 0px;
-}
-
-page-offer .swiper-pagination-bullet-active {
-  background: #fecc27;
-}
-
-page-offer .overlay {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4)));
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-}
-
-page-offer .swiper-pagination-fraction, page-offer .swiper-pagination-custom, page-offer .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 5px;
-}
-
-page-offer .item-name {
-  text-align: center;
-  font-size: 2rem;
-  color: #fecc27;
-}
-
-page-offer .offer-label {
-  position: absolute;
-  top: 0px;
-  left: 12px;
-  z-index: 999;
-}
-
-page-offer .price, page-offer .desc {
-  text-align: left;
-  padding: 0 0 0 1em;
-  margin: 5px 0px;
-  font-size: 15px;
-}
-
-page-offer .total {
-  font-size: 20px;
-  font-weight: 700;
-  color: #fecc27;
-}
-
-page-offer .line {
-  text-decoration: line-through;
-  color: #777;
-}
-
-page-offer .square {
-  display: block;
-  width: 40px;
-  line-height: 36px;
-  font-size: .8em;
-  background-color: #f53d3d;
-  color: #fff;
-  text-align: center;
-}
-
-page-offer .triangle {
-  display: block;
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid #f53d3d;
-}
-
-page-offer .btn-add-to-cart {
-  background-color: #fecc27 !important;
-  color: #fff;
-  padding: 22.2px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  font-size: 14px;
-  margin: 0;
-  position: fixed;
-  bottom: 0;
-}
-
-page-offer .slide-zoom {
-  height: 100%;
 }
 
 page-product-details .slider img {
@@ -26101,6 +25948,10 @@ page-product-details .item-name {
   color: #222;
 }
 
+page-product-details .toggle-checked .toggle-icon {
+  background: #424242 !important;
+}
+
 page-product-details .item-price {
   float: right;
 }
@@ -26124,6 +25975,10 @@ page-product-list .item .label {
   margin: 9px 0px 0px 0px;
 }
 
+page-product-list .category img {
+  width: 130px;
+}
+
 page-product-list .category .item-name {
   font-weight: 700;
   font-size: 15px;
@@ -26145,50 +26000,6 @@ page-product-list .category .item-price {
 
 page-product-list .list {
   margin: -1px 0 0px 0;
-}
-
-page-registration .item {
-  background-color: rgba(119, 119, 119, 0.8);
-  width: 80%;
-  display: block;
-  margin: 0 auto;
-  border-radius: 5px;
-}
-
-page-registration .item.item-block .item-inner {
-  border-bottom: 0px;
-}
-
-page-registration .item-input .label {
-  color: #fff;
-}
-
-page-registration .login {
-  background: url("../assets/img/bg.jpg") no-repeat center;
-  background-size: cover;
-  color: #fff;
-}
-
-page-registration .login .logo {
-  width: 86px;
-  display: block;
-  margin: 0 auto;
-  margin-top: 4em;
-  padding-bottom: 2em;
-}
-
-page-registration .login-btn {
-  width: 80%;
-  display: block;
-  margin: 0 auto;
-  border-radius: 5px;
-  height: 4.4rem;
-  background-color: #fecc27;
-}
-
-page-registration .social-icon {
-  width: 86px;
-  padding: 0px 20px;
 }
 
 page-settings .img {

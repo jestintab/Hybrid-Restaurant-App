@@ -1,6 +1,6 @@
-import {NgModule} from '@angular/core';
-import {IonicPageModule} from 'ionic-angular';
-import {AboutUsPage} from './about-us';
+import { NgModule } from '@angular/core';
+import { IonicPageModule } from 'ionic-angular';
+import { AboutUsPage } from './about-us';
 
 
 @NgModule({
@@ -9,10 +9,10 @@ import {AboutUsPage} from './about-us';
     ],
     imports: [
         IonicPageModule.forChild(AboutUsPage),
-        
+
 
     ],
-    exports: [ 
+    exports: [
         AboutUsPage
     ]
 })

@@ -7,7 +7,7 @@ page-home {
     padding: 0px;
     .slides {
       .overlay {
-       // background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+        // background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
         display: inline-flex;
       }
       .slider-img {
@@ -15,21 +15,19 @@ page-home {
         width: 100%;
         position: relative;
         z-index: -111;
-      } 
+      }
       .slider-text {
         color: #fff;
         font-size: 22px;
         padding: 5px;
         position: absolute;
         bottom: 0;
-        margin: 5px 0px; 
+        margin: 5px 0px;
       }
       .swiper-pagination-bullet {
         background: $primary !important;
       }
-    }
-
-    //banner image
+    } //banner image
     .card-title {
       position: absolute;
       top: 36%;
@@ -38,9 +36,7 @@ page-home {
       font-weight: bold;
       color: #fff;
     }
-
     /*Categories*/
-
     .categories {
       flex-wrap: wrap;
       h2 {
@@ -50,9 +46,12 @@ page-home {
         font-weight: 500;
       }
       img {
-        text-align: center;
         position: relative;
         z-index: -111;
+        width: auto !important;
+        height: auto !important;
+        align-items: center;
+         display: block;
       }
       .text-over-img {
         color: #fff;
@@ -63,7 +62,6 @@ page-home {
         width: 100%;
         margin: -34px 0px 0px 0px;
         text-align: center;
-
       }
     }
   }

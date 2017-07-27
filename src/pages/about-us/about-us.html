@@ -1,67 +1,74 @@
 <ion-header>
-    <ion-navbar>
-        <button ion-button menuToggle>
+  <ion-navbar>
+    <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>About Us</ion-title>
-    </ion-navbar>
+    <ion-title>About Us</ion-title>
+  </ion-navbar>
 </ion-header>
 
 
 <ion-content>
 
-   <ion-slides initialSlide=0 speed=2000 loop=true>
-  <ion-slide>
-    
-    <img src="assets/img/about_us2.jpg" class="slider-img">
-       <div class="card-title">WE DESIGN TASTE</div>
-  </ion-slide>
+  <ion-slides initialSlide=0 speed=2000 loop=true>
     <ion-slide>
-    <img src="assets/img/about_us1.jpg" class="slider-img">
-     <div class="card-title">WE DESIGN TASTE</div>
-  </ion-slide>
-  <ion-slide>
-    <img src="assets/img/about_us3.jpg" class="slider-img">
-     <div class="card-title">WE DELIVERY FRESH</div>
-  </ion-slide>
+
+      <img src="assets/img/about_us2.jpg" class="slider-img">
+      <div class="card-title">WE DESIGN TASTE</div>
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/img/about_us1.jpg" class="slider-img">
+      <div class="card-title">WE DESIGN TASTE</div>
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/img/about_us3.jpg" class="slider-img">
+      <div class="card-title">WE DELIVERY FRESH</div>
+    </ion-slide>
 
 
-</ion-slides>
+  </ion-slides>
 
-<!--about-->
-<div class="wrapper">
-  <h4 class="heading">About Us </h4>
+  <!--about-->
+  <div class="wrapper">
+    <h4 class="heading">About Us </h4>
     <p class="details">
-    Sandwich Factory is a Street-Food Snack-House where it serves its sandwiches in the authentic Lebanese way including the ingredients. It is the first true Lebanese Shawarma and menu offering that is as close as you can get in the country to how the Lebanese people have eaten it for years.
+      Sandwich Factory is a Street-Food Snack-House where it serves its sandwiches in the authentic Lebanese way including the
+      ingredients. It is the first true Lebanese Shawarma and menu offering that is as close as you can get in the country
+      to how the Lebanese people have eaten it for years.
     </p>
 
- <!--Get in touch-->
-   <h4 class="heading">Get In Touch &nbsp;<ion-icon name="arrow-dropdown"></ion-icon></h4>
-   <ion-card>
+    <!--Get in touch-->
+    <h4 class="heading">Get In Touch &nbsp;
+      <ion-icon name="arrow-dropdown"></ion-icon>
+    </h4>
+    <ion-card>
       <ion-card-content (click)="callUs()">
-         <ion-icon name="call"></ion-icon> &nbsp; Call us
+        <ion-icon name="call"></ion-icon> &nbsp; Call us:
+        <label> 40206500</label>
       </ion-card-content>
       <ion-card-content (click)="contact()">
-        <ion-icon name="mail"></ion-icon> &nbsp; Email us
+        <ion-icon name="mail"></ion-icon> &nbsp; Email us:
+        <label>info@sandwichfactory.qa </label>
       </ion-card-content>
       <ion-card-content (click)="gotogoogleMap()">
-         <ion-icon name="locate" ></ion-icon> &nbsp; Locate us
+        <ion-icon name="locate"></ion-icon> &nbsp; Locate us
       </ion-card-content>
     </ion-card>
 
- <!--follow-->
-    <h4 class="heading">Follow Us &nbsp;<ion-icon name="arrow-dropdown"></ion-icon></h4>
-   <ion-card>
-      <ion-card-content>
-          <ion-icon name="logo-facebook"></ion-icon> &nbsp; Facebook
+    <!--follow-->
+    <h4 class="heading">Follow Us &nbsp;
+      <ion-icon name="arrow-dropdown"></ion-icon>
+    </h4>
+    <ion-card>
+      <ion-card-content (click)="openFacebook('sfdoha')">
+        <ion-icon name="logo-facebook"></ion-icon> &nbsp; Facebook
       </ion-card-content>
-      <ion-card-content>
+      <ion-card-content (click)="openTwitter('sf_doha')">
         <ion-icon name="logo-twitter"></ion-icon> &nbsp; Twitter
       </ion-card-content>
-      <ion-card-content>
-         <ion-icon name="logo-instagram"></ion-icon> &nbsp; Instagram
+      <ion-card-content (click)="openInstagram('sf_doha')">
+        <ion-icon name="logo-instagram"></ion-icon> &nbsp; Instagram
       </ion-card-content>
     </ion-card>
-   </div> 
+  </div>
 </ion-content>
-

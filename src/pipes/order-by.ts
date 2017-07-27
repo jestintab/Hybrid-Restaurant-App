@@ -1,4 +1,4 @@
-import {  Pipe } from '@angular/core';
+import { Pipe } from '@angular/core';
 
 
 /*
@@ -12,11 +12,11 @@ import {  Pipe } from '@angular/core';
   pure: false
 })
 
-export class OrderBy  {
+export class OrderBy {
   /*
     Takes a value and makes it lowercase.
    */
-   transform(value: any[], expression: any, ex1:any, ex2:any, reverse?: boolean): any {
+  transform(value: any[], expression: any, ex1: any, ex2: any, reverse?: boolean): any {
     if (!value) {
       return value;
     }

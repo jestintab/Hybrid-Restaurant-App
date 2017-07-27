@@ -1,5 +1,5 @@
-import {Component} from "@angular/core";
-import {AlertController, NavController, PopoverController, IonicPage, ModalController, ViewController, } from "ionic-angular";
+import { Component } from "@angular/core";
+import { AlertController, NavController, PopoverController, IonicPage, ModalController, ViewController, } from "ionic-angular";
 //import {NgForm} from "@angular/forms";
 
 
@@ -11,22 +11,22 @@ import {AlertController, NavController, PopoverController, IonicPage, ModalContr
 })
 export class CartPage {
     cartItems: any[] = [];
-    cartData:any[] = [];
+    cartData: any[] = [];
     SubTotalPrice: number;
     GrandTotal: number;
     noOfItems: number;
-    comments:string;
-    productId:number;
+    comments: string;
+    productId: number;
     constructor(public navCtrl: NavController,
-                public alertCtrl: AlertController,
-                public popoverCtrl: PopoverController,
-                public modalCtrl: ModalController) {
+        public alertCtrl: AlertController,
+        public popoverCtrl: PopoverController,
+        public modalCtrl: ModalController) {
         this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
         if (this.cartItems != null) {
             this.noOfItems = this.cartItems.length;
         }
-    } 
- 
+    }
+
     ngOnInit() {
         if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
             let prompt = this.alertCtrl.create({
@@ -72,7 +72,7 @@ export class CartPage {
             this.CalculatePrice();
 
         }
-        
+
         localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
         this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
         this.noOfItems = this.noOfItems - 1;
@@ -81,7 +81,7 @@ export class CartPage {
         }
     }
 
-    editItem(cartItem){
+    editItem(cartItem) {
         //console.log(cartItem);
         this.productId = cartItem.id;
 
@@ -91,23 +91,23 @@ export class CartPage {
         // });
         // optionModal.present();
         this.navCtrl.push("ProductDetailsPage", {
-            productId: this.productId,    
+            productId: this.productId,
             cartStoredItem: cartItem,
 
-            });
+        });
     }
 
     deleteOptionItem(data) {
         for (let i = 0; i <= this.cartItems.length - 1; i++) {
-          for(let j = 0; j <= this.cartItems[i].extraOption.length -1 ; j++){
-            if (this.cartItems[i].extraOption[j].id == data.id) {
-                this.cartItems[i].extraOption.splice(j, 1);
-                console.log(this.cartItems);
+            for (let j = 0; j <= this.cartItems[i].extraOption.length - 1; j++) {
+                if (this.cartItems[i].extraOption[j].id == data.id) {
+                    this.cartItems[i].extraOption.splice(j, 1);
+                    // console.log(this.cartItems);
+                }
             }
-          }
         }
-            this.CalculatePrice();
-        
+        this.CalculatePrice();
+
         localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
         this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
         this.noOfItems = this.noOfItems - 1;
@@ -116,24 +116,24 @@ export class CartPage {
         }
     }
 
-      onCart(){
-      this.cartData['comments'] = this.cartData['comments'];  
-      this.cartData['noofitems'] = this.noOfItems;
-       
-       if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
+    onCart() {
+        this.cartData['comments'] = this.cartData['comments'];
+        this.cartData['noofitems'] = this.noOfItems;
+
+        if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
             this.alert();
         }
         else {
-            
-            this.navCtrl.push("CheckoutPage",this.cartData);
-            console.log(this.cartData);         
-            }
-    }  
- 
+
+            this.navCtrl.push("CheckoutPage", this.cartData);
+            console.log(this.cartData);
+        }
+    }
+
     alert() {
         let alert = this.alertCtrl.create({
             title: 'Cart Is Empty!',
-            subTitle: 'Please Add Item!',
+            subTitle: 'Please your favourite sandwiches!',
             buttons: [
                 {
                     text: 'Ok',
@@ -151,57 +151,62 @@ export class CartPage {
         let proGrandTotalPrice = 0;
         for (let i = 0; i <= this.cartItems.length; i++) {
             if (this.cartItems[i] != null) {
-                
+
                 if (this.cartItems[i].extraOption.length != 0) {
-                    for(let j = 0; j <= this.cartItems[i].extraOption.length -1 ; j++){
-                     proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].extraOption[j].price;                            
-                    }      
-                     proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].itemTotalPrice;                
-                    
+                    for (let j = 0; j <= this.cartItems[i].extraOption.length - 1; j++) {
+                        proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].extraOption[j].price;
+                    }
+                    proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].itemTotalPrice;
+
                 } else {
                     proGrandTotalPrice = proGrandTotalPrice + this.cartItems[i].itemTotalPrice;
-                   
+
                 }
                 this.SubTotalPrice = proGrandTotalPrice;
             }
         }
-       
-        this.GrandTotal = Math.ceil(this.SubTotalPrice  );
+
+        this.GrandTotal = Math.ceil(this.SubTotalPrice);
         this.cartData['orderTotal'] = this.SubTotalPrice;
-       // localStorage.setItem('orderTotal', JSON.stringify(this.SubTotalPrice));
-        
+        // localStorage.setItem('orderTotal', JSON.stringify(this.SubTotalPrice));
+
     }
 
- 
 
-  add(data) {
-    if (data.Quantity < 20) {
-      data.Quantity = data.Quantity + 1;
-      for (let i = 0; i <= this.cartItems.length - 1; i++) {
-      if (this.cartItems[i].id == data.id) {
-        this.cartItems[i].Quantity = data.Quantity;
-        this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].price);
-       }
-    }
-    localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
-    this.CalculatePrice();
-    }
-  }
 
-  remove(data) {
-
-    if (data.Quantity > 1) {
-    data.Quantity =data.Quantity - 1;
-      for (let i = 0; i <= this.cartItems.length - 1; i++) {
-      if (this.cartItems[i].id == data.id) {
-        this.cartItems[i].Quantity = data.Quantity;
-        this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].price);      
-      }
+    add(data) {
+        if (data.Quantity < 20) {
+            data.Quantity = data.Quantity + 1;
+            for (let i = 0; i <= this.cartItems.length - 1; i++) {
+                if (this.cartItems[i].id == data.id) {
+                    this.cartItems[i].Quantity = data.Quantity;
+                    this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].price);
+                }
+            }
+            localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
+            this.CalculatePrice();
+        }
     }
-    localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
-    this.CalculatePrice();
-    }
-  }
 
+    remove(data) {
+
+        if (data.Quantity > 1) {
+            data.Quantity = data.Quantity - 1;
+            for (let i = 0; i <= this.cartItems.length - 1; i++) {
+                if (this.cartItems[i].id == data.id) {
+                    this.cartItems[i].Quantity = data.Quantity;
+                    this.cartItems[i].itemTotalPrice = (data.Quantity * this.cartItems[i].price);
+                }
+            }
+            localStorage.setItem('cartItem', JSON.stringify(this.cartItems));
+            this.CalculatePrice();
+        }
+    }
+
+    addMore() {
+        this.navCtrl.push("CategoryPage");
+        console.log('add more works');
+
+    }
 
 }

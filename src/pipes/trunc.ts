@@ -12,11 +12,11 @@ import { Pipe } from '@angular/core';
   pure: false
 })
 
-export class Trunc  {
+export class Trunc {
   /*
     Takes a value and makes it lowercase.
    */
-   transform(value: any) {
-     return Math.trunc(value);
+  transform(value: any) {
+    return Math.trunc(value);
   }
 }

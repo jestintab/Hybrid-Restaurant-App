@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
-import {NavController, NavParams, IonicPage} from 'ionic-angular';
-import {Service} from '../../app/service';
+import { Component } from '@angular/core';
+import { NavController, NavParams, IonicPage } from 'ionic-angular';
+import { Service } from '../../app/service';
 
 @IonicPage()
 @Component({
@@ -12,18 +12,17 @@ export class NewsPage {
     newsList: any;
 
     constructor(public navCtrl: NavController,
-                public navParams: NavParams,
-                public newsService: Service) {
+        public navParams: NavParams,
+        public newsService: Service) {
     }
 
     ngOnInit() {
         this.newsService.getBlog()
             .subscribe((response) => {
-               this.newsList = response;
-            //    this.newsList.forEach(newsContent => {
-            //        console.log(newsContent.id);
-            //    });
-               
+                this.newsList = response;
+                //    this.newsList.forEach(newsContent => {
+                //        console.log(newsContent.id);
+                //    });
             })
     }
 
