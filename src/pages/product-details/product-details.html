@@ -90,15 +90,15 @@
 
     <ion-row>
         <ion-col col-6>
-            <a (click)="addToCart(product.id)" ion-button icon-left full class="btn-add-to-cart">
-                <ion-icon name="cart"></ion-icon>
-                CHECKOUT
-            </a>
-        </ion-col>
-        <ion-col col-6>
             <a (click)="home()" ion-button icon-left full class="btn-add-to-cart">
                 <ion-icon name="basket"></ion-icon>
                 Add More
+            </a>
+        </ion-col>
+        <ion-col col-6>
+            <a (click)="addToCart(product.id)" ion-button icon-left full class="btn-add-to-cart">
+                <ion-icon name="cart"></ion-icon>
+                CHECKOUT
             </a>
         </ion-col>
     </ion-row>

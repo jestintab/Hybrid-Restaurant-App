@@ -1,7 +1,19 @@
+// Define vars we'll be using
+$brand-success: $primary;
+$loader-size: 10em;
+$check-height: $loader-size/2 - .5;
+$check-width: $check-height/2;
+$check-left: ($loader-size/6 + $loader-size/12);
+$check-thickness: 5px;
+$check-color: $brand-success;
 page-thankyou {
-  .page-content {
-    background-color: $white !important;
+  .thank-you {
+    background: url("../assets/img/c3.jpg") no-repeat center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, .8);
     .thanks {
+      //background-color: rgba(0, 0, 0, 0.6);
+      color: white;
       text-align: center;
       margin: 0 auto;
       h2 {
@@ -12,7 +24,102 @@ page-thankyou {
       p {
         line-height: 2.5rem;
         font-weight: 500;
+        font-size: 1.7rem;
       }
     }
+  }
+  .circle-loader {
+    margin: 0 0 30px 10px;
+    border: $check-thickness solid rgba(0, 0, 0, 0.2);
+    border-left-color: $check-color;
+    animation-name: loader-spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .circle-loader,
+  .circle-loader:after {
+    border-radius: 50%;
+    width: $loader-size;
+    height: $loader-size;
+  }
+  .load-complete {
+    -webkit-animation: none;
+    animation: none;
+    border-color: $check-color;
+    transition: border 500ms ease-out;
+  }
+  .checkmark {
+    &.draw:after {
+      animation-duration: 800ms;
+      animation-timing-function: ease;
+      animation-name: checkmark;
+      transform: scaleX(-1) rotate(135deg);
+    }
+    &:after {
+      opacity: 1;
+      height: $check-height;
+      width: $check-width;
+      transform-origin: left top;
+      border-right: $check-thickness solid $check-color;
+      border-top: $check-thickness solid $check-color;
+      content: '';
+      left: $check-left;
+      top: $check-height;
+      position: absolute;
+    }
+  }
+  @keyframes loader-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes checkmark {
+    0% {
+      height: 0;
+      width: 0;
+      opacity: 1;
+    }
+    20% {
+      height: 0;
+      width: $check-width;
+      opacity: 1;
+    }
+    40% {
+      height: $check-height;
+      width: $check-width;
+      opacity: 1;
+    }
+    100% {
+      height: $check-height;
+      width: $check-width;
+      opacity: 1;
+    }
+  }
+  .order-details {
+    background: rgba(0, 0, 0, 0.6);
+    color: #c6c6c6;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .yelloBold {
+    color: $primary;
+    font-weight: 600;
+  }
+  col{
+    text-align: center;
+  }
+  .order-btn{
+    border-color: $primary;
+    color:$primary;
+    //background: $primary;
+    text-align: center; 
+    width: 100%;
   }
 }

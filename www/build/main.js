@@ -97,11 +97,12 @@ var Service = (function () {
             this.networkService.showNetworkAlert();
         }
         else {
+            //console.log(JSON.stringify(orderedItems));
             this.body = 'message=' + JSON.stringify(orderedItems);
             this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
             this.headers.append('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
             return this.http.post(this.postUrl, this.body, { headers: this.headers })
-                .map(function (res) { return res; });
+                .map(function (res) { return res.text(); });
             //     .subscribe((data) => {
             //     console.log(data);
             // });
@@ -243,7 +244,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-//import { Diagnostic } from '@ionic-native/diagnostic';
 var NetworkService = (function () {
     function NetworkService(alert, 
         //private diagnostic: Diagnostic,

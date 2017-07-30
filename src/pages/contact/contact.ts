@@ -29,7 +29,7 @@ export class ContactPage {
         this.http.request(new Request({
             method: RequestMethod.Post,
             url: "https://api.mailgun.net/v3/" + this.mailgunUrl + "/messages",
-            body: "from=" + "info@sandwichfactory.co" + "&to=" + "it@aljedad.com" + "&subject=" + "Mail from Mobile App  " + "&text=" + "Name: \t" + this.user.name + "\n Email: \t" + this.user.email + "\n Message:\t" + this.user.message,
+            body: "from=" + "info@sandwichfactory.co" + "&to=" + "it@aljedad.com" + "&subject=" + "Contact from Mobile App  " + "&text=" + "Name: \t" + this.user.name + "\n Email: \t" + this.user.email + "\n Message:\t" + this.user.message,
             headers: requestHeaders
         }))
             .subscribe(success => {
@@ -42,9 +42,9 @@ export class ContactPage {
 
         console.log("response-" + JSON.stringify(this.user));
         let toast = this.toastCtrl.create({
-            message: 'Response is sent successfully',
+            message: 'Your message is sent successfully',
             duration: 3000,
-            position: 'middle'
+            position: 'bottom'
         });
         toast.present();
         this.user = '';

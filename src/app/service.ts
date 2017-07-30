@@ -88,11 +88,12 @@ export class Service {
     if (this.networkService.noConnection()) {
       this.networkService.showNetworkAlert();
     } else {
+      //console.log(JSON.stringify(orderedItems));
       this.body = 'message=' + JSON.stringify(orderedItems);
       this.headers = new Headers();
       this.headers.append('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
       return this.http.post(this.postUrl, this.body, { headers: this.headers })
-        .map((res: Response) => res);
+        .map((res: Response) => res.text());
       //     .subscribe((data) => {
       //     console.log(data);
       // });

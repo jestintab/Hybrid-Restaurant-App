@@ -22,19 +22,25 @@ page-checkout {
     color: $primary;
   }
   .ordertype-block {
-    .radio-md .radio-checked {
+    .radio-checked {
       border-color: $primary;
       .radio-inner {
         background: $primary;
       }
     }
+      .item-radio-checked ion-label{
+        color: $primary !important;
+       }
   }
   .payment-block {
-    .radio-md .radio-checked {
+     .radio-checked {
       border-color: $dark;
       .radio-inner {
         background: $dark;
       }
+    }
+    .item-radio-checked ion-label {
+      color:$dark !important;
     }
   }
   .card-detail p {
@@ -115,6 +121,7 @@ page-checkout {
       border-color: rgba(256, 256, 256, .05);
       padding-left: 0 !important;
       text-indent: 7px;
+    
     }
     .col-cod {
       padding-left: 0 !important;
@@ -129,6 +136,14 @@ page-checkout {
     }
     .col-cart {
       padding-right: 0 !important;
+    }
+    .card-descrip p{
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1em;
+      font-size: 14px !important;
+      line-height: 22px !important;
+      display:inline-block;
+      text-align: center;
     }
     .card-btn {
       @extend .cod-btn;
@@ -175,4 +190,5 @@ page-checkout {
     border-top: 0px !important;
     border-bottom: 0px !important;
   }
+  
 }

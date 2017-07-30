@@ -25,8 +25,10 @@ export class HomePage {
             this.noOfItems = this.cartItems.length;
         }
 
+        
 
     }
+    
     ionViewDidEnter() {
         let loader = this.loading.create({
             content: 'Loading ...',

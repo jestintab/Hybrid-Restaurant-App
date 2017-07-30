@@ -275,9 +275,7 @@ export class ProductDetailsPage {
                 }
             }
             this.storage.set('favourite', this.favouriteItems);
-
         })
-
     }
 
     createToaster(message, duration) {

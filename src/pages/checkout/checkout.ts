@@ -31,6 +31,9 @@ export class CheckoutPage {
 
     orderType: string;
     deliveryCharge: number = 5;
+    message:any;
+    status:string;
+    orderId:number;
 
     constructor(public navCtrl: NavController, public service: Service,
         public NavParams: NavParams) {
@@ -47,11 +50,20 @@ export class CheckoutPage {
         this.OrderedProduct.orderDetail = OrderDetails.value;
 
         this.service.postOrderDetails(this.OrderedProduct)
-            .subscribe((res) => {
-                console.log(res);
+            .subscribe((data) => {
+                console.log(data);
+                this.message = JSON.parse(data);
+                this.status = this.message.status;
+                this.orderId = this.message.order_id;
+                console.log(this.status, this.orderId);
+
+                //this.res_body = res.body; 
+       this.navCtrl.push("ThankyouPage", { status: this.status , orderId: this.orderId,
+         orderDetails: this.OrderedProduct.orderDetail,
+        orderTotal: this.OrderedProduct.orderTotal });
+
             });
         // console.log(JSON.stringify(this.OrderedProduct));
-        this.navCtrl.push("ThankyouPage");
     }
 
 

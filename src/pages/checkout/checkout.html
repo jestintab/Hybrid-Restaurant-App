@@ -33,7 +33,7 @@
             <ion-col col-4 class="no-padd">
                 <ion-item class="sub-address">
                     <ion-label>Free Delivery </ion-label>
-                    <ion-label> <span>(only gatemall) </span></ion-label>
+                    <ion-label> <span>(GateMall only) </span></ion-label>
                     <ion-radio name="order_type" value="gatemall" (click)="gateMall()"></ion-radio>
                 </ion-item>
             </ion-col>
@@ -97,9 +97,9 @@
                 </ion-item>
                 <ion-item class="sub-address">
                     <ion-label>Phone: </ion-label>
-                    <ion-input col-4 type="text" disabled="true" placeholder="Code" ngValue="00974" name="pcode"
-                        id="pcode" required [(ngModel)]="orderDetails.pcode"></ion-input>
-                    <ion-input type="number" minlength="8" placeholder=" Your 8 digit Phone no:" name="phone" id="phone" required [(ngModel)]="orderDetails.phone"></ion-input>
+                    <ion-input col-5 type="text" disabled="true"  ngValue="00974" name="pcode"
+                        id="pcode"  [(ngModel)]="orderDetails.pcode"></ion-input>
+                    <ion-input  type="number" minlength="8" placeholder="8 digit phone no:" name="phone" id="phone" required [(ngModel)]="orderDetails.phone"></ion-input>
 
                 </ion-item>
 
@@ -165,8 +165,8 @@
             <ion-list class="card-list" [hidden]="tagHide2">
                 <ion-item class="card-detail">
                     <ion-row>
-                        <ion-col col-12>
-                            <p> Our bike delivery staff will bring a <br>Portable Credit/Debit Card Machine for the payment.
+                        <ion-col class="card-descrip" col-12>
+                            <p> Our bike delivery staff will bring a <br>Portable Credit / Debit Card Machine for the payment.
 
                             </p>
                         </ion-col>

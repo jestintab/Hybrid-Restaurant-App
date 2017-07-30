@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AlertController, NavController, App } from 'ionic-angular';
 import { Network } from '@ionic-native/network';
 //import { Diagnostic } from '@ionic-native/diagnostic';
+import { LoadingController } from 'ionic-angular';
 
 
 
@@ -17,6 +18,7 @@ export class NetworkService {
     this.navCtrl = app.getActiveNav();
   }
   noConnection() {
+    
     return (this.network.type === 'none');
   }
 

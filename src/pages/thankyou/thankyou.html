@@ -3,7 +3,7 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>Thank You</ion-title>
+        <ion-title>Order Confirmation</ion-title>
         <ion-buttons end>
             <button ion-button icon-only color="royal">
                     <ion-icon name="cart"></ion-icon>
@@ -11,16 +11,32 @@
         </ion-buttons>
     </ion-navbar>
 </ion-header>
-
-<ion-content class="page-content">
+<ion-content class="thank-you">
     <ion-row>
         <ion-col>
             <div class="thanks">
-                <h2>Thank for your order !</h2>
-                <p>Your order has been received by our delivery staff,will be with you shortly. We will call you within 10 minutes
-                    to confirm your order. If you are unreachable, this order will automatically be cancelled.
+                <h2>Order complete!  </h2>
+                <p> Your order <span class="yelloBold">#{{orderId}} </span> for <span class="yelloBold">  {{orderTotal}} QAR</span> is being processed.
+                <div class="circle-loader " [ngClass]="{'load-complete' : loadcomplete}">
+                    <div class="checkmark draw" [hidden]="!loadcomplete"></div>
+                </div>
+                <!-- <button ion-button icon-only >  <ion-icon name="checkmark"> </ion-icon> </button> -->
+                <p>We will call you to <span class="yelloBold"> {{orderDetails.phone}} </span> within 10 minutes to confirm
+                    your order. If you are unreachable, this order will automatically be cancelled.
                 </p>
+                <p> We will update the statuses of your order to <span class="yelloBold"> {{orderDetails.email}}</span> </p>
             </div>
+<button class="order-btn"  ion-button round icon-left outline (click)=orderAgain()  >   
+            <ion-icon  name="home"></ion-icon> Order Again </button>
+        </ion-col>
+       
+    </ion-row>
+    <ion-row>
+         <ion-col col-8 col-offset-4>
+             
+        
         </ion-col>
     </ion-row>
+
+   
 </ion-content>
