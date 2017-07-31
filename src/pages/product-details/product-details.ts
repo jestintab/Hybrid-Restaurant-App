@@ -114,9 +114,13 @@ export class ProductDetailsPage {
                                             'price': parseInt(resp.restify.rows[j].values.price.value)
                                         });
                                     }
+                                    
+                                    
                                 });
                         }
                     }
+                    loader.dismiss();
+                    
                 })
 
 
@@ -127,7 +131,6 @@ export class ProductDetailsPage {
                 this.optionCount = this.checkedOptions.length;
 
             }
-            loader.dismiss();
         });
     }
     ngOnInit() {

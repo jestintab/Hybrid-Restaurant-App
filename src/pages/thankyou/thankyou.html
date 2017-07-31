@@ -21,10 +21,9 @@
                     <div class="checkmark draw" [hidden]="!loadcomplete"></div>
                 </div>
                 <!-- <button ion-button icon-only >  <ion-icon name="checkmark"> </ion-icon> </button> -->
-                <p>We will call you to <span class="yelloBold"> {{orderDetails.phone}} </span> within 10 minutes to confirm
-                    your order. If you are unreachable, this order will automatically be cancelled.
+                <p>We will call to <span class="yelloBold"> {{orderDetails.phone}} </span> in 10 minutes for order confirmation. If you are unreachable, this order will automatically be cancelled.
                 </p>
-                <p> We will update the statuses of your order to <span class="yelloBold"> {{orderDetails.email}}</span> </p>
+                <p> We will update the status of your order to <span class="yelloBold"> {{orderDetails.email}}</span> </p>
             </div>
 <button class="order-btn"  ion-button round icon-left outline (click)=orderAgain()  >   
             <ion-icon  name="home"></ion-icon> Order Again </button>

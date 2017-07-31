@@ -31,8 +31,9 @@ export class CategoryPage {
                 .subscribe((response) => {
                     this.categories = response.restify.rows;
                     //console.log(response.restify.rows);
+                     loader.dismiss();
                 })
-            loader.dismiss();
+           
         });
     }
 

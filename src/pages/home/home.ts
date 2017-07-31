@@ -43,8 +43,9 @@ export class HomePage {
             this.service.getCategory()
                 .subscribe((response) => {
                     this.categories = response.restify.rows;
+                      loader.dismiss();
                 })
-            loader.dismiss();
+          
         });
     }
 

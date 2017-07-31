@@ -42,8 +42,8 @@ export class ProductListPage {
           this.menuItems = response.restify.rows;
           this.items = this.menuItems;
           //console.log(response.restify.rows);
+         loader.dismiss();          
         })
-      loader.dismiss();
     });
   }
   ngOnInit() {

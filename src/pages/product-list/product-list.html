@@ -27,7 +27,7 @@
         <ion-col col-9>
           <!-- col with 50% width -->
           <p class="item-name">{{menuItem.values.menu_name.value | entity }}</p>
-          <p class="item-detail" text-wrap><span class="">{{menuItem.values.menu_description.value}}</span></p>
+          <p class="item-detail" text-wrap><span class="">{{menuItem.values.menu_description.value | entity}}</span></p>
           <p class="item-detail">Price:
             <span class="item-price">{{menuItem.values.menu_price.value | trunc }}  QR</span>
             <!-- <span *ngIf="menuItem.offer" class="item-price">${{}}</span> -->

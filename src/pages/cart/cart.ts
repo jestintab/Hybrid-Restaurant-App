@@ -30,8 +30,8 @@ export class CartPage {
     ngOnInit() {
         if (localStorage.getItem('cartItem') == null || this.cartItems.length == 0) {
             let prompt = this.alertCtrl.create({
-                title: 'Your Cart is Empty!',
-                message: "Please add item",
+                title: 'Your cart is Empty!',
+                message: "Please add your favourite sandwiches!",
                 buttons: [
                     {
                         text: 'Ok',
@@ -132,8 +132,8 @@ export class CartPage {
 
     alert() {
         let alert = this.alertCtrl.create({
-            title: 'Cart Is Empty!',
-            subTitle: 'Please your favourite sandwiches!',
+            title: 'Cart is Empty!',
+            subTitle: 'Please add your favourite sandwiches!',
             buttons: [
                 {
                     text: 'Ok',

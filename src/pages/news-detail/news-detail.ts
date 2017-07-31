@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, IonicPage } from 'ionic-angular';
+import { NavController, NavParams, IonicPage, LoadingController } from 'ionic-angular';
 import { Service } from '../../app/service';
 
 @IonicPage()
@@ -15,11 +15,17 @@ export class NewsDetailPage {
 
     constructor(public navCtrl: NavController,
         public navParams: NavParams,
-        public newsService: Service) {
+        public newsService: Service,
+        public loading: LoadingController) {
         this.newsId = this.navParams.get('newsId');
     }
 
     ngOnInit() {
+        let loader = this.loading.create({
+            content: 'Loading ...',
+        });
+
+        loader.present().then(() => {
         this.newsService.getBlogDetail(this.newsId)
             .subscribe((response) => {
 
@@ -28,15 +34,17 @@ export class NewsDetailPage {
                 this.newsDetails.img = response.better_featured_image.media_details.sizes.medium.source_url
                 this.newsDetails.date = response.date;
                 this.newsDetails.content = response.content.rendered;
-                console.log(this.newsDetails.content);
+                //console.log(this.newsDetails.content);
                 //     console.log(response.title.rendered);
                 //     for (let i = 0; i <= response.length - 1; i++) {
                 //         if (response.id == this.newsId) {
                 //             this.newsDetails = response;
                 //         }
                 //     }
+                loader.dismiss();
             })
     }
+    )};
 
 
-}
+    }
