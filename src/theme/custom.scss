@@ -4,7 +4,33 @@
 // If you need to override any code property you need to Mention !important with each property .
 // ----------------------------------------------------------------------------------------------
 //Write all IOS Custom code Here
-.ios {}
+.ios {
+   .alert-wrapper {
+    background: $dark !important;
+  }
+  .alert-button {
+    color: white !important;
+  }
+  .alert-radio-group {
+    border-top: 1px solid $primary !important;
+    border-bottom: 1px solid $primary !important;
+  }
+  .alert-title {
+    color: white;
+  }
+  .alert-radio-label {
+    color: #fff !important;
+  }
+  .alert-radio-icon {
+    border-color:$primary !important;
+}
+  .alert-radio-inner{
+    background: $primary !important;
+  }
+  .alert-message, .alert-sub-title{
+    color: #fff !important;
+  }
+}
 
 .md {
   //Write all Android Custom code Here

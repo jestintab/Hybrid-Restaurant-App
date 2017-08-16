@@ -4,7 +4,7 @@
         <ion-buttons end>
             <button ion-button icon-only color="royal" (click)="navcart()">
                 <ion-icon name="cart"></ion-icon>
-                <ion-badge class="carts" item-right color="danger">{{noOfItems}}</ion-badge>
+                <ion-badge class="carts" item-right color="danger"></ion-badge>
             </button>
         </ion-buttons>
     </ion-navbar>
@@ -52,7 +52,7 @@
         </ion-col>
 
         <ion-col col-6>
-            <a (click)="addToCart(product.id)" ion-button icon-left full class="btn-add-to-cart">
+            <a (click)="addToCart(product.id,0)" ion-button icon-left full class="btn-add-to-cart">
                 <ion-icon name="cart"></ion-icon>
                 ADD TO CART
             </a>
@@ -62,20 +62,20 @@
 
     <ion-list class="extra-list" *ngIf="optionLength">
 
-        <div *ngIf="optionCount">
+        <!-- <div *ngIf="optionCount">
             <ion-list-header class="header" text-center>Selected extra choice</ion-list-header>
             <ion-item *ngFor="let coption of checkedOptions; let i = index" class="list-item">
 
-                <ion-label>{{coption.name}} ({{coption.price | trunc }} QR) </ion-label>
-                <ion-toggle (ionChange)="checkOptions(coption)" [checked]="true"></ion-toggle>
+                <ion-label>{{coption.name}} ({{coption.price | trunc }} QR) {{coption.check}} </ion-label>
+                <ion-toggle (ionChange)="checkOptions(coption)" [(ngModel)]="coption.check"   ></ion-toggle>
             </ion-item>
-        </div>
+        </div> -->
         <ion-list-header class="header" text-center>Add extra choice</ion-list-header>
         <ion-item *ngFor="let option of ExtraOptions; let i = index" class="list-item">
 
 
             <ion-label>{{option.name}} ({{option.price | trunc }} QR) </ion-label>
-            <ion-toggle (ionChange)="checkOptions(option)"></ion-toggle>
+            <ion-toggle  (ionChange)="checkOptions(option)"  ></ion-toggle>
             <!--[checked]="checkedOptions[i]!=NULL" -->
 
             <!--</div>
@@ -86,17 +86,23 @@
         </ion-item>
 
     </ion-list>
-
+   
+      <ion-list-header class="header" text-center>Special Request</ion-list-header>
+        <ion-item class="card-item">
+           <ion-input type="text" placeholder="Type here.." name="specialrequest" id="specialRequest"
+                                           [(ngModel)]="product.request" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+      
 
     <ion-row>
         <ion-col col-6>
             <a (click)="home()" ion-button icon-left full class="btn-add-to-cart">
                 <ion-icon name="basket"></ion-icon>
-                Add More
+                Continue Shopping
             </a>
         </ion-col>
         <ion-col col-6>
-            <a (click)="addToCart(product.id)" ion-button icon-left full class="btn-add-to-cart">
+            <a (click)="addToCart(product.id,1)" ion-button icon-left full class="btn-add-to-cart">
                 <ion-icon name="cart"></ion-icon>
                 CHECKOUT
             </a>

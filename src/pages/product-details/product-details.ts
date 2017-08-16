@@ -8,6 +8,7 @@ import 'rxjs/Rx';
 import isset from 'locutus/php/var/isset';
 import { LoadingController } from 'ionic-angular';
 
+import   _   from 'lodash-joins';
 
 @IonicPage()
 @Component({
@@ -20,7 +21,7 @@ export class ProductDetailsPage {
     productId: number;
     noOfItems: number;
     cartItems: any[];
-    ExtraOptions: any[] = [];
+    ExtraOptions: any[] =[];
     itemInCart: any[] = [];
     Cart: any[] = [];
     prices: any[] = [{ value: '' }];
@@ -40,8 +41,9 @@ export class ProductDetailsPage {
     menuExtras: any;
     optionLength: number;
     cartStoredItem: any;
-    checkedOptions: any;
+    checkedOptions: any[]=[];
     optionCount: number;
+   
 
     constructor(public navCtrl: NavController,
         public alertCtrl: AlertController,
@@ -49,7 +51,7 @@ export class ProductDetailsPage {
         public navParams: NavParams,
         public storage: Storage,
         public service: Service,
-        public loading: LoadingController) {
+        public loading: LoadingController ) {
         this.productId = navParams.get('productId');
         if (isset(navParams.get('cartStoredItem'))) {
             this.cartStoredItem = navParams.get('cartStoredItem');
@@ -61,14 +63,16 @@ export class ProductDetailsPage {
         }
         this.storage.get('favourite').then((favourite) => {
             this.favourites = favourite;
-        })
+        });
+       
+        //this.product.extraOption;
         // this.storage.get('favourite').then((favourites) => {
         //     this.favouriteItems = favourites;
         // })
     }
     ionViewDidEnter() {
         let loader = this.loading.create({
-            content: 'Loading ...',
+            content: 'Loading ',
         });
 
         loader.present().then(() => {
@@ -93,7 +97,7 @@ export class ProductDetailsPage {
                     this.optionLength = this.menuOptions.length;
 
                     if (this.menuOptions.length != 0) {
-
+                        
                         this.menuOptions.forEach(menuOption => {
                             this.menuOptionJson = menuOption.values.option_values.value;
                             this.menuOptionId = menuOption.values.option_id.value;
@@ -111,27 +115,55 @@ export class ProductDetailsPage {
                                             'option_value_id': resp.restify.rows[j].values.option_value_id.value,
                                             'option_id': resp.restify.rows[j].values.option_id.value,
                                             'name': resp.restify.rows[j].values.value.value,
-                                            'price': parseInt(resp.restify.rows[j].values.price.value)
+                                            'price': parseInt(resp.restify.rows[j].values.price.value),
+                                            
+                                            
                                         });
                                     }
-                                    
-                                    
+
+
                                 });
                         }
                     }
                     loader.dismiss();
-                    
                 })
 
 
             if (isset(this.cartStoredItem)) {
-
-
                 this.checkedOptions = this.cartStoredItem.extraOption;
                 this.optionCount = this.checkedOptions.length;
+               
+//  var left = [
+//      {id: 'c', left: 0},
+//        {id: 'e', left: 2},
+//        {id: 'c', left: 1},
+//    ],
+//    right = [
+//        {id: 'a', right: 0},
+//        {id: 'b', right: 1},
+//        {id: 'c', right: 2},
+//        {id: 'c', right: 3},
+//        {id: 'd', right: 4},
+//        {id: 'f', right: 5},
+//        {id: 'g', right: 6}
+//    ],
+  var accessor = function (obj) {
+       return obj['option_id'];
+   };
+    //var joinedData = _.hashInnerJoin(left, accessor, right, accessor);
+                //  accessor = function (obj) {
+                //                 return obj['check'] = true ;
+                //                 };
+                            console.log(this.checkedOptions);
+                            console.log(this.ExtraOptions);
+                 var joinedData = _.merge(this.ExtraOptions, this.checkedOptions) 
+            //    var arr = _.remove(joinedData, function(obj,pos) {
+            //             return arr.indexOf(obj['option_id']) == pos;
+            //             });
+            //                 console.log(arr);
 
             }
-        });
+        }); 
     }
     ngOnInit() {
 
@@ -143,19 +175,14 @@ export class ProductDetailsPage {
 
 
 
-    addToCart(productId) {
-        // if (this.product.sizeOption.name == null) {
-        //     let alert = this.alertCtrl.create({
-        //         title: 'Please!',
-        //         subTitle: 'Select Size and Price!',
-        //         buttons: ['OK']
-        //     });
-        //     alert.present();
-        // }
-        // else {
+    addToCart(productId, cart) {
+       
         this.Cart = JSON.parse(localStorage.getItem("cartItem"));
+        this.product.request = this.product.request;
         if (this.Cart == null) {
             this.product.Quantity = this.count;
+            
+            
 
             this.product.itemTotalPrice = this.product.Quantity * this.product.price;
 
@@ -174,7 +201,6 @@ export class ProductDetailsPage {
             for (let i = 0; i <= this.Cart.length - 1; i++) {
                 if (this.Cart[i].id == productId) {
                     this.Cart.splice(i, 1);
-
                 }
             }
             this.product.Quantity = this.count;
@@ -188,30 +214,41 @@ export class ProductDetailsPage {
 
             this.Cart.push(this.product);
             localStorage.setItem('cartItem', JSON.stringify(this.Cart));
+        };
+
+        if (cart == 0) {
+            this.createToaster('Item added to cart', '3000');
+            console.log(this.Cart);
+        } else {
+            this.navCtrl.push("CartPage");
         }
-        this.navCtrl.push("CartPage");
 
 
     }
 
-    checkOptions(option) {
 
-        if (this.product.extraOption.length !== 0) {
+
+ checkOptions(option) {
+
+let added =0;
+        if (this.product.extraOption.length != 0) {
             for (let i = 0; i <= this.product.extraOption.length - 1; i++) {
-                if (this.product.extraOption[i].name == option.name) {
+               
+                if (parseInt(this.product.extraOption[i].option_value_id) == parseInt(option.option_value_id)) {
                     this.product.extraOption.splice(i, 1);
-                    break;
+                   added = 1
                 }
-                else {
+               
+            }
+            if (added == 0){
                     this.product.extraOption.push(option);
-                    break;
-                }
+                 
             }
         }
         else {
             this.product.extraOption.push(option);
         }
-
+      //console.log(this.product.extraOption);
     }
 
     // sizeOptions(price) {

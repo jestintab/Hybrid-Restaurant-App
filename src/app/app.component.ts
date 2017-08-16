@@ -38,7 +38,7 @@ export class MyApp {
     statusBar: StatusBar,
     splashScreen: SplashScreen,
     public oneSignal: OneSignal,
-    public toast: ToastController) {
+    public toast: ToastController,) {
 
     platform.ready().then((res) => {
       if (res == 'cordova') {
@@ -46,9 +46,13 @@ export class MyApp {
         this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
         this.oneSignal.handleNotificationReceived().subscribe(() => {
         });
-        this.oneSignal.handleNotificationOpened().subscribe(() => {
-          console.log("notification opened!");
+        this.oneSignal.handleNotificationOpened().subscribe((jsonData:any) =>  {
+        let dataFromPush = JSON.stringify(jsonData);
+                    // this.navCtrl.push("NotificationPage");
+
+        console.log('didReceiveRemoteNotificationCallBack: ' + dataFromPush);  
         });
+
         this.oneSignal.endInit();
       }
       statusBar.styleDefault();
@@ -95,5 +99,8 @@ export class MyApp {
   }
   thankyou() {
     this.nav.setRoot("ThankyouPage");
+  }
+  notification(){
+    this.nav.setRoot("NotificationPage")
   }
 }

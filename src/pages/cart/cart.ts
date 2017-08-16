@@ -85,6 +85,10 @@ export class CartPage {
         //console.log(cartItem);
         this.productId = cartItem.id;
 
+       for( let i =0; i <=  cartItem.extraOption.length -1 ; i++){
+           cartItem.extraOption[i]['check'] = true;
+       }
+
         // let optionModal = this.modalCtrl.create( "ProductOption", {"productId": this.productId});
         // optionModal.onDidDismiss(data => {
         //     console.log(data);
@@ -93,6 +97,7 @@ export class CartPage {
         this.navCtrl.push("ProductDetailsPage", {
             productId: this.productId,
             cartStoredItem: cartItem,
+            
 
         });
     }
@@ -205,7 +210,7 @@ export class CartPage {
 
     addMore() {
         this.navCtrl.push("CategoryPage");
-        console.log('add more works');
+        //console.log('add more works');
 
     }
 

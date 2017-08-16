@@ -15,27 +15,28 @@
     <ion-row>
         <ion-col>
             <div class="thanks">
-                <h2>Order complete!  </h2>
-                <p> Your order <span class="yelloBold">#{{orderId}} </span> for <span class="yelloBold">  {{orderTotal}} QAR</span> is being processed.
-                <div class="circle-loader " [ngClass]="{'load-complete' : loadcomplete}">
-                    <div class="checkmark draw" [hidden]="!loadcomplete"></div>
-                </div>
-                <!-- <button ion-button icon-only >  <ion-icon name="checkmark"> </ion-icon> </button> -->
-                <p>We will call to <span class="yelloBold"> {{orderDetails.phone}} </span> in 10 minutes for order confirmation. If you are unreachable, this order will automatically be cancelled.
-                </p>
-                <p> We will update the status of your order to <span class="yelloBold"> {{orderDetails.email}}</span> </p>
+                <h2>Order complete! </h2>
+                <p> Your order <span class="yelloBold">#{{orderId}} </span> for <span class="yelloBold">  {{orderTotal}} QAR</span>                    is being processed.
+                    <div class="circle-loader " [ngClass]="{'load-complete' : loadcomplete}">
+                        <div class="checkmark draw" [hidden]="!loadcomplete"></div>
+                    </div>
+                    <!-- <button ion-button icon-only >  <ion-icon name="checkmark"> </ion-icon> </button> -->
+                    <p>We will call to <span class="yelloBold"> {{orderDetails.phone}} </span> in 10 minutes for order confirmation.
+                        If you are unreachable, this order will automatically be cancelled.
+                    </p>
+                    <p> We will update the status of your order to <span class="yelloBold"> {{orderDetails.email}}</span> </p>
             </div>
-<button class="order-btn"  ion-button round icon-left outline (click)=orderAgain()  >   
+            <button class="order-btn" ion-button round icon-left outline (click)=orderAgain()>   
             <ion-icon  name="home"></ion-icon> Order Again </button>
         </ion-col>
-       
+
     </ion-row>
     <ion-row>
-         <ion-col col-8 col-offset-4>
-             
-        
+        <ion-col col-8 col-offset-4>
+
+
         </ion-col>
     </ion-row>
 
-   
+
 </ion-content>

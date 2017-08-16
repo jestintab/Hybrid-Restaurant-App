@@ -20,8 +20,7 @@ export class Service {
   //private options:any;  
   private postUrl: string;
   private blogUrl: string;
-
-
+  private notificationUrl: string;
 
   constructor(private http: Http, private networkService: NetworkService) {
     this.sflive = 'https://order.sandwichfactory.qa/api/sforder'; //https://order.sandwichfactory.qa/api/sforder
@@ -33,7 +32,8 @@ export class Service {
     this.sort = '_sort=';
     this.amp = '&';
     this.postUrl = "http://aljedad.com/sforder/api";
-    this.blogUrl = "https://sandwichfactory.qa/blog/wp-json/wp/v2/posts"
+    this.blogUrl = "https://sandwichfactory.qa/blog/wp-json/wp/v2/posts";
+    this.notificationUrl = "https://sandwichfactory.qa/blog/wp-json/wp/v2/posts?filter[category_name]=notifications";
 
   }
   getData() {
@@ -48,7 +48,7 @@ export class Service {
     if (this.networkService.noConnection()) {
       this.networkService.showNetworkAlert();
     } else {
-      return this.http.get(this.sflive + '/9i3njlbu8_categories/' + this.json + this.amp + this.sort + 'priority+asc')
+      return this.http.get(this.sflive + '/9i3njlbu8_categories/' + this.json + this.amp + this.filter +  'status' + this.equalTo + '1'+ this.amp +  this.sort + 'priority+asc' )
         .map((response: Response) => response.json());
     }
   }

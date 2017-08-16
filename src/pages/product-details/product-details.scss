@@ -63,16 +63,17 @@ page-product-details {
     font-size: 14px;
     margin: 0px;
   }
+  .header {
+      color: $white;
+      background-color: $grey;
+      margin: 0;
+    }
   .extra-list {
     margin: -1px 4px 16px 4px;
     border-bottom: 1px solid #dedede;
     border-left: 1px solid #dedede;
     border-right: 1px solid #dedede;
-    .header {
-      color: $white;
-      background-color: $grey;
-      margin: 0;
-    }
+    
     .toggle .toggle-checked {
       background-color: $primary;
       width: 45px;
