@@ -41,6 +41,12 @@
         <splash density="port-xhdpi" src="resources/android/splash/drawable-port-xhdpi-screen.png" />
         <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png" />
         <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
+        <splash density="land-xhdpi" src="resources\android\splash\drawable-land-xhdpi-screen.png" />
+        <splash density="land-xxhdpi" src="resources\android\splash\drawable-land-xxhdpi-screen.png" />
+        <splash density="land-xxxhdpi" src="resources\android\splash\drawable-land-xxxhdpi-screen.png" />
+        <splash density="port-xhdpi" src="resources\android\splash\drawable-port-xhdpi-screen.png" />
+        <splash density="port-xxhdpi" src="resources\android\splash\drawable-port-xxhdpi-screen.png" />
+        <splash density="port-xxxhdpi" src="resources\android\splash\drawable-port-xxxhdpi-screen.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -86,6 +92,8 @@
         <variable name="APP_ID" value="1825216277772417" />
         <variable name="APP_NAME" value="ionic3ApiApp" />
     </plugin>
+    <plugin name="cordova-plugin-file" spec="^4.3.3" />
+    <plugin name="cordova-plugin-file-transfer" spec="^1.6.3" />
     <plugin name="cordova-plugin-googleplus" spec="^5.1.1">
         <variable name="REVERSED_CLIENT_ID" value="ionic3Api" />
     </plugin>

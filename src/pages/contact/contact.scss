@@ -4,6 +4,9 @@ page-contact {
     background-size: cover;
   }
   .contact-head {
+    font-family: 'something_in_the_air' !important; 
+    
+    text-transform: uppercase;
     margin-top: 2em;
     text-align: center;
     color: $white;
@@ -22,6 +25,11 @@ page-contact {
     border-radius: 5px;
     height: 4.4rem;
     background-color: $primary;
+    color: $dark;
+  }
+  .submit-btn a:hover{
+    background-color: $primary !important;
+    color: $dark;
   }
   .item {
     background-color: rgba(119, 119, 119, 0.6);

@@ -3,11 +3,16 @@ page-category {
     white-space: normal;
   }
   .heading {
+    font-family: 'SkolaSansCn' !important;
     font-size: 15px;
     font-weight: 700;
+    line-height: 25px;
     color: $grey;
   }
-  .item-md ion-thumbnail img {
+ .desc {
+    font-family: 'pdintextpro' !important;
+  }
+  .item-md ion-thumbnail img-loader {
     height: 5em;
     width: 5em;
   }

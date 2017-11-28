@@ -7,7 +7,7 @@ import html_entity_decode from 'locutus/php/strings/html_entity_decode';
 import 'rxjs/Rx';
 import isset from 'locutus/php/var/isset';
 import { LoadingController } from 'ionic-angular';
-
+import { ImageLoaderConfig } from 'ionic-image-loader';
 import   _   from 'lodash-joins';
 
 @IonicPage()
@@ -51,7 +51,8 @@ export class ProductDetailsPage {
         public navParams: NavParams,
         public storage: Storage,
         public service: Service,
-        public loading: LoadingController ) {
+        public loading: LoadingController,
+        private imageLoaderConfig: ImageLoaderConfig ) {
         this.productId = navParams.get('productId');
         if (isset(navParams.get('cartStoredItem'))) {
             this.cartStoredItem = navParams.get('cartStoredItem');
@@ -64,7 +65,12 @@ export class ProductDetailsPage {
         this.storage.get('favourite').then((favourite) => {
             this.favourites = favourite;
         });
-       
+        this.imageLoaderConfig.setWidth('100%');
+        this.imageLoaderConfig.setHeight('auto');
+        this.imageLoaderConfig.setBackgroundSize('cover');
+        
+        
+        
         //this.product.extraOption;
         // this.storage.get('favourite').then((favourites) => {
         //     this.favouriteItems = favourites;

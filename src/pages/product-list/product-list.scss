@@ -16,15 +16,17 @@ page-product-list {
     }
   }
   .category {
-    img {
+    img-loader {
       width: 130px;
     }
     .item-name {
       font-weight: 700;
       font-size: 15px;
       white-space: nowrap;
+      line-height: 30px;
     }
     .item-detail {
+      font-family: 'pdintextpro' !important;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;

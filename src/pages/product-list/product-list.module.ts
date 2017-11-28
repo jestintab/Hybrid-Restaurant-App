@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { ProductListPage } from './product-list';
 import { PipesModule } from '../../pipes/pipes.module';
+import { IonicImageLoader  } from 'ionic-image-loader';
 
 
 
@@ -14,6 +15,8 @@ import { PipesModule } from '../../pipes/pipes.module';
     imports: [
         IonicPageModule.forChild(ProductListPage),
         PipesModule,
+        IonicImageLoader     
+        
 
     ],
     exports: [

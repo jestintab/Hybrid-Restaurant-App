@@ -60,10 +60,19 @@
         },
         "mx.ferreyra.callnumber": {
             "PACKAGE_NAME": "com.sandwichfactoryintl.sfdoha"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.sandwichfactoryintl.sfdoha"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.sandwichfactoryintl.sfdoha"
         }
     },
     "dependent_plugins": {
         "es6-promise-plugin": {
+            "PACKAGE_NAME": "com.sandwichfactoryintl.sfdoha"
+        },
+        "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.sandwichfactoryintl.sfdoha"
         }
     }

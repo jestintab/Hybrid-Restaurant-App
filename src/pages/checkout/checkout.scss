@@ -1,4 +1,5 @@
 page-checkout {
+  font-family: 'SkolaSansCn' ;  
    ::-wekit-input-placeholder {
     color: $white !important;
   }
@@ -74,6 +75,7 @@ page-checkout {
   }
   .checkOut .card-btn,
   page-checkout .checkOut .checkOut-btn :hover {
+    font-family: 'pdintextpro' !important;
     background-color: $white;
     color: $white;
     border: 1px solid $light-grey;
@@ -98,7 +100,9 @@ page-checkout {
     background: url('../assets/img/bg.jpg') no-repeat center;
     background-size: cover;
     .address-header {
-      font-size: 20px;
+    font-family: 'something_in_the_air' !important;
+    text-transform: uppercase;
+      font-size: 22px;
       color: $white;
       text-align: center;
       color: $white;
@@ -114,6 +118,7 @@ page-checkout {
       color: $dark;
     }
     .sub-address {
+    
       background-color: rgba(0, 0, 0, 0.5);
       color: $white;
       border-right: 1px solid;
@@ -122,6 +127,10 @@ page-checkout {
       padding-left: 0 !important;
       text-indent: 7px;
     
+    }
+    .sub-address ion-input {
+      font-family: 'pdintextpro' !important;
+      font-size: 18px;
     }
     .col-cod {
       padding-left: 0 !important;

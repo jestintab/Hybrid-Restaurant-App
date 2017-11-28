@@ -13,7 +13,7 @@
 
 <ion-content>
     <ion-row class="productImage">
-        <img src="https://order.sandwichfactory.qa/assets/images/{{product.image}}" alt="">
+        <img-loader src="https://order.sandwichfactory.qa/assets/images/{{product.image}}"> </img-loader>
         <!--<p class="text-over-image">{{product.name }} &nbsp;<span class="prod-price">
         ({{product.price | trunc }} QR)</span></p>-->
         <span clear text-center (click)="toggleFavourite()">
@@ -74,7 +74,7 @@
         <ion-item *ngFor="let option of ExtraOptions; let i = index" class="list-item">
 
 
-            <ion-label>{{option.name}} ({{option.price | trunc }} QR) </ion-label>
+            <ion-label class="cart-options">{{option.name}} ({{option.price | trunc }} QR) </ion-label>
             <ion-toggle  (ionChange)="checkOptions(option)"  ></ion-toggle>
             <!--[checked]="checkedOptions[i]!=NULL" -->
 

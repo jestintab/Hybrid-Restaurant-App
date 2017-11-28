@@ -1,0 +1,80 @@
+.ios,
+.md {
+  page-intro {
+    .slide1 {
+      background-color: #363233;
+      img{
+        width: 70% !important;
+        height: auto !important;
+      }
+      h1 {
+        font-family: 'something_in_the_air';
+        text-transform: uppercase;
+        font-size: 30px;
+        color: #B7B2AB;
+      }
+    }
+    .slide2 {
+      h2 {
+        font-family: 'lazing';
+        text-transform: uppercase;
+        font-size: 30px;
+      }
+      .step {
+        line-height: 60px;
+        text-align: left;
+        padding-left:30%;
+        ion-icon{
+          text-align: left;
+          padding-right:10px;
+        }
+      }
+      
+      .steps {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-family: 'lazing';
+        text-transform: uppercase;
+        font-size: 25px;
+        text-align: center;
+      }
+      ion-icon {
+        padding-left: 20px;
+      }
+    }
+    .slide3{
+      h2{
+        font-family: 'something_in_the_air';
+        text-transform: uppercase;
+        font-size: 30px;
+      }
+      .intro-container{
+        margin: 30px 10px;
+      }
+    }
+    .slide3,
+    .slide2,
+    {
+      background-color: #FBC83B;
+      .order-btn {
+        border-color: $secondary;
+        color: $secondary; //background: $primary;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    img {
+      height: 70vh !important;
+      width: auto !important;
+    }
+    .order-btn {
+      border-color: $primary;
+      color: $primary; //background: $primary;
+      text-align: center;
+      width: 100%;
+    }
+    .swiper-pagination-bullet-active {
+      background: #fff;
+    }
+  }
+}

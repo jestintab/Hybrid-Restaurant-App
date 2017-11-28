@@ -3,6 +3,7 @@ import { NavController, IonicPage } from 'ionic-angular';
 //import {ProductListPage} from '../product-list/product-list';
 import { Service } from '../../app/service';
 import { LoadingController } from 'ionic-angular';
+import { ImageLoaderConfig } from 'ionic-image-loader';
 
 
 
@@ -17,8 +18,13 @@ import { LoadingController } from 'ionic-angular';
 export class CategoryPage {
     categories: any[] = [];
 
-    constructor(public navCtrl: NavController, public service: Service, public loading: LoadingController) {
-
+    constructor(public navCtrl: NavController, public service: Service, public loading: LoadingController,
+        private imageLoaderConfig: ImageLoaderConfig) {
+            this.imageLoaderConfig.setWidth('100%');
+            this.imageLoaderConfig.setHeight('5em');
+            this.imageLoaderConfig.setBackgroundSize('contain');
+            
+    
 
     }
     ionViewDidEnter() {

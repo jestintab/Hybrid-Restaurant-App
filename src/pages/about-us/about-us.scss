@@ -6,6 +6,11 @@ page-about-us {
     height: 250px;
     margin-top: -13px;
   }
+  .card-title{
+    font-family: 'something_in_the_air';
+    text-transform: uppercase;
+    font-size: 35px;
+  }
   .wrapper {
     margin-top: -14px;
   }
@@ -25,11 +30,15 @@ page-about-us {
     padding: 8px;
   }
   .heading {
-    color: #6d6d6d;
+    font-family: 'something_in_the_air';
+    text-transform: uppercase;
+    color: #000000;
     padding-left: 10px;
   }
   .details {
-    color: #6d6d6d;
+    font-family: 'something_in_the_air' !important;
+    font-size: 20px;
+    color: #414041;
     padding-left: 10px;
     line-height: 1.45;
     text-align: justify;
@@ -45,6 +54,10 @@ page-about-us {
     border-color: rgba(0, 0, 0, 0.1);
     color: #6d6d6d;
     font-size: 1.6rem;
+    font-family: 'SkolaSansCn'
   }
- 
+ h6{
+   font-family: 'lazing';
+
+ }
 }

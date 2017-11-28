@@ -12,10 +12,10 @@
         <ion-list>
             <ion-item (click)="navigate(categorie.values.category_id.value)">
                 <ion-thumbnail item-left>
-                    <img src="https://order.sandwichfactory.qa/assets/images/{{categorie.values.image.value}}">
+                        <img-loader src="https://order.sandwichfactory.qa/assets/images/{{categorie.values.image.value}}"></img-loader>
                 </ion-thumbnail>
                 <p class="heading">{{categorie.values.name.value | entity }}</p>
-                <p>{{categorie.values.description.value}}</p>
+                <p class="desc">{{categorie.values.description.value}}</p>
             </ion-item>
         </ion-list>
     </ion-card>

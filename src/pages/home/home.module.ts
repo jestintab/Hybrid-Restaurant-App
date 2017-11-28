@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { HomePage } from './home';
 import { PipesModule } from '../../pipes/pipes.module';
+import { IonicImageLoader  } from 'ionic-image-loader';
+
 
 
 
@@ -11,7 +13,8 @@ import { PipesModule } from '../../pipes/pipes.module';
     ],
     imports: [
         IonicPageModule.forChild(HomePage),
-        PipesModule
+        PipesModule,
+        IonicImageLoader
     ],
     exports: [
         HomePage

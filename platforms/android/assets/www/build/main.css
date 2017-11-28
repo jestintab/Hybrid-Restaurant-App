@@ -3825,6 +3825,46 @@ ion-icon::before {
   display: inline-block;
 }
 
+@font-face {
+  font-family: 'something_in_the_air';
+  src: url("../assets/fonts/Something_in_the_air.ttf");
+  src: url("../assets/fonts/Something_in_the_air.ttf?#iefix") format("embedded-opentype"), url("../assets/fonts/Something_in_the_air.ttf") format("woff"), url("../assets/fonts/Something_in_the_air.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SkolaSans';
+  src: url("../assets/fonts/SkolaSansCn-Bold.otf");
+  src: url("../assets/fonts/SkolaSansCn-Bold.otf?#iefix") format("embedded-opentype"), url("../assets/fonts/SkolaSansCn-Bold.otf") format("woff"), url("../assets/fonts/SkolaSansCn-Bold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lazing';
+  src: url("../assets/fonts/lazing_on_a_sunny_afternoon.ttf");
+  src: url("../assets/fonts/lazing_on_a_sunny_afternoon.ttf?#iefix") format("embedded-opentype"), url("../assets/fonts/lazing_on_a_sunny_afternoon.ttf") format("woff"), url("../assets/fonts/lazing_on_a_sunny_afternoon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pdfintextpro';
+  src: url("../assets/fonts/pfdintextpro-regular-webfont.woff");
+  src: url("../assets/fonts/pfdintextpro-regular-webfont.woff?#iefix") format("embedded-opentype"), url("../assets/fonts/pfdintextpro-regular-webfont.woff") format("woff"), url("../assets/fonts/pfdintextpro-regular-webfont.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'SkolaSans', sans-serif !important;
+}
+
+p {
+  font-family: 'SkolaSans', sans-serif !important;
+}
+
 ion-action-sheet {
   left: 0;
   top: 0;
@@ -25217,7 +25257,12 @@ ion-navbar.toolbar {
 }
 
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'SkolaSans', sans-serif;
+}
+
+.title {
+  font-family: 'something_in_the_air';
+  text-transform: uppercase;
 }
 
 .toolbar-background-ios {
@@ -25271,6 +25316,7 @@ ion-badge {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'something_in_the_air';
 }
 
 .sidebar-menu .list-md {
@@ -25292,8 +25338,10 @@ ion-badge {
 
 .sidebar-menu .menu-item {
   background-color: transparent;
+  text-transform: uppercase !important;
   color: #fff;
   height: 3.5em;
+  font-size: 18px;
   border-bottom: 1px solid;
   border-color: rgba(0, 0, 0, 0.2);
 }
@@ -25336,6 +25384,12 @@ page-about-us ion-slides {
   margin-top: -13px;
 }
 
+page-about-us .card-title {
+  font-family: 'something_in_the_air';
+  text-transform: uppercase;
+  font-size: 35px;
+}
+
 page-about-us .wrapper {
   margin-top: -14px;
 }
@@ -25358,12 +25412,16 @@ page-about-us .card-title {
 }
 
 page-about-us .heading {
-  color: #6d6d6d;
+  font-family: 'something_in_the_air';
+  text-transform: uppercase;
+  color: #000000;
   padding-left: 10px;
 }
 
 page-about-us .details {
-  color: #6d6d6d;
+  font-family: 'something_in_the_air' !important;
+  font-size: 20px;
+  color: #414041;
   padding-left: 10px;
   line-height: 1.45;
   text-align: justify;
@@ -25379,6 +25437,11 @@ page-about-us .card-content {
   border-color: rgba(0, 0, 0, 0.1);
   color: #6d6d6d;
   font-size: 1.6rem;
+  font-family: 'SkolaSansCn';
+}
+
+page-about-us h6 {
+  font-family: 'lazing';
 }
 
 page-cart .price-details {
@@ -25387,6 +25450,10 @@ page-cart .price-details {
   display: -ms-flexbox;
   display: flex;
   width: 97%;
+}
+
+page-cart button {
+  font-family: 'pdfintextpro' !important;
 }
 
 page-cart .cart-list {
@@ -25502,14 +25569,24 @@ page-category ion-label {
 }
 
 page-category .heading {
+  font-family: 'SkolaSansCn' !important;
   font-size: 15px;
   font-weight: 700;
+  line-height: 25px;
   color: #777;
 }
 
-page-category .item-md ion-thumbnail img {
+page-category .desc {
+  font-family: 'pdintextpro' !important;
+}
+
+page-category .item-md ion-thumbnail img-loader {
   height: 5em;
   width: 5em;
+}
+
+page-checkout {
+  font-family: 'SkolaSansCn';
 }
 
 page-checkout ::-wekit-input-placeholder {
@@ -25604,6 +25681,7 @@ page-checkout .item {
 
 page-checkout .checkOut .card-btn, page-checkout .checkOut .checkOut-btn,
 page-checkout page-checkout .checkOut .checkOut-btn :hover {
+  font-family: 'pdintextpro' !important;
   background-color: #fff;
   color: #fff;
   border: 1px solid #ccc;
@@ -25634,7 +25712,9 @@ page-checkout .checkOut {
 }
 
 page-checkout .checkOut .address-header, page-checkout .checkOut .payment-header {
-  font-size: 20px;
+  font-family: 'something_in_the_air' !important;
+  text-transform: uppercase;
+  font-size: 22px;
   color: #fff;
   text-align: center;
   color: #fff;
@@ -25656,6 +25736,11 @@ page-checkout .checkOut .sub-address {
   border-color: rgba(255, 255, 255, 0.05);
   padding-left: 0 !important;
   text-indent: 7px;
+}
+
+page-checkout .checkOut .sub-address ion-input {
+  font-family: 'pdintextpro' !important;
+  font-size: 18px;
 }
 
 page-checkout .checkOut .col-cod {
@@ -25740,6 +25825,8 @@ page-contact .contact {
 }
 
 page-contact .contact-head {
+  font-family: 'something_in_the_air' !important;
+  text-transform: uppercase;
   margin-top: 2em;
   text-align: center;
   color: #fff;
@@ -25760,6 +25847,12 @@ page-contact .submit-btn {
   border-radius: 5px;
   height: 4.4rem;
   background-color: #fecc27;
+  color: #222;
+}
+
+page-contact .submit-btn a:hover {
+  background-color: #fecc27 !important;
+  color: #222;
 }
 
 page-contact .item {
@@ -25784,6 +25877,8 @@ page-home {
 
 page-home h2 {
   margin-top: 1rem;
+  font-family: 'something_in_the_air';
+  text-transform: uppercase;
 }
 
 page-home .grid {
@@ -25840,11 +25935,17 @@ page-home .grid .categories h2 {
   font-weight: 500;
 }
 
-page-home .grid .categories img {
+page-home .grid .categories .home-img {
+  width: 100%;
+  height: 200px;
+}
+
+page-home .grid .categories img-loader {
   position: relative;
   z-index: -111;
-  width: 200px !important;
-  height: auto !important;
+  width: 100% !important;
+  height: 200px !important;
+  min-height: 50px !important;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -25861,6 +25962,108 @@ page-home .grid .categories .text-over-img {
   width: 100%;
   margin: -34px 0px 0px 0px;
   text-align: center;
+}
+
+.ios page-intro .slide1,
+.md page-intro .slide1 {
+  background-color: #363233;
+}
+
+.ios page-intro .slide1 img,
+.md page-intro .slide1 img {
+  width: 70% !important;
+  height: auto !important;
+}
+
+.ios page-intro .slide1 h1,
+.md page-intro .slide1 h1 {
+  font-family: 'something_in_the_air';
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #B7B2AB;
+}
+
+.ios page-intro .slide2 h2,
+.md page-intro .slide2 h2 {
+  font-family: 'lazing';
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.ios page-intro .slide2 .step,
+.md page-intro .slide2 .step {
+  line-height: 60px;
+  text-align: left;
+  padding-left: 30%;
+}
+
+.ios page-intro .slide2 .step ion-icon,
+.md page-intro .slide2 .step ion-icon {
+  text-align: left;
+  padding-right: 10px;
+}
+
+.ios page-intro .slide2 .steps,
+.md page-intro .slide2 .steps {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'lazing';
+  text-transform: uppercase;
+  font-size: 25px;
+  text-align: center;
+}
+
+.ios page-intro .slide2 ion-icon,
+.md page-intro .slide2 ion-icon {
+  padding-left: 20px;
+}
+
+.ios page-intro .slide3 h2,
+.md page-intro .slide3 h2 {
+  font-family: 'something_in_the_air';
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.ios page-intro .slide3 .intro-container,
+.md page-intro .slide3 .intro-container {
+  margin: 30px 10px;
+}
+
+.ios page-intro .slide3,
+.ios page-intro .slide2,
+.md page-intro .slide3,
+.md page-intro .slide2 {
+  background-color: #FBC83B;
+}
+
+.ios page-intro .slide3 .order-btn,
+.ios page-intro .slide2 .order-btn,
+.md page-intro .slide3 .order-btn,
+.md page-intro .slide2 .order-btn {
+  border-color: #4a4a49;
+  color: #4a4a49;
+  text-align: center;
+  width: 100%;
+}
+
+.ios page-intro img,
+.md page-intro img {
+  height: 70vh !important;
+  width: auto !important;
+}
+
+.ios page-intro .order-btn,
+.md page-intro .order-btn {
+  border-color: #fecc27;
+  color: #fecc27;
+  text-align: center;
+  width: 100%;
+}
+
+.ios page-intro .swiper-pagination-bullet-active,
+.md page-intro .swiper-pagination-bullet-active {
+  background: #fff;
 }
 
 page-location .sebm-google-map-container {
@@ -25896,7 +26099,7 @@ page-news-detail .news-time {
   color: #777;
 }
 
-page-product-details .slider img {
+page-product-details .slider img-loader {
   width: 100% !important;
   height: 200px !important;
 }
@@ -25913,6 +26116,7 @@ page-product-details .text-over-image {
 
 page-product-details .productImage {
   max-height: 300px;
+  min-height: 250px;
 }
 
 page-product-details .prod-price {
@@ -25938,6 +26142,11 @@ page-product-details .menu-item {
 
 page-product-details .menu-item .item-name {
   color: #fff;
+  font-family: 'SkolaSansCn' !important;
+}
+
+page-product-details .menu-item .item-price {
+  font-family: 'SkolaSansCn' !important;
 }
 
 page-product-details .count {
@@ -25961,13 +26170,20 @@ page-product-details .label {
   margin: 0px 0px 0px 0;
 }
 
+page-product-details ion-list-header {
+  font-family: 'something_in_the_air';
+  text-transform: uppercase !important;
+  font-size: 16px;
+}
+
 page-product-details .btn-add-to-cart {
+  font-family: 'pdfintextpro' !important;
   background-color: #fecc27 !important;
   color: #222;
   padding: 22.2px;
   -webkit-box-shadow: none;
   box-shadow: none;
-  font-size: 14px;
+  font-size: 15px;
   margin: 0px;
 }
 
@@ -26051,6 +26267,10 @@ page-product-details .item-price {
   float: right;
 }
 
+page-product-details .cart-options {
+  font-family: 'pdintextpro' !important;
+}
+
 page-product-list .trim-info {
   max-width: 200px;
   display: inline-block;
@@ -26070,7 +26290,7 @@ page-product-list .item .label {
   margin: 9px 0px 0px 0px;
 }
 
-page-product-list .category img {
+page-product-list .category img-loader {
   width: 130px;
 }
 
@@ -26078,9 +26298,11 @@ page-product-list .category .item-name {
   font-weight: 700;
   font-size: 15px;
   white-space: nowrap;
+  line-height: 30px;
 }
 
 page-product-list .category .item-detail {
+  font-family: 'pdintextpro' !important;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -26206,9 +26428,10 @@ page-thankyou .thank-you .thanks {
 }
 
 page-thankyou .thank-you .thanks h2 {
+  font-family: 'something_in_the_air';
+  text-transform: uppercase;
   margin-top: 6.8rem;
-  font-size: 2.8rem;
-  font-weight: 600;
+  font-size: 28px;
 }
 
 page-thankyou .thank-you .thanks p {

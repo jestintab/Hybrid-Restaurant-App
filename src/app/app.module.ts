@@ -11,6 +11,7 @@ import { MyApp } from './app.component';
 import { Network } from '@ionic-native/network';
 import { NetworkService } from '../providers/network-service';
 import { Diagnostic } from '@ionic-native/diagnostic';
+import { IonicImageLoader  } from 'ionic-image-loader';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { Diagnostic } from '@ionic-native/diagnostic';
     imports: [
         IonicModule.forRoot(MyApp),
         IonicStorageModule.forRoot(),
+        IonicImageLoader.forRoot(),
         BrowserModule,
         HttpModule
     ],
@@ -35,6 +37,7 @@ import { Diagnostic } from '@ionic-native/diagnostic';
         Network,
         NetworkService,
         Diagnostic,
+        
     ],
 })
 export class AppModule {

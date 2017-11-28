@@ -1,6 +1,6 @@
 page-product-details {
   .slider {
-    img {
+    img-loader {
       width: 100% !important;
       height: 200px !important;
     }
@@ -16,6 +16,7 @@ page-product-details {
   }
   .productImage {
     max-height: 300px;
+    min-height: 250px;
   }
   .prod-price {
     font-weight: 700;
@@ -36,6 +37,11 @@ page-product-details {
     font-size: 18px;
     .item-name {
       color: #fff;
+      font-family: 'SkolaSansCn' !important;      
+    }
+    .item-price{
+      font-family: 'SkolaSansCn' !important;      
+      
     }
   }
   .count {
@@ -54,13 +60,20 @@ page-product-details {
   }
   .label {
     margin: 0px 0px 0px 0;
+   
+  }
+  ion-list-header{
+    font-family: 'something_in_the_air';
+    text-transform: uppercase !important;
+    font-size: 16px;
   }
   .btn-add-to-cart {
+    font-family: 'pdfintextpro' !important;
     background-color: $primary !important;
     color: $dark;
     padding: 22.2px;
     box-shadow: none;
-    font-size: 14px;
+    font-size: 15px;
     margin: 0px;
   }
   .header {
@@ -137,5 +150,9 @@ page-product-details {
   }
   .item-price {
     float: right;
+  }
+  .cart-options{
+    font-family: 'pdintextpro' !important;
+    
   }
 }

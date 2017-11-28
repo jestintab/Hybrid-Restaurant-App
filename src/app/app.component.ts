@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Service } from '../app/service';
 import { OneSignal } from '@ionic-native/onesignal';
+import { ImageLoaderConfig } from 'ionic-image-loader';
 
 
 @Component({
@@ -19,15 +20,17 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any;
+ 
 
   ngOnInit(): any {
-    let token = localStorage.getItem('user');
+    let token = localStorage.getItem('introShown');
 
-    if (token == null) {
-      this.rootPage = "HomePage";
+    if (token == '1') {
+      this.rootPage = "IntroPage";
     }
     else {
-      this.rootPage = "HomePage";
+      this.rootPage = "IntroPage";
+      localStorage.setItem('introShown', '1');
     }
   }
 
@@ -38,7 +41,8 @@ export class MyApp {
     statusBar: StatusBar,
     splashScreen: SplashScreen,
     public oneSignal: OneSignal,
-    public toast: ToastController,) {
+    public toast: ToastController,
+    private imageLoaderConfig: ImageLoaderConfig ) {
 
     platform.ready().then((res) => {
       if (res == 'cordova') {
@@ -60,8 +64,8 @@ export class MyApp {
 
 
     });
-
-
+   
+    this.imageLoaderConfig.setFallbackUrl('../../assets/no-image.png'); 
     // this.service.getData()
     //   .subscribe((response) => {
     //     this.newsCounter = response.newsList.length;
@@ -102,5 +106,8 @@ export class MyApp {
   }
   notification(){
     this.nav.setRoot("NotificationPage")
+  }
+  intro(){
+    this.nav.setRoot("IntroPage")
   }
 }

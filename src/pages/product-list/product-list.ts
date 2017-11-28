@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController, IonicPage } from 'ionic-angular';
 import { Service } from '../../app/service';
 import { LoadingController } from 'ionic-angular';
+import { ImageLoaderConfig } from 'ionic-image-loader';
 
 
 @IonicPage()
@@ -23,15 +24,20 @@ export class ProductListPage {
     public service: Service,
     public navParams: NavParams,
     public toastCtrl: ToastController,
-    public loading: LoadingController) {
+    public loading: LoadingController,
+    private imageLoaderConfig: ImageLoaderConfig) {
     this.catId = navParams.get('catId');
 
     // this.cartItems = JSON.parse(localStorage.getItem('cartItem'));
     // if (this.cartItems != null) {
     //   this.noOfItems = this.cartItems.length;
     // }
+    
   }
   ionViewDidEnter() {
+    this.imageLoaderConfig.setWidth('100%');
+    this.imageLoaderConfig.setHeight('80px');
+    this.imageLoaderConfig.setBackgroundSize('contain');
     let loader = this.loading.create({
       content: 'Loading ...',
     });
@@ -47,6 +53,8 @@ export class ProductListPage {
     });
   }
   ngOnInit() {
+    
+    
 
   }
   initializeItems() {
