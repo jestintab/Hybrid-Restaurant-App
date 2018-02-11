@@ -23,17 +23,17 @@ export class Service {
   private notificationUrl: string;
 
   constructor(private http: Http, private networkService: NetworkService) {
-    this.sflive = 'https://order.sandwichfactory.qa/api/sforder'; //https://order.sandwichfactory.qa/api/sforder
-    this.sfapiUrl = 'http://aljedad.com/api/sforder'; //http://aljedad.com/api/sforder
+    this.sflive = 'assets/json/restaurantAppJson.json'; 
+    this.sfapiUrl = 'assets/json/restaurantAppJson.json';
     this.equalTo = '%3D%3D';
     this.and = '%26%26';
     this.json = '?_view=json';
     this.filter = '_filter=';
     this.sort = '_sort=';
     this.amp = '&';
-    this.postUrl = "http://aljedad.com/sforder/api";
-    this.blogUrl = "https://sandwichfactory.qa/blog/wp-json/wp/v2/posts";
-    this.notificationUrl = "https://sandwichfactory.qa/blog/wp-json/wp/v2/posts?filter[category_name]=notifications";
+    this.postUrl = "assets/json/restaurantAppJson.json";
+    this.blogUrl = "assets/json/restaurantAppJson.json";
+    this.notificationUrl = "assets/json/restaurantAppJson.json";
 
   }
   getData() {
