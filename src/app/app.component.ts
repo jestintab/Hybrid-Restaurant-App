@@ -46,7 +46,7 @@ export class MyApp {
 
     platform.ready().then((res) => {
       if (res == 'cordova') {
-        this.oneSignal.startInit('8fe87859-f423-4946-964f-28cee25c1b8b', '973507141094');
+        this.oneSignal.startInit('');
         this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
         this.oneSignal.handleNotificationReceived().subscribe(() => {
         });
